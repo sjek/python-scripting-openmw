@@ -51,6 +51,13 @@ namespace MWScript
                     std::cout << "AiActivate" << std::endl;
                 }
         };
+        void AiActivate (const std::string & actorID, const std::string & objectID)
+        {
+            MWMechanics::AiActivate activatePackage(objectID); //do aifollow next, try implementing both in python
+            MWWorld::Ptr ptr = MWBase::Environment::get().getWorld()->getPtr (actorID, true);
+            ptr.getClass().getCreatureStats (ptr).getAiSequence().stack(activatePackage, ptr);
+            std::cout << "AiActivate" << std::endl;
+        };
 
         template<class R>
         class OpAiTravel : public Interpreter::Opcode1

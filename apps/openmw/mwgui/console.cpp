@@ -3,6 +3,8 @@
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 
+#include <Python.h>
+
 #include <components/compiler/exception.hpp>
 #include <components/compiler/extensions0.hpp>
 
@@ -174,6 +176,15 @@ namespace MWGui
     {
         // Log the command
         print("#FFFFFF> " + command + "\n");
+
+        // PLACE PYTHON INTERCEPT HERE
+        if (command=="python-test")
+        {
+            Py_Initialize();
+            PyRun_SimpleString("print('yay')\n"
+                     "print 'Today is'\n");
+            Py_Finalize();
+        };
 
         Compiler::Locals locals;
         Compiler::Output output (locals);
