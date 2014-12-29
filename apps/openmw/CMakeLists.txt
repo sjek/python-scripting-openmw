@@ -196,14 +196,14 @@ endif (MSVC)
 #add_subdirectory(mwscript) can put this all in its own CMakeLists.txt
 FIND_PACKAGE(SWIG REQUIRED)
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript)
-ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/mwscript/python_interface_wrap.cpp ${CMAKE_CURRENT_BINARY_DIR}/mwscript/openmw.py COMMAND "${SWIG_EXECUTABLE}" -c++ -python -o ${CMAKE_CURRENT_BINARY_DIR}/mwscript/python_interface_wrap.cpp ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i)
+ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/mwscript/python_interface_wrap.cpp ${CMAKE_BINARY_DIR}/openmw.py COMMAND "${SWIG_EXECUTABLE}" -c++ -python -o ${CMAKE_CURRENT_BINARY_DIR}/mwscript/python_interface_wrap.cpp -outdir ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i)
+# also depends on aiactivate.hpp etc
 add_library(wrapper STATIC ${CMAKE_CURRENT_BINARY_DIR}/mwscript/python_interface_wrap.cpp)
 set_target_properties(wrapper PROPERTIES
      LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript
      INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/mwscript
      )
-INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/mwscript/openmw.py DESTINATION ${BINDIR}) #find better place
-# also depends on aiactivate.hpp etc
+INSTALL(FILES ${CMAKE_BINARY_DIR}/openmw.py DESTINATION ${BINDIR}) #find better place
 FIND_PACKAGE(PythonLibs)
 INCLUDE_DIRECTORIES(${PYTHON_INCLUDE_PATH})
 target_link_libraries(openmw ${PYTHON_LIBRARIES} wrapper)

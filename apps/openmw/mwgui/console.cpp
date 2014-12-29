@@ -177,13 +177,14 @@ namespace MWGui
         // Log the command
         print("#FFFFFF> " + command + "\n");
 
-        // PLACE PYTHON INTERCEPT HERE
-        if (command=="python-test")
+        // PLACE PYTHON INTERCEPT HERE, this is temporary proof-of-concept. place text.py in same dir as executable
+        if (command=="test.py")
         {
             Py_Initialize();
-            PyRun_SimpleString("print('yay')\n"
-                     "print 'Today is'\n");
+            PyObject* PyFileObject = PyFile_FromString("test.py", "r");
+            PyRun_SimpleFileEx(PyFile_AsFile(PyFileObject), "test.py", 1);
             Py_Finalize();
+            return;
         };
 
         Compiler::Locals locals;
