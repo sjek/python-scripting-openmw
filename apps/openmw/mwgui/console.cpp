@@ -181,8 +181,8 @@ namespace MWGui
         if (command=="test.py")
         {
             Py_Initialize();
-            PyObject* PyFileObject = PyFile_FromString("test.py", "r");
-            PyRun_SimpleFileEx(PyFile_AsFile(PyFileObject), "test.py", 1);
+            FILE *file_1 = fopen("test.py","r");
+            PyRun_SimpleFileEx(file_1,"test.py",1);
             Py_Finalize();
             return;
         };
