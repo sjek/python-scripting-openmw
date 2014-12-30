@@ -185,7 +185,7 @@ namespace MWGui
             PyRun_SimpleFileEx(file_1,"test.py",1);
             Py_Finalize();
             return;
-        };
+        }
 
         Compiler::Locals locals;
         Compiler::Output output (locals);

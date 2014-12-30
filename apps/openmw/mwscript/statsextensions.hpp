@@ -17,6 +17,7 @@ namespace MWScript
     namespace Stats
     {        
         void installOpcodes (Interpreter::Interpreter& interpreter);
+        void SetPCCrimeLevel (const int bounty);
     }
 }
 

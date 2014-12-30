@@ -427,6 +427,14 @@ namespace MWScript
                         MWBase::Environment::get().getWorld()->getPlayer().recordCrimeId();
                 }
         };
+        void SetPCCrimeLevel (const int bounty)
+        {
+            MWBase::World *world = MWBase::Environment::get().getWorld();
+            MWWorld::Ptr player = world->getPlayerPtr();
+            player.getClass().getNpcStats (player).setBounty(bounty);
+            if (bounty == 0)
+                MWBase::Environment::get().getWorld()->getPlayer().recordCrimeId();
+        }
 
         class OpModPCCrimeLevel : public Interpreter::Opcode0
         {

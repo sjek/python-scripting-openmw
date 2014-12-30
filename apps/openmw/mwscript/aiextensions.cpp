@@ -57,7 +57,7 @@ namespace MWScript
             MWWorld::Ptr ptr = MWBase::Environment::get().getWorld()->getPtr (actorID, true);
             ptr.getClass().getCreatureStats (ptr).getAiSequence().stack(activatePackage, ptr);
             std::cout << "AiActivate" << std::endl;
-        };
+        }
 
         template<class R>
         class OpAiTravel : public Interpreter::Opcode1

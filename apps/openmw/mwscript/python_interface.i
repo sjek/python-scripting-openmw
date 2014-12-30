@@ -2,6 +2,7 @@
  %{
  /* Includes the header in the wrapper code */
  #include "aiextensions.hpp"
+ #include "statsextensions.hpp"
  %}
 
 %ignore installOpcodes;
@@ -11,4 +12,5 @@
 
  /* Parse the header file to generate wrappers */
 %include "aiextensions.hpp"
+%include "statsextensions.hpp"
 
