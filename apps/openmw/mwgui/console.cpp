@@ -177,12 +177,12 @@ namespace MWGui
         // Log the command
         print("#FFFFFF> " + command + "\n");
 
-        // PLACE PYTHON INTERCEPT HERE, this is temporary proof-of-concept. place text.py in same dir as executable
-        if (command=="test.py")
+        // Python case
+        if (command.find(".py") != std::string::npos)
         {
             Py_Initialize();
-            FILE *file_1 = fopen("test.py","r");
-            PyRun_SimpleFileEx(file_1,"test.py",1);
+            FILE *file_1 = fopen(command.c_str(),"r");
+            PyRun_SimpleFileEx(file_1,command.c_str(),1);
             Py_Finalize();
             return;
         }

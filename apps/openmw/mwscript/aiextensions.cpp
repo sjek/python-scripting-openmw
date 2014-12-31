@@ -53,8 +53,8 @@ namespace MWScript
         };
         void AiActivate (const std::string & actorID, const std::string & objectID)
         {
-            MWMechanics::AiActivate activatePackage(objectID); //do aifollow next, try implementing both in python
-            MWWorld::Ptr ptr = MWBase::Environment::get().getWorld()->getPtr (actorID, true);
+            MWMechanics::AiActivate activatePackage(objectID);
+            MWWorld::Ptr ptr = MWBase::Environment::get().getWorld()->getPtr (actorID, true);//see refs.hpp
             ptr.getClass().getCreatureStats (ptr).getAiSequence().stack(activatePackage, ptr);
             std::cout << "AiActivate" << std::endl;
         }
