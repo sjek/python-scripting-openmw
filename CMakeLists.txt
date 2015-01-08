@@ -578,6 +578,7 @@ endif(BUILD_NIFTEST)
 
 # Apps and tools
 add_subdirectory( apps/openmw )
+add_subdirectory( apps/extensiontool )
 
 if (BUILD_BSATOOL)
   add_subdirectory( apps/bsatool )
