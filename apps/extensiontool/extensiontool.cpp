@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <fstream>
 
 #include <components/compiler/extensions.hpp>
 #include <components/compiler/extensions0.hpp>
@@ -12,13 +13,19 @@ class CodeGenerator
     Compiler::Extensions mExtensions;
     std::vector<std::string> mKeywords;
     void test2(std::string keyword);
+    std::ofstream mHeaderfile;
 public:
     CodeGenerator()
     {
+        mHeaderfile.open ("openmw_bindings.hpp");
         Compiler::registerExtensions(mExtensions);
         mExtensions.listKeywords(mKeywords);
-        std::cout << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
+        mHeaderfile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
         for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::test2), this) );
+    }
+    ~CodeGenerator()
+    {
+        mHeaderfile.close ();
     }
 };
 
@@ -65,7 +72,7 @@ void CodeGenerator::test2(std::string keyword)
     }
     else
     {
-            std::cout << "error generating " << keyword << " not function or instruction\n";
+            std::cerr << "error generating " << keyword << " not function or instruction\n";
     }
 
     std::string commas = "";
@@ -94,38 +101,45 @@ void CodeGenerator::test2(std::string keyword)
         if (*c=='f')
         {
             arguments += commas + "Interpreter::Type_Float arg" + convert.str()+optional;
+            argcount++;
         }
         else if (*c=='s')
         {
             arguments += commas + "Interpreter::Type_Short arg" + convert.str()+optionalstr;
+            argcount++;
         }
         else if (*c=='S' || *c=='c')
         {
             arguments += commas + "std::string arg" + convert.str()+optionalstr;
+            argcount++;
         }
-        else if (*c=='x' || *c=='X' || *c=='z' || *c=='j')
+        else if (*c=='j') //junk appears as a first argument but not used
         {
             continue;
+        }
+        else if (*c=='x' || *c=='X' || *c=='z' ) //these are only in optional arguments, but ignored
+        {
+            break;
         }
         else if (*c=='l')
         {
             arguments += commas + "Interpreter::Type_Integer arg" + convert.str()+optional;
+            argcount++;
         }
         else if (*c=='/')
         {
             optional= "=-123456";
             optionalstr= "=\"OPTIONAL_FLAG\"";
-            argcount--;
+
         }
         else
         {
-            arguments= commas + "ERROR IN ARG TYPE";
-         }
-        argcount++;
+            std::cerr << "ERROR IN ARG TYPE for keyword: " << keyword;
+        }
     }
 
     declaration += "("+arguments+");\n";
-    std::cout << declaration << "\n";
+    mHeaderfile << declaration << "\n";
     return;
 }
 
