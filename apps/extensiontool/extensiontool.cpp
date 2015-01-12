@@ -4,75 +4,94 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <bitset>
+#include <stack>
 
 #include <components/compiler/extensions.hpp>
 #include <components/compiler/extensions0.hpp>
+#include <components/compiler/literals.hpp>
+
 
 class CodeGenerator
 {
-    Compiler::Extensions mExtensions;
-    std::vector<std::string> mKeywords;
-    void test2(std::string keyword);
-    std::ofstream mHeaderfile;
-public:
-    CodeGenerator()
-    {
-        mHeaderfile.open ("openmw_bindings.hpp");
-        Compiler::registerExtensions(mExtensions);
-        mExtensions.listKeywords(mKeywords);
-        mHeaderfile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
-        for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::test2), this) );
-    }
-    ~CodeGenerator()
-    {
-        mHeaderfile.close ();
-    }
+        Compiler::Extensions mExtensions;
+        std::vector<std::string> mKeywords;
+        void keywordParser(std::string keyword);
+        std::ofstream mHeaderFile;
+        std::ofstream mImpFile;
+    public:
+        CodeGenerator()
+        {
+            mHeaderFile.open ("openmwbindings.hpp");
+            mImpFile.open ("openmwbindings.cpp");
+            Compiler::registerExtensions(mExtensions);
+            mExtensions.listKeywords(mKeywords);
+            mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
+            mHeaderFile << "namespace MWScriptExtensions\n{\n";
+            mImpFile << "#include \"openmwbindings.hpp\"\n\n";
+            mImpFile << "namespace MWScriptExtensions\n{\n    extern MWScript::InterpreterContext& context;\n";
+            mImpFile << "    extern Interpreter::Interpreter interpreter;//define these in the startexternalscript opcode and install opcodes\n\n";
+            for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::keywordParser), this) );
+            mHeaderFile << "}\n";
+            mImpFile << "}\n\n";
+        }
 };
 
 
-void CodeGenerator::test2(std::string keyword)
+void CodeGenerator::keywordParser(std::string keyword)
 {
     Compiler::ScriptReturn returnType;
-    std::string return_declare="";
-    std::string return_command="";
+    std::string returnDeclare="";
+    std::string returnCommand="";
     std::string declaration="";
     std::string arguments="";
+    std::string foursp ="    ";
+    std::stack <std::string> pushArguments;
     int argcount=0;
+    int optionalcount=-1;
     Compiler::ScriptArgs argumentType;
+    std::vector<Interpreter::Type_Code> code;
+    Compiler::Literals literals;
     int keywordint=mExtensions.searchKeyword(keyword);
     bool explicitReference=0;
     if(mExtensions.isFunction (keywordint, returnType, argumentType, explicitReference))
     {
+        mExtensions.generateFunctionCode(keywordint,code,literals,"",0);
+        //std::map<int, Compiler::Extensions::Function>::const_iterator iter = mFunctions.find (keyword);
         if (returnType=='f')
         {
-            return_declare="Interpreter::Type_Float";
-            return_command = "return runtime[0].mFloat"; // maybe runtime.pop() as well?
+            mHeaderFile << foursp << "Interpreter::Type_Float";
+            mImpFile << foursp << "Interpreter::Type_Float";
+            returnCommand = "return runtime[0].mFloat"; // maybe runtime.pop() as well?
         }
         else if (returnType=='S')
         {
-            return_declare="std::string";
-            return_command = "return runtime.getStringLiteral(runtime[0].mInteger)";
+            //returnDeclare="std::string";
+            //returnCommand = "return runtime.getStringLiteral(runtime[0].mInteger)";
+            std::cerr << "String returns not supported in keyword  " << keyword;
         }
         else if (returnType=='l')
         {
-            return_declare="Interpreter::Type_Integer";
-            return_command = "return runtime[0].mInteger";
+            mHeaderFile << foursp << "Interpreter::Type_Integer";
+            mImpFile << foursp << "Interpreter::Type_Integer";
+            returnCommand = "return runtime[0].mInteger";
         }
         else
         {
-            std::cout << "error generating " << keyword << " no valid returnType\n";
-            //return_declare="void ";
-            //return_command = "return";
-         }
-        declaration= return_declare + " " + keyword;
+            std::cerr << "error generating " << keyword << " no valid returnType\n";
+        }
+        mHeaderFile << " " << keyword << "(";
+        mImpFile << " " << keyword << "(";
     }
     else if(mExtensions.isInstruction (keywordint, argumentType, explicitReference))
     {
-        declaration= "void " + keyword;
+        mExtensions.generateInstructionCode(keywordint,code,literals,"",0);
+        mHeaderFile << foursp << "void " << keyword << "(";
+        mImpFile << foursp << "void " << keyword<<"(";
     }
     else
     {
-            std::cerr << "error generating " << keyword << " not function or instruction\n";
+        std::cerr << "error generating " << keyword << " not function or instruction\n";
     }
 
     std::string commas = "";
@@ -81,8 +100,6 @@ void CodeGenerator::test2(std::string keyword)
     std::ostringstream convert;
     for(const char* c = argumentType.c_str(); *c; ++c)
     {
-        convert.str("");
-        convert << argcount;
         if(argcount > 0) commas=", ";
         /// Typedef for script arguments string
         /** Every character reperesents an argument to the command. All arguments are required until a /, after which
@@ -100,17 +117,48 @@ void CodeGenerator::test2(std::string keyword)
         **/
         if (*c=='f')
         {
-            arguments += commas + "Interpreter::Type_Float arg" + convert.str()+optional;
+            mHeaderFile << commas << "Interpreter::Type_Float arg" << argcount << optional;
+            mImpFile << commas << "Interpreter::Type_Float arg" << argcount;
+            convert << "if (arg" << argcount << "!=-123456)\n";
+            convert << foursp << foursp << "{\n";
+            convert << foursp << foursp << foursp << "Compiler::Generator.pushFloat(code, literals, arg" << argcount <<");\n";
+            convert << foursp << foursp << foursp << "argumentsPassed++;\n";
+            convert << foursp << foursp << "}\n";
+            pushArguments.push(convert.str());
+            convert.str("");
             argcount++;
         }
         else if (*c=='s')
         {
-            arguments += commas + "Interpreter::Type_Short arg" + convert.str()+optionalstr;
-            argcount++;
+            //mHeaderFile << commas << "Interpreter::Type_Short arg" << argcount<<optionalstr;
+            //mImpFile << commas << "Interpreter::Type_Short arg" << argcount;
+            //argcount++;
+            std::cerr << "shorts not supported yet in keyword: " + keyword + "\n";
         }
         else if (*c=='S' || *c=='c')
         {
-            arguments += commas + "std::string arg" + convert.str()+optionalstr;
+            mHeaderFile << commas << "std::string arg" << argcount<<optionalstr;
+            mImpFile << commas << "std::string arg" << argcount;
+            if (*c=='c')
+            {
+                convert << "if (arg" << argcount << "!=\"OPTIONAL_FLAG\")\n";
+                convert << foursp << foursp << "{\n";
+                convert << foursp << foursp << foursp << "Compiler::Generator.pushString(code, literals, Misc::StringUtils::lowerCase (arg" << argcount << "));\n";
+                convert << foursp << foursp << foursp << "argumentsPassed++;\n";
+                convert << foursp << foursp << "}\n";
+                pushArguments.push(convert.str());
+                convert.str("");
+            } else if (*c=='S')
+            {
+                convert << "if (arg" << argcount << "!=\"OPTIONAL_FLAG\")\n";
+                convert << foursp << foursp << "{\n";
+                convert << foursp << foursp << foursp << "Compiler::Generator.pushString(code, literals, arg" << convert.str() << ");\n";
+                convert << foursp << foursp << foursp << "argumentsPassed++;\n";
+                convert << foursp << foursp << "}\n";
+                pushArguments.push(convert.str());
+                convert.str("");
+            }
+            convert.str("");
             argcount++;
         }
         else if (*c=='j') //junk appears as a first argument but not used
@@ -123,14 +171,22 @@ void CodeGenerator::test2(std::string keyword)
         }
         else if (*c=='l')
         {
-            arguments += commas + "Interpreter::Type_Integer arg" + convert.str()+optional;
+            mHeaderFile << commas << "Interpreter::Type_Integer arg" << argcount<<optionalstr;
+            mImpFile << commas << "Interpreter::Type_Integer arg" << argcount;
+            convert << "if (arg" << argcount << "!=-123456)\n";
+            convert << foursp << foursp << "{\n";
+            convert << foursp << foursp << foursp << "Compiler::Generator.pushInt(code, literals, arg" << argcount <<");\n";
+            convert << foursp << foursp << foursp << "argumentsPassed++;\n";
+            convert << foursp << foursp << "}\n";
+            pushArguments.push(convert.str());
+            convert.str("");
             argcount++;
         }
         else if (*c=='/')
         {
             optional= "=-123456";
             optionalstr= "=\"OPTIONAL_FLAG\"";
-
+            optionalcount=argcount;
         }
         else
         {
@@ -138,8 +194,36 @@ void CodeGenerator::test2(std::string keyword)
         }
     }
 
-    declaration += "("+arguments+");\n";
-    mHeaderfile << declaration << "\n";
+    if (optionalcount==-1)
+    {
+        optionalcount =0;
+    }
+    else
+    {
+        optionalcount = argcount-optionalcount;
+    }
+
+    mHeaderFile << ");\n";
+    mImpFile << ")\n    {\n";
+    mImpFile << foursp << foursp << "Interpreter::Type_Code codeword = " << code[0] << ";//codeword without arguments\n";
+    mImpFile << foursp << foursp << "Literals& literals;\n";
+    mImpFile << foursp << foursp << "std::vector<Interpreter::Type_Code> code;\n";
+    mImpFile << foursp << foursp << "uint argCount = " << argcount << ";\n";
+    mImpFile << foursp << foursp << "uint optionalArgCount = " << optionalcount << ";\n";
+    mImpFile << foursp << foursp << "uint argumentsPassed = 0;\n";
+    mImpFile << foursp << foursp << "uint optionalArgumentsPassed = 0;\n";
+    for (uint i = pushArguments.size(); i >0; i--)
+    {
+        mImpFile << foursp << foursp << pushArguments.top();
+        pushArguments.pop();
+    }
+    mImpFile << foursp << foursp << "optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);\n";
+    mImpFile << foursp << foursp << "// adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it\n";
+    mImpFile << foursp << foursp << "if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);\n";
+    mImpFile << foursp << foursp << "//now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()\n";
+    mImpFile << foursp << foursp << "interpreter.run(&code[0], code.size(), context);//todo - get the runtime!\n";
+    mImpFile << foursp << foursp << returnCommand << ";\n";
+    mImpFile << foursp << "}\n";
     return;
 }
 
