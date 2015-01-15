@@ -1,16 +1,16 @@
 %module openmw
  %{
  /* Includes the header in the wrapper code */
- #include "aiextensions.hpp"
- #include "statsextensions.hpp"
+ #include "openmwbindings.hpp"
  %}
 
-%ignore installOpcodes;
+%ignore getData;
+%ignore Data;
 
 %include "std_string.i"
 
 
  /* Parse the header file to generate wrappers */
-%include "aiextensions.hpp"
-%include "statsextensions.hpp"
+%include "openmwbindings.hpp"
+%include "../../../components/interpreter/types.hpp"
 

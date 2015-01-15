@@ -9,11 +9,22 @@
 #include <components/compiler/extensions0.hpp>
 
 #include "../mwscript/extensions.hpp"
+#include "../mwscript/interpretercontext.hpp"
+#include "../mwscript/locals.hpp"
+#include "../mwscript/openmwbindings.hpp"
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 
 #include "../mwworld/esmstore.hpp"
+
+namespace MWScriptExtensions
+{
+    extern MWScript::InterpreterContext context;
+    Interpreter::Interpreter interpreter;
+    void setContext(MWScript::InterpreterContext pythonContext) { MWScript::InterpreterContext context=pythonContext; }
+
+}
 
 namespace MWGui
 {
@@ -177,9 +188,14 @@ namespace MWGui
         // Log the command
         print("#FFFFFF> " + command + "\n");
 
+
         // Python case
         if (command.find(".py") != std::string::npos)
         {
+            MWScript::installOpcodes(MWScriptExtensions::interpreter);
+            //MWScript::Locals pythonLocals;
+            MWScript::InterpreterContext pythonContext(NULL, mPtr);
+            MWScriptExtensions::setContext(pythonContext);
             Py_Initialize();
             FILE *file_1 = fopen(command.c_str(),"r");
             PyRun_SimpleFileEx(file_1,command.c_str(),1);
