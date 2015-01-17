@@ -6,6 +6,7 @@
 
 #include "creaturestats.hpp"
 #include "npcstats.hpp"
+#include "spellcasting.hpp"
 
 namespace MWMechanics
 {
@@ -55,7 +56,7 @@ namespace MWMechanics
         enchantment.mData.mCharge = getGemCharge();
         enchantment.mData.mAutocalc = 0;
         enchantment.mData.mType = mCastStyle;
-        enchantment.mData.mCost = getCastCost();
+        enchantment.mData.mCost = getBaseCastCost();
 
         store.remove(mSoulGemPtr, 1, player);
 
@@ -65,7 +66,7 @@ namespace MWMechanics
 
         if(mSelfEnchanting)
         {
-            if(std::rand()/static_cast<double> (RAND_MAX)*100 < getEnchantChance())
+            if(getEnchantChance()<std::rand()/static_cast<double> (RAND_MAX)*100)
                 return false;
 
             mEnchanter.getClass().skillUsageSucceeded (mEnchanter, ESM::Skill::Enchant, 2);
@@ -170,28 +171,30 @@ namespace MWMechanics
         for (std::vector<ESM::ENAMstruct>::const_iterator it = mEffects.begin(); it != mEffects.end(); ++it)
         {
             float baseCost = (store.get<ESM::MagicEffect>().find(it->mEffectID))->mData.mBaseCost;
-            // To reflect vanilla behavior
             int magMin = (it->mMagnMin == 0) ? 1 : it->mMagnMin;
             int magMax = (it->mMagnMax == 0) ? 1 : it->mMagnMax;
             int area = (it->mArea == 0) ? 1 : it->mArea;
 
-            float magnitudeCost = 0;
+            float magnitudeCost = (magMin + magMax) * baseCost * 0.05;
             if (mCastStyle == ESM::Enchantment::ConstantEffect)
             {
-                magnitudeCost = (magMin + magMax) * baseCost * 2.5;
+                magnitudeCost *= store.get<ESM::GameSetting>().find("fEnchantmentConstantDurationMult")->getFloat();
             }
             else
             {
-                magnitudeCost = (magMin + magMax) * it->mDuration * baseCost * 0.025;
-                if(it->mRange == ESM::RT_Target)
-                    magnitudeCost *= 1.5;
+                magnitudeCost *= it->mDuration;
             }
 
-            float areaCost = area * 0.025 * baseCost;
-            if (it->mRange == ESM::RT_Target)
-                areaCost *= 1.5;
+            float areaCost = area * 0.05 * baseCost;
 
-            enchantmentCost += (magnitudeCost + areaCost) * effectsLeftCnt;
+            const float fEffectCostMult = store.get<ESM::GameSetting>().find("fEffectCostMult")->getFloat();
+
+            float cost = (magnitudeCost + areaCost) * fEffectCostMult;
+            if (it->mRange == ESM::RT_Target)
+                cost *= 1.5;
+
+            enchantmentCost += cost * effectsLeftCnt;
+            enchantmentCost = std::max(1.f, enchantmentCost);
             --effectsLeftCnt;
         }
 
@@ -199,23 +202,19 @@ namespace MWMechanics
     }
 
 
-    int Enchanting::getCastCost() const
+    int Enchanting::getBaseCastCost() const
     {
         if (mCastStyle == ESM::Enchantment::ConstantEffect)
             return 0;
 
-        const float enchantCost = getEnchantPoints();
+        return getEnchantPoints();
+    }
+
+    int Enchanting::getEffectiveCastCost() const
+    {
+        int baseCost = getBaseCastCost();
         MWWorld::Ptr player = MWBase::Environment::get().getWorld()->getPlayerPtr();
-        MWMechanics::NpcStats &stats = player.getClass().getNpcStats(player);
-        int eSkill = stats.getSkill(ESM::Skill::Enchant).getModified();
-
-        /*
-         * Each point of enchant skill above/under 10 subtracts/adds
-         * one percent of enchantment cost while minimum is 1.
-         */
-        const float castCost = enchantCost - (enchantCost / 100) * (eSkill - 10);
-
-        return static_cast<int>((castCost < 1) ? 1 : castCost);
+        return getEffectiveEnchantmentCastCost(baseCost, player);
     }
 
 

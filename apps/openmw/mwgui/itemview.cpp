@@ -2,8 +2,6 @@
 
 #include <cmath>
 
-#include <boost/lexical_cast.hpp>
-
 #include <MyGUI_FactoryManager.h>
 #include <MyGUI_Gui.h>
 #include <MyGUI_ImageBox.h>
@@ -56,11 +54,11 @@ void ItemView::layoutWidgets()
     int x = 0;
     int y = 0;
     MyGUI::Widget* dragArea = mScrollView->getChildAt(0);
-    int maxHeight = dragArea->getHeight();
+    int maxHeight = mScrollView->getHeight();
 
     int rows = maxHeight/42;
     rows = std::max(rows, 1);
-    bool showScrollbar = std::ceil(dragArea->getChildCount()/float(rows)) > mScrollView->getWidth()/42;
+    bool showScrollbar = int(std::ceil(dragArea->getChildCount()/float(rows))) > mScrollView->getWidth()/42;
     if (showScrollbar)
         maxHeight -= 18;
 

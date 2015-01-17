@@ -10,6 +10,7 @@
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
+#include "../mwworld/esmstore.hpp"
 
 #include "ptr.hpp"
 #include "refdata.hpp"
@@ -37,12 +38,12 @@ namespace MWWorld
         throw std::runtime_error ("class does not support ID retrieval");
     }
 
-    void Class::insertObjectRendering (const Ptr& ptr, MWRender::RenderingInterface& renderingInterface) const
+    void Class::insertObjectRendering (const Ptr& ptr, const std::string& mesh, MWRender::RenderingInterface& renderingInterface) const
     {
 
     }
 
-    void Class::insertObject(const Ptr& ptr, MWWorld::PhysicsSystem& physics) const
+    void Class::insertObject(const Ptr& ptr, const std::string& mesh, MWWorld::PhysicsSystem& physics) const
     {
 
     }
@@ -380,6 +381,16 @@ namespace MWWorld
     bool Class::canWalk(const Ptr &ptr) const
     {
         return false;
+    }
+
+    bool Class::isPureWaterCreature(const MWWorld::Ptr& ptr) const
+    {
+        return canSwim(ptr) && !canWalk(ptr);
+    }
+
+    bool Class::isMobile(const MWWorld::Ptr& ptr) const
+    {
+        return canSwim(ptr) || canWalk(ptr) || canFly(ptr);
     }
 
     int Class::getSkill(const MWWorld::Ptr& ptr, int skill) const

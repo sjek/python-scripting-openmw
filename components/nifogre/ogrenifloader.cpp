@@ -689,6 +689,14 @@ public:
  */
 class NIFObjectLoader
 {
+    static bool sShowMarkers;
+public:
+    static void setShowMarkers(bool show)
+    {
+        sShowMarkers = show;
+    }
+private:
+
     static void warn(const std::string &msg)
     {
         std::cerr << "NIFObjectLoader: Warn: " << msg << std::endl;
@@ -799,7 +807,7 @@ class NIFObjectLoader
             {
                 if (ctrls->recType == Nif::RC_NiAlphaController)
                 {
-                    const Nif::NiAlphaController *alphaCtrl = dynamic_cast<const Nif::NiAlphaController*>(ctrls.getPtr());
+                    const Nif::NiAlphaController *alphaCtrl = static_cast<const Nif::NiAlphaController*>(ctrls.getPtr());
                     Ogre::ControllerValueRealPtr dstval(OGRE_NEW AlphaController::Value(movable, alphaCtrl->data.getPtr(), &scene->mMaterialControllerMgr));
                     AlphaController::Function* function = OGRE_NEW AlphaController::Function(alphaCtrl, (animflags&Nif::NiNode::AnimFlag_AutoPlay));
                     scene->mMaxControllerLength = std::max(function->mStopTime, scene->mMaxControllerLength);
@@ -808,7 +816,7 @@ class NIFObjectLoader
                 }
                 else if (ctrls->recType == Nif::RC_NiMaterialColorController)
                 {
-                    const Nif::NiMaterialColorController *matCtrl = dynamic_cast<const Nif::NiMaterialColorController*>(ctrls.getPtr());
+                    const Nif::NiMaterialColorController *matCtrl = static_cast<const Nif::NiMaterialColorController*>(ctrls.getPtr());
                     Ogre::ControllerValueRealPtr dstval(OGRE_NEW MaterialColorController::Value(movable, matCtrl->data.getPtr(), &scene->mMaterialControllerMgr));
                     MaterialColorController::Function* function = OGRE_NEW MaterialColorController::Function(matCtrl, (animflags&Nif::NiNode::AnimFlag_AutoPlay));
                     scene->mMaxControllerLength = std::max(function->mStopTime, scene->mMaxControllerLength);
@@ -826,7 +834,7 @@ class NIFObjectLoader
             {
                 if (ctrls->recType == Nif::RC_NiFlipController)
                 {
-                    const Nif::NiFlipController *flipCtrl = dynamic_cast<const Nif::NiFlipController*>(ctrls.getPtr());
+                    const Nif::NiFlipController *flipCtrl = static_cast<const Nif::NiFlipController*>(ctrls.getPtr());
 
 
                     Ogre::ControllerValueRealPtr dstval(OGRE_NEW FlipController::Value(
@@ -928,6 +936,8 @@ class NIFObjectLoader
             particledata = static_cast<const Nif::NiAutoNormalParticles*>(partnode)->data.getPtr();
         else if(partnode->recType == Nif::RC_NiRotatingParticles)
             particledata = static_cast<const Nif::NiRotatingParticles*>(partnode)->data.getPtr();
+        else
+            throw std::runtime_error("Unexpected particle node type");
 
         std::string fullname = name+"@index="+Ogre::StringConverter::toString(partnode->recIndex);
         if(partnode->name.length() > 0)
@@ -971,7 +981,10 @@ class NIFObjectLoader
             {
                 const Nif::NiParticleSystemController *partctrl = static_cast<const Nif::NiParticleSystemController*>(ctrl.getPtr());
 
-                partsys->setDefaultDimensions(partctrl->size*2, partctrl->size*2);
+                float size = partctrl->size*2;
+                // HACK: don't allow zero-sized particles which can rarely cause an AABB assertion in Ogre to fail
+                size = std::max(size, 0.00001f);
+                partsys->setDefaultDimensions(size, size);
 
                 if(!partctrl->emitter.empty())
                 {
@@ -1171,11 +1184,6 @@ class NIFObjectLoader
         if(node->recType == Nif::RC_RootCollisionNode)
             isRootCollisionNode = true;
 
-        // Marker objects: just skip the entire node branch
-        /// \todo don't do this in the editor
-        if (node->name.find("marker") != std::string::npos)
-            return;
-
         if(node->recType == Nif::RC_NiBSAnimationNode)
             animflags |= node->flags;
         else if(node->recType == Nif::RC_NiBSParticleNode)
@@ -1208,7 +1216,7 @@ class NIFObjectLoader
                 const Nif::NiStringExtraData *sd = static_cast<const Nif::NiStringExtraData*>(e.getPtr());
                 // String markers may contain important information
                 // affecting the entire subtree of this obj
-                if(sd->string == "MRK")
+                if(sd->string == "MRK" && !sShowMarkers)
                 {
                     // Marker objects. These meshes are only visible in the
                     // editor.
@@ -1381,6 +1389,7 @@ ObjectScenePtr Loader::createObjects(Ogre::SceneNode *parentNode, std::string na
 }
 
 ObjectScenePtr Loader::createObjects(Ogre::Entity *parent, const std::string &bonename,
+                                     const std::string& bonefilter,
                                  Ogre::SceneNode *parentNode,
                                  std::string name, const std::string &group)
 {
@@ -1406,11 +1415,9 @@ ObjectScenePtr Loader::createObjects(Ogre::Entity *parent, const std::string &bo
 
     if(isskinned)
     {
-        // Apparently both are allowed. Sigh.
-        // This could also mean that filters are supposed to work on the actual node
-        // hierarchy, rather than just trishapes, and the 'tri ' should be omitted?
-        std::string filter = "@shape=tri "+bonename;
-        std::string filter2 = "@shape="+bonename;
+        // accepts anything named "filter*" or "tri filter*"
+        std::string filter = "@shape=tri "+bonefilter;
+        std::string filter2 = "@shape="+bonefilter;
         Misc::StringUtils::toLower(filter);
         Misc::StringUtils::toLower(filter2);
         for(size_t i = 0;i < scene->mEntities.size();i++)
@@ -1470,6 +1477,15 @@ void Loader::createKfControllers(Ogre::Entity *skelBase,
                                  std::vector<Ogre::Controller<Ogre::Real> > &ctrls)
 {
     NIFObjectLoader::loadKf(skelBase->getSkeleton(), name, textKeys, ctrls);
+}
+
+bool Loader::sShowMarkers = false;
+bool NIFObjectLoader::sShowMarkers = false;
+
+void Loader::setShowMarkers(bool show)
+{
+    sShowMarkers = show;
+    NIFObjectLoader::setShowMarkers(show);
 }
 
 

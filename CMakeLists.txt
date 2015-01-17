@@ -20,29 +20,13 @@ set(OPENMW_VERSION_TAGHASH "")
 
 set(OPENMW_VERSION "${OPENMW_VERSION_MAJOR}.${OPENMW_VERSION_MINOR}.${OPENMW_VERSION_RELEASE}")
 
+set(GIT_CHECKOUT FALSE)
 if(EXISTS ${PROJECT_SOURCE_DIR}/.git)
     if(NOT EXISTS ${PROJECT_SOURCE_DIR}/.git/shallow)
         find_package(Git)
 
         if(GIT_FOUND)
-            include(GetGitRevisionDescription)
-            get_git_tag_revision(TAGHASH --tags --max-count=1)
-            get_git_head_revision(REFSPEC COMMITHASH)
-            git_describe(VERSION --tags ${TAGHASH})
-
-            string(REGEX MATCH "^openmw-[^0-9]*[0-9]+\\.[0-9]+\\.[0-9]+.*" MATCH "${VERSION}")
-            if(MATCH)
-                string(REGEX REPLACE "^openmw-([0-9]+)\\..*" "\\1" GIT_VERSION_MAJOR "${VERSION}")
-                string(REGEX REPLACE "^openmw-[0-9]+\\.([0-9]+).*" "\\1" GIT_VERSION_MINOR "${VERSION}")
-                string(REGEX REPLACE "^openmw-[0-9]+\\.[0-9]+\\.([0-9]+).*" "\\1" GIT_VERSION_RELEASE "${VERSION}")
-
-                set(OPENMW_VERSION_COMMITHASH "${COMMITHASH}")
-                set(OPENMW_VERSION_TAGHASH "${TAGHASH}")
-
-                message(STATUS "OpenMW version ${OPENMW_VERSION}")
-            else(MATCH)
-                message(WARNING "Failed to get valid version information from Git")
-            endif(MATCH)
+            set(GIT_CHECKOUT TRUE)
         else(GIT_FOUND)
             message(WARNING "Git executable not found")
         endif(GIT_FOUND)
@@ -77,7 +61,7 @@ option(BUILD_MWINIIMPORTER "build MWiniImporter" ON)
 option(BUILD_OPENCS "build OpenMW Construction Set" ON)
 option(BUILD_WIZARD "build Installation Wizard" ON)
 option(BUILD_WITH_CODE_COVERAGE "Enable code coverage with gconv" OFF)
-option(BUILD_UNITTESTS "Enable Unittests with Google C++ Unittest and GMock frameworks" OFF)
+option(BUILD_UNITTESTS "Enable Unittests with Google C++ Unittest" OFF)
 option(BUILD_NIFTEST "build nif file tester" OFF)
 option(BUILD_MYGUI_PLUGIN "build MyGUI plugin for OpenMW resources, to use with MyGUI tools" ON)
 
@@ -117,7 +101,7 @@ set(OENGINE_OGRE
 set(OENGINE_GUI
   ${LIBS_DIR}/openengine/gui/loglistener.cpp
   ${LIBS_DIR}/openengine/gui/manager.cpp
-  ${LIBS_DIR}/openengine/gui/layout.hpp
+  ${LIBS_DIR}/openengine/gui/layout.cpp
 )
 
 set(OENGINE_BULLET
@@ -382,6 +366,8 @@ configure_file(${OpenMW_SOURCE_DIR}/files/opencs/defaultfilters
 if (NOT WIN32 AND NOT APPLE)
     configure_file(${OpenMW_SOURCE_DIR}/files/openmw.desktop
         "${OpenMW_BINARY_DIR}/openmw.desktop")
+    configure_file(${OpenMW_SOURCE_DIR}/files/openmw-mimeinfo.xml
+        "${OpenMW_BINARY_DIR}/openmw-mimeinfo.xml")
     configure_file(${OpenMW_SOURCE_DIR}/files/opencs.desktop
         "${OpenMW_BINARY_DIR}/opencs.desktop")
 endif()
@@ -447,6 +433,7 @@ IF(NOT WIN32 AND NOT APPLE)
 
     # Install icon and desktop file
     INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw.desktop" DESTINATION "${DATAROOTDIR}/applications" PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ COMPONENT "openmw")
+    INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw-mimeinfo.xml" DESTINATION "${DATAROOTDIR}/mime/packages" PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ COMPONENT "openmw")
     INSTALL(FILES "${OpenMW_SOURCE_DIR}/files/launcher/images/openmw.png" DESTINATION "${ICONDIR}" PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ COMPONENT "openmw")
     IF(BUILD_OPENCS)
         INSTALL(FILES "${OpenMW_BINARY_DIR}/opencs.desktop" DESTINATION "${DATAROOTDIR}/applications" PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ COMPONENT "opencs")
@@ -871,4 +858,3 @@ if (DOXYGEN_FOUND)
         WORKING_DIRECTORY ${OpenMW_BINARY_DIR}
         COMMENT "Generating documentation for the github-pages at ${DOXYGEN_PAGES_OUTPUT_DIR}" VERBATIM)
 endif ()
-

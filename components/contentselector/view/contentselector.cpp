@@ -24,7 +24,7 @@ ContentSelectorView::ContentSelector::ContentSelector(QWidget *parent) :
 
 void ContentSelectorView::ContentSelector::buildContentModel()
 {
-    mContentModel = new ContentSelectorModel::ContentModel();
+    mContentModel = new ContentSelectorModel::ContentModel(this);
 }
 
 void ContentSelectorView::ContentSelector::buildGameFileView()
@@ -64,30 +64,18 @@ void ContentSelectorView::ContentSelector::buildAddonView()
 void ContentSelectorView::ContentSelector::setProfileContent(const QStringList &fileList)
 {
     clearCheckStates();
-    bool foundGamefile = false;
 
     foreach (const QString &filepath, fileList)
     {
-        if (!foundGamefile)
+        const ContentSelectorModel::EsmFile *file = mContentModel->item(filepath);
+        if (file && file->isGameFile())
         {
-            const ContentSelectorModel::EsmFile *file = mContentModel->item(filepath);
-
-            foundGamefile = (file->isGameFile());
-
-            if (foundGamefile)
-            {
-                setGameFile (filepath);
-                break;
-            }
+            setGameFile (filepath);
+            break;
         }
     }
 
-/*        if (!foundGameFile)
-        {
-            //throw gamefile error here.
-        }*/
-
-    setCheckStates (fileList);
+    setContentList(fileList);
 }
 
 void ContentSelectorView::ContentSelector::setGameFile(const QString &filename)
@@ -115,14 +103,14 @@ void ContentSelectorView::ContentSelector::clearCheckStates()
     mContentModel->uncheckAll();
 }
 
-void ContentSelectorView::ContentSelector::setCheckStates(const QStringList &list)
+void ContentSelectorView::ContentSelector::setContentList(const QStringList &list)
 {
     if (list.isEmpty())
     {
         slotCurrentGameFileIndexChanged (ui.gameFileView->currentIndex());
     }
     else
-        mContentModel->setCheckStates (list, true);
+        mContentModel->setContentList(list, true);
 }
 
 ContentSelectorModel::ContentFileList

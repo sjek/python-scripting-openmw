@@ -28,6 +28,9 @@ namespace MWWorld
         // Set RefNum to its default state.
         void unsetRefNum();
 
+        /// Does the RefNum have a content file?
+        bool hasContentFile() const;
+
         // Id of object being referenced
         std::string getRefId() const;
 
@@ -79,6 +82,7 @@ namespace MWWorld
         void setFaction (const std::string& faction);
 
         // PC faction rank required to use the item. Sometimes is -1, which means "any rank".
+        void setFactionRank(int factionRank);
         int getFactionRank() const;
 
         // Lock level for doors and containers

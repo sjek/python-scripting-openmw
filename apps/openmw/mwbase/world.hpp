@@ -104,6 +104,7 @@ namespace MWBase
             virtual void clear() = 0;
 
             virtual int countSavedGameRecords() const = 0;
+            virtual int countSavedGameCells() const = 0;
 
             virtual void write (ESM::ESMWriter& writer, Loading::Listener& listener) const = 0;
 
@@ -392,6 +393,7 @@ namespace MWBase
             virtual bool isFlying(const MWWorld::Ptr &ptr) const = 0;
             virtual bool isSlowFalling(const MWWorld::Ptr &ptr) const = 0;
             virtual bool isSwimming(const MWWorld::Ptr &object) const = 0;
+            virtual bool isWading(const MWWorld::Ptr &object) const = 0;
             ///Is the head of the creature underwater?
             virtual bool isSubmerged(const MWWorld::Ptr &object) const = 0;
             virtual bool isUnderwater(const MWWorld::CellStore* cell, const Ogre::Vector3 &pos) const = 0;
@@ -546,7 +548,7 @@ namespace MWBase
             virtual void spawnEffect (const std::string& model, const std::string& textureOverride, const Ogre::Vector3& worldPos) = 0;
 
             virtual void explodeSpell (const Ogre::Vector3& origin, const ESM::EffectList& effects,
-                                       const MWWorld::Ptr& caster, const std::string& id, const std::string& sourceName) = 0;
+                                       const MWWorld::Ptr& caster, int rangeType, const std::string& id, const std::string& sourceName) = 0;
 
             virtual void activate (const MWWorld::Ptr& object, const MWWorld::Ptr& actor) = 0;
 

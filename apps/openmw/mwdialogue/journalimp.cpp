@@ -92,9 +92,7 @@ namespace MWDialogue
 
         quest.addEntry (entry); // we are doing slicing on purpose here
 
-        std::vector<std::string> empty;
-        std::string notification = "#{sJournalEntry}";
-        MWBase::Environment::get().getWindowManager()->messageBox (notification, empty);
+        MWBase::Environment::get().getWindowManager()->messageBox ("#{sJournalEntry}");
     }
 
     void Journal::setJournalIndex (const std::string& id, int index)
@@ -189,7 +187,6 @@ namespace MWDialogue
             writer.startRecord (ESM::REC_QUES);
             state.save (writer);
             writer.endRecord (ESM::REC_QUES);
-            progress.increaseProgress();
 
             for (Topic::TEntryIter iter (quest.begin()); iter!=quest.end(); ++iter)
             {
@@ -200,7 +197,6 @@ namespace MWDialogue
                 writer.startRecord (ESM::REC_JOUR);
                 entry.save (writer);
                 writer.endRecord (ESM::REC_JOUR);
-                progress.increaseProgress();
             }
         }
 
@@ -212,7 +208,6 @@ namespace MWDialogue
             writer.startRecord (ESM::REC_JOUR);
             entry.save (writer);
             writer.endRecord (ESM::REC_JOUR);
-            progress.increaseProgress();
         }
 
         for (TTopicIter iter (mTopics.begin()); iter!=mTopics.end(); ++iter)
@@ -228,7 +223,6 @@ namespace MWDialogue
                 writer.startRecord (ESM::REC_JOUR);
                 entry.save (writer);
                 writer.endRecord (ESM::REC_JOUR);
-                progress.increaseProgress();
             }
         }
     }
