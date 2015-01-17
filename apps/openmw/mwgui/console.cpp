@@ -11,8 +11,6 @@
 #include "../mwscript/extensions.hpp"
 #include "../mwscript/interpretercontext.hpp"
 #include "../mwscript/locals.hpp"
-#include "../mwscript/openmwbindings.hpp"
-
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 
@@ -20,10 +18,8 @@
 
 namespace MWScriptExtensions
 {
-    extern MWScript::InterpreterContext context;
-    Interpreter::Interpreter interpreter;
-    void setContext(MWScript::InterpreterContext pythonContext) { MWScript::InterpreterContext context=pythonContext; }
-
+    MWScript::InterpreterContext *context; //can declare this anywhere else, just set the pointers when using!
+    Interpreter::Interpreter *interpreter;
 }
 
 namespace MWGui
@@ -192,10 +188,14 @@ namespace MWGui
         // Python case
         if (command.find(".py") != std::string::npos)
         {
-            MWScript::installOpcodes(MWScriptExtensions::interpreter);
+            //MWScript::InterpreterContext pythonContext(NULL, mPtr);
+            ConsoleInterpreterContext pythonContext (*this, mPtr);
+            MWScriptExtensions::context = &pythonContext;
+            Interpreter::Interpreter pythonInterpreter;
+            MWScript::installOpcodes(pythonInterpreter, mConsoleOnlyScripts);
+            MWScriptExtensions::interpreter = &pythonInterpreter;
             //MWScript::Locals pythonLocals;
-            MWScript::InterpreterContext pythonContext(NULL, mPtr);
-            MWScriptExtensions::setContext(pythonContext);
+            //MWScript::InterpreterContext pythonContext(NULL, mPtr);
             Py_Initialize();
             FILE *file_1 = fopen(command.c_str(),"r");
             PyRun_SimpleFileEx(file_1,command.c_str(),1);

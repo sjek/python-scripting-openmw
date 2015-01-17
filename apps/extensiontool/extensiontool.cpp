@@ -20,10 +20,10 @@ class CodeGenerator
         std::ofstream mHeaderFile;
         std::ofstream mImpFile;
     public:
-        CodeGenerator()
+        CodeGenerator(std::string directory = "")
         {
-            mHeaderFile.open ("openmwbindings.hpp");
-            mImpFile.open ("openmwbindings.cpp");
+            mHeaderFile.open (std::string(directory+"openmwbindings.hpp").c_str());
+            mImpFile.open (std::string(directory+"openmwbindings.cpp").c_str());
             Compiler::registerExtensions(mExtensions);
             mExtensions.listKeywords(mKeywords);
             mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
@@ -37,8 +37,8 @@ class CodeGenerator
             mImpFile << "#include <apps/openmw/mwscript/extensions.hpp>\n\n";
             mImpFile << "#include <components/misc/stringops.hpp>\n\n";
             mImpFile << "namespace MWScriptExtensions\n{\n";
-            mImpFile << "    Interpreter::Interpreter interpreter;//define these as extern here and declare in the startexternalscript opcode and install opcodes\n";
-            mImpFile << "    MWScript::InterpreterContext context(NULL,MWWorld::Ptr());//define these as extern here and declare in the startexternalscript opcode and install opcodes\n\n";
+            mImpFile << "    Interpreter::Interpreter *interpreter;//this is also defined in openmw is that bad?\n";
+            mImpFile << "    MWScript::InterpreterContext *context;//this is also defined in openmw is that bad?\n\n";
             for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::keywordParser), this) );
             mHeaderFile << "}\n";
             mImpFile << "}\n\n";
@@ -61,10 +61,11 @@ void CodeGenerator::keywordParser(std::string keyword)
     std::vector<Interpreter::Type_Code> code;
     Compiler::Literals literals;
     int keywordint=mExtensions.searchKeyword(keyword);
-    bool explicitReference=0;
+    bool explicitReference=true;
     if(mExtensions.isFunction (keywordint, returnType, argumentType, explicitReference))
     {
-        mExtensions.generateFunctionCode(keywordint,code,literals,"",0);
+        mExtensions.generateFunctionCode(keywordint,code,literals,"",0); //code[0] = implicitcode
+        if(explicitReference==true) mExtensions.generateFunctionCode(keywordint,code,literals,"explicit",0); //code[2] = explicitcode
         // In the opcode we will write:
         // MWScript::InterpreterContext& context = static_cast<MWScript::InterpreterContext&> (runtime.getContext());
         //context.getReference(required);
@@ -107,7 +108,8 @@ void CodeGenerator::keywordParser(std::string keyword)
     }
     else if(mExtensions.isInstruction (keywordint, argumentType, explicitReference))
     {
-        mExtensions.generateInstructionCode(keywordint,code,literals,"",0);
+        mExtensions.generateInstructionCode(keywordint,code,literals,"",0);//code[0]=implicit
+        if(explicitReference==true) mExtensions.generateInstructionCode(keywordint,code,literals,"explicit",0);//code[2]=explicit
         mHeaderFile << foursp << "void " << keyword << "(";
         mImpFile << foursp << "void " << keyword<<"(";
         returnCommand = "return;\n";
@@ -122,6 +124,7 @@ void CodeGenerator::keywordParser(std::string keyword)
     std::string optionalInt = "";
     std::string optionalStr = "";
     std::ostringstream convert;
+    if(explicitReference) argumentType= 'S'+argumentType; //first argument is a referenceID
     for(const char* c = argumentType.c_str(); *c; ++c)
     {
         if(argcount > 0) commas=", ";
@@ -174,7 +177,8 @@ void CodeGenerator::keywordParser(std::string keyword)
                 convert.str("");
             } else if (*c=='S')
             {
-                convert << "if (arg" << argcount << "!=\"OPTIONAL_FLAG\")\n";
+                if(explicitReference && argcount==0) convert << "if (arg0 !=\"self\")\n";
+                else convert << foursp << foursp << "if (arg" << argcount << "!=\"OPTIONAL_FLAG\" )\n";
                 convert << foursp << foursp << "{\n";
                 convert << foursp << foursp << foursp << "Compiler::Generator::pushString(code, literals, arg" << argcount << ");\n";
                 convert << foursp << foursp << foursp << "argumentsPassed++;\n";
@@ -231,6 +235,8 @@ void CodeGenerator::keywordParser(std::string keyword)
     mImpFile << ")\n    {\n";
     mImpFile << foursp << foursp << "Interpreter::Type_Code codeword = 0x" << std::hex << code[0] << std::dec <<";//codeword without arguments\n";
     mImpFile << foursp << foursp << "Compiler::Literals literals;\n";
+    if(explicitReference)
+        mImpFile << foursp << foursp << "if(arg0!=\"self\") codeword = 0x" << std::hex << code[3] << std::dec <<";//codeword without arguments\n";
     mImpFile << foursp << foursp << "std::vector<Interpreter::Type_Code> code;\n";
     mImpFile << foursp << foursp << "uint argCount = " << argcount << ";\n";
     mImpFile << foursp << foursp << "uint optionalArgCount = " << optionalcount << ";\n";
@@ -241,9 +247,12 @@ void CodeGenerator::keywordParser(std::string keyword)
         mImpFile << foursp << foursp << pushArguments.top();
         pushArguments.pop();
     }
+    mImpFile << foursp << foursp << "code.push_back(codeword);\n";
     mImpFile << foursp << foursp << "optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);\n";
+    mImpFile << foursp << foursp << "std::cout << \"in the program \\n \";\n";
     mImpFile << foursp << foursp << "// adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it\n";
     mImpFile << foursp << foursp << "if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);\n";
+    mImpFile << foursp << foursp << "std::cout << (std::bitset<32>) codeword << \" \\n \\n \";\n";
     mImpFile << foursp << foursp << "//now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()\n";
 
     mImpFile << foursp << foursp << "std::vector<Interpreter::Type_Code> codeblock;\n";
@@ -253,7 +262,11 @@ void CodeGenerator::keywordParser(std::string keyword)
     mImpFile << foursp << foursp << "codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getStringSize()/4));\n";
     mImpFile << foursp << foursp << "std::copy (code.begin(), code.end(), std::back_inserter (codeblock));\n";
     mImpFile << foursp << foursp << "literals.append(codeblock);\n";
-    mImpFile << foursp << foursp << "interpreter.run(&codeblock[0], codeblock.size(), context);//todo - get the runtime stack!\n";
+    mImpFile << foursp << foursp << "for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)\n";
+    mImpFile << foursp << foursp << foursp << "std::cout << (std::bitset<32>) *i << \" \\n \";\n";
+
+    mImpFile << foursp << foursp << "interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!\n";
+    mImpFile << foursp << foursp << "std::cout.flush();\n";
     mImpFile << foursp << foursp << returnCommand;
     mImpFile << foursp << "}\n";
     return;
@@ -261,7 +274,9 @@ void CodeGenerator::keywordParser(std::string keyword)
 
 int main(int argc, char**argv)
 {
-    CodeGenerator codeGen;
+    std::string directory;
+    if(argv[1]!=NULL) directory = std::string(argv[1])+"/";
+    CodeGenerator codeGen(directory);
     return 0;
 }
 
