@@ -13,8 +13,8 @@
 
 namespace MWScriptExtensions
 {
-    Interpreter::Interpreter *interpreter;//this is also defined in openmw is that bad?
-    MWScript::InterpreterContext *context;//this is also defined in openmw is that bad?
+    Interpreter::Interpreter *interpreter=NULL;
+    MWScript::InterpreterContext *context=NULL;
 
     void activate(std::string arg0)
     {

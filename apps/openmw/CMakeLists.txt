@@ -210,6 +210,11 @@ ADD_CUSTOM_COMMAND(OUTPUT
     COMMAND extensiontool ${CMAKE_CURRENT_SOURCE_DIR}/mwscript
     DEPENDS extensiontool)
 
+include_directories(${BULLET_INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR})
+
+add_library(openmwbindings STATIC ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp)
+target_link_libraries(openmwbindings components)
+
 set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
 
 #set(SWIG_MODULE_OPENMW_EXTRA_DEPS ${CMAKE_CURRENT_BINARY_DIR}/mwscript/openmwbindings.hpp ${CMAKE_CURRENT_BINARY_DIR}/mwscript/openmwbindings.cpp)
@@ -217,12 +222,12 @@ set(SWIG_MODULE_OPENMW_EXTRA_DEPS ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbin
 
 SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i PROPERTIES CPLUSPLUS ON)
 #SWIG_ADD_MODULE(openmw python ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i ${CMAKE_CURRENT_BINARY_DIR}/mwscript/openmwbindings.cpp)
-SWIG_ADD_MODULE(openmw python ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp)
+SWIG_ADD_MODULE(openmw python ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/python_interface.i)
 
 SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript")
 
-SWIG_LINK_LIBRARIES(openmw components ${PYTHON_LIBRARIES})
-target_link_libraries(openmw ${PYTHON_LIBRARIES})
+SWIG_LINK_LIBRARIES(openmw openmwbindings ${PYTHON_LIBRARIES})
+target_link_libraries(openmw ${PYTHON_LIBRARIES} openmwbindings)
 
 INSTALL(FILES ${CMAKE_BINARY_DIR}/openmw.py ${SWIG_MODULE_OPENMW_REAL_NAME} DESTINATION ${BINDIR}) #distutils is best
 

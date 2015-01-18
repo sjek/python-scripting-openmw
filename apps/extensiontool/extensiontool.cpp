@@ -37,8 +37,8 @@ class CodeGenerator
             mImpFile << "#include <apps/openmw/mwscript/extensions.hpp>\n\n";
             mImpFile << "#include <components/misc/stringops.hpp>\n\n";
             mImpFile << "namespace MWScriptExtensions\n{\n";
-            mImpFile << "    Interpreter::Interpreter *interpreter;//this is also defined in openmw is that bad?\n";
-            mImpFile << "    MWScript::InterpreterContext *context;//this is also defined in openmw is that bad?\n\n";
+            mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
+            mImpFile << "    MWScript::InterpreterContext *context=NULL;\n\n";
             for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::keywordParser), this) );
             mHeaderFile << "}\n";
             mImpFile << "}\n\n";

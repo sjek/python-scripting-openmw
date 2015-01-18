@@ -21,8 +21,8 @@
 
 namespace MWScriptExtensions
 {
-    MWScript::InterpreterContext *context; //can declare this anywhere else, just set the pointers when using!
-    Interpreter::Interpreter *interpreter;
+    extern MWScript::InterpreterContext *context; //can declare this anywhere else, just set the pointers when using!
+    extern Interpreter::Interpreter *interpreter;
 }
 
 namespace MWGui
@@ -215,6 +215,8 @@ namespace MWGui
             FILE *file_1 = fopen(command.c_str(),"r");
             PyRun_SimpleFileEx(file_1,command.c_str(),1);
             Py_Finalize();
+            MWScriptExtensions::interpreter=NULL;
+            MWScriptExtensions::context = NULL;
             return;
         }
 
