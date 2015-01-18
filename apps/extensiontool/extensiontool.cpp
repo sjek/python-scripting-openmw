@@ -27,6 +27,8 @@ class CodeGenerator
             Compiler::registerExtensions(mExtensions);
             mExtensions.listKeywords(mKeywords);
             mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
+            mHeaderFile << "#include <components/interpreter/interpreter.hpp>\n";
+            mHeaderFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
             mHeaderFile << "namespace MWScriptExtensions\n{\n";
             mImpFile << "#include \"openmwbindings.hpp\"\n\n";
             mImpFile << "#include <components/compiler/literals.hpp>\n";
@@ -39,6 +41,8 @@ class CodeGenerator
             mImpFile << "namespace MWScriptExtensions\n{\n";
             mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
             mImpFile << "    MWScript::InterpreterContext *context=NULL;\n\n";
+            mHeaderFile << "    extern Interpreter::Interpreter *interpreter;\n";
+            mHeaderFile << "    extern MWScript::InterpreterContext *context;\n\n";
             for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::keywordParser), this) );
             mHeaderFile << "}\n";
             mImpFile << "}\n\n";

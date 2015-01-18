@@ -1,8 +1,14 @@
 #include <string>
 
 #include <components/interpreter/types.hpp>
+#include <components/interpreter/interpreter.hpp>
+#include <apps/openmw/mwscript/interpretercontext.hpp>
+
 namespace MWScriptExtensions
 {
+    extern Interpreter::Interpreter *interpreter;
+    extern MWScript::InterpreterContext *context;
+
     void activate(std::string arg0);
     void additem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2);
     void addsoulgem(std::string arg0, std::string arg1, std::string arg2);

@@ -13,15 +13,10 @@
 
 #include "interpretercontext.hpp"
 #include "extensions.hpp"
+#include "openmwbindings.hpp"
 #include "ref.hpp"
 
 #include <iostream>
-
-namespace MWScriptExtensions//put this in a header and include
-{
-    extern MWScript::InterpreterContext *context; //can declare this anywhere else, just set the pointers when using!
-    extern Interpreter::Interpreter *interpreter;
-}
 
 namespace MWScript
 {
