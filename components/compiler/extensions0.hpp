@@ -42,6 +42,11 @@ namespace Compiler
         void registerExtensions (Extensions& extensions);
     }
 
+    namespace ExternalScript
+    {
+        void registerExtensions (Extensions& extensions);
+    }
+
     namespace Gui
     {
         void registerExtensions (Extensions& extensions);	

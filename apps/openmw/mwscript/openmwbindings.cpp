@@ -16581,6 +16581,40 @@ namespace MWScriptExtensions
         std::cout.flush();
         return;
     }
+    void startexternalscript(std::string arg0)
+    {
+        Interpreter::Type_Code codeword = 0xca0002ff;//codeword without arguments
+        Compiler::Literals literals;
+        std::vector<Interpreter::Type_Code> code;
+        uint argCount = 1;
+        uint optionalArgCount = 0;
+        uint argumentsPassed = 0;
+        uint optionalArgumentsPassed = 0;
+                if (arg0!="OPTIONAL_FLAG" )
+        {
+            Compiler::Generator::pushString(code, literals, arg0);
+            argumentsPassed++;
+        }
+        code.push_back(codeword);
+        optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
+        std::cout << "in the program \n ";
+        // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
+        if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
+        std::cout << (std::bitset<32>) codeword << " \n \n ";
+        //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
+        std::vector<Interpreter::Type_Code> codeblock;
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (code.size()));
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getIntegerSize()/4));
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getFloatSize()/4));
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getStringSize()/4));
+        std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
+        literals.append(codeblock);
+        for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
+            std::cout << (std::bitset<32>) *i << " \n ";
+        interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
+        std::cout.flush();
+        return;
+    }
     void stopcombat(std::string arg0)
     {
         Interpreter::Type_Code codeword = 0xca00023c;//codeword without arguments

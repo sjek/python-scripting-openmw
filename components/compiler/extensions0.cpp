@@ -14,6 +14,7 @@ namespace Compiler
         Control::registerExtensions (extensions);
         Dialogue::registerExtensions (extensions);
         Gui::registerExtensions (extensions);
+        ExternalScript::registerExtensions (extensions);
         Misc::registerExtensions (extensions);
         Sky::registerExtensions (extensions);
         Sound::registerExtensions (extensions);
@@ -194,6 +195,14 @@ namespace Compiler
             extensions.registerInstruction("modfactionreaction", "ccl", opcodeModFactionReaction);
             extensions.registerFunction("getfactionreaction", 'l', "ccX", opcodeGetFactionReaction);
             extensions.registerInstruction("clearinfoactor", "", opcodeClearInfoActor, opcodeClearInfoActorExplicit);
+        }
+    }
+
+    namespace ExternalScript
+    {
+        void registerExtensions (Extensions& extensions)
+        {
+            extensions.registerInstruction ("startexternalscript", "S", opcodeStartExternalScript);
         }
     }
 

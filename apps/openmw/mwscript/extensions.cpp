@@ -14,6 +14,7 @@
 #include "aiextensions.hpp"
 #include "controlextensions.hpp"
 #include "dialogueextensions.hpp"
+#include "externalscriptextensions.hpp"
 #include "animationextensions.hpp"
 #include "transformationextensions.hpp"
 #include "consoleextensions.hpp"
@@ -34,6 +35,7 @@ namespace MWScript
         Ai::installOpcodes (interpreter);
         Control::installOpcodes (interpreter);
         Dialogue::installOpcodes (interpreter);
+        ExternalScript::installOpcodes (interpreter);
         Animation::installOpcodes (interpreter);
         Transformation::installOpcodes (interpreter);
 

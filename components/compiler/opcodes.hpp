@@ -172,6 +172,11 @@ namespace Compiler
         const int opcodeClearInfoActorExplicit = 0x2000246;
     }
 
+    namespace ExternalScript
+    {
+        const int opcodeStartExternalScript = 0x20002ff;
+    }
+
     namespace Gui
     {
         const int opcodeEnableBirthMenu = 0x200000e;

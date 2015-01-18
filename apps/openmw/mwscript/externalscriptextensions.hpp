@@ -1,5 +1,5 @@
-#ifndef GAME_SCRIPT_STATSEXTENSIONS_H
-#define GAME_SCRIPT_STATSEXTENSIONS_H
+#ifndef GAME_SCRIPT_EXTERNALSCRIPTEXTENSIONS_HPP
+#define GAME_SCRIPT_EXTERNALSCRIPTEXTENSIONS_HPP
 
 namespace Compiler
 {
@@ -13,9 +13,8 @@ namespace Interpreter
 
 namespace MWScript
 {
-    /// \brief stats-related script functionality (creatures and NPCs)
-    namespace Stats
-    {        
+    namespace ExternalScript
+    {
         void installOpcodes (Interpreter::Interpreter& interpreter);
     }
 }

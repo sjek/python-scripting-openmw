@@ -5,25 +5,16 @@
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 
-#include <Python.h>
-
 #include <components/compiler/exception.hpp>
 #include <components/compiler/extensions0.hpp>
 
 #include "../mwscript/extensions.hpp"
-#include "../mwscript/interpretercontext.hpp"
-#include "../mwscript/locals.hpp"
+
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
 
 #include "../mwworld/esmstore.hpp"
-
-namespace MWScriptExtensions
-{
-    extern MWScript::InterpreterContext *context; //can declare this anywhere else, just set the pointers when using!
-    extern Interpreter::Interpreter *interpreter;
-}
 
 namespace MWGui
 {
@@ -198,27 +189,6 @@ namespace MWGui
     {
         // Log the command
         print("#FFFFFF> " + command + "\n");
-
-
-        // Python case
-        if (command.find(".py") != std::string::npos)
-        {
-            //MWScript::InterpreterContext pythonContext(NULL, mPtr);
-            ConsoleInterpreterContext pythonContext (*this, mPtr);
-            MWScriptExtensions::context = &pythonContext;
-            Interpreter::Interpreter pythonInterpreter;
-            MWScript::installOpcodes(pythonInterpreter, mConsoleOnlyScripts);
-            MWScriptExtensions::interpreter = &pythonInterpreter;
-            //MWScript::Locals pythonLocals;
-            //MWScript::InterpreterContext pythonContext(NULL, mPtr);
-            Py_Initialize();
-            FILE *file_1 = fopen(command.c_str(),"r");
-            PyRun_SimpleFileEx(file_1,command.c_str(),1);
-            Py_Finalize();
-            MWScriptExtensions::interpreter=NULL;
-            MWScriptExtensions::context = NULL;
-            return;
-        }
 
         Compiler::Locals locals;
         Compiler::Output output (locals);
