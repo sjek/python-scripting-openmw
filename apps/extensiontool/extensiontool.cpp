@@ -83,6 +83,8 @@ void CodeGenerator::keywordParser(std::string keyword)
         // then use generator to assign to local (assignToLocal), where value is empty, or is our
         // current code of arguments and codeword
 
+        //way easier:subclass interpretter to allow us to get the runtime
+
         if (returnType=='f')
         {
             mHeaderFile << foursp << "Interpreter::Type_Float";

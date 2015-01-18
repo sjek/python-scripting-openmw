@@ -57,6 +57,8 @@ namespace Interpreter
             ///< ownership of \a opcode is transferred to *this.
 
             void run (const Type_Code *code, int codeSize, Context& context);
+
+            Data getRuntimeData(int index);
     };
 }
 
