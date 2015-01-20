@@ -85,11 +85,13 @@ void CodeGenerator::keywordParser(std::string keyword)
 
         //way easier:subclass interpretter to allow us to get the runtime
 
+        //new opcode that saves the top of the stack to a variable in this namespace
+
         if (returnType=='f')
         {
             mHeaderFile << foursp << "Interpreter::Type_Float";
             mImpFile << foursp << "Interpreter::Type_Float";
-            //returnCommand = "return runtime[0].mFloat;\n"; // maybe runtime.pop() as well?
+            //returnCommand = "return interpreter->getRuntimeData(0).mFloat;\n"; // maybe runtime.pop() as well?
             returnCommand = "return 1;\n";//need to fix!
         }
         else if (returnType=='S')
@@ -102,7 +104,7 @@ void CodeGenerator::keywordParser(std::string keyword)
         {
             mHeaderFile << foursp << "Interpreter::Type_Integer";
             mImpFile << foursp << "Interpreter::Type_Integer";
-            //returnCommand = "return runtime[0].mInteger;\n";
+            //returnCommand = "return interpreter->getRuntimeData(0).mInteger;\n";
             returnCommand = "return 1;\n";//need to fix!
         }
         else

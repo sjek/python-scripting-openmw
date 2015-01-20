@@ -4,8 +4,10 @@
  #include "openmwbindings.hpp"
  %}
 
-%ignore getData;
+%ignore interpreter;
+%ignore context;
 %ignore Data;
+%ignore getData;
 
 %include "std_string.i"
 
