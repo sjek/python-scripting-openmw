@@ -51,10 +51,21 @@ namespace MWScript
                     }
                 }
         };
+        class OpExternalScriptReturn : public Interpreter::Opcode0
+        {
+            public:
+
+                virtual void execute (Interpreter::Runtime& runtime)
+                {
+                    MWScriptExtensions::stackReturn = runtime[0];
+                }
+        };
+
 
         void installOpcodes (Interpreter::Interpreter& interpreter)
         {
             interpreter.installSegment5 (Compiler::ExternalScript::opcodeStartExternalScript, new OpStartExternalScript);
+            interpreter.installSegment5 (Compiler::ExternalScript::opcodeExternalScriptReturn, new OpExternalScriptReturn);
         }
     }
 }

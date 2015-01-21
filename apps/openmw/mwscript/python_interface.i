@@ -8,6 +8,7 @@
 %ignore context;
 %ignore Data;
 %ignore getData;
+%ignore stackReturn;
 
 %include "std_string.i"
 

@@ -203,6 +203,7 @@ namespace Compiler
         void registerExtensions (Extensions& extensions)
         {
             extensions.registerInstruction ("startexternalscript", "S", opcodeStartExternalScript);
+            extensions.registerInstruction ("externalscriptreturn", "", opcodeExternalScriptReturn);
         }
     }
 

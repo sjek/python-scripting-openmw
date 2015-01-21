@@ -8,6 +8,7 @@ namespace MWScriptExtensions
 {
     extern Interpreter::Interpreter *interpreter;
     extern MWScript::InterpreterContext *context;
+    extern Interpreter::Data stackReturn;
 
     void activate(std::string arg0);
     void additem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2);
@@ -73,6 +74,7 @@ namespace MWScriptExtensions
     void enablevanitymode();
     void equip(std::string arg0, std::string arg1);
     void explodespell(std::string arg0, std::string arg1);
+    void externalscriptreturn();
     void face(std::string arg0, Interpreter::Type_Integer arg1, Interpreter::Type_Integer arg2);
     void fadein(Interpreter::Type_Float arg0);
     void fadeout(Interpreter::Type_Float arg0);
