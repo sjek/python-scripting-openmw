@@ -213,7 +213,7 @@ ADD_CUSTOM_COMMAND(OUTPUT
 
 include_directories(${BULLET_INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR})
 
-add_library(openmwbindings STATIC ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp)
+add_library(openmwbindings STATIC ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings0.cpp)
 target_link_libraries(openmwbindings components)
 
 set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})

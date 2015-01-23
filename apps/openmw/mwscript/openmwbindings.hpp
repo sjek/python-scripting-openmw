@@ -444,7 +444,7 @@ namespace MWScriptExtensions
     void showvars(std::string arg0);
     void skipanim(std::string arg0);
     void startcombat(std::string arg0, std::string arg1);
-    void startexternalscript(std::string arg0);
+    void startexternalscript(std::string arg0, std::string arg1);
     void stopcombat(std::string arg0);
     void stopsound(std::string arg0, std::string arg1);
     void streammusic(std::string arg0);

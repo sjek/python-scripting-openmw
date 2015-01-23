@@ -2458,7 +2458,7 @@ namespace MWScriptExtensions
     }
     void externalscriptreturn()
     {
-        Interpreter::Type_Code codeword = 0xca000300;//codeword without arguments
+        Interpreter::Type_Code codeword = 0xca000301;//codeword without arguments
         Compiler::Literals literals;
         std::vector<Interpreter::Type_Code> code;
         uint argCount = 0;
@@ -15894,16 +15894,22 @@ namespace MWScriptExtensions
         std::cout.flush();
         return;
     }
-    void startexternalscript(std::string arg0)
+    void startexternalscript(std::string arg0, std::string arg1)
     {
         Interpreter::Type_Code codeword = 0xca0002ff;//codeword without arguments
         Compiler::Literals literals;
+        if(arg0!="self") codeword = 0xca0002ff;//codeword without arguments
         std::vector<Interpreter::Type_Code> code;
-        uint argCount = 1;
+        uint argCount = 2;
         uint optionalArgCount = 0;
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
-                if (arg0!="OPTIONAL_FLAG" )
+                if (arg1!="OPTIONAL_FLAG" )
+        {
+            Compiler::Generator::pushString(code, literals, arg1);
+            argumentsPassed++;
+        }
+        if (arg0 !="self")
         {
             Compiler::Generator::pushString(code, literals, arg0);
             argumentsPassed++;
