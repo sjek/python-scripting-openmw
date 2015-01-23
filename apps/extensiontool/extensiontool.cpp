@@ -11,12 +11,100 @@
 #include <components/compiler/extensions0.hpp>
 #include <components/compiler/literals.hpp>
 
+//TODO: set/get locals using get/setMemberFloat
+//make new opcode for setlocal("object_or_global_script_name",value,global=0) and setglobal
+//setlocal needs to know how to set self
+
+//how about new extension "command("string")" which just compiles "string" like console does?
+//problem: what interpreter to use? make new one?
+
+//See: lineparser.cpp:
+
+// check if local, global, or member variable
+//char type = mLocals.getType (name2);
+//if (type!=' ')
+//{
+//    mType = type;
+//    mState = SetLocalVarState;
+//    return true;
+//}
+
+//type = getContext().getGlobalType (name2);
+//if (type!=' ')
+//{
+//    mType = type;
+//    mState = SetGlobalVarState;
+//    return true;
+//}
+
+//mState = SetPotentialMemberVarState;
+//return true;
+//}
+
+//if (mState==SetMemberVarState)
+//{
+//mMemberName = Misc::StringUtils::lowerCase (name);
+//std::pair<char, bool> type = getContext().getMemberType (mMemberName, mName);
+
+//if (type.first!=' ')
+//{
+//    mState = SetMemberVarState2;
+//    mType = type.first;
+//    mReferenceMember = type.second;
+//    return true;
+//}
+
+
+//then later on:
+//    else if (mState==SetLocalVarState && keyword==Scanner::K_to)
+//    {
+//        mExprParser.reset();
+//        scanner.scan (mExprParser);
+
+//        std::vector<Interpreter::Type_Code> code;
+//        char type = mExprParser.append (code);
+
+//        Generator::assignToLocal (mCode, mLocals.getType (mName),
+//            mLocals.getIndex (mName), code, type);
+
+//        mState = EndState;
+//        return true;
+//    }
+//    else if (mState==SetGlobalVarState && keyword==Scanner::K_to)
+//    {
+//        mExprParser.reset();
+//        scanner.scan (mExprParser);
+
+//        std::vector<Interpreter::Type_Code> code;
+//        char type = mExprParser.append (code);
+
+//        Generator::assignToGlobal (mCode, mLiterals, mType, mName, code, type);
+
+//        mState = EndState;
+//        return true;
+//    }
+//    else if (mState==SetMemberVarState2 && keyword==Scanner::K_to)
+//    {
+//        mExprParser.reset();
+//        scanner.scan (mExprParser);
+
+//        std::vector<Interpreter::Type_Code> code;
+//        char type = mExprParser.append (code);
+
+//        Generator::assignToMember (mCode, mLiterals, mType, mMemberName, mName, code, type,
+//            !mReferenceMember);
+
+//        mState = EndState;
+//        return true;
+//    }
 
 class CodeGenerator
 {
         Compiler::Extensions mExtensions;
         std::vector<std::string> mKeywords;
         void keywordParser(std::string keyword);
+        void topGenerator();
+        void bottomGenerator();
         std::ofstream mHeaderFile;
         std::ofstream mImpFile;
     public:
@@ -26,31 +114,44 @@ class CodeGenerator
             mImpFile.open (std::string(directory+"openmwbindings.cpp").c_str());
             Compiler::registerExtensions(mExtensions);
             mExtensions.listKeywords(mKeywords);
-            mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
-            mHeaderFile << "#include <components/interpreter/interpreter.hpp>\n";
-            mHeaderFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
-            mHeaderFile << "namespace MWScriptExtensions\n{\n";
-            mImpFile << "#include \"openmwbindings.hpp\"\n\n";
-            mImpFile << "#include <components/compiler/literals.hpp>\n";
-            mImpFile << "#include <components/compiler/generator.hpp>\n";
-            mImpFile << "#include <components/interpreter/interpreter.hpp>\n";
-            mImpFile << "#include <components/compiler/opcodes.hpp>\n";
-            mImpFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
-            mImpFile << "#include <apps/openmw/mwbase/world.hpp>\n\n";
-            mImpFile << "#include <apps/openmw/mwscript/extensions.hpp>\n\n";
-            mImpFile << "#include <components/misc/stringops.hpp>\n\n";
-            mImpFile << "namespace MWScriptExtensions\n{\n";
-            mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
-            mImpFile << "    MWScript::InterpreterContext *context=NULL;\n";
-            mImpFile << "    Interpreter::Data stackReturn;\n\n";
-            mHeaderFile << "    extern Interpreter::Interpreter *interpreter;\n";
-            mHeaderFile << "    extern MWScript::InterpreterContext *context;\n";
-            mHeaderFile << "    extern Interpreter::Data stackReturn;\n\n";
+        }
+        void run()
+        {
+            topGenerator();
             for_each(mKeywords.begin(), mKeywords.end(), bind1st(mem_fun(&CodeGenerator::keywordParser), this) );
-            mHeaderFile << "}\n";
-            mImpFile << "}\n\n";
+            bottomGenerator();
         }
 };
+
+void CodeGenerator::topGenerator()
+{
+    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
+    mHeaderFile << "#include <components/interpreter/interpreter.hpp>\n";
+    mHeaderFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
+    mHeaderFile << "namespace MWScriptExtensions\n{\n";
+    mImpFile << "#include \"openmwbindings.hpp\"\n\n";
+    mImpFile << "#include <components/compiler/literals.hpp>\n";
+    mImpFile << "#include <components/compiler/generator.hpp>\n";
+    mImpFile << "#include <components/interpreter/interpreter.hpp>\n";
+    mImpFile << "#include <components/compiler/opcodes.hpp>\n";
+    mImpFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
+    mImpFile << "#include <apps/openmw/mwbase/world.hpp>\n\n";
+    mImpFile << "#include <apps/openmw/mwscript/extensions.hpp>\n\n";
+    mImpFile << "#include <components/misc/stringops.hpp>\n\n";
+    mImpFile << "namespace MWScriptExtensions\n{\n";
+    mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
+    mImpFile << "    MWScript::InterpreterContext *context=NULL;\n";
+    mImpFile << "    Interpreter::Data stackReturn;\n\n";
+    mHeaderFile << "    extern Interpreter::Interpreter *interpreter;\n";
+    mHeaderFile << "    extern MWScript::InterpreterContext *context;\n";
+    mHeaderFile << "    extern Interpreter::Data stackReturn;\n\n";
+}
+void CodeGenerator::bottomGenerator()
+{
+    mHeaderFile << "}\n";
+    mImpFile << "}\n\n";
+}
+
 
 void CodeGenerator::keywordParser(std::string keyword)
 {
@@ -73,22 +174,6 @@ void CodeGenerator::keywordParser(std::string keyword)
     {
         mExtensions.generateFunctionCode(keywordint,code,literals,"",0); //code[0] = implicitcode
         if(explicitReference==true) mExtensions.generateFunctionCode(keywordint,code,literals,"explicit",0); //code[2] = explicitcode
-        // In the opcode we will write:
-        // MWScript::InterpreterContext& context = static_cast<MWScript::InterpreterContext&> (runtime.getContext());
-        //context.getReference(required);
-        // MWScript::Locals& locals = context.getReference(true).getRefData().getLocals();
-
-        //returnLocal = context.getReference(true).getRefData().getLocals() + ".declare("+returnType+",returnvalue);\n"
-        // or we can put Locals &locals in the namespace
-        // locals.setVarByInt(ptr.getClass().getScript(ptr), "onpcequip", 1)
-        // or just manually increment mLongs, mFloats in locals and send an opcode to store value there?
-
-        // then use generator to assign to local (assignToLocal), where value is empty, or is our
-        // current code of arguments and codeword
-
-        //way easier:subclass interpretter to allow us to get the runtime
-
-        //new opcode that saves the top of the stack to a variable in this namespace
 
         if (returnType=='f')
         {
@@ -290,6 +375,7 @@ int main(int argc, char**argv)
     std::string directory;
     if(argv[1]!=NULL) directory = std::string(argv[1])+"/";
     CodeGenerator codeGen(directory);
+    codeGen.run();
     return 0;
 }
 

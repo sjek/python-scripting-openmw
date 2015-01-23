@@ -34,10 +34,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -79,10 +77,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -124,10 +120,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -164,10 +158,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -208,10 +200,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -252,10 +242,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -286,10 +274,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -331,10 +317,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -396,10 +380,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -466,10 +448,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -566,10 +546,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -636,10 +614,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -691,10 +667,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -791,10 +765,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -831,10 +803,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -866,10 +836,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -906,10 +874,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -951,10 +917,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -980,10 +944,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -1015,10 +977,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1054,10 +1014,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1093,10 +1051,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1282,10 +1238,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1317,10 +1271,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1352,10 +1304,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1387,10 +1337,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1422,10 +1370,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1457,10 +1403,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1491,10 +1435,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1530,10 +1472,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1559,10 +1499,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1588,10 +1526,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1617,10 +1553,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1646,10 +1580,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1675,10 +1607,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1704,10 +1634,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1733,10 +1661,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1762,10 +1688,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1791,10 +1715,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1820,10 +1742,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1865,10 +1785,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1905,10 +1823,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1934,10 +1850,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1963,10 +1877,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -1992,10 +1904,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2021,10 +1931,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2050,10 +1958,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2079,10 +1985,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2108,10 +2012,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2137,10 +2039,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2166,10 +2066,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2195,10 +2093,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2224,10 +2120,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2253,10 +2147,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2282,10 +2174,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2311,10 +2201,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2340,10 +2228,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2369,10 +2255,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2398,10 +2282,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2427,10 +2309,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2456,10 +2336,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2485,10 +2363,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2525,10 +2401,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2565,10 +2439,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2594,10 +2466,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2639,10 +2509,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2673,10 +2541,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2707,10 +2573,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2746,10 +2610,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2781,10 +2643,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2810,10 +2670,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2845,10 +2703,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2880,10 +2736,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2915,10 +2769,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2950,10 +2802,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -2985,10 +2835,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -3020,10 +2868,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3056,10 +2902,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3092,10 +2936,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3128,10 +2970,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3164,10 +3004,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3200,10 +3038,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3241,10 +3077,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3277,10 +3111,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3313,10 +3145,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3354,10 +3184,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3390,10 +3218,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3426,10 +3252,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3462,10 +3286,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3498,10 +3320,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3534,10 +3354,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3570,10 +3388,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3606,10 +3422,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3642,10 +3456,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3672,10 +3484,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3708,10 +3518,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3744,10 +3552,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3780,10 +3586,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3816,10 +3620,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3852,10 +3654,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3888,10 +3688,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3924,10 +3722,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3954,10 +3750,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -3984,10 +3778,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4019,10 +3811,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4055,10 +3845,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4091,10 +3879,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4132,10 +3918,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4168,10 +3952,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4209,10 +3991,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4245,10 +4025,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4281,10 +4059,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4321,10 +4097,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4357,10 +4131,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4393,10 +4165,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4429,10 +4199,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4465,10 +4233,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4501,10 +4267,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4537,10 +4301,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4573,10 +4335,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4609,10 +4369,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4645,10 +4403,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4681,10 +4437,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4717,10 +4471,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4753,10 +4505,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4789,10 +4539,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4825,10 +4573,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4861,10 +4607,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4897,10 +4641,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4927,10 +4669,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -4963,10 +4703,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5004,10 +4742,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5039,10 +4775,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5075,10 +4809,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5111,10 +4843,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5152,10 +4882,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5188,10 +4916,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5224,10 +4950,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5265,10 +4989,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5301,10 +5023,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5337,10 +5057,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5373,10 +5091,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5409,10 +5125,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5439,10 +5153,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5475,10 +5187,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5511,10 +5221,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5547,10 +5255,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5583,10 +5289,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5618,10 +5322,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5648,10 +5350,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5689,10 +5389,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5719,10 +5417,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5749,10 +5445,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5790,10 +5484,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5820,10 +5512,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5850,10 +5540,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5880,10 +5568,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5910,10 +5596,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5946,10 +5630,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -5976,10 +5658,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6006,10 +5686,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6036,10 +5714,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6066,10 +5742,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6096,10 +5770,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6126,10 +5798,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6167,10 +5837,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6208,10 +5876,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6244,10 +5910,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6280,10 +5944,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6316,10 +5978,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6352,10 +6012,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6388,10 +6046,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6424,10 +6080,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6460,10 +6114,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6496,10 +6148,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6532,10 +6182,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6568,10 +6216,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6604,10 +6250,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6640,10 +6284,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6676,10 +6318,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6706,10 +6346,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6742,10 +6380,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6778,10 +6414,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6814,10 +6448,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6850,10 +6482,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6891,10 +6521,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6927,10 +6555,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6963,10 +6589,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -6999,10 +6623,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7040,10 +6662,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7081,10 +6701,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7117,10 +6735,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7152,10 +6768,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7188,10 +6802,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7224,10 +6836,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7265,10 +6875,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7306,10 +6914,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7347,10 +6953,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7383,10 +6987,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7419,10 +7021,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7455,10 +7055,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7496,10 +7094,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7532,10 +7128,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7562,10 +7156,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7598,10 +7190,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7628,10 +7218,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7664,10 +7252,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7700,10 +7286,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7736,10 +7320,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7766,10 +7348,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7802,10 +7382,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7832,10 +7410,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7862,10 +7438,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -7891,10 +7465,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -7931,10 +7503,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -7972,10 +7542,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -8013,10 +7581,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -8054,10 +7620,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -8095,10 +7659,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8135,10 +7697,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8170,10 +7730,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -8210,10 +7768,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8250,10 +7806,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8300,10 +7854,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8335,10 +7887,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8369,10 +7919,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8409,10 +7957,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8449,10 +7995,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8489,10 +8033,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8529,10 +8071,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8569,10 +8109,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8609,10 +8147,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8649,10 +8185,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8689,10 +8223,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8729,10 +8261,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8769,10 +8299,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8809,10 +8337,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8849,10 +8375,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8889,10 +8413,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8929,10 +8451,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -8969,10 +8489,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9009,10 +8527,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9049,10 +8565,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9089,10 +8603,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9129,10 +8641,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9169,10 +8679,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9209,10 +8717,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9249,10 +8755,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9289,10 +8793,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9329,10 +8831,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9373,10 +8873,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9413,10 +8911,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9453,10 +8949,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9493,10 +8987,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9533,10 +9025,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9573,10 +9063,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9613,10 +9101,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9653,10 +9139,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9693,10 +9177,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9733,10 +9215,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9773,10 +9253,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9813,10 +9291,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9853,10 +9329,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9893,10 +9367,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9933,10 +9405,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -9973,10 +9443,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10013,10 +9481,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10053,10 +9519,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10093,10 +9557,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10133,10 +9595,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10173,10 +9633,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10207,10 +9665,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10252,10 +9708,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10292,10 +9746,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10376,10 +9828,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10416,10 +9866,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10456,10 +9904,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10496,10 +9942,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10536,10 +9980,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10576,10 +10018,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10616,10 +10056,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10656,10 +10094,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10696,10 +10132,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10736,10 +10170,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10776,10 +10208,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10816,10 +10246,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10856,10 +10284,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10896,10 +10322,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10936,10 +10360,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -10976,10 +10398,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11016,10 +10436,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11056,10 +10474,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11096,10 +10512,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11136,10 +10550,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11176,10 +10588,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11216,10 +10626,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11256,10 +10664,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11296,10 +10702,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11336,10 +10740,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11376,10 +10778,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11410,10 +10810,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11450,10 +10848,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11490,10 +10886,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11535,10 +10929,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11580,10 +10972,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11609,10 +10999,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -11645,10 +11033,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -11681,10 +11067,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -11717,10 +11101,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -11747,10 +11129,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11776,10 +11156,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11816,10 +11194,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11856,10 +11232,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11896,10 +11270,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -11926,10 +11298,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11955,10 +11325,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -11984,10 +11352,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -12025,10 +11391,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12065,10 +11429,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12105,10 +11467,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12160,10 +11520,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12209,10 +11567,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12263,10 +11619,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12322,10 +11676,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12361,10 +11713,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12406,10 +11756,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12446,10 +11794,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12496,10 +11842,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12530,10 +11874,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12570,10 +11912,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12620,10 +11960,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12664,10 +12002,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12719,10 +12055,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12779,10 +12113,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12808,10 +12140,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12843,10 +12173,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12883,10 +12211,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12927,10 +12253,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -12971,10 +12295,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13016,10 +12338,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13061,10 +12381,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13101,10 +12419,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13141,10 +12457,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13170,10 +12484,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13205,10 +12517,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13250,10 +12560,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13295,10 +12603,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13330,10 +12636,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -13376,10 +12680,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13411,10 +12713,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
@@ -13452,10 +12752,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13492,10 +12790,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13532,10 +12828,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13572,10 +12866,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13612,10 +12904,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13657,10 +12947,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13697,10 +12985,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13737,10 +13023,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13777,10 +13061,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13812,10 +13094,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13852,10 +13132,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13892,10 +13170,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13932,10 +13208,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -13972,10 +13246,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14012,10 +13284,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14052,10 +13322,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14092,10 +13360,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14132,10 +13398,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14172,10 +13436,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14212,10 +13474,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14252,10 +13512,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14292,10 +13550,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14332,10 +13588,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14372,10 +13626,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14412,10 +13664,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14452,10 +13702,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14492,10 +13740,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14532,10 +13778,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14572,10 +13816,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14612,10 +13854,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14652,10 +13892,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14692,10 +13930,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14732,10 +13968,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14772,10 +14006,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14812,10 +14044,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14851,10 +14081,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14891,10 +14119,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14931,10 +14157,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -14971,10 +14195,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15011,10 +14233,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15051,10 +14271,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15091,10 +14309,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15131,10 +14347,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15171,10 +14385,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15211,10 +14423,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15251,10 +14461,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15285,10 +14493,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15330,10 +14536,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15370,10 +14574,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15415,10 +14617,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15455,10 +14655,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15495,10 +14693,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15535,10 +14731,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15575,10 +14769,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15615,10 +14807,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15655,10 +14845,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15695,10 +14883,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15735,10 +14921,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15775,10 +14959,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15815,10 +14997,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15855,10 +15035,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15895,10 +15073,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15935,10 +15111,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -15975,10 +15149,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16015,10 +15187,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16055,10 +15225,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16095,10 +15263,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16135,10 +15301,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16175,10 +15339,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16215,10 +15377,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16255,10 +15415,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16295,10 +15453,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16335,10 +15491,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16375,10 +15529,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16415,10 +15567,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16449,10 +15599,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16489,10 +15637,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16524,10 +15670,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16564,10 +15708,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16598,10 +15740,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16633,10 +15773,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16668,10 +15806,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16703,10 +15839,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16743,10 +15877,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16777,10 +15909,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16812,10 +15942,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16852,10 +15980,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16886,10 +16012,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16921,10 +16045,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16956,10 +16078,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -16985,10 +16105,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17014,10 +16132,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17043,10 +16159,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17072,10 +16186,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17101,10 +16213,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17130,10 +16240,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17159,10 +16267,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17194,10 +16300,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17223,10 +16327,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17252,10 +16354,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17281,10 +16381,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17310,10 +16408,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17339,10 +16435,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17368,10 +16462,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17397,10 +16489,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17426,10 +16516,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17455,10 +16543,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17484,10 +16570,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17513,10 +16597,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17542,10 +16624,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17571,10 +16651,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17600,10 +16678,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17629,10 +16705,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17658,10 +16732,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17687,10 +16759,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17716,10 +16786,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17745,10 +16813,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17774,10 +16840,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17803,10 +16867,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17838,10 +16900,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17873,10 +16933,8 @@ namespace MWScriptExtensions
             argumentsPassed++;
         }
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17902,10 +16960,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
         std::vector<Interpreter::Type_Code> codeblock;
@@ -17931,10 +16987,8 @@ namespace MWScriptExtensions
         uint argumentsPassed = 0;
         uint optionalArgumentsPassed = 0;
         optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
-        std::cout << "in the program \n ";
         // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
         if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
-        std::cout << (std::bitset<32>) codeword << " \n \n ";
         code.push_back(codeword);
         code.push_back(0xc8000000 | Compiler::ExternalScript::opcodeExternalScriptReturn);//segment 5 code
         //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
