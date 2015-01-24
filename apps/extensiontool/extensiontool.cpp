@@ -88,32 +88,31 @@ void CodeGenerator::keywordParser(std::string keyword)
         mExtensions.generateFunctionCode(keywordint,code,literals,"",0); //code[0] = implicitcode
         if(explicitReference==true) mExtensions.generateFunctionCode(keywordint,code,literals,"explicit",0); //code[2] = explicitcode
 
-        if (returnType=='f')
+        switch (returnType)
         {
-            mHeaderFile << foursp << "Interpreter::Type_Float";
-            mImpFile << foursp << "Interpreter::Type_Float";
-            returnCommand = "return stackReturn.mFloat;\n"; // maybe runtime.pop() as well?
-            //returnCommand = "return 1;\n";//need to fix!
+            case 'f':
+                mHeaderFile << foursp << "Interpreter::Type_Float";
+                mImpFile << foursp << "Interpreter::Type_Float";
+                returnCommand = "return stackReturn.mFloat;\n"; // maybe runtime.pop() as well?
+                break;
+            case 'S':
+                //returnDeclare="std::string";
+                //returnCommand = "return runtime.getStringLiteral(runtime[0].mInteger)";
+                std::cerr << "String returns not supported in keyword  " << keyword;
+                break;
+            case 'l':
+                mHeaderFile << foursp << "Interpreter::Type_Integer";
+                mImpFile << foursp << "Interpreter::Type_Integer";
+                returnCommand = "return stackReturn.mInteger;\n";
+                //returnCommand = "return 1;\n";//need to fix!
+                break;
+            default:
+                std::cerr << "error generating " << keyword << " no valid returnType\n";
         }
-        else if (returnType=='S')
-        {
-            //returnDeclare="std::string";
-            //returnCommand = "return runtime.getStringLiteral(runtime[0].mInteger)";
-            std::cerr << "String returns not supported in keyword  " << keyword;
-        }
-        else if (returnType=='l')
-        {
-            mHeaderFile << foursp << "Interpreter::Type_Integer";
-            mImpFile << foursp << "Interpreter::Type_Integer";
-            returnCommand = "return stackReturn.mInteger;\n";
-            //returnCommand = "return 1;\n";//need to fix!
-        }
-        else
-        {
-            std::cerr << "error generating " << keyword << " no valid returnType\n";
-        }
+
         mHeaderFile << " " << keyword << "(";
         mImpFile << " " << keyword << "(";
+
     }
     else if(mExtensions.isInstruction (keywordint, argumentType, explicitReference))
     {
