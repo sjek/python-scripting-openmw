@@ -230,5 +230,6 @@ SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_F
 SWIG_LINK_LIBRARIES(openmw openmwbindings ${PYTHON_LIBRARIES})
 target_link_libraries(openmw ${PYTHON_LIBRARIES} openmwbindings)
 
+FILE(COPY ${CMAKE_SOURCE_DIR}/files/test.py DESTINATION ${CMAKE_BINARY_DIR})
 INSTALL(FILES ${CMAKE_BINARY_DIR}/openmw.py ${SWIG_MODULE_OPENMW_REAL_NAME} DESTINATION ${BINDIR}) #distutils is best
 
