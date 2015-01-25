@@ -37,7 +37,7 @@ namespace MWScript
                         MWScriptExtensions::context = &pythonContext;
                         Interpreter::Interpreter pythonInterpreter;
                         MWScript::installOpcodes(pythonInterpreter);
-                        MWScriptExtensions::interpreter = &pythonInterpreter;
+                        MWScriptExtensions::interpreter = &pythonInterpreter; //need to create one interpreter, not recreat each time
                         Py_Initialize();
                         FILE *file_1 = fopen(scriptname.c_str(),"r");
                         PyRun_SimpleFileEx(file_1,scriptname.c_str(),1);

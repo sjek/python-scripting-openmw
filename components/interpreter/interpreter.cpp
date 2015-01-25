@@ -7,8 +7,6 @@
 #include <stdexcept>
 
 #include "opcodes.hpp"
-#include "runtime.hpp"
-
 
 namespace Interpreter
 {
@@ -221,10 +219,4 @@ namespace Interpreter
 
         mRuntime.clear();
     }
-
-    Data Interpreter::getRuntimeData(int index)
-    {
-        return mRuntime[index];
-    }
-
 }

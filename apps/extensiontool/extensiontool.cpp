@@ -38,9 +38,10 @@ class CodeGenerator
 
 void CodeGenerator::topGenerator()
 {
-    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
-    mHeaderFile << "#include <components/interpreter/interpreter.hpp>\n";
-    mHeaderFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
+    mHeaderFile << "#ifndef OPENMWBINDINGS_HPP\n#define OPENMWBINDINGS_HPP\n\n";
+    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
+    mHeaderFile << "namespace Interpreter { class Interpreter; }\n";
+    mHeaderFile << "namespace MWScript { class InterpreterContext; }\n\n";
     mHeaderFile << "namespace MWScriptExtensions\n{\n";
     mImpFile << "#include \"openmwbindings.hpp\"\n\n";
     mImpFile << "#include <components/compiler/literals.hpp>\n";
@@ -53,15 +54,18 @@ void CodeGenerator::topGenerator()
     mImpFile << "#include <components/misc/stringops.hpp>\n\n";
     mImpFile << "namespace MWScriptExtensions\n{\n";
     mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
+    //mImpFile << "    bool opcodesInstalled=false;\n";
     mImpFile << "    MWScript::InterpreterContext *context=NULL;\n";
     mImpFile << "    Interpreter::Data stackReturn;\n\n";
     mHeaderFile << "    extern Interpreter::Interpreter *interpreter;\n";
+    //mHeaderFile << "    extern bool opcodesInstalled;\n";
     mHeaderFile << "    extern MWScript::InterpreterContext *context;\n";
     mHeaderFile << "    extern Interpreter::Data stackReturn;\n\n";
 }
 void CodeGenerator::bottomGenerator()
 {
     mHeaderFile << "}\n";
+    mHeaderFile << "#endif\n";
     mImpFile << "}\n\n";
 }
 
@@ -273,10 +277,10 @@ void CodeGenerator::keywordParser(std::string keyword)
     mImpFile << foursp << foursp << "std::copy (code.begin(), code.end(), std::back_inserter (codeblock));\n";
     mImpFile << foursp << foursp << "literals.append(codeblock);\n";
     mImpFile << foursp << foursp << "for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)\n";
-    mImpFile << foursp << foursp << foursp << "std::cout << (std::bitset<32>) *i << \" \\n \";\n";
+    //mImpFile << foursp << foursp << foursp << "std::cout << (std::bitset<32>) *i << \" \\n \";\n";
 
     mImpFile << foursp << foursp << "interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!\n";
-    mImpFile << foursp << foursp << "std::cout.flush();\n";
+    //mImpFile << foursp << foursp << "std::cout.flush();\n";
     mImpFile << foursp << foursp << returnCommand;
     mImpFile << foursp << "}\n";
     return;

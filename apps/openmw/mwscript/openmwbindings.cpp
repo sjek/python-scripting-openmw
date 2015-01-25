@@ -46,9 +46,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void additem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -89,9 +87,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void addsoulgem(std::string arg0, std::string arg1, std::string arg2)
@@ -132,9 +128,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void addspell(std::string arg0, std::string arg1)
@@ -170,9 +164,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void addtolevcreature(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -212,9 +204,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void addtolevitem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -254,9 +244,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void addtopic(std::string arg0)
@@ -286,9 +274,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aiactivate(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -329,9 +315,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aiescort(std::string arg0, std::string arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4, Interpreter::Type_Float arg5, Interpreter::Type_Integer arg6)
@@ -392,9 +376,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aiescortcell(std::string arg0, std::string arg1, std::string arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4, Interpreter::Type_Float arg5, Interpreter::Type_Float arg6, Interpreter::Type_Integer arg7)
@@ -460,9 +442,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aifollow(std::string arg0, std::string arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4, Interpreter::Type_Float arg5, Interpreter::Type_Integer arg6, Interpreter::Type_Integer arg7, Interpreter::Type_Integer arg8, Interpreter::Type_Integer arg9, Interpreter::Type_Integer arg10, Interpreter::Type_Integer arg11, Interpreter::Type_Integer arg12, Interpreter::Type_Integer arg13)
@@ -558,9 +538,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aifollowcell(std::string arg0, std::string arg1, std::string arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4, Interpreter::Type_Float arg5, Interpreter::Type_Float arg6, Interpreter::Type_Integer arg7)
@@ -626,9 +604,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aitravel(std::string arg0, Interpreter::Type_Float arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Integer arg4)
@@ -679,9 +655,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void aiwander(std::string arg0, Interpreter::Type_Float arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Integer arg4, Interpreter::Type_Integer arg5, Interpreter::Type_Integer arg6, Interpreter::Type_Integer arg7, Interpreter::Type_Integer arg8, Interpreter::Type_Integer arg9, Interpreter::Type_Integer arg10, Interpreter::Type_Integer arg11, Interpreter::Type_Integer arg12, Interpreter::Type_Integer arg13)
@@ -777,9 +751,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void bc(std::string arg0, std::string arg1)
@@ -815,9 +787,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void becomewerewolf(std::string arg0)
@@ -848,9 +818,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void betacomment(std::string arg0, std::string arg1)
@@ -886,9 +854,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void cast(std::string arg0, std::string arg1, std::string arg2)
@@ -929,9 +895,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer cellchanged()
@@ -957,9 +921,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void centeroncell(std::string arg0)
@@ -989,9 +951,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void centeronexterior(Interpreter::Type_Integer arg0, Interpreter::Type_Integer arg1)
@@ -1026,9 +986,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void changeweather(std::string arg0, Interpreter::Type_Integer arg1)
@@ -1063,9 +1021,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void choice(std::string arg0, Interpreter::Type_Integer arg1, std::string arg2, Interpreter::Type_Integer arg3, std::string arg4, Interpreter::Type_Integer arg5, std::string arg6, Interpreter::Type_Integer arg7, std::string arg8, Interpreter::Type_Integer arg9, std::string arg10, Interpreter::Type_Integer arg11, std::string arg12, Interpreter::Type_Integer arg13, std::string arg14, Interpreter::Type_Integer arg15, std::string arg16, Interpreter::Type_Integer arg17, std::string arg18, Interpreter::Type_Integer arg19, std::string arg20, Interpreter::Type_Integer arg21, std::string arg22, Interpreter::Type_Integer arg23, std::string arg24, Interpreter::Type_Integer arg25, std::string arg26, Interpreter::Type_Integer arg27, std::string arg28, Interpreter::Type_Integer arg29, std::string arg30, Interpreter::Type_Integer arg31)
@@ -1250,9 +1206,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void clearforcejump(std::string arg0)
@@ -1283,9 +1237,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void clearforcemovejump(std::string arg0)
@@ -1316,9 +1268,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void clearforcerun(std::string arg0)
@@ -1349,9 +1299,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void clearforcesneak(std::string arg0)
@@ -1382,9 +1330,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void clearinfoactor(std::string arg0)
@@ -1415,9 +1361,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void coc(std::string arg0)
@@ -1447,9 +1391,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void coe(Interpreter::Type_Integer arg0, Interpreter::Type_Integer arg1)
@@ -1484,9 +1426,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disablelevitation()
@@ -1511,9 +1451,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableplayercontrols()
@@ -1538,9 +1476,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableplayerfighting()
@@ -1565,9 +1501,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableplayerjumping()
@@ -1592,9 +1526,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableplayerlooking()
@@ -1619,9 +1551,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableplayermagic()
@@ -1646,9 +1576,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableplayerviewswitch()
@@ -1673,9 +1601,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disableteleporting()
@@ -1700,9 +1626,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void disablevanitymode()
@@ -1727,9 +1651,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void dontsaveobject()
@@ -1754,9 +1676,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void drop(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -1797,9 +1717,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void dropsoulgem(std::string arg0, std::string arg1)
@@ -1835,9 +1753,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablebirthmenu()
@@ -1862,9 +1778,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableclassmenu()
@@ -1889,9 +1803,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableinventorymenu()
@@ -1916,9 +1828,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablelevelupmenu()
@@ -1943,9 +1853,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablelevitation()
@@ -1970,9 +1878,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablemagicmenu()
@@ -1997,9 +1903,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablemapmenu()
@@ -2024,9 +1928,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablenamemenu()
@@ -2051,9 +1953,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableplayercontrols()
@@ -2078,9 +1978,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableplayerfighting()
@@ -2105,9 +2003,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableplayerjumping()
@@ -2132,9 +2028,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableplayerlooking()
@@ -2159,9 +2053,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableplayermagic()
@@ -2186,9 +2078,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableplayerviewswitch()
@@ -2213,9 +2103,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableracemenu()
@@ -2240,9 +2128,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablerest()
@@ -2267,9 +2153,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablestatreviewmenu()
@@ -2294,9 +2178,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablestatsmenu()
@@ -2321,9 +2203,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enableteleporting()
@@ -2348,9 +2228,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void enablevanitymode()
@@ -2375,9 +2253,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void equip(std::string arg0, std::string arg1)
@@ -2413,9 +2289,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void explodespell(std::string arg0, std::string arg1)
@@ -2451,9 +2325,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void externalscriptreturn()
@@ -2478,9 +2350,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void face(std::string arg0, Interpreter::Type_Integer arg1, Interpreter::Type_Integer arg2)
@@ -2521,9 +2391,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void fadein(Interpreter::Type_Float arg0)
@@ -2553,9 +2421,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void fadeout(Interpreter::Type_Float arg0)
@@ -2585,9 +2451,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void fadeto(Interpreter::Type_Float arg0, Interpreter::Type_Float arg1)
@@ -2622,9 +2486,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void fall(std::string arg0)
@@ -2655,9 +2517,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void fillmap()
@@ -2682,9 +2542,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void forcegreeting(std::string arg0)
@@ -2715,9 +2573,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void forcejump(std::string arg0)
@@ -2748,9 +2604,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void forcemovejump(std::string arg0)
@@ -2781,9 +2635,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void forcerun(std::string arg0)
@@ -2814,9 +2666,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void forcesneak(std::string arg0)
@@ -2847,9 +2697,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer getacrobatics(std::string arg0)
@@ -2881,9 +2729,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getagility(std::string arg0)
@@ -2915,9 +2761,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getaipackagedone(std::string arg0)
@@ -2949,9 +2793,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getalarm(std::string arg0)
@@ -2983,9 +2825,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getalchemy(std::string arg0)
@@ -3017,9 +2857,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getalteration(std::string arg0)
@@ -3051,9 +2889,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getangle(std::string arg0, std::string arg1)
@@ -3090,9 +2926,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getarmorbonus(std::string arg0)
@@ -3124,9 +2958,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getarmorer(std::string arg0)
@@ -3158,9 +2990,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getarmortype(std::string arg0, Interpreter::Type_Integer arg1)
@@ -3197,9 +3027,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getathletics(std::string arg0)
@@ -3231,9 +3059,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getattackbonus(std::string arg0)
@@ -3265,9 +3091,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getattacked(std::string arg0)
@@ -3299,9 +3123,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getaxe(std::string arg0)
@@ -3333,9 +3155,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getblightdisease(std::string arg0)
@@ -3367,9 +3187,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getblindness(std::string arg0)
@@ -3401,9 +3219,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getblock(std::string arg0)
@@ -3435,9 +3251,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getbluntweapon(std::string arg0)
@@ -3469,9 +3283,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getbuttonpressed()
@@ -3497,9 +3309,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getcastpenalty(std::string arg0)
@@ -3531,9 +3341,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getchameleon(std::string arg0)
@@ -3565,9 +3373,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getcollidingactor(std::string arg0)
@@ -3599,9 +3405,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getcollidingpc(std::string arg0)
@@ -3633,9 +3437,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getcommondisease(std::string arg0)
@@ -3667,9 +3469,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getconjuration(std::string arg0)
@@ -3701,9 +3501,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getcurrentaipackage(std::string arg0)
@@ -3735,9 +3533,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getcurrenttime()
@@ -3763,9 +3559,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getcurrentweather()
@@ -3791,9 +3585,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getdeadcount(std::string arg0)
@@ -3824,9 +3616,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getdefendbonus(std::string arg0)
@@ -3858,9 +3648,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getdestruction(std::string arg0)
@@ -3892,9 +3680,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getdetected(std::string arg0, std::string arg1)
@@ -3931,9 +3717,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getdisposition(std::string arg0)
@@ -3965,9 +3749,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer geteffect(std::string arg0, std::string arg1)
@@ -4004,9 +3786,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getenchant(std::string arg0)
@@ -4038,9 +3818,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getendurance(std::string arg0)
@@ -4072,9 +3850,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getfactionreaction(std::string arg0, std::string arg1)
@@ -4110,9 +3886,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getfatigue(std::string arg0)
@@ -4144,9 +3918,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Float getfatiguegetratio(std::string arg0)
@@ -4178,9 +3950,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getfight(std::string arg0)
@@ -4212,9 +3982,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getflee(std::string arg0)
@@ -4246,9 +4014,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getflying(std::string arg0)
@@ -4280,9 +4046,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getforcejump(std::string arg0)
@@ -4314,9 +4078,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getforcemovejump(std::string arg0)
@@ -4348,9 +4110,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getforcerun(std::string arg0)
@@ -4382,9 +4142,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getforcesneak(std::string arg0)
@@ -4416,9 +4174,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer gethandtohand(std::string arg0)
@@ -4450,9 +4206,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float gethealth(std::string arg0)
@@ -4484,9 +4238,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Float gethealthgetratio(std::string arg0)
@@ -4518,9 +4270,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getheavyarmor(std::string arg0)
@@ -4552,9 +4302,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer gethello(std::string arg0)
@@ -4586,9 +4334,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getillusion(std::string arg0)
@@ -4620,9 +4366,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getintelligence(std::string arg0)
@@ -4654,9 +4398,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getinterior()
@@ -4682,9 +4424,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getinvisible(std::string arg0)
@@ -4716,9 +4456,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getitemcount(std::string arg0, std::string arg1)
@@ -4755,9 +4493,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getjournalindex(std::string arg0)
@@ -4788,9 +4524,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getlevel(std::string arg0)
@@ -4822,9 +4556,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getlightarmor(std::string arg0)
@@ -4856,9 +4588,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getlineofsight(std::string arg0, std::string arg1)
@@ -4895,9 +4625,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getlocked(std::string arg0)
@@ -4929,9 +4657,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getlongblade(std::string arg0)
@@ -4963,9 +4689,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getlos(std::string arg0, std::string arg1)
@@ -5002,9 +4726,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getluck(std::string arg0)
@@ -5036,9 +4758,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getmagicka(std::string arg0)
@@ -5070,9 +4790,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Float getmagickagetratio(std::string arg0)
@@ -5104,9 +4822,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getmarksman(std::string arg0)
@@ -5138,9 +4854,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getmasserphase()
@@ -5166,9 +4880,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getmediumarmor(std::string arg0)
@@ -5200,9 +4912,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getmercantile(std::string arg0)
@@ -5234,9 +4944,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getmysticism(std::string arg0)
@@ -5268,9 +4976,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getparalysis(std::string arg0)
@@ -5302,9 +5008,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpccell(std::string arg0)
@@ -5335,9 +5039,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getpccrimelevel()
@@ -5363,9 +5065,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getpcfacrep(std::string arg0, std::string arg1)
@@ -5402,9 +5102,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpcinjail()
@@ -5430,9 +5128,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpcjumping()
@@ -5458,9 +5154,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpcrank(std::string arg0, std::string arg1)
@@ -5497,9 +5191,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpcrunning()
@@ -5525,9 +5217,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpcsleep()
@@ -5553,9 +5243,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpcsneaking()
@@ -5581,9 +5269,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpctraveling()
@@ -5609,9 +5295,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getpersonality(std::string arg0)
@@ -5643,9 +5327,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getplayercontrolsdisabled()
@@ -5671,9 +5353,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getplayerfightingdisabled()
@@ -5699,9 +5379,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getplayerjumpingdisabled()
@@ -5727,9 +5405,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getplayerlookingdisabled()
@@ -5755,9 +5431,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getplayermagicdisabled()
@@ -5783,9 +5457,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getplayerviewswitchdisabled()
@@ -5811,9 +5483,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getpos(std::string arg0, std::string arg1)
@@ -5850,9 +5520,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getrace(std::string arg0, std::string arg1)
@@ -5889,9 +5557,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getreputation(std::string arg0)
@@ -5923,9 +5589,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistblight(std::string arg0)
@@ -5957,9 +5621,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistcorprus(std::string arg0)
@@ -5991,9 +5653,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistdisease(std::string arg0)
@@ -6025,9 +5685,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistfire(std::string arg0)
@@ -6059,9 +5717,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistfrost(std::string arg0)
@@ -6093,9 +5749,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistmagicka(std::string arg0)
@@ -6127,9 +5781,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistnormalweapons(std::string arg0)
@@ -6161,9 +5813,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistparalysis(std::string arg0)
@@ -6195,9 +5845,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistpoison(std::string arg0)
@@ -6229,9 +5877,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getresistshock(std::string arg0)
@@ -6263,9 +5909,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getrestoration(std::string arg0)
@@ -6297,9 +5941,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getscale(std::string arg0)
@@ -6331,9 +5973,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getsecundaphase()
@@ -6359,9 +5999,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getsecurity(std::string arg0)
@@ -6393,9 +6031,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getshortblade(std::string arg0)
@@ -6427,9 +6063,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getsilence(std::string arg0)
@@ -6461,9 +6095,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getsneak(std::string arg0)
@@ -6495,9 +6127,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getsoundplaying(std::string arg0, std::string arg1)
@@ -6534,9 +6164,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getspear(std::string arg0)
@@ -6568,9 +6196,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getspeechcraft(std::string arg0)
@@ -6602,9 +6228,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getspeed(std::string arg0)
@@ -6636,9 +6260,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getspell(std::string arg0, std::string arg1)
@@ -6675,9 +6297,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getspelleffects(std::string arg0, std::string arg1)
@@ -6714,9 +6334,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getspellreadied(std::string arg0)
@@ -6748,9 +6366,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getsquareroot(Interpreter::Type_Float arg0)
@@ -6781,9 +6397,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getstandingactor(std::string arg0)
@@ -6815,9 +6429,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getstandingpc(std::string arg0)
@@ -6849,9 +6461,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getstartingangle(std::string arg0, std::string arg1)
@@ -6888,9 +6498,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Float getstartingpos(std::string arg0, std::string arg1)
@@ -6927,9 +6535,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getstat(std::string arg0, std::string arg1)
@@ -6966,9 +6572,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getstrength(std::string arg0)
@@ -7000,9 +6604,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getsuperjump(std::string arg0)
@@ -7034,9 +6636,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getswimspeed(std::string arg0)
@@ -7068,9 +6668,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer gettarget(std::string arg0, std::string arg1)
@@ -7107,9 +6705,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getunarmored(std::string arg0)
@@ -7141,9 +6737,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getvanitymodedisabled()
@@ -7169,9 +6763,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getwaterbreathing(std::string arg0)
@@ -7203,9 +6795,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getwaterlevel()
@@ -7231,9 +6821,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     Interpreter::Type_Integer getwaterwalking(std::string arg0)
@@ -7265,9 +6853,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getweapondrawn(std::string arg0)
@@ -7299,9 +6885,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getweapontype(std::string arg0)
@@ -7333,9 +6917,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getwerewolfkills()
@@ -7361,9 +6943,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer getwillpower(std::string arg0)
@@ -7395,9 +6975,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Float getwindspeed()
@@ -7423,9 +7001,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mFloat;
     }
     void goodbye()
@@ -7450,9 +7026,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void gotojail()
@@ -7477,9 +7051,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer hasitemequipped(std::string arg0, std::string arg1)
@@ -7516,9 +7088,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer hassoulgem(std::string arg0, std::string arg1)
@@ -7555,9 +7125,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer hitattemptonme(std::string arg0, std::string arg1)
@@ -7594,9 +7162,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer hitonme(std::string arg0, std::string arg1)
@@ -7633,9 +7199,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void hurtcollidingactor(std::string arg0, Interpreter::Type_Float arg1)
@@ -7671,9 +7235,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void hurtstandingactor(std::string arg0, Interpreter::Type_Float arg1)
@@ -7709,9 +7271,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer iswerewolf(std::string arg0)
@@ -7743,9 +7303,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void journal(std::string arg0, Interpreter::Type_Integer arg1)
@@ -7780,9 +7338,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void lock(std::string arg0, Interpreter::Type_Integer arg1)
@@ -7818,9 +7374,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void loopgroup(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2, Interpreter::Type_Integer arg3)
@@ -7866,9 +7420,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void lowerrank(std::string arg0)
@@ -7899,9 +7451,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void menutest(Interpreter::Type_Integer arg0)
@@ -7931,9 +7481,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modacrobatics(std::string arg0, Interpreter::Type_Integer arg1)
@@ -7969,9 +7517,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modagility(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8007,9 +7553,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modalarm(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8045,9 +7589,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modalchemy(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8083,9 +7625,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modalteration(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8121,9 +7661,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modarmorbonus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8159,9 +7697,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modarmorer(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8197,9 +7733,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modathletics(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8235,9 +7769,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modattackbonus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8273,9 +7805,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modaxe(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8311,9 +7841,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modblindness(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8349,9 +7877,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modblock(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8387,9 +7913,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modbluntweapon(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8425,9 +7949,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modcastpenalty(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8463,9 +7985,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modchameleon(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8501,9 +8021,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modconjuration(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8539,9 +8057,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modcurrentfatigue(std::string arg0, Interpreter::Type_Float arg1)
@@ -8577,9 +8093,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modcurrenthealth(std::string arg0, Interpreter::Type_Float arg1)
@@ -8615,9 +8129,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modcurrentmagicka(std::string arg0, Interpreter::Type_Float arg1)
@@ -8653,9 +8165,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void moddefendbonus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8691,9 +8201,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void moddestruction(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8729,9 +8237,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void moddisposition(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8767,9 +8273,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modenchant(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8805,9 +8309,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modendurance(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8843,9 +8345,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modfactionreaction(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -8885,9 +8385,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modfatigue(std::string arg0, Interpreter::Type_Float arg1)
@@ -8923,9 +8421,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modfight(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8961,9 +8457,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modflee(std::string arg0, Interpreter::Type_Integer arg1)
@@ -8999,9 +8493,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modflying(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9037,9 +8529,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modhandtohand(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9075,9 +8565,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modhealth(std::string arg0, Interpreter::Type_Float arg1)
@@ -9113,9 +8601,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modheavyarmor(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9151,9 +8637,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modhello(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9189,9 +8673,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modillusion(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9227,9 +8709,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modintelligence(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9265,9 +8745,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modinvisible(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9303,9 +8781,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modlightarmor(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9341,9 +8817,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modlongblade(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9379,9 +8853,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modluck(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9417,9 +8889,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modmagicka(std::string arg0, Interpreter::Type_Float arg1)
@@ -9455,9 +8925,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modmarksman(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9493,9 +8961,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modmediumarmor(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9531,9 +8997,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modmercantile(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9569,9 +9033,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modmysticism(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9607,9 +9069,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modparalysis(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9645,9 +9105,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modpccrimelevel(Interpreter::Type_Float arg0)
@@ -9677,9 +9135,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modpcfacrep(std::string arg0, Interpreter::Type_Integer arg1, std::string arg2)
@@ -9720,9 +9176,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modpersonality(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9758,9 +9212,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modregion(std::string arg0, Interpreter::Type_Integer arg1, Interpreter::Type_Integer arg2, Interpreter::Type_Integer arg3, Interpreter::Type_Integer arg4, Interpreter::Type_Integer arg5, Interpreter::Type_Integer arg6, Interpreter::Type_Integer arg7, Interpreter::Type_Integer arg8, Interpreter::Type_Integer arg9, Interpreter::Type_Integer arg10)
@@ -9840,9 +9292,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modreputation(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9878,9 +9328,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistblight(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9916,9 +9364,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistcorprus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9954,9 +9400,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistdisease(std::string arg0, Interpreter::Type_Integer arg1)
@@ -9992,9 +9436,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistfire(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10030,9 +9472,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistfrost(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10068,9 +9508,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistmagicka(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10106,9 +9544,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistnormalweapons(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10144,9 +9580,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistparalysis(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10182,9 +9616,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistpoison(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10220,9 +9652,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modresistshock(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10258,9 +9688,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modrestoration(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10296,9 +9724,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modscale(std::string arg0, Interpreter::Type_Float arg1)
@@ -10334,9 +9760,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modsecurity(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10372,9 +9796,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modshortblade(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10410,9 +9832,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modsilence(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10448,9 +9868,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modsneak(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10486,9 +9904,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modspear(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10524,9 +9940,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modspeechcraft(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10562,9 +9976,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modspeed(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10600,9 +10012,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modstrength(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10638,9 +10048,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modsuperjump(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10676,9 +10084,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modswimspeed(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10714,9 +10120,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modunarmored(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10752,9 +10156,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modwaterbreathing(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10790,9 +10192,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modwaterlevel(Interpreter::Type_Float arg0)
@@ -10822,9 +10222,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modwaterwalking(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10860,9 +10258,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void modwillpower(std::string arg0, Interpreter::Type_Integer arg1)
@@ -10898,9 +10294,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void move(std::string arg0, std::string arg1, Interpreter::Type_Float arg2)
@@ -10941,9 +10335,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void moveworld(std::string arg0, std::string arg1, Interpreter::Type_Float arg2)
@@ -10984,9 +10376,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer onactivate()
@@ -11012,9 +10402,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer ondeath(std::string arg0)
@@ -11046,9 +10434,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer onknockout(std::string arg0)
@@ -11080,9 +10466,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     Interpreter::Type_Integer onmurder(std::string arg0)
@@ -11114,9 +10498,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void payfine()
@@ -11141,9 +10523,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void payfinethief()
@@ -11168,9 +10548,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void pcclearexpelled(std::string arg0, std::string arg1)
@@ -11206,9 +10584,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void pcexpell(std::string arg0, std::string arg1)
@@ -11244,9 +10620,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer pcexpelled(std::string arg0, std::string arg1)
@@ -11283,9 +10657,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void pcforce1stperson()
@@ -11310,9 +10682,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void pcforce3rdperson()
@@ -11337,9 +10707,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer pcget3rdperson()
@@ -11365,9 +10733,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void pcjoinfaction(std::string arg0, std::string arg1)
@@ -11403,9 +10769,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void pclowerrank(std::string arg0, std::string arg1)
@@ -11441,9 +10805,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void pcraiserank(std::string arg0, std::string arg1)
@@ -11479,9 +10841,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void placeatme(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2, Interpreter::Type_Float arg3, Interpreter::Type_Integer arg4)
@@ -11532,9 +10892,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void placeatpc(std::string arg0, Interpreter::Type_Integer arg1, Interpreter::Type_Float arg2, Interpreter::Type_Integer arg3)
@@ -11579,9 +10937,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void placeitem(std::string arg0, Interpreter::Type_Float arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4)
@@ -11631,9 +10987,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void placeitemcell(std::string arg0, std::string arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4, Interpreter::Type_Float arg5)
@@ -11688,9 +11042,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playbink(std::string arg0, Interpreter::Type_Integer arg1)
@@ -11725,9 +11077,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playgroup(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -11768,9 +11118,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playloopsound3d(std::string arg0, std::string arg1)
@@ -11806,9 +11154,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playloopsound3dvp(std::string arg0, std::string arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3)
@@ -11854,9 +11200,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playsound(std::string arg0)
@@ -11886,9 +11230,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playsound3d(std::string arg0, std::string arg1)
@@ -11924,9 +11266,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playsound3dvp(std::string arg0, std::string arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3)
@@ -11972,9 +11312,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void playsoundvp(std::string arg0, Interpreter::Type_Float arg1, Interpreter::Type_Float arg2)
@@ -12014,9 +11352,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void position(std::string arg0, Interpreter::Type_Float arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4)
@@ -12067,9 +11403,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void positioncell(std::string arg0, Interpreter::Type_Float arg1, Interpreter::Type_Float arg2, Interpreter::Type_Float arg3, Interpreter::Type_Float arg4, std::string arg5)
@@ -12125,9 +11459,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void ra()
@@ -12152,9 +11484,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void raiserank(std::string arg0)
@@ -12185,9 +11515,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removeeffects(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12223,9 +11551,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removefromlevcreature(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -12265,9 +11591,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removefromlevitem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -12307,9 +11631,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removeitem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -12350,9 +11672,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removesoulgem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
@@ -12393,9 +11713,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removespell(std::string arg0, std::string arg1)
@@ -12431,9 +11749,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void removespelleffects(std::string arg0, std::string arg1)
@@ -12469,9 +11785,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void resetactors()
@@ -12496,9 +11810,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void resurrect(std::string arg0)
@@ -12529,9 +11841,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void rotate(std::string arg0, std::string arg1, Interpreter::Type_Float arg2)
@@ -12572,9 +11882,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void rotateworld(std::string arg0, std::string arg1, Interpreter::Type_Float arg2)
@@ -12615,9 +11923,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer samefaction(std::string arg0)
@@ -12649,9 +11955,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void say(std::string arg0, std::string arg1, std::string arg2)
@@ -12692,9 +11996,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer saydone(std::string arg0)
@@ -12726,9 +12028,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
     void setacrobatics(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12764,9 +12064,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setagility(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12802,9 +12100,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setalarm(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12840,9 +12136,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setalchemy(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12878,9 +12172,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setalteration(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12916,9 +12208,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setangle(std::string arg0, std::string arg1, Interpreter::Type_Float arg2)
@@ -12959,9 +12249,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setarmorbonus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -12997,9 +12285,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setarmorer(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13035,9 +12321,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setathletics(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13073,9 +12357,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setatstart(std::string arg0)
@@ -13106,9 +12388,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setattackbonus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13144,9 +12424,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setaxe(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13182,9 +12460,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setblindness(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13220,9 +12496,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setblock(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13258,9 +12532,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setbluntweapon(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13296,9 +12568,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setcastpenalty(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13334,9 +12604,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setchameleon(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13372,9 +12640,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setconjuration(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13410,9 +12676,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setdefendbonus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13448,9 +12712,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setdelete(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13486,9 +12748,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setdestruction(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13524,9 +12784,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setdisposition(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13562,9 +12820,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setenchant(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13600,9 +12856,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setendurance(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13638,9 +12892,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setfatigue(std::string arg0, Interpreter::Type_Float arg1)
@@ -13676,9 +12928,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setfight(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13714,9 +12964,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setflee(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13752,9 +13000,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setflying(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13790,9 +13036,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void sethandtohand(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13828,9 +13072,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void sethealth(std::string arg0, Interpreter::Type_Float arg1)
@@ -13866,9 +13108,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setheavyarmor(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13904,9 +13144,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void sethello(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13942,9 +13180,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setillusion(std::string arg0, Interpreter::Type_Integer arg1)
@@ -13980,9 +13216,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setintelligence(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14018,9 +13252,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setinvisible(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14056,9 +13288,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setjournalindex(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14093,9 +13323,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setlevel(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14131,9 +13359,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setlightarmor(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14169,9 +13395,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setlongblade(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14207,9 +13431,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setluck(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14245,9 +13467,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setmagicka(std::string arg0, Interpreter::Type_Float arg1)
@@ -14283,9 +13503,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setmarksman(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14321,9 +13539,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setmediumarmor(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14359,9 +13575,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setmercantile(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14397,9 +13611,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setmysticism(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14435,9 +13647,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setparalysis(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14473,9 +13683,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setpccrimelevel(Interpreter::Type_Float arg0)
@@ -14505,9 +13713,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setpcfacrep(std::string arg0, Interpreter::Type_Integer arg1, std::string arg2)
@@ -14548,9 +13754,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setpersonality(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14586,9 +13790,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setpos(std::string arg0, std::string arg1, Interpreter::Type_Float arg2)
@@ -14629,9 +13831,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setreputation(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14667,9 +13867,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistblight(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14705,9 +13903,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistcorprus(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14743,9 +13939,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistdisease(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14781,9 +13975,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistfire(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14819,9 +14011,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistfrost(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14857,9 +14047,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistmagicka(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14895,9 +14083,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistnormalweapons(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14933,9 +14119,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistparalysis(std::string arg0, Interpreter::Type_Integer arg1)
@@ -14971,9 +14155,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistpoison(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15009,9 +14191,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setresistshock(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15047,9 +14227,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setrestoration(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15085,9 +14263,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setscale(std::string arg0, Interpreter::Type_Float arg1)
@@ -15123,9 +14299,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setsecurity(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15161,9 +14335,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setshortblade(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15199,9 +14371,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setsilence(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15237,9 +14407,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setsneak(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15275,9 +14443,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setspear(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15313,9 +14479,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setspeechcraft(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15351,9 +14515,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setspeed(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15389,9 +14551,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setstrength(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15427,9 +14587,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setsuperjump(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15465,9 +14623,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setswimspeed(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15503,9 +14659,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setunarmored(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15541,9 +14695,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setwaterbreathing(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15579,9 +14731,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setwaterlevel(Interpreter::Type_Float arg0)
@@ -15611,9 +14761,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setwaterwalking(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15649,9 +14797,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setwerewolfacrobatics(std::string arg0)
@@ -15682,9 +14828,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void setwillpower(std::string arg0, Interpreter::Type_Integer arg1)
@@ -15720,9 +14864,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void showmap(std::string arg0)
@@ -15752,9 +14894,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void showrestmenu(std::string arg0)
@@ -15785,9 +14925,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void showvars(std::string arg0)
@@ -15818,9 +14956,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void skipanim(std::string arg0)
@@ -15851,9 +14987,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void startcombat(std::string arg0, std::string arg1)
@@ -15889,9 +15023,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void startexternalscript(std::string arg0)
@@ -15921,9 +15053,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void stopcombat(std::string arg0)
@@ -15954,9 +15084,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void stopsound(std::string arg0, std::string arg1)
@@ -15992,9 +15120,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void streammusic(std::string arg0)
@@ -16024,9 +15150,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void sv(std::string arg0)
@@ -16057,9 +15181,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tai(std::string arg0)
@@ -16090,9 +15212,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tcb()
@@ -16117,9 +15237,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tcg()
@@ -16144,9 +15262,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tcl()
@@ -16171,9 +15287,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tfh()
@@ -16198,9 +15312,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tfow()
@@ -16225,9 +15337,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tgm()
@@ -16252,9 +15362,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tm()
@@ -16279,9 +15387,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void toggleai(std::string arg0)
@@ -16312,9 +15418,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglecollision()
@@ -16339,9 +15443,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglecollisionboxes()
@@ -16366,9 +15468,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglecollisiongrid()
@@ -16393,9 +15493,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglefogofwar()
@@ -16420,9 +15518,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglefullhelp()
@@ -16447,9 +15543,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglegodmode()
@@ -16474,9 +15568,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglemenus()
@@ -16501,9 +15593,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglepathgrid()
@@ -16528,9 +15618,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglesky()
@@ -16555,9 +15643,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglevanitymode()
@@ -16582,9 +15668,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglewater()
@@ -16609,9 +15693,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void togglewireframe()
@@ -16636,9 +15718,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void toggleworld()
@@ -16663,9 +15743,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tpg()
@@ -16690,9 +15768,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void ts()
@@ -16717,9 +15793,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void turnmoonred()
@@ -16744,9 +15818,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void turnmoonwhite()
@@ -16771,9 +15843,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tvm()
@@ -16798,9 +15868,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void tw()
@@ -16825,9 +15893,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void twa()
@@ -16852,9 +15918,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void twf()
@@ -16879,9 +15943,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void undowerewolf(std::string arg0)
@@ -16912,9 +15974,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void unlock(std::string arg0)
@@ -16945,9 +16005,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     void wakeuppc()
@@ -16972,9 +16030,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return;
     }
     Interpreter::Type_Integer xbox()
@@ -17000,9 +16056,7 @@ namespace MWScriptExtensions
         std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
         literals.append(codeblock);
         for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
-            std::cout << (std::bitset<32>) *i << " \n ";
         interpreter->run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
-        std::cout.flush();
         return stackReturn.mInteger;
     }
 }

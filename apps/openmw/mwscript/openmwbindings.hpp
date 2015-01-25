@@ -1,8 +1,12 @@
+#ifndef OPENMWBINDINGS_HPP
+#define OPENMWBINDINGS_HPP
+
 #include <string>
 
 #include <components/interpreter/types.hpp>
-#include <components/interpreter/interpreter.hpp>
-#include <apps/openmw/mwscript/interpretercontext.hpp>
+
+namespace Interpreter { class Interpreter; }
+namespace MWScript { class InterpreterContext; }
 
 namespace MWScriptExtensions
 {
@@ -484,3 +488,4 @@ namespace MWScriptExtensions
     void wakeuppc();
     Interpreter::Type_Integer xbox();
 }
+#endif

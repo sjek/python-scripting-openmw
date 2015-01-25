@@ -1,17 +1,33 @@
-#include "openmwbindings.hpp"
-#include "openmwbindings0.hpp"
+//#include "openmwbindings.hpp"
+//#include "openmwbindings0.hpp"
 
-#include "interpretercontext.hpp"
-#include "globalscripts.hpp"
+//#include "interpretercontext.hpp"
+//#include "globalscripts.hpp"
 
-#include <components/compiler/locals.hpp>
+//#include <components/compiler/locals.hpp>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/scriptmanager.hpp"
+//#include "../mwbase/environment.hpp"
+//#include "../mwbase/scriptmanager.hpp"
 
-#include "../mwworld/class.hpp"
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/worldimp.hpp"
+//#include "../mwworld/class.hpp"
+//#include "../mwworld/ptr.hpp"
+//#include "../mwworld/worldimp.hpp"
+
+//used include-what-you-use from CLANG projcect
+
+#include <assert.h>                     // for assert
+#include <components/compiler/locals.hpp>  // for Locals
+#include <iostream>                     // for operator<<, cout, ostream, etc
+#include <string>                       // for string, operator<<, etc
+#include "../mwbase/environment.hpp"    // for Environment
+#include "../mwbase/scriptmanager.hpp"  // for ScriptManager
+#include "../mwworld/../mwscript/locals.hpp"  // for Locals
+#include "../mwworld/class.hpp"         // for Class
+#include "../mwworld/ptr.hpp"           // for Ptr
+#include "globalscripts.hpp"            // for GlobalScripts
+#include "interpretercontext.hpp"       // for InterpreterContext
+#include "openmwbindings.hpp"           // for context
+
 
 
 namespace MWScriptExtensions
@@ -19,14 +35,21 @@ namespace MWScriptExtensions
     void set(std::string name, float value)
     {
         char type;
-        MWWorld::Ptr ptr = context->getReference(false); // can be empty, e.g. console or global
+        std::string script;
+        MWWorld::Ptr ptr = context->getReference(false); // can be empty, e.g. console or global. running script from console doesn't work
+        if (!ptr.isEmpty()) script = ptr.getClass().getScript(ptr);
 
-        if (!ptr.isEmpty()) //if the context is for an object/actor
+        if (!script.empty()) //if there is a script running on the object
         {
-            const std::string script = ptr.getClass().getScript(ptr);
+            std::cout << "scriptname =" << script << "\n";
+            std::cout.flush();
             const Compiler::Locals &complocals = MWBase::Environment::get().getScriptManager()->getLocals(script);
+            std::cout << "gotlocals\n";
+            std::cout.flush();
             //if there is is a script, get locals for script
             type = complocals.getType (name);
+            std::cout << "gottype\n";
+            std::cout.flush();
             if (type!=' ') //it is a variable in this local script
             {
                 // do what is done:       Generator::assignToLocal (mCode, mLocals.getType (mName),
@@ -92,6 +115,7 @@ namespace MWScriptExtensions
         std::cout.flush();
 
         bool globalscript = !MWBase::Environment::get().getScriptManager()->getGlobalScripts().getLocals(id).isEmpty();
+        if (globalscript) std::cout <<"am a global script\n";
 
         type = MWBase::Environment::get().getScriptManager()->getLocals (id).getType(varname);
 

@@ -10,6 +10,7 @@
 %ignore Data;
 %ignore getData;
 %ignore stackReturn;
+%ignore opcodesInstalled;
 
 %include "std_string.i"
 
