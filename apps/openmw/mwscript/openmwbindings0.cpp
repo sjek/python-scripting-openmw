@@ -28,6 +28,7 @@
 #include "interpretercontext.hpp"       // for InterpreterContext
 #include "openmwbindings.hpp"           // for context
 
+#include "openmwbindings0.hpp"
 
 
 namespace MWScriptExtensions
