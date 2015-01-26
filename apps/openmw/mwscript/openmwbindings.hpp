@@ -10,7 +10,8 @@ namespace MWScript { class InterpreterContext; }
 
 namespace MWScriptExtensions
 {
-    extern Interpreter::Interpreter *interpreter;
+    extern Interpreter::Interpreter interpreter;
+    extern bool opcodesInstalled;
     extern MWScript::InterpreterContext *context;
     extern Interpreter::Data stackReturn;
 

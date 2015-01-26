@@ -1,5 +1,6 @@
 #SomethingScript in morrowind.omwgame has a short named hello you can use
-from openmw import *
+#from openmw import *
+from openmw import gethealth, setpccrimelevel, getflying, setflying, set
 
 print("health: " + str((gethealth("player"))))
 

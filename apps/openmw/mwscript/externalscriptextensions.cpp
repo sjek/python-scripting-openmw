@@ -35,14 +35,21 @@ namespace MWScript
                     {
                         MWScript::InterpreterContext pythonContext = static_cast<InterpreterContext&> (runtime.getContext());
                         MWScriptExtensions::context = &pythonContext;
-                        Interpreter::Interpreter pythonInterpreter;
-                        MWScript::installOpcodes(pythonInterpreter);
-                        MWScriptExtensions::interpreter = &pythonInterpreter; //need to create one interpreter, not recreat each time
-                        Py_Initialize();
+                        //Interpreter::Interpreter pythonInterpreter;
+                        //MWScript::installOpcodes(pythonInterpreter);
+                        //MWScriptExtensions::interpreter = &pythonInterpreter; //need to create one interpreter, not recreat each time
+                        if(!MWScriptExtensions::opcodesInstalled)
+                        {
+                            MWScript::installOpcodes(MWScriptExtensions::interpreter);
+                            Py_Initialize();
+                            PyRun_SimpleString("from openmw import *\n");
+                            MWScriptExtensions::opcodesInstalled=true;
+                        }
+                        PyThreadState* newPythonInterpreter = Py_NewInterpreter();
                         FILE *file_1 = fopen(scriptname.c_str(),"r");
                         PyRun_SimpleFileEx(file_1,scriptname.c_str(),1);
-                        Py_Finalize();
-                        MWScriptExtensions::interpreter=NULL;
+                        Py_EndInterpreter(newPythonInterpreter);
+                        //MWScriptExtensions::interpreter=NULL;
                         MWScriptExtensions::context = NULL;
                     }
                     else
