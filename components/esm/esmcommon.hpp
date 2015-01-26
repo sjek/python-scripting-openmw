@@ -23,7 +23,7 @@ template <int LEN>
 union NAME_T
 {
     char name[LEN];
-    int32_t val;
+    uint32_t val;
 
   bool operator==(const char *str) const
   {
@@ -40,8 +40,8 @@ union NAME_T
   }
   bool operator!=(const std::string &str) const { return !((*this)==str); }
 
-  bool operator==(int v) const { return v == val; }
-  bool operator!=(int v) const { return v != val; }
+  bool operator==(uint32_t v) const { return v == val; }
+  bool operator!=(uint32_t v) const { return v != val; }
 
   std::string toString() const { return std::string(name, strnlen(name, LEN)); }
 

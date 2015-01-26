@@ -51,6 +51,8 @@ option(OGRE_STATIC  "Link static build of Ogre and Ogre Plugins into the binarie
 option(BOOST_STATIC "Link static build of Boost into the binaries" FALSE)
 option(SDL2_STATIC "Link static build of SDL into the binaries" FALSE)
 
+set(CUSTOM_OGRE_PLUGIN_DIR "" CACHE PATH "Specify a custom directory for Ogre plugins (autodetected by default)")
+
 option(OPENMW_UNITY_BUILD "Use fewer compilation units to speed up compile time" FALSE)
 
 # Apps and tools
@@ -58,6 +60,7 @@ option(BUILD_BSATOOL "build BSA extractor" ON)
 option(BUILD_ESMTOOL "build ESM inspector" ON)
 option(BUILD_LAUNCHER "build Launcher" ON)
 option(BUILD_MWINIIMPORTER "build MWiniImporter" ON)
+option(BUILD_ESSIMPORTER "build ESS (Morrowind save game) importer" ON)
 option(BUILD_OPENCS "build OpenMW Construction Set" ON)
 option(BUILD_WIZARD "build Installation Wizard" ON)
 option(BUILD_WITH_CODE_COVERAGE "Enable code coverage with gconv" OFF)
@@ -322,8 +325,10 @@ if (APPLE AND OPENMW_OSX_DEPLOYMENT)
     # make it empty so plugin loading code can check this and try to find plugins inside app bundle
     add_definitions(-DOGRE_PLUGIN_DIR="")
 else()
-    if (NOT DEFINED ${OGRE_PLUGIN_DIR})
+    if (CUSTOM_OGRE_PLUGIN_DIR STREQUAL "")
         set(OGRE_PLUGIN_DIR ${OGRE_PLUGIN_DIR_REL})
+    else()
+        set(OGRE_PLUGIN_DIR ${CUSTOM_OGRE_PLUGIN_DIR})
     endif()
 
     add_definitions(-DOGRE_PLUGIN_DIR="${OGRE_PLUGIN_DIR}")
@@ -414,6 +419,9 @@ IF(NOT WIN32 AND NOT APPLE)
     IF(BUILD_MWINIIMPORTER)
         INSTALL(PROGRAMS "${OpenMW_BINARY_DIR}/mwiniimport" DESTINATION "${BINDIR}" )
     ENDIF(BUILD_MWINIIMPORTER)
+    IF(BUILD_ESSIMPORTER)
+        INSTALL(PROGRAMS "${OpenMW_BINARY_DIR}/openmw-essimporter" DESTINATION "${BINDIR}" )
+    ENDIF(BUILD_ESSIMPORTER)
     IF(BUILD_OPENCS)
         INSTALL(PROGRAMS "${OpenMW_BINARY_DIR}/opencs" DESTINATION "${BINDIR}" )
     ENDIF(BUILD_OPENCS)
@@ -457,8 +465,9 @@ if(WIN32)
     FILE(GLOB dll_files "${OpenMW_BINARY_DIR}/Release/*.dll")
     INSTALL(FILES ${dll_files} DESTINATION ".")
     INSTALL(FILES "${OpenMW_BINARY_DIR}/openmw.cfg.install" DESTINATION "." RENAME "openmw.cfg")
+    INSTALL(FILES "${OpenMW_SOURCE_DIR}/CHANGELOG.md" DESTINATION "." RENAME "CHANGELOG.txt")
+    INSTALL(FILES "${OpenMW_SOURCE_DIR}/README.md" DESTINATION "." RENAME "README.txt")
     INSTALL(FILES
-        "${OpenMW_SOURCE_DIR}/readme.txt"
         "${OpenMW_SOURCE_DIR}/Docs/license/GPL3.txt"
         "${OpenMW_SOURCE_DIR}/Docs/license/DejaVu Font License.txt"
         "${OpenMW_BINARY_DIR}/settings-default.cfg"
@@ -472,6 +481,9 @@ if(WIN32)
     IF(BUILD_MWINIIMPORTER)
         INSTALL(PROGRAMS "${OpenMW_BINARY_DIR}/Release/mwiniimport.exe" DESTINATION ".")
     ENDIF(BUILD_MWINIIMPORTER)
+    IF(BUILD_ESSIMPORTER)
+        INSTALL(PROGRAMS "${OpenMW_BINARY_DIR}/Release/openmw-essimporter.exe" DESTINATION ".")
+    ENDIF(BUILD_ESSIMPORTER)
     IF(BUILD_OPENCS)
         INSTALL(PROGRAMS "${OpenMW_BINARY_DIR}/Release/opencs.exe" DESTINATION ".")
         INSTALL(FILES "${OpenMW_BINARY_DIR}/opencs.ini" DESTINATION ".")
@@ -502,13 +514,13 @@ if(WIN32)
     IF(BUILD_WIZARD)
         SET(CPACK_PACKAGE_EXECUTABLES "${CPACK_PACKAGE_EXECUTABLES};openmw-wizard;OpenMW Wizard")
     ENDIF(BUILD_WIZARD)
-    SET(CPACK_NSIS_CREATE_ICONS_EXTRA "CreateShortCut '\$SMPROGRAMS\\\\$STARTMENU_FOLDER\\\\Readme.lnk' '\$INSTDIR\\\\readme.txt'")
+    SET(CPACK_NSIS_CREATE_ICONS_EXTRA "CreateShortCut '\$SMPROGRAMS\\\\$STARTMENU_FOLDER\\\\Readme.lnk' '\$INSTDIR\\\\README.txt'")
     SET(CPACK_NSIS_DELETE_ICONS_EXTRA "
         !insertmacro MUI_STARTMENU_GETFOLDER Application $MUI_TEMP
         Delete \\\"$SMPROGRAMS\\\\$MUI_TEMP\\\\Readme.lnk\\\"
         ")
-    SET(CPACK_RESOURCE_FILE_README "${OpenMW_SOURCE_DIR}/readme.txt")
-    SET(CPACK_PACKAGE_DESCRIPTION_FILE "${OpenMW_SOURCE_DIR}/readme.txt")
+    SET(CPACK_RESOURCE_FILE_README "${OpenMW_SOURCE_DIR}/README.md")
+    SET(CPACK_PACKAGE_DESCRIPTION_FILE "${OpenMW_SOURCE_DIR}/README.md")
     SET(CPACK_NSIS_EXECUTABLES_DIRECTORY ".")
     SET(CPACK_NSIS_DISPLAY_NAME "OpenMW ${OPENMW_VERSION}")
     SET(CPACK_NSIS_HELP_LINK "http:\\\\\\\\www.openmw.org")
@@ -581,6 +593,10 @@ endif()
 
 if (BUILD_MWINIIMPORTER)
    add_subdirectory( apps/mwiniimporter )
+endif()
+
+if (BUILD_ESSIMPORTER)
+   add_subdirectory (apps/essimporter )
 endif()
 
 if (BUILD_OPENCS)

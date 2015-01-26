@@ -193,6 +193,7 @@ namespace Compiler
             extensions.registerFunction("samefaction", 'l', "", opcodeSameFaction,
                 opcodeSameFactionExplicit);
             extensions.registerInstruction("modfactionreaction", "ccl", opcodeModFactionReaction);
+            extensions.registerInstruction("setfactionreaction", "ccl", opcodeSetFactionReaction);
             extensions.registerFunction("getfactionreaction", 'l', "ccX", opcodeGetFactionReaction);
             extensions.registerInstruction("clearinfoactor", "", opcodeClearInfoActor, opcodeClearInfoActorExplicit);
         }
@@ -224,7 +225,7 @@ namespace Compiler
             extensions.registerInstruction ("enablestatsmenu", "", opcodeEnableStatsMenu);
 
             extensions.registerInstruction ("enablerest", "", opcodeEnableRest);
-            extensions.registerInstruction ("enablelevelupmenu", "", opcodeEnableRest);
+            extensions.registerInstruction ("enablelevelupmenu", "", opcodeEnableLevelupMenu);
 
             extensions.registerInstruction ("showrestmenu", "", opcodeShowRestMenu, opcodeShowRestMenuExplicit);
 
