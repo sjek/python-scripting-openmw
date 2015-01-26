@@ -175,8 +175,8 @@ namespace Compiler
 
     namespace ExternalScript
     {
-        const int opcodeStartExternalScript = 0x20002ff;
-        const int opcodeExternalScriptReturn = 0x2000300;
+        const int opcodeStartExternalScript = 0x2000301;
+        const int opcodeExternalScriptReturn = 0x2000302;
     }
 
     namespace Gui

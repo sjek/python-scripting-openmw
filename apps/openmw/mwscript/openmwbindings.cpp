@@ -1834,7 +1834,7 @@ namespace MWScriptExtensions
     }
     void enablelevelupmenu()
     {
-        Interpreter::Type_Code codeword = 0xca000017;//codeword without arguments
+        Interpreter::Type_Code codeword = 0xca000300;//codeword without arguments
         Compiler::Literals literals;
         std::vector<Interpreter::Type_Code> code;
         uint argCount = 0;
@@ -2331,7 +2331,7 @@ namespace MWScriptExtensions
     }
     void externalscriptreturn()
     {
-        Interpreter::Type_Code codeword = 0xca000300;//codeword without arguments
+        Interpreter::Type_Code codeword = 0xca000302;//codeword without arguments
         Compiler::Literals literals;
         std::vector<Interpreter::Type_Code> code;
         uint argCount = 0;
@@ -12896,6 +12896,46 @@ namespace MWScriptExtensions
         interpreter.run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
         return;
     }
+    void setfactionreaction(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2)
+    {
+        Interpreter::Type_Code codeword = 0xca0002ff;//codeword without arguments
+        Compiler::Literals literals;
+        std::vector<Interpreter::Type_Code> code;
+        uint argCount = 3;
+        uint optionalArgCount = 0;
+        uint argumentsPassed = 0;
+        uint optionalArgumentsPassed = 0;
+        if (arg2!=-123456)
+        {
+            Compiler::Generator::pushInt(code, literals, arg2);
+            argumentsPassed++;
+        }
+        if (arg1!="OPTIONAL_FLAG")
+        {
+            Compiler::Generator::pushString(code, literals, Misc::StringUtils::lowerCase (arg1));
+            argumentsPassed++;
+        }
+        if (arg0!="OPTIONAL_FLAG")
+        {
+            Compiler::Generator::pushString(code, literals, Misc::StringUtils::lowerCase (arg0));
+            argumentsPassed++;
+        }
+        optionalArgumentsPassed = argumentsPassed-(argCount-optionalArgCount);
+        // adds number of arguments as argument to the codeword, similar to how generateInstructionCode does it
+        if (argumentsPassed > 0) codeword= codeword | (optionalArgumentsPassed & 0xff);
+        code.push_back(codeword);
+        //now append codeword to code, append literals to code, create header words and place at head of code see Output::getCode()
+        std::vector<Interpreter::Type_Code> codeblock;
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (code.size()));
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getIntegerSize()/4));
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getFloatSize()/4));
+        codeblock.push_back (static_cast<Interpreter::Type_Code> (literals.getStringSize()/4));
+        std::copy (code.begin(), code.end(), std::back_inserter (codeblock));
+        literals.append(codeblock);
+        for( std::vector<Interpreter::Type_Code>::const_iterator i = codeblock.begin(); i != codeblock.end(); ++i)
+        interpreter.run(&codeblock[0], codeblock.size(), *context);//todo - get the runtime stack!
+        return;
+    }
     void setfatigue(std::string arg0, Interpreter::Type_Float arg1)
     {
         Interpreter::Type_Code codeword = 0xca00005f;//codeword without arguments
@@ -15029,7 +15069,7 @@ namespace MWScriptExtensions
     }
     void startexternalscript(std::string arg0)
     {
-        Interpreter::Type_Code codeword = 0xca0002ff;//codeword without arguments
+        Interpreter::Type_Code codeword = 0xca000301;//codeword without arguments
         Compiler::Literals literals;
         std::vector<Interpreter::Type_Code> code;
         uint argCount = 1;

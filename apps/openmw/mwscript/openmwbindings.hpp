@@ -389,6 +389,7 @@ namespace MWScriptExtensions
     void setdisposition(std::string arg0, Interpreter::Type_Integer arg1);
     void setenchant(std::string arg0, Interpreter::Type_Integer arg1);
     void setendurance(std::string arg0, Interpreter::Type_Integer arg1);
+    void setfactionreaction(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2);
     void setfatigue(std::string arg0, Interpreter::Type_Float arg1);
     void setfight(std::string arg0, Interpreter::Type_Integer arg1);
     void setflee(std::string arg0, Interpreter::Type_Integer arg1);
