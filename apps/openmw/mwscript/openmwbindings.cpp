@@ -1,16 +1,19 @@
 #include "openmwbindings.hpp"
 
-#include <components/compiler/literals.hpp>
-#include <components/compiler/generator.hpp>
-#include <components/interpreter/interpreter.hpp>
+#include <stddef.h>                     // for NULL
+#include <sys/types.h>                  // for uint
+#include <algorithm>                    // for copy
+#include <iterator>                     // for back_inserter, etc
+#include <vector>                       // for vector, etc
+
+#include <components/compiler/generator.hpp>  // for pushString, pushInt, etc
+#include <components/compiler/literals.hpp>  // for Literals
 #include <components/compiler/opcodes.hpp>
-#include <apps/openmw/mwscript/interpretercontext.hpp>
+#include <components/interpreter/interpreter.hpp>  // for Interpreter
+#include <components/misc/stringops.hpp>  // for StringUtils
+#include <components/interpreter/types.hpp>  // for Type_Code, etc
 
-#include <apps/openmw/mwbase/world.hpp>
-
-#include <apps/openmw/mwscript/extensions.hpp>
-
-#include <components/misc/stringops.hpp>
+#include "interpretercontext.hpp"
 
 namespace MWScriptExtensions
 {

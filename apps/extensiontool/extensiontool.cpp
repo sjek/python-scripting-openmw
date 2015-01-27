@@ -1,15 +1,18 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <string>
-#include <sstream>
+#include <stddef.h>                     // for NULL
+#include <sys/types.h>                  // for uint
+#include <algorithm>                    // for for_each
+#include <functional>                   // for mem_fun1_t, binder1st, etc
+#include <iostream>                     // for basic_ostream, operator<<, etc
 #include <fstream>
-#include <bitset>
-#include <stack>
+#include <sstream>
+#include <stack>                        // for stack
+#include <string>                       // for operator<<, char_traits, etc
+#include <vector>                       // for vector
 
-#include <components/compiler/extensions.hpp>
-#include <components/compiler/extensions0.hpp>
-#include <components/compiler/literals.hpp>
+#include <components/compiler/extensions.hpp>  // for Extensions, etc
+#include <components/compiler/extensions0.hpp>  // for registerExtensions
+#include <components/compiler/literals.hpp>  // for Literals
+#include <components/interpreter/types.hpp>  // for Type_Code
 
 class CodeGenerator
 {
@@ -39,19 +42,23 @@ class CodeGenerator
 void CodeGenerator::topGenerator()
 {
     mHeaderFile << "#ifndef OPENMWBINDINGS_HPP\n#define OPENMWBINDINGS_HPP\n\n";
-    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
-    mHeaderFile << "namespace Interpreter { class Interpreter; }\n";
+    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
+    mHeaderFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n\n";
     mHeaderFile << "namespace MWScript { class InterpreterContext; }\n\n";
     mHeaderFile << "namespace MWScriptExtensions\n{\n";
     mImpFile << "#include \"openmwbindings.hpp\"\n\n";
-    mImpFile << "#include <components/compiler/literals.hpp>\n";
-    mImpFile << "#include <components/compiler/generator.hpp>\n";
-    mImpFile << "#include <components/interpreter/interpreter.hpp>\n";
+    mImpFile << "#include <stddef.h>                     // for NULL\n";
+    mImpFile << "#include <sys/types.h>                  // for uint\n";
+    mImpFile << "#include <algorithm>                    // for copy\n";
+    mImpFile << "#include <iterator>                     // for back_inserter, etc\n";
+    mImpFile << "#include <vector>                       // for vector, etc\n\n";
+    mImpFile << "#include <components/compiler/generator.hpp>  // for pushString, pushInt, etc\n";
+    mImpFile << "#include <components/compiler/literals.hpp>  // for Literals\n";
     mImpFile << "#include <components/compiler/opcodes.hpp>\n";
-    mImpFile << "#include <apps/openmw/mwscript/interpretercontext.hpp>\n\n";
-    mImpFile << "#include <apps/openmw/mwbase/world.hpp>\n\n";
-    mImpFile << "#include <apps/openmw/mwscript/extensions.hpp>\n\n";
-    mImpFile << "#include <components/misc/stringops.hpp>\n\n";
+    mImpFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n";
+    mImpFile << "#include <components/misc/stringops.hpp>  // for StringUtils\n";
+    mImpFile << "#include <components/interpreter/types.hpp>  // for Type_Code, etc\n\n";
+    mImpFile << "#include \"interpretercontext.hpp\"\n\n";
     mImpFile << "namespace MWScriptExtensions\n{\n";
     //mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
     mImpFile << "    Interpreter::Interpreter interpreter;\n";

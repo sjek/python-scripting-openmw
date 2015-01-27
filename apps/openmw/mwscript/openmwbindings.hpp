@@ -4,8 +4,8 @@
 #include <string>
 
 #include <components/interpreter/types.hpp>
+#include <components/interpreter/interpreter.hpp>  // for Interpreter
 
-namespace Interpreter { class Interpreter; }
 namespace MWScript { class InterpreterContext; }
 
 namespace MWScriptExtensions
