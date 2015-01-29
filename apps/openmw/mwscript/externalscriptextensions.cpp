@@ -45,10 +45,10 @@ namespace MWScript
                             PyRun_SimpleString("from openmw import *\n");
                             MWScriptExtensions::opcodesInstalled=true;
                         }
-                        PyThreadState* newPythonInterpreter = Py_NewInterpreter();
+                        //PyThreadState* newPythonInterpreter = Py_NewInterpreter();
                         FILE *file_1 = fopen(scriptname.c_str(),"r");
                         PyRun_SimpleFileEx(file_1,scriptname.c_str(),1);
-                        Py_EndInterpreter(newPythonInterpreter);
+                        //Py_EndInterpreter(newPythonInterpreter);
                         //MWScriptExtensions::interpreter=NULL;
                         MWScriptExtensions::context = NULL;
                     }

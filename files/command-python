@@ -1,0 +1,1 @@
+PYTHONPATH=. ./openmw --start=Seyda Neen --skip-menu --content Morrowind.esm --content SomethingScripts.omwaddon --script-all &
