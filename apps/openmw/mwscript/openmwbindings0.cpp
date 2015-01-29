@@ -33,8 +33,9 @@
 
 namespace MWScriptExtensions
 {
-    void set(std::string name, float value)
+    float setget(std::string mode, std::string name, float value)
     {
+        if(mode!="set" && mode!="get") std::cerr << "unknown setget mode: " << mode << "\n";//don't use std::cerr
         char type;
         std::string script;
         MWWorld::Ptr ptr = context->getReference(false); // can be empty, e.g. console or global. running script from console doesn't work
@@ -63,15 +64,37 @@ namespace MWScriptExtensions
                 switch(type)
                 {
                     case 's':
-                        context->setLocalShort(index, static_cast<int>(value)); break;
+                        if(mode=="set")
+                        {
+                            context->setLocalShort(index, static_cast<int>(value));
+                            return 0;
+                        }
+                        else
+                        {
+                            return context->getLocalShort(index);
+                        }
 
                     case 'l':
-                        context->setLocalLong(index, static_cast<int>(value)); break;
-
+                        if(mode=="set")
+                        {
+                            context->setLocalLong(index, static_cast<int>(value));
+                            return 0;
+                        }
+                        else
+                        {
+                            return context->getLocalLong(index);
+                        }
                     case 'f':
-                        context->setLocalFloat(index, value); break;
+                        if(mode=="set")
+                        {
+                            context->setLocalFloat(index, value);
+                            return 0;
+                        }
+                        else
+                        {
+                            return context->getLocalFloat(index);
+                        }
                 }
-                return;
             }
         }
 
@@ -84,26 +107,41 @@ namespace MWScriptExtensions
             std::cout.flush();
             switch (type)
             {
-                case 'f':
-
-                    context->setGlobalFloat(name,value);
-                    break;
-
                 case 's':
-
-                    context->setGlobalShort(name,static_cast<int>(value));
-                    break;
+                    if(mode=="set")
+                    {
+                        context->setGlobalShort(name, static_cast<int>(value));
+                        return 0;
+                    }
+                    else
+                    {
+                        return context->getGlobalShort(name);
+                    }
 
                 case 'l':
-
-                    context->setGlobalLong(name,static_cast<int>(value));
-                    break;
+                    if(mode=="set")
+                    {
+                        context->setGlobalLong(name, static_cast<int>(value));
+                        return 0;
+                    }
+                    else
+                    {
+                        return context->getGlobalLong(name);
+                    }
+                case 'f':
+                    if(mode=="set")
+                    {
+                        context->setGlobalFloat(name, value);
+                        return 0;
+                    }
+                    else
+                    {
+                        return context->getGlobalFloat(name);
+                    }
 
                 default:
-
                     assert (0);
             }
-            return;
         }
 
         //all that's left is it a variable in another local or global script
@@ -123,24 +161,51 @@ namespace MWScriptExtensions
         switch (type)
         {
             case 'f':
-
-                context->setMemberFloat(id,varname,value,globalscript);
-                return;
+                if(mode=="set")
+                {
+                    context->setMemberFloat(id,varname,value,globalscript);
+                    return 0;
+                }
+                else
+                {
+                    return context->getMemberFloat(id,varname,globalscript);
+                }
 
             case 's':
-
-                context->setMemberShort(id,varname,static_cast<int>(value),globalscript);
-                return;
+                if(mode=="set")
+                {
+                    context->setMemberShort(id,varname,static_cast<int>(value),globalscript);
+                    return 0;
+                }
+                else
+                {
+                    return context->getMemberShort(id,varname,globalscript);
+                }
 
             case 'l':
-
-                context->setMemberLong(id,varname,static_cast<int>(value),globalscript);
-                return;
+                if(mode=="set")
+                {
+                    context->setMemberLong(id,varname,static_cast<int>(value),globalscript);
+                    return 0;
+                }
+                else
+                {
+                    return context->getMemberLong(id,varname,globalscript);
+                }
 
             default:
 
                 assert (0);
         }
         assert(0);
+    }
+
+    void omwset(std::string name, float value)
+    {
+        setget("set", name, value);
+    }
+    float omwget(std::string name)
+    {
+        return setget("get", name, 0);
     }
 }

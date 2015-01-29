@@ -5,6 +5,7 @@
 
 namespace MWScriptExtensions
 {
-    void set(std::string name, float value);
+    void omwset(std::string name, float value);
+    float omwget(std::string name);
 }
 #endif // OPENMWBINDINGS0_HPP
