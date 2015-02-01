@@ -3,17 +3,20 @@
 #ifndef OPENMW_COMPONENTS_NIF_NIFSTREAM_HPP
 #define OPENMW_COMPONENTS_NIF_NIFSTREAM_HPP
 
-#include <stdint.h>
-#include <stdexcept>
-
 #include <OgreDataStream.h>
-#include <OgreVector2.h>
-#include <OgreVector3.h>
-#include <OgreVector4.h>
 #include <OgreMatrix3.h>
 #include <OgreQuaternion.h>
 #include <OgreStringConverter.h>
+#include <OgreVector2.h>
+#include <OgreVector3.h>
+#include <OgreVector4.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdexcept>
+#include <string>
+#include <vector>
 
+#include "OgreSharedPtr.h"
 #include "niftypes.hpp"
 
 namespace Nif

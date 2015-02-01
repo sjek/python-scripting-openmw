@@ -1,22 +1,33 @@
 #ifndef CSV_WORLD_DIALOGUESUBVIEW_H
 #define CSV_WORLD_DIALOGUESUBVIEW_H
 
-#include <map>
-#include <memory>
-
+#include <qabstractitemdelegate.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qscrollarea.h>
+#include <qstyleoption.h>
 #include <QAbstractItemDelegate>
 #include <QScrollArea>
-
-#include "../doc/subview.hpp"
+#include <map>
+#include <memory>
+#include <string>
+#include <vector>
 
 #include "../../model/world/columnbase.hpp"
 #include "../../model/world/commanddispatcher.hpp"
+#include "../doc/subview.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/universalid.hpp"
 
+class QAbstractItemModel;
 class QDataWidgetMapper;
-class QSize;
 class QEvent;
 class QLabel;
+class QModelIndex;
+class QPainter;
+class QSize;
+class QUndoStack;
 class QVBoxLayout;
+class QWidget;
 
 namespace CSMWorld
 {

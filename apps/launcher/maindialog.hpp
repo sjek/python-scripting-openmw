@@ -8,28 +8,35 @@
 #include <components/files/configurationmanager.hpp>
 #endif
 
-#include <components/process/processinvoker.hpp>
-
 #include <components/config/gamesettings.hpp>
 #include <components/config/launchersettings.hpp>
+#include <components/process/processinvoker.hpp>
+#include <qmainwindow.h>
+#include <qobjectdefs.h>
+#include <qprocess.h>
+#include <qstringlist.h>
 
 #include "settings/graphicssettings.hpp"
-
 #include "ui_mainwindow.h"
 
+class QCloseEvent;
 class QListWidgetItem;
 class QStackedWidget;
+class QString;
 class QStringList;
 class QStringListModel;
-class QString;
+class QWidget;
+namespace Process {
+class ProcessInvoker;
+}  // namespace Process
 
 namespace Launcher
 {
-    class PlayPage;
-    class GraphicsPage;
     class DataFilesPage;
-    class UnshieldThread;
+    class GraphicsPage;
+    class PlayPage;
     class SettingsPage;
+    class UnshieldThread;
 
 #ifndef WIN32
     bool expansions(Launcher::UnshieldThread& cd);

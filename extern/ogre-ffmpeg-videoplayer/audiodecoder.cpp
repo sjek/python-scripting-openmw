@@ -1,17 +1,28 @@
 #include "audiodecoder.hpp"
+#include "extern/ogre-ffmpeg-videoplayer/videodefs.hpp"
 
 
 extern "C"
 {
 
     #include <libavcodec/avcodec.h>
+#include <libavcodec/version.h>
+#include <libavutil/avutil.h>
+#include <libavutil/channel_layout.h>
+#include <libavutil/mem.h>
+#include <libavutil/rational.h>
+#include <math.h>
+#include <string.h>
+#include <algorithm>
+#include <stdexcept>
+#include <string>
 
     #ifdef HAVE_LIBSWRESAMPLE
     #include <libswresample/swresample.h>
     #else
     // FIXME: remove this section once libswresample is packaged for Debian
     #include <libavresample/avresample.h>
-    #include <libavutil/opt.h>
+
     #define SwrContext AVAudioResampleContext
     int  swr_init(AVAudioResampleContext *avr);
     void  swr_free(AVAudioResampleContext **avr);

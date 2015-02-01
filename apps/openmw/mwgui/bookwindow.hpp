@@ -1,11 +1,20 @@
 #ifndef MWGUI_BOOKWINDOW_H
 #define MWGUI_BOOKWINDOW_H
 
-#include "windowbase.hpp"
+#include <components/widgets/imagebutton.hpp>
+#include <utility>
+#include <vector>
 
 #include "../mwworld/ptr.hpp"
+#include "windowbase.hpp"
 
-#include <components/widgets/imagebutton.hpp>
+namespace Gui {
+class ImageButton;
+}  // namespace Gui
+namespace MyGUI {
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

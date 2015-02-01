@@ -1,14 +1,14 @@
 #ifndef GAME_SCRIPT_LOCALS_H
 #define GAME_SCRIPT_LOCALS_H
 
-#include <vector>
-
 #include <components/interpreter/types.hpp>
+#include <string>
+#include <vector>
 
 namespace ESM
 {
-    struct Script;
     struct Locals;
+    struct Script;
 }
 
 namespace MWScript

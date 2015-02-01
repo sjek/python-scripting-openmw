@@ -1,26 +1,52 @@
-#include "tooltips.hpp"
-
-#include <iomanip>
-
 #include <MyGUI_Gui.h>
-#include <MyGUI_RenderManager.h>
-#include <MyGUI_InputManager.h>
 #include <MyGUI_ImageBox.h>
-
+#include <MyGUI_InputManager.h>
+#include <MyGUI_RenderManager.h>
+#include <assert.h>
 #include <components/misc/resourcehelpers.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <iomanip>
+#include <map>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/spellcasting.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwmechanics/spellcasting.hpp"
-
-#include "mapwindow.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Widget.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/widgets.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/settings/settings.hpp"
 #include "inventorywindow.hpp"
-
 #include "itemmodel.hpp"
+#include "mapwindow.hpp"
+#include "openengine/gui/layout.hpp"
+#include "tooltips.hpp"
 
 namespace MWGui
 {

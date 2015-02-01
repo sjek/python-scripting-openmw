@@ -1,14 +1,22 @@
 
-#include "regionmap.hpp"
-
-#include <cmath>
-#include <algorithm>
-
-#include <QBrush>
-
 #include <components/misc/stringops.hpp>
+#include <qbrush.h>
+#include <qcolor.h>
+#include <qglobal.h>
+#include <qsize.h>
+#include <qstring.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <sstream>
+#include <stdexcept>
 
+#include "apps/opencs/model/world/cell.hpp"
+#include "apps/opencs/model/world/cellcoordinates.hpp"
+#include "apps/opencs/model/world/idcollection.hpp"
+#include "apps/opencs/model/world/record.hpp"
+#include "components/esm/loadregn.hpp"
 #include "data.hpp"
+#include "regionmap.hpp"
 #include "universalid.hpp"
 
 CSMWorld::RegionMap::CellDescription::CellDescription() : mDeleted (false) {}

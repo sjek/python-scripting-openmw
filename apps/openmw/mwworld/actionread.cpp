@@ -1,19 +1,22 @@
-#include "actionread.hpp"
-
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/player.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-
 #include "../mwgui/bookwindow.hpp"
 #include "../mwgui/scrollwindow.hpp"
-
-#include "player.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "actionread.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwworld/action.hpp"
+#include "apps/openmw/mwworld/livecellref.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "class.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
 #include "esmstore.hpp"
+#include "player.hpp"
 
 namespace MWWorld
 {

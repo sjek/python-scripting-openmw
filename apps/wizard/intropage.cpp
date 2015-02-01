@@ -1,5 +1,9 @@
-#include "intropage.hpp"
+#include <qobject.h>
+#include <qpixmap.h>
+#include <qstring.h>
+#include <qwidget.h>
 
+#include "intropage.hpp"
 #include "mainwizard.hpp"
 
 Wizard::IntroPage::IntroPage(QWidget *parent) :

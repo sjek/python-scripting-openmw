@@ -1,7 +1,9 @@
-#include "esmfile.hpp"
+#include <qdatastream.h>
+#include <qiodevice.h>
+#include <qnamespace.h>
 
-#include <QMimeData>
-#include <QDataStream>
+#include "components/contentselector/model/modelitem.hpp"
+#include "esmfile.hpp"
 
 int ContentSelectorModel::EsmFile::sPropertyCount = 7;
 QString ContentSelectorModel::EsmFile::sToolTip = QString("<b>Author:</b> %1<br/> \

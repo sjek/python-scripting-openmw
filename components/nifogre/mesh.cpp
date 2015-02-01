@@ -1,24 +1,63 @@
-#include "mesh.hpp"
-
-#include <limits>
-
-#include <OgreMeshManager.h>
-#include <OgreMesh.h>
-#include <OgreSubMesh.h>
 #include <OgreBone.h>
 #include <OgreHardwareBufferManager.h>
-#include <OgreMaterialManager.h>
-#include <OgreSkeletonManager.h>
+#include <OgreKeyFrame.h>
+#include <OgreMesh.h>
+#include <OgreMeshManager.h>
 #include <OgreRenderSystem.h>
 #include <OgreRoot.h>
 #include <OgreSkeleton.h>
-#include <OgreKeyFrame.h>
-
+#include <OgreSkeletonManager.h>
+#include <OgreSubMesh.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/nif/node.hpp>
 #include <components/nifcache/nifcache.hpp>
-#include <components/misc/stringops.hpp>
+#include <math.h>
+#include <cassert>
+#include <limits>
+#include <utility>
+#include <vector>
 
+#include "OgreAnimation.h"
+#include "OgreAnimationTrack.h"
+#include "OgreAxisAlignedBox.h"
+#include "OgreColourValue.h"
+#include "OgreException.h"
+#include "OgreHardwareBuffer.h"
+#include "OgreHardwareIndexBuffer.h"
+#include "OgreHardwareVertexBuffer.h"
+#include "OgreMatrix4.h"
+#include "OgrePose.h"
+#include "OgrePrerequisites.h"
+#include "OgreQuaternion.h"
+#include "OgreSharedPtr.h"
+#include "OgreStringConverter.h"
+#include "OgreVector2.h"
+#include "OgreVector3.h"
+#include "OgreVector4.h"
+#include "OgreVertexBoneAssignment.h"
+#include "OgreVertexIndexData.h"
+#include "components/nif/base.hpp"
+#include "components/nif/controller.hpp"
+#include "components/nif/data.hpp"
+#include "components/nif/niffile.hpp"
+#include "components/nif/record.hpp"
+#include "components/nif/recordptr.hpp"
 #include "material.hpp"
+#include "mesh.hpp"
+
+namespace Nif {
+class NiAlphaProperty;
+class NiMaterialProperty;
+class NiSpecularProperty;
+class NiStencilProperty;
+class NiTexturingProperty;
+class NiVertexColorProperty;
+class NiWireframeProperty;
+class NiZBufferProperty;
+}  // namespace Nif
+namespace Ogre {
+class Resource;
+}  // namespace Ogre
 
 namespace NifOgre
 {

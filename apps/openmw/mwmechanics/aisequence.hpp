@@ -1,9 +1,13 @@
 #ifndef GAME_MWMECHANICS_AISEQUENCE_H
 #define GAME_MWMECHANICS_AISEQUENCE_H
 
+#include <components/esm/loadnpc.hpp>
 #include <list>
 
-#include <components/esm/loadnpc.hpp>
+namespace ESM {
+struct AIPackageList;
+struct Position;
+}  // namespace ESM
 //#include "aistate.hpp"
 
 namespace MWWorld
@@ -24,9 +28,9 @@ namespace ESM
 namespace MWMechanics
 {
     class AiPackage;
-    
-    template< class Base > class DerivedClassStorage;
     struct AiTemporaryBase;
+    template< class Base > class DerivedClassStorage;
+
     typedef DerivedClassStorage<AiTemporaryBase> AiState;
 
     /// \brief Sequence of AI-packages for a single actor

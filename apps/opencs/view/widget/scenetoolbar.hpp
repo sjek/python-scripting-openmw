@@ -1,8 +1,11 @@
 #ifndef CSV_WIDGET_SCENETOOLBAR_H
 #define CSV_WIDGET_SCENETOOLBAR_H
 
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QWidget>
 
+class QFocusEvent;
 class QVBoxLayout;
 
 namespace CSVWidget

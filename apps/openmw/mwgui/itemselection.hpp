@@ -2,8 +2,15 @@
 #define OPENMW_GAME_MWGUI_ITEMSELECTION_H
 
 #include <MyGUI_Delegate.h>
+#include <string>
 
+#include "MyGUI_DelegateImplement.h"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWWorld
 {
@@ -12,9 +19,9 @@ namespace MWWorld
 
 namespace MWGui
 {
+    class InventoryItemModel;
     class ItemView;
     class SortFilterItemModel;
-    class InventoryItemModel;
 
     class ItemSelectionDialog : public WindowModal
     {

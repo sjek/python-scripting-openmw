@@ -1,21 +1,35 @@
-#include "summoning.hpp"
-
 #include <OgreVector3.h>
+#include <map>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwmechanics/spellcasting.hpp"
-
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/manualref.hpp"
-#include "../mwworld/inventorystore.hpp"
-
 #include "../mwrender/animation.hpp"
-
-#include "creaturestats.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/manualref.hpp"
+#include "OgreMath.h"
+#include "OgreQuaternion.h"
 #include "aifollow.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/activespells.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadstat.hpp"
+#include "creaturestats.hpp"
+#include "summoning.hpp"
+
+namespace MWWorld {
+class CellStore;
+}  // namespace MWWorld
 
 
 namespace MWMechanics

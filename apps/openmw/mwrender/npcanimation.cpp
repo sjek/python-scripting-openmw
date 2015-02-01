@@ -1,32 +1,63 @@
-#include "npcanimation.hpp"
-
-#include <OgreSceneManager.h>
+#include <OgreBone.h>
 #include <OgreEntity.h>
-#include <OgreParticleSystem.h>
-#include <OgreSubEntity.h>
+#include <OgreSceneNode.h>
 #include <OgreSkeleton.h>
 #include <OgreSkeletonInstance.h>
-#include <OgreSceneNode.h>
-#include <OgreBone.h>
+#include <OgreSubEntity.h>
 #include <OgreTechnique.h>
-
-#include <extern/shiny/Main/Factory.hpp>
-
+#include <assert.h>
 #include <components/misc/resourcehelpers.hpp>
-
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/class.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
+#include <extern/shiny/Main/Factory.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <exception>
+#include <iostream>
+#include <typeinfo>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "OgreAnimationState.h"
+#include "OgreAny.h"
+#include "OgreBlendMode.h"
+#include "OgreColourValue.h"
+#include "OgreCommon.h"
+#include "OgreMaterial.h"
+#include "OgreMovableObject.h"
+#include "OgreNode.h"
+#include "OgrePass.h"
+#include "OgreQuaternion.h"
+#include "OgreUserObjectBindings.h"
+#include "apps/openmw/mwrender/../mwworld/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwrender/../mwworld/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwrender/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwrender/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "apps/openmw/mwrender/../mwworld/store.hpp"
+#include "apps/openmw/mwrender/animation.hpp"
+#include "apps/openmw/mwrender/weaponanimation.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadbody.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/misc/stringops.hpp"
+#include "npcanimation.hpp"
 #include "renderconst.hpp"
-#include "camera.hpp"
+
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
 
 namespace
 {

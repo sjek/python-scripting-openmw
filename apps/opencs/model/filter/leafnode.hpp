@@ -2,6 +2,7 @@
 #define CSM_FILTER_LEAFNODE_H
 
 #include <memory>
+#include <vector>
 
 #include "node.hpp"
 

@@ -1,12 +1,30 @@
 
-#include "creaturelevlist.hpp"
-
-#include <components/esm/loadlevlist.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/creaturelevliststate.hpp>
+#include <components/esm/loadlevlist.hpp>
+#include <memory>
+#include <typeinfo>
 
 #include "../mwmechanics/levelledlist.hpp"
-
 #include "../mwworld/customdata.hpp"
+#include "apps/openmw/mwclass/../mwmechanics/../mwbase/environment.hpp"
+#include "apps/openmw/mwclass/../mwmechanics/../mwbase/world.hpp"
+#include "apps/openmw/mwclass/../mwmechanics/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwclass/../mwmechanics/../mwworld/manualref.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "components/esm/objectstate.hpp"
+#include "creaturelevlist.hpp"
+
+namespace MWRender {
+class RenderingInterface;
+}  // namespace MWRender
+namespace MWWorld {
+class ESMStore;
+}  // namespace MWWorld
 
 namespace
 {

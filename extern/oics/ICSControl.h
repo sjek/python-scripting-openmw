@@ -27,10 +27,16 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef OICS_Control_H_
 #define OICS_Control_H_
 
-#include "ICSPrerequisites.h"
+#include <list>
+#include <string>
 
 #include "ICSChannel.h"
 #include "ICSControlListener.h"
+#include "ICSPrerequisites.h"
+
+namespace ICS {
+class ControlListener;
+}  // namespace ICS
 
 namespace ICS
 {

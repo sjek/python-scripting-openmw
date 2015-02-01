@@ -1,13 +1,26 @@
 #ifndef MWRENDER_CHARACTERPREVIEW_H
 #define MWRENDER_CHARACTERPREVIEW_H
 
-#include <OgreRenderTarget.h>
 #include <OgreMaterialManager.h>
+#include <OgreRenderTarget.h>
 #include <OgreVector3.h>
-
 #include <components/esm/loadnpc.hpp>
+#include <string>
 
 #include "../mwworld/ptr.hpp"
+#include "OgreMath.h"
+#include "OgrePrerequisites.h"
+#include "OgreResource.h"
+#include "OgreSharedPtr.h"
+#include "apps/openmw/mwrender/../mwworld/livecellref.hpp"
+
+namespace Ogre {
+class Camera;
+class RenderTarget;
+class SceneManager;
+class SceneNode;
+class Viewport;
+}  // namespace Ogre
 
 namespace OEngine
 {

@@ -1,8 +1,16 @@
 #ifndef OPENMW_MECHANICS_COMBAT_H
 #define OPENMW_MECHANICS_COMBAT_H
 
-#include "../mwworld/ptr.hpp"
 #include <OgreVector3.h>
+
+#include "../mwworld/ptr.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace Ogre {
+class Vector3;
+}  // namespace Ogre
 
 namespace MWMechanics
 {

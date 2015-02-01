@@ -1,9 +1,10 @@
-#include "graphicssettings.hpp"
+#include <qiterator.h>
+#include <qregexp.h>
+#include <qstring.h>
+#include <qtextstream.h>
 
-#include <QTextStream>
-#include <QString>
-#include <QRegExp>
-#include <QMap>
+#include "components/config/settingsbase.hpp"
+#include "graphicssettings.hpp"
 
 Launcher::GraphicsSettings::GraphicsSettings()
 {

@@ -1,8 +1,15 @@
 #ifndef OPENMW_MWGUI_MERCHANTREPAIR_H
 #define OPENMW_MWGUI_MERCHANTREPAIR_H
 
-#include "windowbase.hpp"
 #include "../mwworld/ptr.hpp"
+#include "windowbase.hpp"
+
+namespace MyGUI {
+class Button;
+class ScrollView;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

@@ -1,13 +1,16 @@
 ///Program to test .nif files both on the FileSystem and in BSA archives.
 
-#include "../niffile.hpp"
-#include "../../bsa/bsa_file.hpp"
-#include "../../bsa/bsa_archive.hpp"
-#include <OgreRoot.h>
 #include <OgreResourceGroupManager.h>
-#include <iostream>
+#include <OgreRoot.h>
+#include <ctype.h>
 #include <algorithm>
 #include <exception>
+#include <iostream>
+#include <string>
+
+#include "../../bsa/bsa_archive.hpp"
+#include "../../bsa/bsa_file.hpp"
+#include "../niffile.hpp"
 
 ///See if the file has the named extension
 bool hasExtension(std::string filename, std::string  extensionToFind)

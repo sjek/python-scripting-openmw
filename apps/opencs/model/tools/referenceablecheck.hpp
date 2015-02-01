@@ -1,10 +1,46 @@
 #ifndef REFERENCEABLECHECKSTAGE_H
 #define REFERENCEABLECHECKSTAGE_H
 
-#include "../world/universalid.hpp"
+#include <string>
+
 #include "../doc/stage.hpp"
 #include "../world/data.hpp"
 #include "../world/refiddata.hpp"
+#include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace CSMWorld {
+class RefIdData;
+template <typename RecordT> struct RefIdDataContainer;
+}  // namespace CSMWorld
+namespace ESM {
+struct Activator;
+struct Apparatus;
+struct Armor;
+struct Book;
+struct Class;
+struct Clothing;
+struct Container;
+struct Creature;
+struct CreatureLevList;
+struct Door;
+struct Faction;
+struct Ingredient;
+struct ItemLevList;
+struct Light;
+struct Lockpick;
+struct Miscellaneous;
+struct NPC;
+struct Potion;
+struct Probe;
+struct Race;
+struct Repair;
+struct Static;
+struct Weapon;
+}  // namespace ESM
 
 namespace CSMTools
 {

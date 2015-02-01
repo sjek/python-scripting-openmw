@@ -1,23 +1,29 @@
-#include "globalmap.hpp"
-
-#include <boost/filesystem.hpp>
-#include <boost/lexical_cast.hpp>
-
+#include <OgreHardwarePixelBuffer.h>
 #include <OgreImage.h>
 #include <OgreTextureManager.h>
-#include <OgreColourValue.h>
-#include <OgreHardwareVertexBuffer.h>
-#include <OgreRoot.h>
-#include <OgreHardwarePixelBuffer.h>
-
-#include <components/loadinglistener/loadinglistener.hpp>
-
+#include <assert.h>
+#include <boost/lexical_cast.hpp>
 #include <components/esm/globalmap.hpp>
+#include <components/loadinglistener/loadinglistener.hpp>
+#include <limits.h>
+#include <string.h>
+#include <algorithm>
+#include <sstream>
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwworld/esmstore.hpp"
+#include "OgreDataStream.h"
+#include "OgreMemoryAllocatorConfig.h"
+#include "OgrePixelFormat.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreTexture.h"
+#include "apps/openmw/mwrender/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/settings/settings.hpp"
+#include "globalmap.hpp"
 
 namespace MWRender
 {

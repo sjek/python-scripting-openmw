@@ -1,5 +1,7 @@
-#include "importpage.hpp"
+#include <qobject.h>
+#include <qwidget.h>
 
+#include "importpage.hpp"
 #include "mainwizard.hpp"
 
 Wizard::ImportPage::ImportPage(QWidget *parent) :

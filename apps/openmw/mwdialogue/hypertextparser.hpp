@@ -1,6 +1,7 @@
 #ifndef GAME_MWDIALOGUE_HYPERTEXTPARSER_H
 #define GAME_MWDIALOGUE_HYPERTEXTPARSER_H
 
+#include <stddef.h>
 #include <string>
 #include <vector>
 

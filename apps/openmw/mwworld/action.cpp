@@ -1,10 +1,9 @@
 
-#include "action.hpp"
-
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-
 #include "../mwbase/soundmanager.hpp"
+#include "action.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
 
 const MWWorld::Ptr& MWWorld::Action::getTarget() const
 {

@@ -3,10 +3,33 @@
 
 #include <OgreController.h>
 #include <OgreVector3.h>
-
 #include <components/nifogre/ogrenifloader.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../mwworld/ptr.hpp"
+#include "OgreAxisAlignedBox.h"
+#include "OgreMath.h"
+#include "OgreMemoryAllocatorConfig.h"
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
+
+namespace Ogre {
+class Camera;
+class Entity;
+class Light;
+class MovableObject;
+class Node;
+class SceneManager;
+class SceneNode;
+class SkeletonInstance;
+class StaticGeometry;
+class TagPoint;
+}  // namespace Ogre
 
 namespace ESM
 {

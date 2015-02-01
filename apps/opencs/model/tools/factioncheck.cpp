@@ -1,13 +1,15 @@
 
-#include "factioncheck.hpp"
-
-#include <sstream>
-#include <map>
-
 #include <components/esm/loadfact.hpp>
 #include <components/esm/loadskil.hpp>
+#include <map>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "factioncheck.hpp"
 
 CSMTools::FactionCheckStage::FactionCheckStage (const CSMWorld::IdCollection<ESM::Faction>& factions)
 : mFactions (factions)

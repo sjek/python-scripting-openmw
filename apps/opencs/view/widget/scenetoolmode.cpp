@@ -1,12 +1,23 @@
 
+#include <qboxlayout.h>
+#include <qframe.h>
+#include <qicon.h>
+#include <qmargins.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qpixmap.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qwidget.h>
+#include <utility>
+
+#include "apps/opencs/view/widget/pushbutton.hpp"
+#include "apps/opencs/view/widget/scenetool.hpp"
+#include "modebutton.hpp"
+#include "scenetoolbar.hpp"
 #include "scenetoolmode.hpp"
 
-#include <QHBoxLayout>
-#include <QFrame>
-#include <QSignalMapper>
-
-#include "scenetoolbar.hpp"
-#include "modebutton.hpp"
+class QPoint;
 
 void CSVWidget::SceneToolMode::adjustToolTip (const ModeButton *activeMode)
 {

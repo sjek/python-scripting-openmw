@@ -1,8 +1,12 @@
 #ifndef GAME_MWWORLD_ACTIONTALK_H
 #define GAME_MWWORLD_ACTIONTALK_H
 
-#include "ptr.hpp"
 #include "action.hpp"
+#include "ptr.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWWorld
 {

@@ -1,8 +1,9 @@
 
-#include "objectstate.hpp"
-
+#include "components/esm/cellref.hpp"
+#include "components/esm/locals.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "objectstate.hpp"
 
 void ESM::ObjectState::load (ESMReader &esm)
 {

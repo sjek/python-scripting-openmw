@@ -1,21 +1,43 @@
-#include "plugin.hpp"
-
-#include <MyGUI_LogManager.h>
 #include <MyGUI_FactoryManager.h>
-#include <MyGUI_ScrollBar.h>
-#include <MyGUI_Gui.h>
-#include <MyGUI_Window.h>
 #include <MyGUI_LanguageManager.h>
-
+#include <MyGUI_LogManager.h>
+#include <MyGUI_ScrollBar.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreTextureManager.h>
+#include <boost/any.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/program_options/detail/value_semantic.hpp>
+#include <boost/program_options/errors.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <boost/version.hpp>
 #include <components/bsa/resources.hpp>
 #include <components/files/configurationmanager.hpp>
 #include <components/fontloader/fontloader.hpp>
-
 #include <components/widgets/tags.hpp>
 #include <components/widgets/widgets.hpp>
+#include <string.h>
+#include <iostream>
+#include <sstream>
+#include <utility>
+#include <vector>
 
-#include <OgreTextureManager.h>
-#include <OgreHardwarePixelBuffer.h>
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_UString.h"
+#include "OgreHardwareBuffer.h"
+#include "OgrePixelFormat.h"
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "OgreTexture.h"
+#include "components/bsa/../files/collections.hpp"
+#include "components/bsa/../files/multidircollection.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "plugin.hpp"
 
 //FIXME: code duplication
 namespace boost

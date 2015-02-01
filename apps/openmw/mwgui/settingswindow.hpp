@@ -1,7 +1,20 @@
 #ifndef MWGUI_SETTINGS_H
 #define MWGUI_SETTINGS_H
 
+#include <stddef.h>
+
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Button;
+class ComboBox;
+class ListBox;
+class ScrollBar;
+class ScrollView;
+class TextBox;
+class Widget;
+class Window;
+}  // namespace MyGUI
 
 namespace MWGui
 {

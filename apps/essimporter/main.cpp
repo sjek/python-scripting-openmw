@@ -1,9 +1,18 @@
-#include <iostream>
-
-#include <boost/program_options.hpp>
-#include <boost/filesystem.hpp>
+#include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/path.hpp>
-#include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <boost/program_options/detail/parsers.hpp>
+#include <boost/program_options/detail/value_semantic.hpp>
+#include <boost/program_options/errors.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/parsers.hpp>
+#include <boost/program_options/positional_options.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <exception>
+#include <iostream>
+#include <stdexcept>
+#include <string>
 
 #include "importer.hpp"
 

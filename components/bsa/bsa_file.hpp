@@ -24,13 +24,13 @@
 #ifndef BSA_BSA_FILE_H
 #define BSA_BSA_FILE_H
 
-#include <stdint.h>
+#include <OgreDataStream.h>
 #include <libs/platform/strings.h>
+#include <stdint.h>
+#include <string.h>
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
-
-#include <OgreDataStream.h>
 
 
 namespace Bsa

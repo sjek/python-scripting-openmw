@@ -1,9 +1,13 @@
-#include "soulgemdialog.hpp"
+#include <string>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "MyGUI_DelegateImplement.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
 #include "messagebox.hpp"
+#include "soulgemdialog.hpp"
 
 namespace MWGui
 {

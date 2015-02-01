@@ -3,8 +3,22 @@
 
 #include <components/esm/attr.hpp>
 #include <components/esm/loadclas.hpp>
-#include "windowbase.hpp"
+#include <map>
+#include <string>
+#include <vector>
+
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_Types.h"
+#include "apps/openmw/mwgui/../mwmechanics/stat.hpp"
+#include "components/esm/loadskil.hpp"
 #include "widgets.hpp"
+#include "windowbase.hpp"
+
+namespace MyGUI {
+class ScrollView;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

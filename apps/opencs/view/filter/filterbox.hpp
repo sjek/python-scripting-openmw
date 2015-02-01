@@ -1,13 +1,29 @@
 #ifndef CSV_FILTER_FILTERBOX_H
 #define CSV_FILTER_FILTERBOX_H
 
-#include <vector>
-
-#include <QWidget>
 #include <QtCore/qnamespace.h>
+#include <qobjectdefs.h>
+#include <qwidget.h>
+#include <QWidget>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../../model/filter/node.hpp"
 #include "../../model/world/universalid.hpp"
+
+class QDragEnterEvent;
+class QDragMoveEvent;
+class QDropEvent;
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
+namespace CSMWorld {
+class UniversalId;
+}  // namespace CSMWorld
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace CSMWorld
 {

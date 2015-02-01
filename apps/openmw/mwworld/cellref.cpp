@@ -1,6 +1,7 @@
-#include "cellref.hpp"
-
 #include <components/esm/objectstate.hpp>
+
+#include "cellref.hpp"
+#include "components/esm/cellref.hpp"
 
 namespace MWWorld
 {

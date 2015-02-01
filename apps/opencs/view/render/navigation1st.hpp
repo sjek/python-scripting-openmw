@@ -3,6 +3,11 @@
 
 #include "navigation.hpp"
 
+class QPoint;
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
+
 namespace CSVRender
 {
     /// \brief First person-like camera controls

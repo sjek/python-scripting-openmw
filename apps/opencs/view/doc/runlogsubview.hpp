@@ -1,7 +1,14 @@
 #ifndef CSV_DOC_RUNLOGSUBVIEW_H
 #define CSV_DOC_RUNLOGSUBVIEW_H
 
+#include <qobjectdefs.h>
+
+#include "apps/opencs/view/doc/../../model/doc/../world/universalid.hpp"
 #include "subview.hpp"
+
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 namespace CSVDoc
 {

@@ -1,6 +1,10 @@
 #ifndef MWGUI_TRADE_ITEM_MODEL_H
 #define MWGUI_TRADE_ITEM_MODEL_H
 
+#include <stddef.h>
+#include <vector>
+
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
 #include "itemmodel.hpp"
 
 namespace MWGui

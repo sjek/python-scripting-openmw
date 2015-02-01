@@ -5,6 +5,11 @@
 
 #include "variant.hpp"
 
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+
 namespace ESM
 {
     class VariantDataBase

@@ -1,13 +1,20 @@
 #ifndef MWGUI_BOOKPAGE_HPP
 #define MWGUI_BOOKPAGE_HPP
 
-#include "MyGUI_Colour.h"
-#include "MyGUI_Widget.h"
-
-#include <functional>
-#include <stdint.h>
 #include <boost/function.hpp>
+#include <boost/function/function_template.hpp>
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/detail/operator_bool.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <stdint.h>
+#include <functional>
+#include <string>
+#include <utility>
+
+#include "MyGUI_Colour.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Widget.h"
 
 namespace MWGui
 {

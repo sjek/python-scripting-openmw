@@ -1,11 +1,16 @@
-#include "windowbase.hpp"
-
 #include <MyGUI_InputManager.h>
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
 
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/environment.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "components/settings/settings.hpp"
 #include "draganddrop.hpp"
+#include "openengine/gui/layout.hpp"
+#include "windowbase.hpp"
 
 using namespace MWGui;
 

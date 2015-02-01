@@ -1,15 +1,19 @@
-#include "aiavoiddoor.hpp"
-#include <iostream>
-#include "../mwbase/world.hpp"
+#include <OgreMath.h>
+#include <cmath>
+#include <vector>
+
 #include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
+#include "OgreVector3.h"
+#include "aiavoiddoor.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/mechanicsmanager.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "components/esm/defs.hpp"
 #include "creaturestats.hpp"
 #include "movement.hpp"
-#include "mechanicsmanagerimp.hpp"
-
-#include <OgreMath.h>
-
 #include "steering.hpp"
 
 MWMechanics::AiAvoidDoor::AiAvoidDoor(const MWWorld::Ptr& doorPtr)

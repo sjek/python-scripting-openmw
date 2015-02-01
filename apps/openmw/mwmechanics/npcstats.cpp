@@ -1,28 +1,36 @@
 
-#include "npcstats.hpp"
-
-#include <cmath>
-#include <stdexcept>
-#include <vector>
-#include <algorithm>
-
-#include <iomanip>
-
-#include <boost/format.hpp>
-
-#include <components/esm/loadskil.hpp>
+#include <boost/format/alt_sstream.hpp>
+#include <boost/format/alt_sstream_impl.hpp>
+#include <boost/format/format_class.hpp>
+#include <boost/format/format_fwd.hpp>
+#include <boost/format/format_implementation.hpp>
+#include <boost/format/free_funcs.hpp>
+#include <boost/optional/optional.hpp>
 #include <components/esm/loadclas.hpp>
-#include <components/esm/loadgmst.hpp>
 #include <components/esm/loadfact.hpp>
+#include <components/esm/loadgmst.hpp>
+#include <components/esm/loadskil.hpp>
 #include <components/esm/npcstats.hpp>
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/esmstore.hpp"
+#include <stddef.h>
+#include <algorithm>
+#include <iomanip>
+#include <iterator>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/statstate.hpp"
+#include "components/misc/stringops.hpp"
+#include "npcstats.hpp"
 
 MWMechanics::NpcStats::NpcStats()
     : mBounty (0)

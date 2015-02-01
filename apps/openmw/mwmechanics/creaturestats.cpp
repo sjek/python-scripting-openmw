@@ -1,14 +1,26 @@
-#include "creaturestats.hpp"
-
-#include <algorithm>
-
 #include <components/esm/creaturestats.hpp>
-
-#include "../mwworld/esmstore.hpp"
+#include <algorithm>
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/activespells.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/spells.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/statstate.hpp"
+#include "creaturestats.hpp"
 
 namespace MWMechanics
 {

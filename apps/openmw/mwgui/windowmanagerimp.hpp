@@ -10,20 +10,54 @@
    this class.
 **/
 
-#include "../mwbase/windowmanager.hpp"
-
-#include "mapwindow.hpp"
-
 #include <MyGUI_KeyCode.h>
 #include <MyGUI_Types.h>
+#include <stdint.h>
+#include <map>
+#include <stack>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "../mwbase/windowmanager.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/bookwindow.hpp"
+#include "apps/openmw/mwgui/confirmationdialog.hpp"
+#include "apps/openmw/mwgui/console.hpp"
+#include "apps/openmw/mwgui/container.hpp"
+#include "apps/openmw/mwgui/countdialog.hpp"
+#include "apps/openmw/mwgui/dialogue.hpp"
+#include "apps/openmw/mwgui/inventorywindow.hpp"
+#include "apps/openmw/mwgui/scrollwindow.hpp"
+#include "apps/openmw/mwgui/spellbuyingwindow.hpp"
+#include "apps/openmw/mwgui/spellwindow.hpp"
+#include "apps/openmw/mwgui/tradewindow.hpp"
+#include "apps/openmw/mwgui/travelwindow.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/loadinglistener/loadinglistener.hpp"
+#include "components/settings/settings.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "components/translation/translation.hpp"
+#include "mapwindow.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+struct Class;
+}  // namespace ESM
+namespace MWWorld {
+class CellStore;
+class Ptr;
+}  // namespace MWWorld
 
 namespace MyGUI
 {
     class Gui;
+    class ImageBox;
+    class UString;
     class Widget;
     class Window;
-    class UString;
-    class ImageBox;
 }
 
 namespace Compiler
@@ -57,38 +91,38 @@ namespace SFO
 
 namespace MWGui
 {
-  class WindowBase;
+  class AlchemyWindow;
+  class CharacterCreation;
+  class CompanionWindow;
+  class DebugWindow;
+  class DragAndDrop;
+  class EnchantingDialog;
   class HUD;
-  class MapWindow;
-  class MainMenu;
-  class StatsWindow;
+  class InfoBoxDialog;
   class InventoryWindow;
   class JournalWindow;
-  class CharacterCreation;
-  class DragAndDrop;
-  class ToolTips;
-  class TextInputDialog;
-  class InfoBoxDialog;
-  class MessageBoxManager;
-  class SettingsWindow;
-  class AlchemyWindow;
-  class QuickKeysMenu;
-  class LoadingScreen;
   class LevelupDialog;
-  class WaitDialog;
-  class SpellCreationDialog;
-  class EnchantingDialog;
-  class TrainingWindow;
-  class SpellIcons;
+  class LoadingScreen;
+  class MainMenu;
+  class MapWindow;
   class MerchantRepair;
-  class Repair;
-  class SoulgemDialog;
+  class MessageBoxManager;
+  class QuickKeysMenu;
   class Recharge;
-  class CompanionWindow;
-  class VideoWidget;
-  class WindowModal;
+  class Repair;
   class ScreenFader;
-  class DebugWindow;
+  class SettingsWindow;
+  class SoulgemDialog;
+  class SpellCreationDialog;
+  class SpellIcons;
+  class StatsWindow;
+  class TextInputDialog;
+  class ToolTips;
+  class TrainingWindow;
+  class VideoWidget;
+  class WaitDialog;
+  class WindowBase;
+  class WindowModal;
 
   class WindowManager : public MWBase::WindowManager
   {

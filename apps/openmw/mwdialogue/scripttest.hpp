@@ -2,6 +2,11 @@
 #define OPENMW_MWDIALOGUE_SCRIPTTEST_H
 
 #include <components/compiler/extensions.hpp>
+#include <utility>
+
+namespace Compiler {
+class Extensions;
+}  // namespace Compiler
 
 namespace MWDialogue
 {

@@ -1,10 +1,15 @@
 #ifndef CSV_TOOLS_REPORTSUBVIEW_H
 #define CSV_TOOLS_REPORTSUBVIEW_H
 
-#include "../doc/subview.hpp"
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
 
-class QTableView;
+#include "../doc/subview.hpp"
+#include "apps/opencs/view/tools/../doc/../../model/doc/../world/universalid.hpp"
+
 class QModelIndex;
+class QTableView;
 
 namespace CSMDoc
 {

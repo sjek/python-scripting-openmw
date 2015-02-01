@@ -1,5 +1,6 @@
+#include "apps/essimporter/importcrec.hpp"
+#include "components/esm/creaturestate.hpp"
 #include "convertcrec.hpp"
-
 #include "convertinventory.hpp"
 
 namespace ESSImport

@@ -1,23 +1,38 @@
 
-#include "regionmap.hpp"
-
+#include <qabstractitemview.h>
+#include <qaction.h>
+#include <qatomic_i386.h>
+#include <qbrush.h>
+#include <qbytearray.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qheaderview.h>
+#include <qitemselectionmodel.h>
+#include <qlist.h>
+#include <qmenu.h>
+#include <qmimedata.h>
+#include <qnamespace.h>
+#include <qstring.h>
+#include <qtableview.h>
+#include <qundostack.h>
+#include <qvariant.h>
 #include <algorithm>
+#include <iterator>
 #include <set>
 #include <sstream>
 
-#include <QHeaderView>
-#include <QContextMenuEvent>
-#include <QMenu>
-
 #include "../../model/doc/document.hpp"
-
-#include "../../model/world/regionmap.hpp"
-#include "../../model/world/universalid.hpp"
+#include "../../model/world/columns.hpp"
+#include "../../model/world/commands.hpp"
 #include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
-#include "../../model/world/commands.hpp"
-#include "../../model/world/columns.hpp"
+#include "../../model/world/regionmap.hpp"
 #include "../../model/world/tablemimedata.hpp"
+#include "../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/./dragrecordtable.hpp"
+#include "regionmap.hpp"
+
+class QWidget;
 
 void CSVWorld::RegionMap::contextMenuEvent (QContextMenuEvent *event)
 {

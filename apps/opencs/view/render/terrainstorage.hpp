@@ -4,6 +4,12 @@
 #include <components/esmterrain/storage.hpp>
 
 #include "../../model/world/data.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadltex.hpp"
+
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
 
 namespace CSVRender
 {

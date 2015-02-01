@@ -1,18 +1,23 @@
 #ifndef INSTALLATIONPAGE_HPP
 #define INSTALLATIONPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qwizard.h>
+#include <stdbool.h>
 #include <QWizardPage>
 
-#include "unshield/unshieldworker.hpp"
-#include "ui_installationpage.h"
 #include "inisettings.hpp"
+#include "ui_installationpage.h"
+#include "unshield/unshieldworker.hpp"
 
 class QThread;
+class QWidget;
 
 namespace Wizard
 {
-    class MainWizard;
     class IniSettings;
+    class MainWizard;
     class UnshieldWorker;
 
     class InstallationPage : public QWizardPage, private Ui::InstallationPage

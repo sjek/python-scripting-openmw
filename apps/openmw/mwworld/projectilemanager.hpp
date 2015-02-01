@@ -1,16 +1,30 @@
 #ifndef OPENMW_MWWORLD_PROJECTILEMANAGER_H
 #define OPENMW_MWWORLD_PROJECTILEMANAGER_H
 
-#include <string>
-
 #include <OgreVector3.h>
-
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/effectlist.hpp>
 #include <components/nifogre/ogrenifloader.hpp>
+#include <stdint.h>
+#include <algorithm>
+#include <string>
+#include <vector>
 
 #include "../mwbase/soundmanager.hpp"
-
+#include "OgreQuaternion.h"
+#include "OgreSharedPtr.h"
 #include "ptr.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace Ogre {
+class SceneNode;
+}  // namespace Ogre
 
 namespace OEngine
 {

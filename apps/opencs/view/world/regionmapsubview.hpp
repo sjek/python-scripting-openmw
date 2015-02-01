@@ -1,7 +1,11 @@
 #ifndef CSV_WORLD_REGIONMAPSUBVIEW_H
 #define CSV_WORLD_REGIONMAPSUBVIEW_H
 
+#include <qobjectdefs.h>
+#include <string>
+
 #include "../doc/subview.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/universalid.hpp"
 
 class QAction;
 

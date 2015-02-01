@@ -1,6 +1,6 @@
-#include "loadgmst.hpp"
-
+#include "components/esm/variant.hpp"
 #include "defs.hpp"
+#include "loadgmst.hpp"
 
 namespace ESM
 {

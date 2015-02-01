@@ -2,14 +2,31 @@
 #define OPENMW_COMPONENTS_NIF_NODE_HPP
 
 #include <OgreMatrix4.h>
+#include <stddef.h>
 
-#include "controlled.hpp"
-#include "extra.hpp"
-#include "data.hpp"
-#include "property.hpp"
-#include "niftypes.hpp"
-#include "controller.hpp"
+#include "OgreMatrix3.h"
+#include "OgreVector3.h"
 #include "base.hpp"
+#include "components/nif/nifstream.hpp"
+#include "components/nif/recordptr.hpp"
+#include "controlled.hpp"
+#include "controller.hpp"
+#include "data.hpp"
+#include "extra.hpp"
+#include "niftypes.hpp"
+#include "property.hpp"
+
+namespace Nif {
+class NIFFile;
+class NiAlphaProperty;
+class NiMaterialProperty;
+class NiSpecularProperty;
+class NiStencilProperty;
+class NiTexturingProperty;
+class NiVertexColorProperty;
+class NiWireframeProperty;
+class NiZBufferProperty;
+}  // namespace Nif
 
 namespace Nif
 {

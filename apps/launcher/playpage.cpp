@@ -1,7 +1,5 @@
 #include "playpage.hpp"
 
-#include <QListView>
-
 #ifdef Q_OS_MAC
 #include <QPlastiqueStyle>
 #endif

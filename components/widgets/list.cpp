@@ -1,9 +1,17 @@
-#include "list.hpp"
-
-#include <MyGUI_Gui.h>
 #include <MyGUI_Button.h>
+#include <MyGUI_Gui.h>
 #include <MyGUI_ImageBox.h>
-#include <MyGUI_ScrollBar.h>
+#include <assert.h>
+#include <stddef.h>
+#include <algorithm>
+
+#include "MyGUI_Align.h"
+#include "MyGUI_ISubWidgetText.h"
+#include "MyGUI_ScrollView.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_WidgetInput.h"
+#include "list.hpp"
 
 namespace Gui
 {

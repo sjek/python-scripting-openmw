@@ -1,7 +1,18 @@
 #ifndef MWGUI_BIRTH_H
 #define MWGUI_BIRTH_H
 
+#include <stddef.h>
+#include <string>
+#include <vector>
+
+#include "MyGUI_DelegateImplement.h"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class ImageBox;
+class ListBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

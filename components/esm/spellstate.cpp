@@ -1,7 +1,9 @@
-#include "spellstate.hpp"
+#include <utility>
 
+#include "components/esm/defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "spellstate.hpp"
 
 namespace ESM
 {

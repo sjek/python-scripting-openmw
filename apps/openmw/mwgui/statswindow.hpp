@@ -1,10 +1,27 @@
 #ifndef MWGUI_STATS_WINDOW_H
 #define MWGUI_STATS_WINDOW_H
 
+#include <components/esm/loadskil.hpp>
+#include <map>
+#include <set>
+#include <string>
+#include <vector>
+
 #include "../mwmechanics/stat.hpp"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_Window.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "windowpinnablebase.hpp"
 
-#include <components/esm/loadskil.hpp>
+namespace MWGui {
+class DragAndDrop;
+}  // namespace MWGui
+namespace MyGUI {
+class ScrollView;
+class TextBox;
+}  // namespace MyGUI
 
 namespace MWGui
 {

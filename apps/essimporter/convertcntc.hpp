@@ -1,9 +1,16 @@
 #ifndef OPENMW_ESSIMPORT_CONVERTCNTC_H
 #define OPENMW_ESSIMPORT_CONVERTCNTC_H
 
+#include <components/esm/containerstate.hpp>
+
 #include "importcntc.hpp"
 
-#include <components/esm/containerstate.hpp>
+namespace ESM {
+struct ContainerState;
+}  // namespace ESM
+namespace ESSImport {
+struct CNTC;
+}  // namespace ESSImport
 
 namespace ESSImport
 {

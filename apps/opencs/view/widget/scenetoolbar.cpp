@@ -1,10 +1,14 @@
 
-#include "scenetoolbar.hpp"
-
-#include <QVBoxLayout>
-#include <QShortcut>
+#include <qboxlayout.h>
+#include <qlayoutitem.h>
+#include <qmargins.h>
+#include <qnamespace.h>
+#include <qshortcut.h>
 
 #include "scenetool.hpp"
+#include "scenetoolbar.hpp"
+
+class QFocusEvent;
 
 void CSVWidget::SceneToolbar::focusInEvent (QFocusEvent *event)
 {

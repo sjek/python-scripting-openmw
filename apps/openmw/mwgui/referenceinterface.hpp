@@ -1,7 +1,13 @@
 #ifndef MWGUI_REFERENCEINTERFACE_H
 #define MWGUI_REFERENCEINTERFACE_H
 
+#include <stddef.h>
+
 #include "../mwworld/ptr.hpp"
+
+namespace MWWorld {
+class CellStore;
+}  // namespace MWWorld
 
 namespace MWGui
 {

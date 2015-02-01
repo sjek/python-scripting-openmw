@@ -1,12 +1,15 @@
 #ifndef PROFILESCOMBOBOX_HPP
 #define PROFILESCOMBOBOX_HPP
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <QDebug>
+
 #include "components/contentselector/view/combobox.hpp"
 #include "lineedit.hpp"
 
-#include <QDebug>
-
 class QString;
+class QWidget;
 
 class ProfilesComboBox : public ContentSelectorView::ComboBox
 {

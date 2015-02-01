@@ -1,11 +1,19 @@
 
+#include <qcombobox.h>
+#include <qicon.h>
+#include <qlabel.h>
+#include <qvariant.h>
+#include <vector>
+
+#include "../../model/world/commands.hpp"
+#include "../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/genericcreator.hpp"
 #include "referenceablecreator.hpp"
 
-#include <QComboBox>
-#include <QLabel>
-
-#include "../../model/world/universalid.hpp"
-#include "../../model/world/commands.hpp"
+class QUndoStack;
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
 
 void CSVWorld::ReferenceableCreator::configureCreateCommand (CSMWorld::CreateCommand& command) const
 {

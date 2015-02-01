@@ -1,6 +1,10 @@
-#include "frame.hpp"
+#include <qlayout.h>
+#include <qobject.h>
+#include <qsizepolicy.h>
+#include <qvariant.h>
+#include <qwidget.h>
 
-#include <QWidget>
+#include "frame.hpp"
 
 const QString CSVSettings::Frame::sInvisibleBoxStyle =
     QString::fromUtf8("Frame { border:2px; padding: 2px; margin: 2px;}");

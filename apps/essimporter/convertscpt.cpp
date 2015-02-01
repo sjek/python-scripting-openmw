@@ -1,7 +1,11 @@
-#include "convertscpt.hpp"
-
 #include <components/misc/stringops.hpp>
+#include <string>
 
+#include "apps/essimporter/importscpt.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/globalscript.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "convertscpt.hpp"
 #include "convertscri.hpp"
 
 namespace ESSImport

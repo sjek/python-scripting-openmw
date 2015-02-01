@@ -1,12 +1,19 @@
 
-#include "stringparser.hpp"
-
+#include <components/misc/stringops.hpp>
 #include <algorithm>
 #include <iterator>
 
-#include "scanner.hpp"
+#include "components/compiler/parser.hpp"
+#include "components/interpreter/types.hpp"
 #include "generator.hpp"
-#include <components/misc/stringops.hpp>
+#include "scanner.hpp"
+#include "stringparser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

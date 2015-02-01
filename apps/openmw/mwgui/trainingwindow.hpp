@@ -1,8 +1,17 @@
 #ifndef MWGUI_TRAININGWINDOW_H
 #define MWGUI_TRAININGWINDOW_H
 
-#include "windowbase.hpp"
 #include "referenceinterface.hpp"
+#include "windowbase.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

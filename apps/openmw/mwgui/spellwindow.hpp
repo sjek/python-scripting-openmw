@@ -1,10 +1,22 @@
 #ifndef MWGUI_SPELLWINDOW_H
 #define MWGUI_SPELLWINDOW_H
 
-#include "windowpinnablebase.hpp"
-#include "../mwworld/ptr.hpp"
+#include <string>
 
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "spellmodel.hpp"
+#include "windowpinnablebase.hpp"
+
+namespace MWGui {
+class DragAndDrop;
+}  // namespace MWGui
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

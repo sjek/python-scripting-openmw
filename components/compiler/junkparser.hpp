@@ -1,7 +1,16 @@
 #ifndef COMPILER_JUNKPARSER_H_INCLUDED
 #define COMPILER_JUNKPARSER_H_INCLUDED
 
+#include <string>
+
 #include "parser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

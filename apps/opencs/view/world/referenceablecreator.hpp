@@ -1,9 +1,18 @@
 #ifndef CSV_WORLD_REFERENCEABLECREATOR_H
 #define CSV_WORLD_REFERENCEABLECREATOR_H
 
-class QComboBox;
+#include <qobjectdefs.h>
+#include <string>
 
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
 #include "genericcreator.hpp"
+
+class QComboBox;
+class QUndoStack;
+namespace CSMWorld {
+class CreateCommand;
+class Data;
+}  // namespace CSMWorld
 
 namespace CSVWorld
 {

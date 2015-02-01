@@ -1,7 +1,31 @@
 #ifndef GAME_MWCLASS_CREATURE_H
 #define GAME_MWCLASS_CREATURE_H
 
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <string>
+
 #include "../mwworld/class.hpp"
+#include "OgreVector3.h"
+#include "apps/openmw/mwclass/../mwgui/tooltips.hpp"
+#include "apps/openmw/mwclass/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwclass/../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwclass/../mwworld/ptr.hpp"
+
+namespace ESM {
+struct ObjectState;
+}  // namespace ESM
+namespace MWMechanics {
+class CreatureStats;
+struct Movement;
+}  // namespace MWMechanics
+namespace MWRender {
+class RenderingInterface;
+}  // namespace MWRender
+namespace MWWorld {
+class Action;
+class CellStore;
+class PhysicsSystem;
+}  // namespace MWWorld
 
 namespace ESM
 {

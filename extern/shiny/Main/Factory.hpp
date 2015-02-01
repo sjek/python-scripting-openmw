@@ -2,12 +2,15 @@
 #define SH_FACTORY_H
 
 #include <map>
-#include <string>
 #include <sstream>
+#include <string>
+#include <vector>
 
+#include "Language.hpp"
 #include "MaterialInstance.hpp"
 #include "ShaderSet.hpp"
-#include "Language.hpp"
+#include "extern/shiny/Main/Platform.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
 
 namespace sh
 {

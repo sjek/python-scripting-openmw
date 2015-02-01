@@ -1,23 +1,38 @@
-#include "charactercreation.hpp"
+#include <assert.h>
+#include <boost/array.hpp>
+#include <stddef.h>
+#include <iostream>
+#include <map>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/world.hpp"
+#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
 #include "../mwworld/class.hpp"
-#include "../mwworld/fallback.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "textinput.hpp"
-#include "race.hpp"
-#include "class.hpp"
+#include "../mwworld/fallback.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_StringUtility.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "birth.hpp"
-#include "review.hpp"
+#include "charactercreation.hpp"
+#include "class.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
 #include "inventorywindow.hpp"
+#include "race.hpp"
+#include "review.hpp"
+#include "textinput.hpp"
 
 namespace
 {

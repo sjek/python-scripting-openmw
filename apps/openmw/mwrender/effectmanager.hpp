@@ -2,6 +2,19 @@
 #define OPENMW_MWRENDER_EFFECTMANAGER_H
 
 #include <components/nifogre/ogrenifloader.hpp>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "OgreController.h"
+#include "OgrePrerequisites.h"
+
+namespace Ogre {
+class Camera;
+class SceneManager;
+class SceneNode;
+class Vector3;
+}  // namespace Ogre
 
 namespace MWRender
 {

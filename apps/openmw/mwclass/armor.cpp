@@ -1,28 +1,35 @@
 
-#include "armor.hpp"
-
+#include <assert.h>
 #include <components/esm/loadarmo.hpp>
-#include <components/esm/loadskil.hpp>
 #include <components/esm/loadgmst.hpp>
+#include <components/esm/loadskil.hpp>
+#include <stddef.h>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
-#include "../mwworld/actionequip.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/nullaction.hpp"
-#include "../mwworld/containerstore.hpp"
-
+#include "../mwbase/world.hpp"
+#include "../mwgui/tooltips.hpp"
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"
-
-#include "../mwgui/tooltips.hpp"
+#include "../mwworld/actionequip.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/action.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "apps/openmw/mwclass/../mwworld/store.hpp"
+#include "armor.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadweap.hpp"
 
 namespace MWClass
 {

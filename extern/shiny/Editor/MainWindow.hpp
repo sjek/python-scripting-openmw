@@ -1,18 +1,39 @@
 #ifndef SHINY_EDITOR_MAINWINDOW_HPP
 #define SHINY_EDITOR_MAINWINDOW_HPP
 
+#include <qmainwindow.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <stddef.h>
 #include <QMainWindow>
-
 #include <QSortFilterProxyModel>
 #include <QStandardItemModel>
 #include <QStringListModel>
-
+#include <map>
 #include <queue>
+#include <string>
+#include <vector>
 
 #include "Actions.hpp"
+#include "PropertySortModel.hpp"
 #include "Query.hpp"
 
-#include "PropertySortModel.hpp"
+class QCloseEvent;
+class QModelIndex;
+class QPoint;
+class QSortFilterProxyModel;
+class QStandardItem;
+class QStandardItemModel;
+class QStringListModel;
+class QWidget;
+namespace sh {
+class Action;
+class ConfigurationQuery;
+class MaterialQuery;
+class PropertySortModel;
+class Query;
+struct MaterialProperty;
+}  // namespace sh
 
 namespace Ui {
 class MainWindow;

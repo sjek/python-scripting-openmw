@@ -1,6 +1,7 @@
 #ifndef GAME_MWDIALOGUE_FILTER_H
 #define GAME_MWDIALOGUE_FILTER_H
 
+#include <string>
 #include <vector>
 
 #include "../mwworld/ptr.hpp"

@@ -1,7 +1,12 @@
 #ifndef SHINY_EDITOR_PROPERTYSORTMODEL_H
 #define SHINY_EDITOR_PROPERTYSORTMODEL_H
 
+#include <qobjectdefs.h>
+#include <qsortfilterproxymodel.h>
 #include <QSortFilterProxyModel>
+
+class QModelIndex;
+class QObject;
 
 namespace sh
 {

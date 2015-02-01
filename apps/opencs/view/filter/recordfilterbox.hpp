@@ -1,14 +1,24 @@
 #ifndef CSV_FILTER_RECORDFILTERBOX_H
 #define CSV_FILTER_RECORDFILTERBOX_H
 
-#include <boost/shared_ptr.hpp>
-
-#include <QWidget>
 #include <QtCore/qnamespace.h>
-
+#include <boost/shared_ptr.hpp>
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QHBoxLayout>
+#include <QWidget>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../../model/filter/node.hpp"
+
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace CSMWorld
 {

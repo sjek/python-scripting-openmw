@@ -1,9 +1,11 @@
 #ifndef CSV_DOC_VIEWMANAGER_H
 #define CSV_DOC_VIEWMANAGER_H
 
-#include <vector>
-
+#include <qobject.h>
+#include <qobjectdefs.h>
 #include <QObject>
+#include <string>
+#include <vector>
 
 #include "loader.hpp"
 

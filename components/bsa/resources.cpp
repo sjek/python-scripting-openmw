@@ -1,12 +1,14 @@
 
-#include "resources.hpp"
-
-#include <iostream>
-
 #include <OgreResourceGroupManager.h>
 #include <OgreStringConverter.h>
+#include <boost/filesystem/path.hpp>
+#include <iostream>
+#include <stdexcept>
 
 #include "bsa_archive.hpp"
+#include "components/bsa/../files/collections.hpp"
+#include "components/bsa/../files/multidircollection.hpp"
+#include "resources.hpp"
 
 void Bsa::registerResources (const Files::Collections& collections,
     const std::vector<std::string>& archives, bool useLooseFiles, bool fsStrict)

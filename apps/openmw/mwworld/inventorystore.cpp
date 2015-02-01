@@ -1,22 +1,40 @@
 
-#include "inventorystore.hpp"
-
-#include <iterator>
-#include <algorithm>
-
-#include <components/esm/loadench.hpp>
 #include <components/esm/inventorystate.hpp>
+#include <components/esm/loadench.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <cstddef>
+#include <iterator>
+#include <stdexcept>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
-
-
-#include "esmstore.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/containerstore.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "class.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/misc/stringops.hpp"
+#include "esmstore.hpp"
+#include "inventorystore.hpp"
+
+namespace MWWorld {
+struct LiveCellRefBase;
+}  // namespace MWWorld
 
 void MWWorld::InventoryStore::copySlots (const InventoryStore& store)
 {

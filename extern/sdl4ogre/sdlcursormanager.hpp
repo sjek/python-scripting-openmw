@@ -2,9 +2,14 @@
 #define SDL4OGRE_CURSORMANAGER_H
 
 #include <SDL.h>
-
-#include "cursormanager.hpp"
 #include <map>
+#include <string>
+
+#include "OgrePrerequisites.h"
+#include "SDL_mouse.h"
+#include "SDL_stdinc.h"
+#include "SDL_surface.h"
+#include "cursormanager.hpp"
 
 namespace SFO
 {

@@ -2,8 +2,14 @@
 #define SH_OGRETEXTUREUNITSTATE_H
 
 #include <OgreTextureUnitState.h>
+#include <string>
 
 #include "../../Main/Platform.hpp"
+#include "extern/shiny/Platforms/Ogre/../../Main/PropertyBase.hpp"
+
+namespace Ogre {
+class TextureUnitState;
+}  // namespace Ogre
 
 namespace sh
 {

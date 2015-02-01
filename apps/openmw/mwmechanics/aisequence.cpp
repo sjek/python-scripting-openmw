@@ -1,24 +1,29 @@
 
-#include "aisequence.hpp"
-
-#include "aipackage.hpp"
-#include "aistate.hpp"
-
-#include "aiwander.hpp"
-#include "aiescort.hpp"
-#include "aitravel.hpp"
-#include "aifollow.hpp"
-#include "aiactivate.hpp"
-#include "aicombat.hpp"
-#include "aipursue.hpp"
-
 #include <components/esm/aisequence.hpp>
+#include <algorithm>
+#include <limits>
+#include <stdexcept>
+#include <string>
+#include <vector>
 
-#include "../mwworld/class.hpp"
-#include "creaturestats.hpp"
-#include "npcstats.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
+#include "OgreVector3.h"
+#include "aiactivate.hpp"
+#include "aicombat.hpp"
+#include "aiescort.hpp"
+#include "aifollow.hpp"
+#include "aipackage.hpp"
+#include "aipursue.hpp"
+#include "aisequence.hpp"
+#include "aistate.hpp"
+#include "aitravel.hpp"
+#include "aiwander.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "components/esm/aipackage.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
 
 namespace MWMechanics
 {

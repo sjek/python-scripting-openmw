@@ -1,7 +1,15 @@
 #ifndef MWGUI_TEXT_INPUT_H
 #define MWGUI_TEXT_INPUT_H
 
+#include <string>
+
+#include "MyGUI_DeprecatedTypes.h"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class EditBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

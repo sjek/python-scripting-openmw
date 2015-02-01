@@ -1,17 +1,17 @@
 #ifndef GAME_SCRIPT_SCRIPTMANAGER_H
 #define GAME_SCRIPT_SCRIPTMANAGER_H
 
-#include <map>
-#include <string>
-
-#include <components/compiler/streamerrorhandler.hpp>
 #include <components/compiler/fileparser.hpp>
-
+#include <components/compiler/streamerrorhandler.hpp>
 #include <components/interpreter/interpreter.hpp>
 #include <components/interpreter/types.hpp>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/scriptmanager.hpp"
-
+#include "components/compiler/locals.hpp"
 #include "globalscripts.hpp"
 
 namespace MWWorld

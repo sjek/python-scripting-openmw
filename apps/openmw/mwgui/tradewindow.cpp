@@ -1,32 +1,53 @@
-#include "tradewindow.hpp"
-
 #include <MyGUI_Button.h>
-#include <MyGUI_InputManager.h>
 #include <MyGUI_ControllerManager.h>
-
+#include <MyGUI_InputManager.h>
 #include <components/widgets/numericeditbox.hpp>
+#include <limits.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include <typeinfo>
+#include <vector>
 
+#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/dialoguemanager.hpp"
-
-#include "../mwworld/manualref.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/creaturestats.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-
+#include "MyGUI_ControllerItem.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/esmstore.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "apps/openmw/mwgui/referenceinterface.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/misc/stringops.hpp"
+#include "containeritemmodel.hpp"
+#include "controllers.hpp"
+#include "countdialog.hpp"
+#include "dialogue.hpp"
 #include "inventorywindow.hpp"
 #include "itemview.hpp"
 #include "sortfilteritemmodel.hpp"
-#include "containeritemmodel.hpp"
 #include "tradeitemmodel.hpp"
-#include "countdialog.hpp"
-#include "dialogue.hpp"
-#include "controllers.hpp"
+#include "tradewindow.hpp"
 
 namespace
 {

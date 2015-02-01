@@ -1,10 +1,10 @@
+#include <qglobal.h>
+#include <qobject.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qwidget.h>
+
 #include "componentselectionpage.hpp"
-
-#include <QDebug>
-#include <QPushButton>
-#include <QAbstractButton>
-#include <QMessageBox>
-
 #include "mainwizard.hpp"
 
 Wizard::ComponentSelectionPage::ComponentSelectionPage(QWidget *parent) :

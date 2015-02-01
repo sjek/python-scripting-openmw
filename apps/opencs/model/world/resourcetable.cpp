@@ -1,10 +1,12 @@
 
-#include "resourcetable.hpp"
-
+#include <qglobal.h>
+#include <qstring.h>
 #include <stdexcept>
 
-#include "resources.hpp"
+#include "apps/opencs/model/world/idtablebase.hpp"
 #include "columnbase.hpp"
+#include "resources.hpp"
+#include "resourcetable.hpp"
 #include "universalid.hpp"
 
 CSMWorld::ResourceTable::ResourceTable (const Resources *resources, unsigned int features)

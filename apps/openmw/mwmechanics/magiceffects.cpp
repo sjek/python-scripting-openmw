@@ -1,12 +1,10 @@
 
-#include "magiceffects.hpp"
-
-#include <cstdlib>
-
-#include <stdexcept>
-
 #include <components/esm/effectlist.hpp>
 #include <components/esm/magiceffects.hpp>
+#include <stdexcept>
+#include <utility>
+
+#include "magiceffects.hpp"
 
 namespace MWMechanics
 {

@@ -2,17 +2,24 @@
 #define ENGINE_H
 
 #include <OgreFrameListener.h>
-
+#include <boost/filesystem/path.hpp>
 #include <components/compiler/extensions.hpp>
 #include <components/files/collections.hpp>
-#include <components/translation/translation.hpp>
-#include <components/settings/settings.hpp>
 #include <components/nifcache/nifcache.hpp>
+#include <components/settings/settings.hpp>
+#include <components/translation/translation.hpp>
+#include <map>
+#include <string>
+#include <vector>
 
-
+#include "components/files/multidircollection.hpp"
+#include "components/to_utf8/to_utf8.hpp"
 #include "mwbase/environment.hpp"
-
 #include "mwworld/ptr.hpp"
+
+namespace Settings {
+class Manager;
+}  // namespace Settings
 
 namespace Compiler
 {

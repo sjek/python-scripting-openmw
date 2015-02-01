@@ -1,9 +1,19 @@
-#include "listview.hpp"
-#include "../../model/settings/setting.hpp"
+#include <qabstractitemmodel.h>
+#include <qabstractitemview.h>
+#include <qcombobox.h>
+#include <qitemselectionmodel.h>
+#include <qlist.h>
+#include <qlistview.h>
+#include <qstringlist.h>
 
-#include <QListView>
-#include <QComboBox>
-#include <QStringListModel>
+#include "../../model/settings/setting.hpp"
+#include "apps/opencs/view/settings/view.hpp"
+#include "listview.hpp"
+
+class QShowEvent;
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 CSVSettings::ListView::ListView(CSMSettings::Setting *setting,
                                 Page *parent)

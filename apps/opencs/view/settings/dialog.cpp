@@ -1,26 +1,27 @@
-#include "dialog.hpp"
-
+#include <qabstractitemview.h>
+#include <qapplication.h>
+#include <qatomic_i386.h>
+#include <qdesktopwidget.h>
+#include <qfontmetrics.h>
+#include <qglobal.h>
+#include <qlist.h>
+#include <qlistwidget.h>
+#include <qmainwindow.h>
+#include <qpoint.h>
+#include <qrect.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qsplitter.h>
+#include <qstring.h>
+#include <qwidget.h>
 #include <algorithm>
 
-#include <QListWidgetItem>
-#include <QApplication>
-#include <QWidget>
-#include <QStackedWidget>
-#include <QtGui>
-#include <QSplitter>
-
-#include "../../model/settings/usersettings.hpp"
-
+#include "apps/opencs/view/settings/resizeablestackedwidget.hpp"
+#include "apps/opencs/view/settings/settingwindow.hpp"
+#include "dialog.hpp"
 #include "page.hpp"
 
-#include <QApplication>
-
-#include <QTreeView>
-#include <QListView>
-#include <QTableView>
-
-#include <QStandardItemModel>
-#include <QStandardItem>
+class QCloseEvent;
 
 CSVSettings::Dialog::Dialog(QMainWindow *parent)
     : mStackedWidget (0), mDebugMode (false), SettingWindow (parent)

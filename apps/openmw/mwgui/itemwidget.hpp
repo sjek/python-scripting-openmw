@@ -2,6 +2,15 @@
 #define OPENMW_MWGUI_ITEMWIDGET_H
 
 #include <MyGUI_Widget.h>
+#include <string>
+
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+
+namespace MyGUI {
+class ImageBox;
+class TextBox;
+}  // namespace MyGUI
 
 namespace MWWorld
 {

@@ -12,10 +12,22 @@
  * @{
  */
 
-#include "../../Main/Platform.hpp"
-
-#include <OgreMaterialManager.h>
 #include <OgreGpuProgramParams.h>
+#include <OgreMaterialManager.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <map>
+#include <string>
+
+#include "../../Main/Platform.hpp"
+#include "OgrePrerequisites.h"
+#include "OgreTechnique.h"
+#include "extern/shiny/Platforms/Ogre/../../Main/Language.hpp"
+#include "extern/shiny/Platforms/Ogre/../../Main/PropertyBase.hpp"
+
+namespace Ogre {
+class Material;
+class Renderable;
+}  // namespace Ogre
 
 namespace sh
 {

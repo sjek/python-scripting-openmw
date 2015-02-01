@@ -1,18 +1,20 @@
 #ifndef MWMECHANICS_SPELLSUCCESS_H
 #define MWMECHANICS_SPELLSUCCESS_H
 
-#include "../mwworld/ptr.hpp"
-
 #include <OgreVector3.h>
-
 #include <components/esm/loadskil.hpp>
+#include <stddef.h>
+#include <string>
+
+#include "../mwworld/ptr.hpp"
+#include "components/esm/defs.hpp"
 
 namespace ESM
 {
-    struct Spell;
+    struct EffectList;
     struct Ingredient;
     struct Potion;
-    struct EffectList;
+    struct Spell;
 }
 
 namespace MWMechanics

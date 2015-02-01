@@ -2,6 +2,8 @@
 #define GAME_SCRIPT_COMPILERCONTEXT_H
 
 #include <components/compiler/context.hpp>
+#include <string>
+#include <utility>
 
 namespace MWScript
 {

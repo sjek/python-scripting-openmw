@@ -1,9 +1,16 @@
 #ifndef OPENMW_ESSIMPORT_CONVERTCREC_H
 #define OPENMW_ESSIMPORT_CONVERTCREC_H
 
+#include <components/esm/creaturestate.hpp>
+
 #include "importcrec.hpp"
 
-#include <components/esm/creaturestate.hpp>
+namespace ESM {
+struct CreatureState;
+}  // namespace ESM
+namespace ESSImport {
+struct CREC;
+}  // namespace ESSImport
 
 namespace ESSImport
 {

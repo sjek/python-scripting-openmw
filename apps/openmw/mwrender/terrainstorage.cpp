@@ -1,10 +1,13 @@
-#include "terrainstorage.hpp"
+#include <stddef.h>
 
-#include <boost/algorithm/string.hpp>
-
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwrender/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadltex.hpp"
+#include "terrainstorage.hpp"
 
 namespace MWRender
 {

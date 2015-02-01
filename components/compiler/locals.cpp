@@ -1,13 +1,11 @@
 
-#include "locals.hpp"
-
-#include <cassert>
-#include <stdexcept>
-#include <algorithm>
-#include <ostream>
-#include <iterator>
-
 #include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <iterator>
+#include <ostream>
+#include <stdexcept>
+
+#include "locals.hpp"
 
 namespace Compiler
 {

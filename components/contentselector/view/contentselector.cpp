@@ -1,16 +1,16 @@
-#include "contentselector.hpp"
+#include <qabstractitemmodel.h>
+#include <qatomic_i386.h>
+#include <qglobal.h>
+#include <qicon.h>
+#include <qlist.h>
+#include <qnamespace.h>
+#include <qsortfilterproxymodel.h>
+#include <qvariant.h>
+#include <qwidget.h>
 
 #include "../model/esmfile.hpp"
-
-#include <QSortFilterProxyModel>
-
-#include <QMenu>
-#include <QContextMenuEvent>
-
-#include <QGridLayout>
-#include <QMessageBox>
-#include <QModelIndex>
-#include <assert.h>
+#include "components/contentselector/view/../model/contentmodel.hpp"
+#include "contentselector.hpp"
 
 ContentSelectorView::ContentSelector::ContentSelector(QWidget *parent) :
     QObject(parent)

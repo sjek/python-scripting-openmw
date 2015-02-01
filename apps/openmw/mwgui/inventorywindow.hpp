@@ -1,10 +1,20 @@
 #ifndef MGUI_Inventory_H
 #define MGUI_Inventory_H
 
-#include "windowpinnablebase.hpp"
-#include "mode.hpp"
+#include <memory>
 
 #include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwrender/characterpreview.hpp"
+#include "mode.hpp"
+#include "windowpinnablebase.hpp"
+
+namespace MyGUI {
+class Button;
+class ImageBox;
+class TextBox;
+class Widget;
+class Window;
+}  // namespace MyGUI
 
 namespace MWRender
 {
@@ -18,11 +28,11 @@ namespace MWGui
         class MWDynamicStat;
     }
 
+    class DragAndDrop;
+    class ItemModel;
     class ItemView;
     class SortFilterItemModel;
     class TradeItemModel;
-    class DragAndDrop;
-    class ItemModel;
 
     class InventoryWindow : public WindowPinnableBase
     {

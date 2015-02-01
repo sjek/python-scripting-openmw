@@ -1,28 +1,39 @@
-#include "journalwindow.hpp"
-
-#include <sstream>
+#include <MyGUI_TextBox.h>
+#include <assert.h>
+#include <boost/bind/arg.hpp>
+#include <boost/bind/bind.hpp>
+#include <boost/bind/bind_template.hpp>
+#include <boost/bind/placeholders.hpp>
+#include <boost/cstdint.hpp>
+#include <boost/smart_ptr/detail/operator_bool.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/widgets/imagebutton.hpp>
+#include <components/widgets/list.hpp>
+#include <stdint.h>
 #include <set>
 #include <stack>
 #include <string>
 #include <utility>
 
-#include <MyGUI_TextBox.h>
-
-#include <boost/bind.hpp>
-#include <boost/function.hpp>
-
-#include <components/widgets/imagebutton.hpp>
-#include <components/widgets/list.hpp>
-
 #include "../mwbase/environment.hpp"
+#include "../mwbase/journal.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwbase/journal.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
 #include "bookpage.hpp"
-#include "windowbase.hpp"
-#include "journalviewmodel.hpp"
+#include "components/misc/stringops.hpp"
 #include "journalbooks.hpp"
+#include "journalviewmodel.hpp"
+#include "journalwindow.hpp"
+#include "windowbase.hpp"
 
 namespace
 {

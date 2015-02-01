@@ -1,4 +1,5 @@
 
+#include "apps/opencs/model/doc/../world/universalid.hpp"
 #include "messages.hpp"
 
 void CSMDoc::Messages::add (const CSMWorld::UniversalId& id, const std::string& message,

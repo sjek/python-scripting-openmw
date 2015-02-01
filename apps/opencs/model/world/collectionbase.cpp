@@ -1,8 +1,8 @@
 
-#include "collectionbase.hpp"
-
 #include <stdexcept>
 
+#include "apps/opencs/model/world/columns.hpp"
+#include "collectionbase.hpp"
 #include "columnbase.hpp"
 
 CSMWorld::CollectionBase::CollectionBase() {}

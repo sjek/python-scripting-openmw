@@ -1,12 +1,13 @@
 
-#include "regioncheck.hpp"
-
-#include <sstream>
-#include <map>
-
 #include <components/esm/loadregn.hpp>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "regioncheck.hpp"
 
 CSMTools::RegionCheckStage::RegionCheckStage (const CSMWorld::IdCollection<ESM::Region>& regions)
 : mRegions (regions)

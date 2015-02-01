@@ -1,7 +1,15 @@
 #ifndef CSV_WORLD_DIALOGUECREATOR_H
 #define CSV_WORLD_DIALOGUECREATOR_H
 
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/creator.hpp"
 #include "genericcreator.hpp"
+
+class QUndoStack;
+namespace CSMWorld {
+class CreateCommand;
+class Data;
+}  // namespace CSMWorld
 
 namespace CSVWorld
 {

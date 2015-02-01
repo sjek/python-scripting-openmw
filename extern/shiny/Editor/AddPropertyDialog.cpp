@@ -1,6 +1,8 @@
 #include "AddPropertyDialog.hpp"
 #include "ui_addpropertydialog.h"
 
+class QWidget;
+
 AddPropertyDialog::AddPropertyDialog(QWidget *parent)
 	: QDialog(parent)
 	, ui(new Ui::AddPropertyDialog)

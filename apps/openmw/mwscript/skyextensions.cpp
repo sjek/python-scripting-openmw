@@ -1,17 +1,17 @@
 
-#include "skyextensions.hpp"
-
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <algorithm>
+#include <string>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
+#include "components/interpreter/types.hpp"
 #include "interpretercontext.hpp"
+#include "skyextensions.hpp"
 
 namespace MWScript
 {

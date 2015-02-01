@@ -1,13 +1,20 @@
-#include "countdialog.hpp"
-
 #include <MyGUI_Button.h>
-#include <MyGUI_ScrollBar.h>
 #include <MyGUI_RenderManager.h>
-
+#include <MyGUI_ScrollBar.h>
 #include <components/widgets/numericeditbox.hpp>
+#include <algorithm>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "countdialog.hpp"
 
 namespace MWGui
 {

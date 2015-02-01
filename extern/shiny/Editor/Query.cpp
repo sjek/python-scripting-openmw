@@ -1,6 +1,15 @@
-#include "Query.hpp"
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <typeinfo>
+#include <utility>
 
 #include "../Main/Factory.hpp"
+#include "Query.hpp"
+#include "extern/shiny/Editor/../Main/MaterialInstance.hpp"
+#include "extern/shiny/Editor/../Main/MaterialInstancePass.hpp"
+#include "extern/shiny/Editor/../Main/MaterialInstanceTextureUnit.hpp"
+#include "extern/shiny/Editor/../Main/PropertyBase.hpp"
 
 namespace sh
 {

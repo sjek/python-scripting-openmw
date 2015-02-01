@@ -2,8 +2,15 @@
 #define SH_OGREPASS_H
 
 #include <OgrePass.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <string>
 
 #include "../../Main/Platform.hpp"
+#include "extern/shiny/Platforms/Ogre/../../Main/PropertyBase.hpp"
+
+namespace Ogre {
+class Pass;
+}  // namespace Ogre
 
 namespace sh
 {

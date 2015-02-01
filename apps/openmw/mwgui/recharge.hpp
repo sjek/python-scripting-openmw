@@ -3,6 +3,13 @@
 
 #include "windowbase.hpp"
 
+namespace MyGUI {
+class Button;
+class ScrollView;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
+
 namespace MWWorld
 {
     class Ptr;

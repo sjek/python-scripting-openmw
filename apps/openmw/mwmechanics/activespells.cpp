@@ -1,13 +1,17 @@
-#include "activespells.hpp"
-
-#include <components/misc/stringops.hpp>
-
 #include <components/esm/loadmgef.hpp>
+#include <components/misc/stringops.hpp>
+#include <stdlib.h>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwworld/esmstore.hpp"
+#include "activespells.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/timestamp.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "components/esm/activespells.hpp"
+#include "components/esm/defs.hpp"
 
 namespace MWMechanics
 {

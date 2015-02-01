@@ -1,14 +1,21 @@
 #ifndef CSV_WIDGET_SCENETOOLRUN_H
 #define CSV_WIDGET_SCENETOOLRUN_H
 
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <set>
 #include <string>
+#include <vector>
 
 #include "scenetool.hpp"
 
 class QFrame;
-class QTableWidget;
 class QModelIndex;
+class QPoint;
+class QTableWidget;
+namespace CSVWidget {
+class SceneToolbar;
+}  // namespace CSVWidget
 
 namespace CSVWidget
 {

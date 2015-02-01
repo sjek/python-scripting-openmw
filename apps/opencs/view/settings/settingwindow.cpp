@@ -1,12 +1,17 @@
-#include <QApplication>
-#include <QDebug>
+#include <qdebug.h>
+#include <qglobal.h>
+#include <qpair.h>
+#include <qstringlist.h>
+#include <stddef.h>
 
-#include "../../model/settings/setting.hpp"
 #include "../../model/settings/connector.hpp"
+#include "../../model/settings/setting.hpp"
 #include "../../model/settings/usersettings.hpp"
-#include "settingwindow.hpp"
 #include "page.hpp"
+#include "settingwindow.hpp"
 #include "view.hpp"
+
+class QWidget;
 
 CSVSettings::SettingWindow::SettingWindow(QWidget *parent)
     : QMainWindow(parent), mModel(NULL)

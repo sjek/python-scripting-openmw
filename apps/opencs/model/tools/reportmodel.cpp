@@ -1,7 +1,8 @@
 
-#include "reportmodel.hpp"
+#include <qstring.h>
 
-#include <stdexcept>
+#include "apps/opencs/model/tools/../world/universalid.hpp"
+#include "reportmodel.hpp"
 
 int CSMTools::ReportModel::rowCount (const QModelIndex & parent) const
 {

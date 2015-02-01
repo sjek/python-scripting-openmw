@@ -1,9 +1,11 @@
 
-#include "cellselection.hpp"
-
 #include <cmath>
-#include <stdexcept>
 #include <limits>
+#include <stdexcept>
+#include <utility>
+
+#include "apps/opencs/model/world/cellcoordinates.hpp"
+#include "cellselection.hpp"
 
 CSMWorld::CellSelection::Iterator CSMWorld::CellSelection::begin() const
 {

@@ -1,4 +1,15 @@
+#include <qicon.h>
+#include <qnamespace.h>
+#include <qpixmap.h>
+#include <qrect.h>
+#include <qsize.h>
+#include <qstyle.h>
+#include <qtoolbutton.h>
+
 #include "lineedit.hpp"
+
+class QResizeEvent;
+class QWidget;
 
 LineEdit::LineEdit(QWidget *parent)
     : QLineEdit(parent)

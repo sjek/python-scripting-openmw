@@ -1,18 +1,40 @@
-#include "aicombataction.hpp"
+#include <components/esm/loadench.hpp>
+#include <components/esm/loadmgef.hpp>
+#include <algorithm>
+#include <map>
+#include <typeinfo>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwmechanics/spellcasting.hpp"
+#include "../mwworld/actionequip.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/inventorystore.hpp"
-#include "../mwworld/actionequip.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/spellcasting.hpp"
-
-#include <components/esm/loadench.hpp>
-#include <components/esm/loadmgef.hpp>
+#include "aicombataction.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/activespells.hpp"
+#include "apps/openmw/mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/spells.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/activespells.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/esm/spelllist.hpp"
 
 namespace
 {

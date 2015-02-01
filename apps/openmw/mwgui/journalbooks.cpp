@@ -1,6 +1,14 @@
-#include "journalbooks.hpp"
-
 #include <MyGUI_LanguageManager.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
+
+#include "MyGUI_Colour.h"
+#include "MyGUI_UString.h"
+#include "apps/openmw/mwgui/bookpage.hpp"
+#include "apps/openmw/mwgui/journalviewmodel.hpp"
+#include "journalbooks.hpp"
 
 namespace
 {

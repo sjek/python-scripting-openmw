@@ -1,11 +1,12 @@
 
-#include "output.hpp"
-
-#include <cassert>
 #include <algorithm>
+#include <cassert>
 #include <iterator>
 
+#include "components/compiler/literals.hpp"
+#include "components/interpreter/types.hpp"
 #include "locals.hpp"
+#include "output.hpp"
 
 namespace Compiler
 {

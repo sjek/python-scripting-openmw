@@ -2,11 +2,12 @@
 #define GAME_SCRIPT_INTERPRETERCONTEXT_H
 
 #include <boost/shared_ptr.hpp>
-
 #include <components/interpreter/context.hpp>
+#include <string>
+#include <vector>
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/action.hpp"
+#include "../mwworld/ptr.hpp"
 
 namespace MWSound
 {

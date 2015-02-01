@@ -1,9 +1,15 @@
 #ifndef CSVSETTINGS_SPINBOX_HPP
 #define CSVSETTINGS_SPINBOX_HPP
 
+#include <qobjectdefs.h>
+#include <qspinbox.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QObject>
-#include <QStringList>
 #include <QSpinBox>
+#include <QStringList>
+
+class QWidget;
 
 namespace CSVSettings
 {

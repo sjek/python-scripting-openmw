@@ -1,27 +1,68 @@
 
-#include "mechanicsmanagerimp.hpp"
-#include "npcstats.hpp"
+#include <OgreSceneNode.h>
+#include <limits.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <ostream>
+#include <typeinfo>
+#include <utility>
 
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/inventorystore.hpp"
-
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/player.hpp"
-
+#include "../mwbase/environment.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/aicombat.hpp"
 #include "../mwmechanics/aipursue.hpp"
-
-#include <OgreSceneNode.h>
-
-#include "spellcasting.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/player.hpp"
+#include "OgreMath.h"
+#include "OgreQuaternion.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwmechanics/../mwbase/mechanicsmanager.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/actors.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/objects.hpp"
+#include "apps/openmw/mwmechanics/spells.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
 #include "autocalcspell.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/misc/stringops.hpp"
+#include "mechanicsmanagerimp.hpp"
+#include "npcstats.hpp"
+#include "spellcasting.hpp"
 
-#include <limits.h>
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace
 {

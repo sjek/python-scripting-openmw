@@ -32,11 +32,12 @@ distribution.
 #pragma warning( disable : 4786 )
 #endif
 
+#include <assert.h>
 #include <ctype.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 
 // Help out windows:
 #if defined( _DEBUG ) && !defined( DEBUG )
@@ -44,12 +45,14 @@ distribution.
 #endif
 
 #ifdef TIXML_USE_STL
-	#include <string>
  	#include <iostream>
 	#include <sstream>
+	#include <string>
+
 	#define TIXML_STRING		std::string
 #else
 	#include "tinystr.h"
+
 	#define TIXML_STRING		TiXmlString
 #endif
 
@@ -82,14 +85,14 @@ distribution.
 	#endif
 #endif	
 
+class TiXmlAttribute;
+class TiXmlComment;
+class TiXmlDeclaration;
 class TiXmlDocument;
 class TiXmlElement;
-class TiXmlComment;
-class TiXmlUnknown;
-class TiXmlAttribute;
-class TiXmlText;
-class TiXmlDeclaration;
 class TiXmlParsingData;
+class TiXmlText;
+class TiXmlUnknown;
 
 const int TIXML_MAJOR_VERSION = 2;
 const int TIXML_MINOR_VERSION = 5;

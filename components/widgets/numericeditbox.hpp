@@ -2,6 +2,15 @@
 #define OPENMW_NUMERIC_EDIT_BOX_H
 
 #include <MyGUI_EditBox.h>
+#include <limits>
+#include <string>
+
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

@@ -1,8 +1,12 @@
 
+#include <qevent.h>
+#include <qnamespace.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qwidget.h>
+
+#include "apps/opencs/view/widget/pushbutton.hpp"
 #include "scenetool.hpp"
-
-#include <QMouseEvent>
-
 #include "scenetoolbar.hpp"
 
 CSVWidget::SceneTool::SceneTool (SceneToolbar *parent, Type type)

@@ -1,36 +1,50 @@
-#include "inputmanagerimp.hpp"
-
-#include <OgreRoot.h>
-#include <OgreRenderWindow.h>
-
-#include <boost/lexical_cast.hpp>
-
+#include <MyGUI_Button.h>
 #include <MyGUI_InputManager.h>
 #include <MyGUI_RenderManager.h>
 #include <MyGUI_Widget.h>
-#include <MyGUI_Button.h>
-#include <MyGUI_EditBox.h>
-
+#include <OgreRenderWindow.h>
+#include <boost/lexical_cast.hpp>
+#include <ctype.h>
 #include <openengine/ogre/renderer.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <sstream>
+#include <stdexcept>
+#include <utility>
 
 #include "../engine.hpp"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/statemanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-
-#include "../mwworld/player.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/esmstore.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-
-#include "../mwdialogue/dialoguemanagerimp.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwgui/windowbase.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/player.hpp"
+#include "MyGUI_KeyCode.h"
+#include "MyGUI_MouseButton.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+#include "SDL_keyboard.h"
+#include "SDL_keycode.h"
+#include "SDL_mouse.h"
+#include "apps/openmw/mwinput/../mwbase/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwinput/../mwbase/environment.hpp"
+#include "apps/openmw/mwinput/../mwgui/mode.hpp"
+#include "apps/openmw/mwinput/../mwworld/../mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwinput/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwinput/../mwworld/ptr.hpp"
+#include "apps/openmw/mwinput/../mwworld/store.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/settings/settings.hpp"
+#include "extern/oics/ICSChannel.h"
+#include "extern/oics/ICSInputControlSystem.h"
+#include "extern/oics/ICSPrerequisites.h"
+#include "extern/sdl4ogre/OISCompat.h"
+#include "extern/sdl4ogre/sdlinputwrapper.hpp"
+#include "inputmanagerimp.hpp"
 
 using namespace ICS;
 

@@ -1,11 +1,21 @@
 #ifndef MWGUI_ENCHANTINGDIALOG_H
 #define MWGUI_ENCHANTINGDIALOG_H
 
+#include "../mwbase/windowmanager.hpp"
+#include "../mwmechanics/enchanting.hpp"
+#include "apps/openmw/mwgui/referenceinterface.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/effectlist.hpp"
 #include "spellcreationdialog.hpp"
 
-#include "../mwbase/windowmanager.hpp"
-
-#include "../mwmechanics/enchanting.hpp"
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

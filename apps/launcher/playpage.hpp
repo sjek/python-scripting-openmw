@@ -1,13 +1,15 @@
 #ifndef PLAYPAGE_H
 #define PLAYPAGE_H
 
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QWidget>
 
 #include "ui_playpage.h"
 
+class QAbstractItemModel;
 class QComboBox;
 class QPushButton;
-class QAbstractItemModel;
 
 namespace Launcher
 {

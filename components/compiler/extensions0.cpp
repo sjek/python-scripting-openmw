@@ -1,7 +1,8 @@
-#include "extensions0.hpp"
+#include <string>
 
-#include "opcodes.hpp"
 #include "extensions.hpp"
+#include "extensions0.hpp"
+#include "opcodes.hpp"
 
 namespace Compiler
 {

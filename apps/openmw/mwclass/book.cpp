@@ -1,25 +1,30 @@
-#include "book.hpp"
-
+#include <assert.h>
 #include <components/esm/loadbook.hpp>
+#include <stddef.h>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actionread.hpp"
-#include "../mwworld/failedaction.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/physicssystem.hpp"
-
+#include "../mwbase/world.hpp"
+#include "../mwgui/tooltips.hpp"
+#include "../mwmechanics/npcstats.hpp"
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"
-
-#include "../mwgui/tooltips.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
+#include "../mwworld/actionread.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/failedaction.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/action.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "apps/openmw/mwclass/../mwworld/store.hpp"
+#include "book.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadsoun.hpp"
 
 namespace MWClass
 {

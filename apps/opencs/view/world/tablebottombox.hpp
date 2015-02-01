@@ -1,8 +1,11 @@
 #ifndef CSV_WORLD_BOTTOMBOX_H
 #define CSV_WORLD_BOTTOMBOX_H
 
-#include <QWidget>
 #include <apps/opencs/model/world/universalid.hpp>
+#include <qobjectdefs.h>
+#include <qwidget.h>
+#include <QWidget>
+#include <string>
 
 class QLabel;
 class QStackedLayout;
@@ -17,8 +20,8 @@ namespace CSMWorld
 
 namespace CSVWorld
 {
-    class CreatorFactoryBase;
     class Creator;
+    class CreatorFactoryBase;
 
     class TableBottomBox : public QWidget
     {

@@ -1,8 +1,15 @@
 #ifndef CSMSETTINGS_SETTING_HPP
 #define CSMSETTINGS_SETTING_HPP
 
-#include <QStringList>
+#include <qatomic_i386.h>
+#include <qglobal.h>
+#include <qlist.h>
+#include <qmap.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QMap>
+#include <QStringList>
+
 #include "support.hpp"
 
 namespace CSMSettings

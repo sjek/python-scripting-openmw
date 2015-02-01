@@ -1,10 +1,14 @@
-#include <QRegExpValidator>
-#include <QLineEdit>
-#include <QString>
-#include <QApplication>
-#include <QKeyEvent>
+#include <qpalette.h>
+#include <qregexp.h>
+#include <qstyle.h>
+#include <qstyleoption.h>
+#include <qstylepainter.h>
+#include <qvalidator.h>
 
 #include "combobox.hpp"
+
+class QPaintEvent;
+class QWidget;
 
 ContentSelectorView::ComboBox::ComboBox(QWidget *parent) :
     QComboBox(parent)

@@ -1,6 +1,10 @@
 #ifndef OPENMW_GUI_SPELLMODEL_H
 #define OPENMW_GUI_SPELLMODEL_H
 
+#include <stddef.h>
+#include <string>
+#include <vector>
+
 #include "../mwworld/ptr.hpp"
 
 namespace MWGui

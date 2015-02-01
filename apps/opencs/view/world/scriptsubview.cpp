@@ -1,16 +1,22 @@
 
-#include "scriptsubview.hpp"
-
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qtextcursor.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <istream>
 #include <stdexcept>
 
 #include "../../model/doc/document.hpp"
-#include "../../model/world/universalid.hpp"
-#include "../../model/world/data.hpp"
 #include "../../model/world/columnbase.hpp"
 #include "../../model/world/commands.hpp"
+#include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
-
+#include "../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/../doc/subview.hpp"
+#include "apps/opencs/view/world/scripthighlighter.hpp"
 #include "scriptedit.hpp"
+#include "scriptsubview.hpp"
 
 CSVWorld::ScriptSubView::ScriptSubView (const CSMWorld::UniversalId& id, CSMDoc::Document& document)
 : SubView (id), mDocument (document), mColumn (-1)

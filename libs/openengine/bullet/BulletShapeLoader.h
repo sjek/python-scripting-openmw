@@ -3,8 +3,20 @@
 
 #include <OgreResource.h>
 #include <OgreResourceManager.h>
-#include <btBulletCollisionCommon.h>
 #include <OgreVector3.h>
+#include <btBulletCollisionCommon.h>
+#include <stddef.h>
+#include <algorithm>
+#include <map>
+#include <string>
+
+#include "OgreCommon.h"
+#include "OgrePrerequisites.h"
+#include "OgreQuaternion.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+
+class btCollisionShape;
 
 namespace OEngine {
 namespace Physic

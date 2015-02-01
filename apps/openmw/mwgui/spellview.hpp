@@ -2,7 +2,14 @@
 #define OPENMW_GUI_SPELLVIEW_H
 
 #include <MyGUI_Widget.h>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
 #include "spellmodel.hpp"
 
 namespace MyGUI

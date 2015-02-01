@@ -1,24 +1,29 @@
 
-#include "probe.hpp"
-
+#include <assert.h>
 #include <components/esm/loadprob.hpp>
+#include <stddef.h>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
-#include "../mwworld/actionequip.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/nullaction.hpp"
-
 #include "../mwgui/tooltips.hpp"
-
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"
+#include "../mwworld/actionequip.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/action.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "probe.hpp"
+
+namespace MWWorld {
+class Class;
+}  // namespace MWWorld
 
 namespace MWClass
 {

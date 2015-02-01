@@ -1,16 +1,24 @@
 #ifndef SCRIPTEDIT_H
 #define SCRIPTEDIT_H
 
+#include <qobjectdefs.h>
+#include <qplaintextedit.h>
+#include <qregexp.h>
+#include <qtimer.h>
+#include <qvector.h>
 #include <QPlainTextEdit>
-#include <QVector>
 #include <QTimer>
+#include <QVector>
+#include <string>
 
 #include "../../model/world/universalid.hpp"
-
 #include "scripthighlighter.hpp"
 
-class QWidget;
+class QDragEnterEvent;
+class QDragMoveEvent;
+class QDropEvent;
 class QRegExp;
+class QWidget;
 
 namespace CSMDoc
 {

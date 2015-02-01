@@ -1,23 +1,41 @@
-#include "bookpage.hpp"
+#include <assert.h>
+#include <boost/smart_ptr/make_shared_object.hpp>
+#include <components/misc/utf8stream.hpp>
+#include <stdint.h>
+#include <string.h>
+#include <algorithm>
+#include <list>
+#include <map>
+#include <stdexcept>
+#include <vector>
 
+#include "MyGUI_FactoryManager.h"
+#include "MyGUI_FontData.h"
 #include "MyGUI_FontManager.h"
+#include "MyGUI_ICroppedRectangle.h"
+#include "MyGUI_IFont.h"
+#include "MyGUI_ILayerNode.h"
+#include "MyGUI_IRenderTarget.h"
+#include "MyGUI_ISubWidget.h"
+#include "MyGUI_ISubWidgetText.h"
+#include "MyGUI_MouseButton.h"
+#include "MyGUI_Prerequest.h"
+#include "MyGUI_RenderFormat.h"
 #include "MyGUI_RenderItem.h"
 #include "MyGUI_RenderManager.h"
+#include "MyGUI_RenderTargetInfo.h"
+#include "MyGUI_TRect.h"
 #include "MyGUI_TextureUtility.h"
-#include "MyGUI_FactoryManager.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_VertexData.h"
+#include "bookpage.hpp"
 
-#include <stdint.h>
-#include <boost/function.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/make_shared.hpp>
-
-#include <components/misc/utf8stream.hpp>
+namespace MyGUI {
+class ITexture;
+}  // namespace MyGUI
 
 namespace MWGui
 {
-struct TypesetBookImpl;
-struct PageDisplay;
-struct BookPageImpl;
 
 static bool ucsSpace (int codePoint);
 static bool ucsLineBreak (int codePoint);

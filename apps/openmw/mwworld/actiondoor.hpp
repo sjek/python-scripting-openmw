@@ -4,6 +4,10 @@
 #include "action.hpp"
 #include "ptr.hpp"
 
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+
 namespace MWWorld
 {
     class ActionDoor : public Action

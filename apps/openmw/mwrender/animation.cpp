@@ -1,41 +1,74 @@
-#include "animation.hpp"
-
-#include <OgreSkeletonManager.h>
-#include <OgreSkeletonInstance.h>
-#include <OgreEntity.h>
-#include <OgreSubEntity.h>
-#include <OgreParticleSystem.h>
 #include <OgreBone.h>
-#include <OgreSubMesh.h>
-#include <OgreSceneManager.h>
 #include <OgreControllerManager.h>
-#include <OgreStaticGeometry.h>
+#include <OgreEntity.h>
+#include <OgreParticleSystem.h>
+#include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
+#include <OgreSkeletonInstance.h>
+#include <OgreStaticGeometry.h>
+#include <OgreSubEntity.h>
 #include <OgreTechnique.h>
-
-#include <components/esm/loadligh.hpp>
-#include <components/esm/loadweap.hpp>
+#include <assert.h>
 #include <components/esm/loadench.hpp>
+#include <components/esm/loadligh.hpp>
 #include <components/esm/loadstat.hpp>
+#include <components/esm/loadweap.hpp>
 #include <components/misc/resourcehelpers.hpp>
-
-#include <libs/openengine/ogre/lights.hpp>
-
 #include <extern/shiny/Main/Factory.hpp>
+#include <libs/openengine/ogre/lights.hpp>
+#include <cmath>
+#include <iostream>
+#include <iterator>
+#include <limits>
+#include <typeinfo>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwmechanics/character.hpp"
 #include "../mwmechanics/creaturestats.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/fallback.hpp"
 #include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "../mwworld/fallback.hpp"
+#include "OgreAnimationState.h"
+#include "OgreColourValue.h"
+#include "OgreController.h"
+#include "OgreException.h"
+#include "OgreLight.h"
+#include "OgreMaterial.h"
+#include "OgreMesh.h"
+#include "OgreMovableObject.h"
+#include "OgreNode.h"
+#include "OgrePass.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSkeleton.h"
+#include "OgreStringConverter.h"
+#include "OgreTextureUnitState.h"
+#include "OgreVector3.h"
+#include "animation.hpp"
+#include "apps/openmw/mwrender/../mwmechanics/spells.hpp"
+#include "apps/openmw/mwrender/../mwworld/cellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "apps/openmw/mwrender/../mwworld/store.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
+#include "components/settings/settings.hpp"
+#include "extern/shiny/Main/MaterialInstance.hpp"
+#include "extern/shiny/Main/Platform.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
 #include "renderconst.hpp"
+
+namespace Ogre {
+class Camera;
+class TagPoint;
+}  // namespace Ogre
 
 
 namespace MWRender

@@ -1,11 +1,12 @@
+#include <stddef.h>
+
+#include "MyGUI_IResource.h"
+#include "MyGUI_ImageBox.h"
+#include "MyGUI_ResourceImageSet.h"
+#include "MyGUI_ResourceManager.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_Version.h"
 #include "cursor.hpp"
-
-#include <MyGUI_PointerManager.h>
-#include <MyGUI_InputManager.h>
-#include <MyGUI_RotatingSkin.h>
-#include <MyGUI_Gui.h>
-
-#include <OgreMath.h>
 
 namespace MWGui
 {

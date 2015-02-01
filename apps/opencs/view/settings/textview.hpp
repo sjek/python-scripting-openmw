@@ -1,8 +1,20 @@
 #ifndef CSVSETTINGS_TEXTVIEW_HPP
 #define CSVSETTINGS_TEXTVIEW_HPP
 
-#include "view.hpp"
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qwidget.h>
+
 #include "../../model/settings/setting.hpp"
+#include "view.hpp"
+
+namespace CSMSettings {
+class Setting;
+}  // namespace CSMSettings
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 namespace CSVSettings
 {

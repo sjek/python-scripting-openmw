@@ -2,10 +2,19 @@
 #define COMPONENTS_TERRAIN_QUADTREENODE_H
 
 #include <OgreAxisAlignedBox.h>
-#include <OgreVector2.h>
 #include <OgreTexture.h>
+#include <OgreVector2.h>
+#include <stddef.h>
 
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
 #include "defs.hpp"
+
+namespace Ogre {
+class SceneNode;
+class Vector3;
+template <typename T> struct TRect;
+}  // namespace Ogre
 
 namespace Ogre
 {
@@ -14,8 +23,8 @@ namespace Ogre
 
 namespace Terrain
 {
-    class DefaultWorld;
     class Chunk;
+    class DefaultWorld;
     class MaterialGenerator;
     struct LoadResponseData;
 

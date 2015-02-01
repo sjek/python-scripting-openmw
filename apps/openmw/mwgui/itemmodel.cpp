@@ -1,12 +1,17 @@
-#include "itemmodel.hpp"
+#include <set>
+#include <string>
 
+#include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
-#include "../mwworld/store.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
+#include "../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/misc/stringops.hpp"
+#include "itemmodel.hpp"
 
 namespace MWGui
 {

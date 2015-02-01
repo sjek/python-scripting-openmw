@@ -1,10 +1,13 @@
 
-#include "topic.hpp"
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwdialogue/journalentry.hpp"
+#include "components/esm/loaddial.hpp"
+#include "topic.hpp"
 
 namespace MWDialogue
 {

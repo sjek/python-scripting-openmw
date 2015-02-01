@@ -1,10 +1,12 @@
-#include "difficultyscaling.hpp"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-#include "../mwworld/esmstore.hpp"
-
 #include <components/settings/settings.hpp>
+
+#include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "difficultyscaling.hpp"
 
 float scaleDamage(float damage, const MWWorld::Ptr& attacker, const MWWorld::Ptr& victim)
 {

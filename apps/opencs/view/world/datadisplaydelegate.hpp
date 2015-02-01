@@ -1,8 +1,28 @@
 #ifndef DATADISPLAYDELEGATE_HPP
 #define DATADISPLAYDELEGATE_HPP
 
+#include <qicon.h>
+#include <qsize.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qstyleoption.h>
+#include <qtextoption.h>
 #include <QTextOption>
+#include <utility>
+#include <vector>
+
 #include "enumdelegate.hpp"
+
+class QModelIndex;
+class QObject;
+class QPainter;
+class QPixmap;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
+namespace CSVWorld {
+class CommandDelegate;
+}  // namespace CSVWorld
 
 namespace CSVWorld
 {

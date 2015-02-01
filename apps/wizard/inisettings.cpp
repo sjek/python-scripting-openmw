@@ -1,13 +1,13 @@
+#include <qbytearray.h>
+#include <qchar.h>
+#include <qdebug.h>
+#include <qfile.h>
+#include <qiodevice.h>
+#include <qiterator.h>
+#include <qregexp.h>
+#include <qtextstream.h>
+
 #include "inisettings.hpp"
-
-#include <QDir>
-
-#include <QTextStream>
-#include <QFile>
-#include <QStringList>
-#include <QString>
-#include <QRegExp>
-#include <QDebug>
 
 Wizard::IniSettings::IniSettings()
 {

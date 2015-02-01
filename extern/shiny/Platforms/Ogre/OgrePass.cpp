@@ -1,15 +1,22 @@
-#include <stdexcept>
-
-#include "OgrePass.hpp"
-
 #include <OgrePass.h>
 #include <OgreTechnique.h>
+#include <ostream>
+#include <stdexcept>
+#include <typeinfo>
 
-#include "OgreTextureUnitState.hpp"
-#include "OgreGpuProgram.hpp"
+#include "OgreGpuProgramParams.h"
 #include "OgreMaterial.hpp"
 #include "OgreMaterialSerializer.hpp"
+#include "OgrePass.hpp"
 #include "OgrePlatform.hpp"
+#include "OgreSharedPtr.h"
+#include "OgreTextureUnitState.hpp"
+#include "OgreVector4.h"
+#include "extern/shiny/Platforms/Ogre/../../Main/Platform.hpp"
+
+namespace Ogre {
+class Exception;
+}  // namespace Ogre
 
 namespace sh
 {

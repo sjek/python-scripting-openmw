@@ -1,10 +1,11 @@
 
-#include "recordfilterbox.hpp"
-
-#include <QHBoxLayout>
-#include <QLabel>
+#include <qboxlayout.h>
+#include <qlabel.h>
+#include <qnamespace.h>
+#include <qstring.h>
 
 #include "editwidget.hpp"
+#include "recordfilterbox.hpp"
 
 CSVFilter::RecordFilterBox::RecordFilterBox (CSMWorld::Data& data, QWidget *parent)
 : QWidget (parent)

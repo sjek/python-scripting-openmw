@@ -1,8 +1,7 @@
 
-#include "cellcoordinates.hpp"
-
 #include <ostream>
-#include <sstream>
+
+#include "cellcoordinates.hpp"
 
 CSMWorld::CellCoordinates::CellCoordinates() : mX (0), mY (0) {}
 

@@ -1,11 +1,19 @@
-#include "itemselection.hpp"
-
-#include <MyGUI_TextBox.h>
 #include <MyGUI_Button.h>
+#include <MyGUI_TextBox.h>
+#include <stddef.h>
 
-#include "itemview.hpp"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "inventoryitemmodel.hpp"
+#include "itemselection.hpp"
+#include "itemview.hpp"
 #include "sortfilteritemmodel.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

@@ -1,21 +1,23 @@
 
-#include "guiextensions.hpp"
-
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
-
-#include "../mwworld/esmstore.hpp"
+#include <components/interpreter/runtime.hpp>
+#include <string>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
-
 #include "../mwbase/mechanicsmanager.hpp"
-
-#include "interpretercontext.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwscript/../mwbase/world.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/store.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/interpreter/context.hpp"
+#include "components/interpreter/types.hpp"
+#include "components/misc/stringops.hpp"
+#include "guiextensions.hpp"
 #include "ref.hpp"
 
 namespace MWScript

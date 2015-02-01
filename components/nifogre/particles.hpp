@@ -1,8 +1,19 @@
 #ifndef OENGINE_OGRE_PARTICLES_H
 #define OENGINE_OGRE_PARTICLES_H
 
-#include <OgreParticleEmitterFactory.h>
 #include <OgreParticleAffectorFactory.h>
+#include <OgreParticleEmitterFactory.h>
+#include <iosfwd>
+#include <vector>
+
+#include "OgreParticleAffector.h"
+#include "OgreParticleEmitter.h"
+#include "OgrePrerequisites.h"
+
+namespace Ogre {
+class Bone;
+class ParticleSystem;
+}  // namespace Ogre
 
 /** Factory class for NifEmitter. */
 class NifEmitterFactory : public Ogre::ParticleEmitterFactory

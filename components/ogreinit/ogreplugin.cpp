@@ -1,7 +1,8 @@
-#include "ogreplugin.hpp"
-
-#include <OgrePrerequisites.h>
 #include <OgreRoot.h>
+#include <boost/filesystem/operations.hpp>
+
+#include "OgrePlatform.h"
+#include "ogreplugin.hpp"
 
 namespace Files {
 

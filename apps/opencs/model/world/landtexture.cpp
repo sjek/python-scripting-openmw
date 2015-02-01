@@ -1,6 +1,8 @@
-#include "landtexture.hpp"
-
 #include <components/esm/esmreader.hpp>
+#include <ostream>
+
+#include "components/esm/loadltex.hpp"
+#include "landtexture.hpp"
 
 namespace CSMWorld
 {

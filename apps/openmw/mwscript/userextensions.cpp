@@ -1,15 +1,16 @@
 
+#include <components/compiler/opcodes.hpp>
+#include <components/interpreter/context.hpp>
+#include <components/interpreter/interpreter.hpp>
+#include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+
 #include "userextensions.hpp"
 
-#include <components/compiler/extensions.hpp>
-#include <components/compiler/opcodes.hpp>
-
-#include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
-#include <components/interpreter/opcodes.hpp>
-#include <components/interpreter/context.hpp>
-
-#include "ref.hpp"
+namespace MWScript {
+struct ExplicitRef;
+struct ImplicitRef;
+}  // namespace MWScript
 
 namespace MWScript
 {

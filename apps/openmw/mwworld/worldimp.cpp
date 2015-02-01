@@ -1,3 +1,50 @@
+#include "LinearMath/btVector3.h"
+#include "OgreAxisAlignedBox.h"
+#include "OgreMath.h"
+#include "OgreNode.h"
+#include "OgreVector4.h"
+#include "apps/openmw/mwworld/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/../mwworld/class.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/activespells.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/spells.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwworld/../mwbase/world.hpp"
+#include "apps/openmw/mwworld/../mwrender/../mwworld/weather.hpp"
+#include "apps/openmw/mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/cellreflist.hpp"
+#include "apps/openmw/mwworld/cells.hpp"
+#include "apps/openmw/mwworld/esmstore.hpp"
+#include "apps/openmw/mwworld/fallback.hpp"
+#include "apps/openmw/mwworld/globals.hpp"
+#include "apps/openmw/mwworld/livecellref.hpp"
+#include "apps/openmw/mwworld/localscripts.hpp"
+#include "apps/openmw/mwworld/physicssystem.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/scene.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "apps/openmw/mwworld/timestamp.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadglob.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/variant.hpp"
+#include "components/files/multidircollection.hpp"
+#include "components/loadinglistener/loadinglistener.hpp"
+#include "components/misc/stringops.hpp"
+#include "openengine/ogre/renderer.hpp"
 #include "worldimp.hpp"
 
 #ifdef _WIN32
@@ -7,51 +54,55 @@
 #else
 #include <tr1/unordered_map>
 #endif
-#include "../mwbase/scriptmanager.hpp"
-#include "../mwscript/globalscripts.hpp"
 #include <OgreSceneNode.h>
-
-#include <libs/openengine/bullet/trace.h>
-#include <libs/openengine/bullet/physic.hpp>
-
-#include <components/bsa/bsa_archive.hpp>
-#include <components/files/collections.hpp>
-#include <components/compiler/locals.hpp>
 #include <components/esm/cellid.hpp>
+#include <components/files/collections.hpp>
 #include <components/misc/resourcehelpers.hpp>
-
-#include <boost/math/special_functions/sign.hpp>
+#include <float.h>
+#include <libs/openengine/bullet/physic.hpp>
+#include <libs/openengine/bullet/trace.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <cmath>
+#include <list>
+#include <ostream>
+#include <set>
+#include <stdexcept>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/scriptmanager.hpp"
+#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwclass/door.hpp"
+#include "../mwmechanics/aiavoiddoor.hpp" //Used to tell actors to avoid doors
 #include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/movement.hpp"
+#include "../mwmechanics/levelledlist.hpp"
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
-#include "../mwmechanics/levelledlist.hpp"
-#include "../mwmechanics/combat.hpp"
-#include "../mwmechanics/aiavoiddoor.hpp" //Used to tell actors to avoid doors
-
-#include "../mwrender/sky.hpp"
 #include "../mwrender/animation.hpp"
-
+#include "../mwrender/sky.hpp"
+#include "../mwscript/globalscripts.hpp"
 #include "../mwscript/interpretercontext.hpp"
-
-#include "../mwclass/door.hpp"
-
-#include "player.hpp"
-#include "manualref.hpp"
-#include "cellfunctors.hpp"
-#include "containerstore.hpp"
-#include "inventorystore.hpp"
 #include "actionteleport.hpp"
-#include "projectilemanager.hpp"
-
+#include "containerstore.hpp"
 #include "contentloader.hpp"
 #include "esmloader.hpp"
+#include "inventorystore.hpp"
+#include "manualref.hpp"
+#include "player.hpp"
+#include "projectilemanager.hpp"
+
+namespace ESM {
+struct Door;
+}  // namespace ESM
+namespace Ogre {
+class Image;
+}  // namespace Ogre
+namespace ToUTF8 {
+class Utf8Encoder;
+}  // namespace ToUTF8
 
 using namespace Ogre;
 

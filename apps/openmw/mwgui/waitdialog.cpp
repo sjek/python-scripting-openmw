@@ -1,24 +1,37 @@
-#include "waitdialog.hpp"
-
 #include <MyGUI_ProgressBar.h>
-
 #include <components/widgets/box.hpp>
+#include <stdlib.h>
+#include <stdexcept>
 
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/statemanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
-#include "../mwstate/charactermanager.hpp"
-
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_ScrollBar.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/timestamp.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/settings/settings.hpp"
+#include "waitdialog.hpp"
 #include "widgets.hpp"
 
 namespace MWGui

@@ -1,8 +1,12 @@
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qstring.h>
+#include <qvariant.h>
+
 #include "PropertySortModel.hpp"
 
-#include "Query.hpp"
+class QObject;
 
-#include <iostream>
 sh::PropertySortModel::PropertySortModel(QObject *parent)
 	: QSortFilterProxyModel(parent)
 {

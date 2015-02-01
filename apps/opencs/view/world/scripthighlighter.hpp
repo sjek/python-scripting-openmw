@@ -1,15 +1,26 @@
 #ifndef CSV_WORLD_SCRIPTHIGHLIGHTER_H
 #define CSV_WORLD_SCRIPTHIGHLIGHTER_H
 
-#include <map>
-
-#include <QSyntaxHighlighter>
-
+#include <components/compiler/extensions.hpp>
 #include <components/compiler/nullerrorhandler.hpp>
 #include <components/compiler/parser.hpp>
-#include <components/compiler/extensions.hpp>
+#include <qstring.h>
+#include <qsyntaxhighlighter.h>
+#include <qtextformat.h>
+#include <QSyntaxHighlighter>
+#include <map>
+#include <string>
 
 #include "../../model/world/scriptcontext.hpp"
+
+class QTextDocument;
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
+namespace Compiler {
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace CSVWorld
 {

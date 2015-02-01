@@ -1,6 +1,7 @@
-#include "importnpcc.hpp"
-
 #include <components/esm/esmreader.hpp>
+
+#include "apps/essimporter/importinventory.hpp"
+#include "importnpcc.hpp"
 
 namespace ESSImport
 {

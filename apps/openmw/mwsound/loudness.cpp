@@ -1,6 +1,10 @@
-#include "loudness.hpp"
+#include <algorithm>
+#include <cmath>
+#include <limits>
 
-#include "soundmanagerimp.hpp"
+#include "OgrePlatform.h"
+#include "apps/openmw/mwsound/sound_decoder.hpp"
+#include "loudness.hpp"
 
 namespace MWSound
 {

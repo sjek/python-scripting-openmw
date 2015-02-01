@@ -1,11 +1,12 @@
 #ifndef CSM_WOLRD_UNIVERSALID_H
 #define CSM_WOLRD_UNIVERSALID_H
 
-#include <string>
-#include <iosfwd>
-#include <vector>
-
+#include <qbasicatomic.h>
+#include <qmetatype.h>
 #include <QMetaType>
+#include <iosfwd>
+#include <string>
+#include <vector>
 
 namespace CSMWorld
 {

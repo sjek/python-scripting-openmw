@@ -1,10 +1,11 @@
 #ifndef CSM_WOLRD_CELLCOORDINATES_H
 #define CSM_WOLRD_CELLCOORDINATES_H
 
+#include <qbasicatomic.h>
+#include <qmetatype.h>
+#include <QMetaType>
 #include <iosfwd>
 #include <string>
-
-#include <QMetaType>
 
 namespace CSMWorld
 {

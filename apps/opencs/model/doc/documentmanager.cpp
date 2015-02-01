@@ -1,10 +1,13 @@
 
-#include "documentmanager.hpp"
-
+#include <boost/filesystem/operations.hpp>
+#include <qwaitcondition.h>
 #include <algorithm>
 #include <stdexcept>
 
-#include <boost/filesystem.hpp>
+#include "apps/opencs/model/doc/../world/resourcesmanager.hpp"
+#include "apps/opencs/model/doc/loader.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "documentmanager.hpp"
 
 #ifndef Q_MOC_RUN
 #include <components/files/configurationmanager.hpp>

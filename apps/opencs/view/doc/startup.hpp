@@ -1,13 +1,15 @@
 #ifndef CSV_DOC_STARTUP_H
 #define CSV_DOC_STARTUP_H
 
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QWidget>
 
 class QGridLayout;
-class QString;
-class QPushButton;
-class QWidget;
 class QIcon;
+class QPushButton;
+class QString;
+class QWidget;
 
 namespace CSVDoc
 {

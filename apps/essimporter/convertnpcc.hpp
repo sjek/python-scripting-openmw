@@ -1,9 +1,16 @@
 #ifndef OPENMW_ESSIMPORT_CONVERTNPCC_H
 #define OPENMW_ESSIMPORT_CONVERTNPCC_H
 
+#include <components/esm/npcstate.hpp>
+
 #include "importnpcc.hpp"
 
-#include <components/esm/npcstate.hpp>
+namespace ESM {
+struct NpcState;
+}  // namespace ESM
+namespace ESSImport {
+struct NPCC;
+}  // namespace ESSImport
 
 namespace ESSImport
 {

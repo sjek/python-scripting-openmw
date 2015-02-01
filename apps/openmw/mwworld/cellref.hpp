@@ -2,6 +2,9 @@
 #define OPENMW_MWWORLD_CELLREF_H
 
 #include <components/esm/cellref.hpp>
+#include <string>
+
+#include "components/esm/defs.hpp"
 
 namespace ESM
 {

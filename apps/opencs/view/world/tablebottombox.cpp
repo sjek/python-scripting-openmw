@@ -1,13 +1,13 @@
 
-#include "tablebottombox.hpp"
-
+#include <qlabel.h>
+#include <qstackedlayout.h>
+#include <qstatusbar.h>
+#include <qstring.h>
 #include <sstream>
 
-#include <QStatusBar>
-#include <QStackedLayout>
-#include <QLabel>
-
+#include "apps/opencs/model/world/universalid.hpp"
 #include "creator.hpp"
+#include "tablebottombox.hpp"
 
 void CSVWorld::TableBottomBox::updateStatus()
 {

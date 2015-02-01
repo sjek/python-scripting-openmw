@@ -1,8 +1,20 @@
-#include "datadisplaydelegate.hpp"
-#include "../../model/settings/usersettings.hpp"
+#include <qabstractitemmodel.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+#include <qpainter.h>
+#include <qpixmap.h>
+#include <qrect.h>
+#include <qvariant.h>
 
-#include <QApplication>
-#include <QPainter>
+#include "../../model/settings/usersettings.hpp"
+#include "apps/opencs/view/world/enumdelegate.hpp"
+#include "apps/opencs/view/world/util.hpp"
+#include "datadisplaydelegate.hpp"
+
+class QObject;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 CSVWorld::DataDisplayDelegate::DataDisplayDelegate(const ValueList &values,
                                                    const IconList &icons,

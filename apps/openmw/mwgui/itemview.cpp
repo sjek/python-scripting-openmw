@@ -1,17 +1,17 @@
-#include "itemview.hpp"
-
-#include <cmath>
-
 #include <MyGUI_FactoryManager.h>
 #include <MyGUI_Gui.h>
-#include <MyGUI_ImageBox.h>
-#include <MyGUI_TextBox.h>
 #include <MyGUI_ScrollView.h>
-#include <MyGUI_Button.h>
+#include <stddef.h>
+#include <algorithm>
+#include <cmath>
+#include <stdexcept>
+#include <utility>
 
-#include "../mwworld/class.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
 #include "itemmodel.hpp"
+#include "itemview.hpp"
 #include "itemwidget.hpp"
 
 namespace MWGui

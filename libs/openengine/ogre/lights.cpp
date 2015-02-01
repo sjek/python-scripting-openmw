@@ -1,6 +1,9 @@
-#include "lights.hpp"
-
 #include <OgreLight.h>
+#include <cmath>
+
+#include "OgreColourValue.h"
+#include "OgreMath.h"
+#include "lights.hpp"
 
 
 namespace OEngine {

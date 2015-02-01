@@ -2,12 +2,21 @@
 #define CSM_WOLRD_REFCOLLECTION_H
 
 #include <map>
+#include <string>
+#include <vector>
 
 #include "../doc/stage.hpp"
-
 #include "collection.hpp"
-#include "ref.hpp"
 #include "record.hpp"
+#include "ref.hpp"
+
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace ESM {
+class ESMReader;
+struct RefNum;
+}  // namespace ESM
 
 namespace CSMWorld
 {

@@ -1,21 +1,38 @@
-#include "soundmanagerimp.hpp"
-
-#include <iostream>
+#include <boost/smart_ptr/detail/operator_bool.hpp>
+#include <math.h>
+#include <stddef.h>
+#include <stdlib.h>
 #include <algorithm>
+#include <exception>
+#include <iostream>
 #include <map>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/statemanager.hpp"
-
-#include "../mwworld/esmstore.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/cellstore.hpp"
-
-#include "sound_output.hpp"
-#include "sound_decoder.hpp"
-#include "sound.hpp"
-
+#include "../mwworld/esmstore.hpp"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwsound/../mwbase/../mwworld/cellref.hpp"
+#include "apps/openmw/mwsound/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwsound/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwsound/../mwbase/soundmanager.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/settings/settings.hpp"
 #include "openal_output.hpp"
+#include "sound.hpp"
+#include "sound_decoder.hpp"
+#include "sound_output.hpp"
+#include "soundmanagerimp.hpp"
+
 #define SOUND_OUT "OpenAL"
 #include "ffmpeg_decoder.hpp"
 #ifndef SOUND_IN

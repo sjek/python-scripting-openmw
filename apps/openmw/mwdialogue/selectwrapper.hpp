@@ -2,6 +2,7 @@
 #define GAME_MWDIALOGUE_SELECTWRAPPER_H
 
 #include <components/esm/loadinfo.hpp>
+#include <string>
 
 namespace MWDialogue
 {

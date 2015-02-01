@@ -1,11 +1,32 @@
 #ifndef GAME_RENDER_LOCALMAP_H
 #define GAME_RENDER_LOCALMAP_H
 
-#include <openengine/ogre/renderer.hpp>
-
 #include <OgreAxisAlignedBox.h>
 #include <OgreColourValue.h>
 #include <OgreResource.h>
+#include <openengine/ogre/renderer.hpp>
+#include <map>
+#include <string>
+#include <vector>
+
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+#include "OgreQuaternion.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector2.h"
+
+namespace OEngine {
+namespace Render {
+class OgreRenderer;
+}  // namespace Render
+}  // namespace OEngine
+namespace Ogre {
+class Camera;
+class Light;
+class RenderTarget;
+class SceneNode;
+class Vector3;
+}  // namespace Ogre
 
 namespace MWWorld
 {

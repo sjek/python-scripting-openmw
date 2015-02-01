@@ -1,11 +1,14 @@
 #ifndef GAME_MWWORLD_ACTIONTELEPORT_H
 #define GAME_MWWORLD_ACTIONTELEPORT_H
 
+#include <components/esm/defs.hpp>
 #include <string>
 
-#include <components/esm/defs.hpp>
-
 #include "action.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWWorld
 {

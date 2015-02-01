@@ -1,25 +1,54 @@
 
-#include "editor.hpp"
-
-#include <openengine/bullet/BulletShapeLoader.h>
-
-#include <QApplication>
-#include <QLocalServer>
-#include <QLocalSocket>
-#include <QMessageBox>
-
-#include <OgreRoot.h>
 #include <OgreRenderWindow.h>
-
+#include <OgreRoot.h>
+#include <boost/filesystem/operations.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/move/core.hpp>
+#include <boost/program_options/detail/value_semantic.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <components/bsa/resources.hpp>
+#include <components/nifogre/ogrenifloader.hpp>
+#include <components/ogreinit/ogreinit.hpp>
 #include <extern/shiny/Main/Factory.hpp>
 #include <extern/shiny/Platforms/Ogre/OgrePlatform.hpp>
+#include <openengine/bullet/BulletShapeLoader.h>
+#include <qapplication.h>
+#include <qbytearray.h>
+#include <qcursor.h>
+#include <qglobal.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qregexp.h>
+#include <qstringlist.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <QLocalServer>
+#include <QLocalSocket>
+#include <exception>
+#include <iostream>
+#include <sstream>
 
-#include <components/ogreinit/ogreinit.hpp>
-#include <components/nifogre/ogrenifloader.hpp>
-#include <components/bsa/resources.hpp>
+#include "OgreCommon.h"
+#include "OgrePlatform.h"
+#include "OgreResourceGroupManager.h"
+#include "apps/opencs/model/doc/documentmanager.hpp"
+#include "apps/opencs/model/settings/usersettings.hpp"
+#include "apps/opencs/view/doc/newgame.hpp"
+#include "apps/opencs/view/doc/startup.hpp"
+#include "apps/opencs/view/doc/viewmanager.hpp"
+#include "apps/opencs/view/render/overlaysystem.hpp"
+#include "apps/opencs/view/settings/dialog.hpp"
+#include "components/files/collections.hpp"
+#include "components/files/configurationmanager.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "editor.hpp"
+#include "extern/shiny/Main/Language.hpp"
 
-#include "model/doc/document.hpp"
-#include "model/world/data.hpp"
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 CS::Editor::Editor (OgreInit::OgreInit& ogreInit)
 : mUserSettings (mCfgMgr), mOverlaySystem (0), mDocumentManager (mCfgMgr),

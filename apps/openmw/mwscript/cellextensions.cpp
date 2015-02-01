@@ -1,21 +1,22 @@
 
-#include "cellextensions.hpp"
-
-#include "../mwworld/esmstore.hpp"
-
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <limits>
+#include <stdexcept>
+#include <string>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-#include "../mwworld/player.hpp"
 #include "../mwworld/cellstore.hpp"
-
-#include "interpretercontext.hpp"
+#include "../mwworld/player.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwworld/ptr.hpp"
+#include "cellextensions.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/interpreter/types.hpp"
+#include "components/misc/stringops.hpp"
 
 namespace MWScript
 {

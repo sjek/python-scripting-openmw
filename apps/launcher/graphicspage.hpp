@@ -1,15 +1,22 @@
 #ifndef GRAPHICSPAGE_H
 #define GRAPHICSPAGE_H
 
-#include <QWidget>
-
 #include <components/ogreinit/ogreinit.hpp>
+#include <qobjectdefs.h>
+#include <qrect.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qwidget.h>
+#include <QWidget>
 
 #include "ui_graphicspage.h"
 
-namespace Ogre { class Root; class RenderSystem; }
-
-namespace Files { struct ConfigurationManager; }
+namespace Files {
+struct ConfigurationManager;
+}  // namespace Files
+namespace Ogre {
+class Root; class RenderSystem;
+}  // namespace Ogre
 
 namespace Launcher
 {

@@ -1,12 +1,32 @@
 #ifndef MWGUI_DIALOGE_H
 #define MWGUI_DIALOGE_H
 
-#include "windowbase.hpp"
-#include "referenceinterface.hpp"
-
-#include "bookpage.hpp"
+#include <stddef.h>
+#include <stdint.h>
+#include <list>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../mwdialogue/keywordsearch.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "bookpage.hpp"
+#include "referenceinterface.hpp"
+#include "windowbase.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class EditBox;
+class ProgressBar;
+class ScrollBar;
+class TextBox;
+class Widget;
+class Window;
+}  // namespace MyGUI
 
 namespace Gui
 {
@@ -20,8 +40,8 @@ namespace MWGui
 
 namespace MWGui
 {
-    class DialogueHistoryViewModel;
     class BookPage;
+    class DialogueHistoryViewModel;
 
     class PersuasionDialog : public WindowModal
     {

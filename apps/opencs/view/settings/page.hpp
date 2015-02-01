@@ -1,21 +1,28 @@
 #ifndef CSVSETTINGS_PAGE_HPP
 #define CSVSETTINGS_PAGE_HPP
 
-#include <QWidget>
-#include <QMap>
+#include <qatomic_i386.h>
+#include <qglobal.h>
+#include <qlist.h>
+#include <qmap.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QList>
-
-#include "frame.hpp"
+#include <QMap>
+#include <QWidget>
 
 #include "../../model/settings/support.hpp"
+#include "frame.hpp"
 
-namespace CSMSettings { class Setting; }
+namespace CSMSettings {
+class Setting;
+}  // namespace CSMSettings
 
 namespace CSVSettings
 {
-    class View;
     class IViewFactory;
     class SettingWindow;
+    class View;
 
     class Page : public Frame
     {

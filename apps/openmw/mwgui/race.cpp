@@ -1,18 +1,37 @@
-#include "race.hpp"
-
-#include <MyGUI_ListBox.h>
-#include <MyGUI_ImageBox.h>
-#include <MyGUI_RenderManager.h>
 #include <MyGUI_Gui.h>
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_ListBox.h>
+#include <MyGUI_RenderManager.h>
+#include <algorithm>
+#include <exception>
+#include <iostream>
+#include <utility>
 
-#include <boost/format.hpp>
-
-#include "../mwworld/esmstore.hpp"
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwrender/characterpreview.hpp"
-
+#include "../mwworld/esmstore.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_Macros.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_ScrollBar.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/widgets.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadbody.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/misc/stringops.hpp"
+#include "race.hpp"
 #include "tooltips.hpp"
 
 namespace

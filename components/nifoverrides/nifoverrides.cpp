@@ -1,12 +1,11 @@
-#include "nifoverrides.hpp"
-
+#include <../components/misc/stringops.hpp>
 #include <OgreStringConverter.h>
 
-#include <../components/misc/stringops.hpp>
-
 #include "../extern/shiny/Main/MaterialInstance.hpp"
-
-#include <stdexcept>
+#include "../extern/shiny/Main/PropertyBase.hpp"
+#include "OgreConfigFile.h"
+#include "OgrePrerequisites.h"
+#include "nifoverrides.hpp"
 
 
 using namespace NifOverrides;

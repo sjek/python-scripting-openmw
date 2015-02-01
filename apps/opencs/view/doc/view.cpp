@@ -1,30 +1,38 @@
-#include "view.hpp"
-
+#include <assert.h>
+#include <boost/filesystem/path.hpp>
+#include <qabstractitemmodel.h>
+#include <qaction.h>
+#include <qatomic_i386.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qkeysequence.h>
+#include <qmenu.h>
+#include <qmenubar.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qrect.h>
+#include <qundostack.h>
+#include <qwidget.h>
+#include <stddef.h>
+#include <algorithm>
 #include <sstream>
-#include <stdexcept>
-
-#include <QCloseEvent>
-#include <QMenuBar>
-#include <QMdiArea>
-#include <QDockWidget>
-#include <QtGui/QApplication>
-#include <QDesktopWidget>
 
 #include "../../model/doc/document.hpp"
 #include "../../model/settings/usersettings.hpp"
-
 #include "../../model/world/idtable.hpp"
-
-#include "../world/subviews.hpp"
-
 #include "../tools/subviews.hpp"
-
-#include "viewmanager.hpp"
-#include "operations.hpp"
-#include "subview.hpp"
+#include "../world/subviews.hpp"
+#include "apps/opencs/view/doc/../../model/doc/../world/data.hpp"
+#include "apps/opencs/view/doc/../../model/doc/state.hpp"
+#include "apps/opencs/view/doc/../../model/world/universalid.hpp"
+#include "apps/opencs/view/doc/subviewfactory.hpp"
 #include "globaldebugprofilemenu.hpp"
+#include "operations.hpp"
 #include "runlogsubview.hpp"
+#include "subview.hpp"
 #include "subviewfactoryimp.hpp"
+#include "view.hpp"
+#include "viewmanager.hpp"
 
 void CSVDoc::View::closeEvent (QCloseEvent *event)
 {

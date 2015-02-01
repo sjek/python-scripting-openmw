@@ -1,11 +1,19 @@
 #ifndef CSV_WORLD_CELLCREATOR_H
 #define CSV_WORLD_CELLCREATOR_H
 
+#include <qobjectdefs.h>
+#include <string>
+
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
+#include "genericcreator.hpp"
+
+class QComboBox;
 class QLabel;
 class QSpinBox;
-class QComboBox;
-
-#include "genericcreator.hpp"
+class QUndoStack;
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
 
 namespace CSVWorld
 {

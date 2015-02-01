@@ -1,35 +1,51 @@
-#include "hud.hpp"
-
-#include <OgreMath.h>
-
-#include <MyGUI_RenderManager.h>
-#include <MyGUI_ProgressBar.h>
 #include <MyGUI_Button.h>
-#include <MyGUI_InputManager.h>
 #include <MyGUI_ImageBox.h>
+#include <MyGUI_InputManager.h>
+#include <MyGUI_ProgressBar.h>
+#include <MyGUI_RenderManager.h>
 #include <MyGUI_ScrollView.h>
-
+#include <OgreMath.h>
 #include <components/misc/resourcehelpers.hpp>
+#include <math.h>
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/esmstore.hpp"
-
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
-#include "inventorywindow.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "MyGUI_Colour.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/mapwindow.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/settings/settings.hpp"
 #include "console.hpp"
-#include "spellicons.hpp"
-#include "itemmodel.hpp"
 #include "draganddrop.hpp"
-
+#include "hud.hpp"
+#include "inventorywindow.hpp"
 #include "itemmodel.hpp"
 #include "itemwidget.hpp"
+#include "spellicons.hpp"
 
 namespace MWGui
 {

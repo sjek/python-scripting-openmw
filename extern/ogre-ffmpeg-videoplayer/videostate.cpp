@@ -1,15 +1,36 @@
+#include "OgreException.h"
+#include "OgrePixelFormat.h"
+#include "OgreTexture.h"
+#include "extern/ogre-ffmpeg-videoplayer/videodefs.hpp"
 #include "videostate.hpp"
 
 #ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
 #endif
-#include <stdint.h>
-
-// Has to be included *before* ffmpeg, due to a macro collision with ffmpeg (#define PixelFormat in avformat.h - grumble)
-#include <OgreTextureManager.h>
 #include <OgreHardwarePixelBuffer.h>
 #include <OgreResourceGroupManager.h>
 #include <OgreStringConverter.h>
+// Has to be included *before* ffmpeg, due to a macro collision with ffmpeg (#define PixelFormat in avformat.h - grumble)
+#include <OgreTextureManager.h>
+#include <assert.h>
+#include <boost/cstdint.hpp>
+#include <boost/date_time/posix_time/posix_time_duration.hpp>
+#include <boost/date_time/time_duration.hpp>
+#include <boost/thread/detail/move.hpp>
+#include <boost/thread/lock_types.hpp>
+#include <boost/thread/pthread/condition_variable.hpp>
+#include <boost/thread/pthread/thread_data.hpp>
+#include <libavcodec/version.h>
+#include <libavformat/avio.h>
+#include <libavformat/version.h>
+#include <libavutil/avutil.h>
+#include <libavutil/frame.h>
+#include <libavutil/mem.h>
+#include <libavutil/old_pix_fmts.h>
+#include <libavutil/rational.h>
+#include <libavutil/version.h>
+#include <stdint.h>
+#include <stdio.h>
 
 extern "C"
 {
@@ -26,6 +47,10 @@ extern "C"
     #endif
 
     #include <libavutil/mathematics.h>
+#include <algorithm>
+#include <iostream>
+#include <new>
+#include <stdexcept>
 
     #if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(55,28,1)
     #define av_frame_alloc  avcodec_alloc_frame
@@ -45,7 +70,6 @@ struct FlushPacket : AVPacket
 
 static FlushPacket flush_pkt;
 
-#include "videoplayer.hpp"
 #include "audiodecoder.hpp"
 #include "audiofactory.hpp"
 

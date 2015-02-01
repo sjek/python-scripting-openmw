@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "cellref.hpp"
+#include "components/esm/defs.hpp"
 #include "locals.hpp"
 
 namespace ESM

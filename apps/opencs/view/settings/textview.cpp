@@ -1,8 +1,18 @@
-#include <QTextEdit>
-#include <QLineEdit>
+#include <qatomic_i386.h>
+#include <qglobal.h>
+#include <qlineedit.h>
+#include <qlist.h>
+#include <qstringlist.h>
+#include <qtextedit.h>
+#include <qvariant.h>
 
-#include "textview.hpp"
 #include "../../model/settings/setting.hpp"
+#include "apps/opencs/view/settings/view.hpp"
+#include "textview.hpp"
+
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 CSVSettings::TextView::TextView(CSMSettings::Setting *setting, Page *parent)
     : mDelimiter (setting->delimiter()), View (setting, parent)

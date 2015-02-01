@@ -2,6 +2,11 @@
 #define OPENMW_MWGUI_BACKGROUNDIMAGE_H
 
 #include <MyGUI_ImageBox.h>
+#include <stddef.h>
+#include <string>
+
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
 
 namespace MWGui
 {

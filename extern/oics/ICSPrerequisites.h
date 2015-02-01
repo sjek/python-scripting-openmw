@@ -29,21 +29,21 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef _InputControlSystem_Prerequisites_H_
 #define _InputControlSystem_Prerequisites_H_
 
+#include <algorithm> /* std::min and std::max for MSVC 2013 */
+#include <fstream>
+#include <limits>
+#include <list>
+#include <map>
 /// Include external headers
 #include <sstream>
-#include <fstream>
+#include <string>
 #include <vector>
-#include <map>
-#include <list>
-#include <limits>
-#include <algorithm> /* std::min and std::max for MSVC 2013 */
 
-#include "tinyxml.h"
-
+#include "SDL_events.h"
+#include "SDL_joystick.h"
 #include "SDL_keyboard.h"
 #include "SDL_mouse.h"
-#include "SDL_joystick.h"
-#include "SDL_events.h"
+#include "tinyxml.h"
 
 /// Define the dll export qualifier if compiling for Windows
 
@@ -98,12 +98,12 @@ namespace ICS
         return (ss >> result) ? result : 0;
 	}
 
-	class InputControlSystem;
     class Channel;
     class ChannelListener;
     class Control;
 	class ControlListener;
 	class DetectingBindingListener;
+	class InputControlSystem;
 	class InputControlSystemLog;
 }
 

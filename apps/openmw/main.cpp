@@ -1,16 +1,36 @@
-#include <iostream>
-#include <cstdio>
-
-#include <components/version/version.hpp>
-#include <components/files/configurationmanager.hpp>
-
 #include <SDL_messagebox.h>
-#include <SDL_main.h>
-#include "engine.hpp"
-
-#include <boost/iostreams/concepts.hpp>
-#include <boost/iostreams/stream_buffer.hpp>
+#include <boost/any.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/iostreams/concepts.hpp>
+#include <boost/iostreams/detail/forward.hpp>
+#include <boost/iostreams/stream_buffer.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/program_options/detail/parsers.hpp>
+#include <boost/program_options/detail/value_semantic.hpp>
+#include <boost/program_options/errors.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/parsers.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <components/files/configurationmanager.hpp>
+#include <components/version/version.hpp>
+#include <string.h>
+#include <unistd.h>
+#include <cstdio>
+#include <exception>
+#include <iostream>
+#include <map>
+#include <memory>
+#include <sstream>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "OgrePlatform.h"
+#include "components/files/multidircollection.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "engine.hpp"
 
 #if defined(_WIN32)
 // For OutputDebugString
@@ -23,6 +43,7 @@
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_LINUX || OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 #include <csignal>
+
 extern int cc_install_handlers(int argc, char **argv, int num_signals, int *sigs, const char *logfile, int (*user_info)(char*, char*));
 extern int is_debugger_attached(void);
 #endif

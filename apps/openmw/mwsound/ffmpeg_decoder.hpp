@@ -7,7 +7,13 @@
 #ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
 #endif
+#include <libavcodec/version.h>
+#include <libavutil/frame.h>
+#include <libavutil/samplefmt.h>
+#include <libavutil/version.h>
+#include <stddef.h>
 #include <stdint.h>
+
 extern "C"
 {
 #include <libavcodec/avcodec.h>
@@ -33,12 +39,15 @@ extern "C"
 #else
 #include <libavresample/avresample.h>
 #include <libavutil/opt.h>
+
 #define SwrContext AVAudioResampleContext
 #endif
 }
 
 #include <string>
+#include <vector>
 
+#include "OgreDataStream.h"
 #include "sound_decoder.hpp"
 
 

@@ -1,6 +1,10 @@
-#include "backgroundimage.hpp"
-
 #include <MyGUI_Gui.h>
+#include <algorithm>
+
+#include "MyGUI_Align.h"
+#include "MyGUI_ImageBox.h"
+#include "MyGUI_Widget.h"
+#include "backgroundimage.hpp"
 
 namespace MWGui
 {

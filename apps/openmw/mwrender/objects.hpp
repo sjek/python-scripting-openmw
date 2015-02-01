@@ -1,15 +1,30 @@
 #ifndef GAME_RENDER_OBJECTS_H
 #define GAME_RENDER_OBJECTS_H
 
-#include <OgreColourValue.h>
 #include <OgreAxisAlignedBox.h>
-
+#include <OgreColourValue.h>
 #include <openengine/ogre/renderer.hpp>
+#include <stddef.h>
+#include <map>
+#include <string>
+
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+
+namespace OEngine {
+namespace Render {
+class OgreRenderer;
+}  // namespace Render
+}  // namespace OEngine
+namespace Ogre {
+class Camera;
+class SceneNode;
+class StaticGeometry;
+}  // namespace Ogre
 
 namespace MWWorld
 {
-    class Ptr;
     class CellStore;
+    class Ptr;
 }
 
 namespace MWRender{

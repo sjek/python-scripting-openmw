@@ -1,12 +1,14 @@
 
-#include "loader.hpp"
-
-#include <QTimer>
+#include <boost/filesystem/path.hpp>
+#include <qtimer.h>
+#include <exception>
 
 #include "../tools/reportmodel.hpp"
-
+#include "apps/opencs/model/doc/../tools/../world/universalid.hpp"
+#include "apps/opencs/model/doc/../world/data.hpp"
+#include "apps/opencs/model/doc/messages.hpp"
 #include "document.hpp"
-#include "state.hpp"
+#include "loader.hpp"
 
 CSMDoc::Loader::Stage::Stage() : mFile (0), mRecordsLoaded (0), mRecordsLeft (false) {}
 

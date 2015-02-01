@@ -1,12 +1,13 @@
-#include "itemwidget.hpp"
-
 #include <MyGUI_FactoryManager.h>
 #include <MyGUI_ImageBox.h>
 #include <MyGUI_TextBox.h>
-
 #include <components/misc/resourcehelpers.hpp>
+#include <stddef.h>
 
 #include "../mwworld/class.hpp"
+#include "MyGUI_StringUtility.h"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "itemwidget.hpp"
 
 namespace
 {

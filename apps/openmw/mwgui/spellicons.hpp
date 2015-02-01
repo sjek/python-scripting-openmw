@@ -1,6 +1,7 @@
 #ifndef MWGUI_SPELLICONS_H
 #define MWGUI_SPELLICONS_H
 
+#include <map>
 #include <string>
 #include <vector>
 
@@ -8,8 +9,8 @@
 
 namespace MyGUI
 {
-    class Widget;
     class ImageBox;
+    class Widget;
 }
 namespace ESM
 {

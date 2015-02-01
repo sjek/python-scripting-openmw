@@ -1,7 +1,20 @@
 #ifndef CSM_FILTER_ORNODE_H
 #define CSM_FILTER_ORNODE_H
 
+#include <map>
+#include <vector>
+
 #include "narynode.hpp"
+
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
+namespace CSMWorld {
+class IdTableBase;
+}  // namespace CSMWorld
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace CSMFilter
 {

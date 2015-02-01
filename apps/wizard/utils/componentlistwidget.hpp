@@ -1,7 +1,13 @@
 #ifndef COMPONENTLISTWIDGET_HPP
 #define COMPONENTLISTWIDGET_HPP
 
+#include <qlistwidget.h>
+#include <qobjectdefs.h>
+#include <qstringlist.h>
 #include <QListWidget>
+
+class QModelIndex;
+class QWidget;
 
 class ComponentListWidget : public QListWidget
 {

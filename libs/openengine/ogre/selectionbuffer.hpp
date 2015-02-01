@@ -2,10 +2,24 @@
 #define OENGINE_SELECTIONBUFFER_H
 
 
-#include <OgreTexture.h>
-#include <OgreRenderTarget.h>
-#include <OgreMaterialManager.h>
 #include <OgreColourValue.h>
+#include <OgreMaterialManager.h>
+#include <OgreRenderTarget.h>
+#include <OgreTexture.h>
+#include <map>
+
+#include "OgreImage.h"
+#include "OgrePrerequisites.h"
+#include "OgreResource.h"
+#include "OgreSharedPtr.h"
+#include "OgreTechnique.h"
+
+namespace Ogre {
+class Camera;
+class Material;
+class RenderTexture;
+class Renderable;
+}  // namespace Ogre
 
 namespace OEngine
 {

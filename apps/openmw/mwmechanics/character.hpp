@@ -2,8 +2,11 @@
 #define GAME_MWMECHANICS_CHARACTER_HPP
 
 #include <OgreVector3.h>
-
 #include <components/esm/loadmgef.hpp>
+#include <stddef.h>
+#include <deque>
+#include <string>
+#include <utility>
 
 #include "../mwworld/ptr.hpp"
 
@@ -21,8 +24,8 @@ namespace MWRender
 namespace MWMechanics
 {
 
-class Movement;
 class CreatureStats;
+class Movement;
 
 enum Priority {
     Priority_Default,

@@ -1,9 +1,10 @@
 
-#include "blacklist.hpp"
-
-#include <algorithm>
-
 #include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <utility>
+
+#include "apps/opencs/model/doc/../world/universalid.hpp"
+#include "blacklist.hpp"
 
 bool CSMDoc::Blacklist::isBlacklisted (const CSMWorld::UniversalId& id) const
 {

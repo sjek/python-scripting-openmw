@@ -1,7 +1,20 @@
 #ifndef OPENMW_MWGUI_SAVEGAMEDIALOG_H
 #define OPENMW_MWGUI_SAVEGAMEDIALOG_H
 
+#include <stddef.h>
+
+#include "MyGUI_KeyCode.h"
+#include "MyGUI_Types.h"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Button;
+class ComboBox;
+class EditBox;
+class ImageBox;
+class ListBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWState
 {

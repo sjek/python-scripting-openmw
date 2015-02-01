@@ -1,9 +1,15 @@
 #ifndef GAME_RENDER_GLOBALMAP_H
 #define GAME_RENDER_GLOBALMAP_H
 
-#include <string>
-
 #include <OgreTexture.h>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "OgreImage.h"
+#include "OgrePrerequisites.h"
+#include "OgreResource.h"
+#include "OgreSharedPtr.h"
 
 namespace Loading
 {

@@ -1,6 +1,7 @@
 #ifndef NATURALSORT_H
 #define NATURALSORT_H
 
+#include <qstring.h>
 #include <QString>
 
     bool naturalSortLessThanCS( const QString &left, const QString &right );

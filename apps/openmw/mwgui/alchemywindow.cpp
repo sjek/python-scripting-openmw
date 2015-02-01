@@ -1,26 +1,38 @@
-#include "alchemywindow.hpp"
-
-#include <boost/algorithm/string.hpp>
-
 #include <MyGUI_Gui.h>
+#include <boost/algorithm/string/trim.hpp>
+#include <stddef.h>
+#include <set>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwmechanics/magiceffects.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/alchemy.hpp"
-
+#include "../mwmechanics/magiceffects.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include <components/esm/records.hpp>
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "alchemywindow.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "apps/openmw/mwgui/widgets.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadmgef.hpp"
 #include "inventoryitemmodel.hpp"
-#include "sortfilteritemmodel.hpp"
 #include "itemview.hpp"
 #include "itemwidget.hpp"
+#include "sortfilteritemmodel.hpp"
 
 namespace MWGui
 {

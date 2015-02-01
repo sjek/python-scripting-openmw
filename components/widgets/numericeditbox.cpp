@@ -1,6 +1,17 @@
+#include <boost/lexical_cast.hpp>
+#include <algorithm>
+#include <sstream>
+
+#include "MyGUI_EditBox.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_WidgetInput.h"
 #include "numericeditbox.hpp"
 
-#include <boost/lexical_cast.hpp>
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

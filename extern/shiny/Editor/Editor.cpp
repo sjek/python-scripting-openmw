@@ -1,14 +1,11 @@
-#include "Editor.hpp"
-
-
-#include <QApplication>
-#include <QTimer>
-
-#include <boost/thread.hpp>
+#include <boost/thread/pthread/mutex.hpp>
+#include <qnamespace.h>
+#include <stddef.h>
+#include <vector>
 
 #include "../Main/Factory.hpp"
-
-#include "MainWindow.hpp"
+#include "Editor.hpp"
+#include "extern/shiny/Editor/Query.hpp"
 
 namespace sh
 {

@@ -1,10 +1,19 @@
 #ifndef CSVSETTINGS_SETTINGWINDOW_HPP
 #define CSVSETTINGS_SETTINGWINDOW_HPP
 
-#include <QMainWindow>
+#include <qatomic_i386.h>
+#include <qlist.h>
+#include <qmainwindow.h>
+#include <qobjectdefs.h>
+#include <qset.h>
+#include <qstring.h>
+#include <qvector.h>
 #include <QList>
+#include <QMainWindow>
 
 #include "../../model/settings/support.hpp"
+
+class QWidget;
 
 namespace CSMSettings {
     class Setting;

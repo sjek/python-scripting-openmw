@@ -1,6 +1,12 @@
-#include "collections.hpp"
-
+#include <boost/filesystem/operations.hpp>
+#include <boost/iterator/iterator_facade.hpp>
 #include <components/misc/stringops.hpp>
+#include <stdexcept>
+#include <utility>
+#include <vector>
+
+#include "collections.hpp"
+#include "components/files/multidircollection.hpp"
 
 namespace Files
 {

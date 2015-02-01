@@ -1,9 +1,14 @@
 #ifndef ESMLOADER_HPP
 #define ESMLOADER_HPP
 
+#include <boost/filesystem/path.hpp>
 #include <vector>
 
 #include "contentloader.hpp"
+
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace ToUTF8
 {

@@ -3,7 +3,12 @@
 
 #include <boost/shared_ptr.hpp>
 
-namespace MWBase { class WindowManager; }
+namespace MWBase {
+class WindowManager;
+}  // namespace MWBase
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace MWGui
 {

@@ -24,13 +24,28 @@
 #ifndef OPENMW_COMPONENTS_NIFOGRE_OGRENIFLOADER_HPP
 #define OPENMW_COMPONENTS_NIFOGRE_OGRENIFLOADER_HPP
 
-#include <OgreResource.h>
-#include <OgreMaterial.h>
 #include <OgreController.h>
-
-#include <vector>
-#include <string>
+#include <OgreMaterial.h>
+#include <OgreResource.h>
 #include <map>
+#include <string>
+#include <vector>
+
+#include "OgrePrerequisites.h"
+#include "OgreQuaternion.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
+
+namespace Ogre {
+class Camera;
+class Entity;
+class Light;
+class MovableObject;
+class Node;
+class ParticleSystem;
+class SceneManager;
+class SceneNode;
+}  // namespace Ogre
 
 
 // FIXME: This namespace really doesn't do anything Nif-specific. Any supportable

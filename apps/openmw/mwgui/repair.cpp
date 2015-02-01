@@ -1,20 +1,36 @@
-#include "repair.hpp"
-
-#include <iomanip>
-
-#include <MyGUI_ScrollView.h>
 #include <MyGUI_Gui.h>
+#include <MyGUI_ScrollView.h>
+#include <algorithm>
+#include <iomanip>
+#include <ostream>
+#include <string>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/containerstore.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
-
-#include "widgets.hpp"
-
+#include "../mwworld/containerstore.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/repair.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadrepa.hpp"
 #include "itemwidget.hpp"
+#include "repair.hpp"
+#include "widgets.hpp"
 
 namespace MWGui
 {

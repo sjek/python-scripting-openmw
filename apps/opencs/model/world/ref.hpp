@@ -2,6 +2,7 @@
 #define CSM_WOLRD_REF_H
 
 #include <components/esm/cellref.hpp>
+#include <string>
 
 namespace CSMWorld
 {

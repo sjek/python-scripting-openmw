@@ -1,19 +1,34 @@
 
-#include "cell.hpp"
-
 #include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-
-#include <components/misc/stringops.hpp>
 #include <components/esm/loadland.hpp>
+#include <components/misc/stringops.hpp>
+#include <qabstractitemmodel.h>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <stddef.h>
+#include <limits>
+#include <utility>
 
-#include "../../model/world/idtable.hpp"
 #include "../../model/world/columns.hpp"
 #include "../../model/world/data.hpp"
+#include "../../model/world/idtable.hpp"
 #include "../world/physicssystem.hpp"
-
+#include "apps/opencs/view/render/../../model/world/idcollection.hpp"
+#include "apps/opencs/view/render/../../model/world/land.hpp"
+#include "apps/opencs/view/render/../../model/world/record.hpp"
+#include "apps/opencs/view/render/../../model/world/universalid.hpp"
+#include "apps/opencs/view/render/object.hpp"
+#include "cell.hpp"
+#include "components/terrain/defs.hpp"
+#include "components/terrain/terraingrid.hpp"
 #include "elements.hpp"
 #include "terrainstorage.hpp"
+
+namespace Ogre {
+class Vector3;
+}  // namespace Ogre
 
 bool CSVRender::Cell::removeObject (const std::string& id)
 {

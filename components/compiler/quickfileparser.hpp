@@ -1,8 +1,17 @@
 #ifndef COMPILER_QUICKFILEPARSER_H_INCLUDED
 #define COMPILER_QUICKFILEPARSER_H_INCLUDED
 
-#include "parser.hpp"
+#include <string>
+
 #include "declarationparser.hpp"
+#include "parser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

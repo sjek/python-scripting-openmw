@@ -1,9 +1,11 @@
 
-#include "navigation1st.hpp"
-
 #include <OgreCamera.h>
+#include <qpoint.h>
 
-#include <QPoint>
+#include "OgreMath.h"
+#include "OgreQuaternion.h"
+#include "OgreVector3.h"
+#include "navigation1st.hpp"
 
 CSVRender::Navigation1st::Navigation1st() : mCamera (0) {}
 

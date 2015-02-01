@@ -1,10 +1,15 @@
-#include "inventoryitemmodel.hpp"
-
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
+#include <stdexcept>
+#include <string>
 
 #include "../mwmechanics/creaturestats.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "components/misc/stringops.hpp"
+#include "inventoryitemmodel.hpp"
 
 namespace MWGui
 {

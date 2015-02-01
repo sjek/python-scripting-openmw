@@ -1,49 +1,59 @@
 #ifndef CSM_WOLRD_DATA_H
 #define CSM_WOLRD_DATA_H
 
-#include <map>
-#include <vector>
-
 #include <boost/filesystem/path.hpp>
-
-#include <QObject>
-#include <QModelIndex>
-
-#include <components/esm/loadglob.hpp>
-#include <components/esm/loadgmst.hpp>
-#include <components/esm/loadskil.hpp>
-#include <components/esm/loadclas.hpp>
-#include <components/esm/loadfact.hpp>
-#include <components/esm/loadrace.hpp>
-#include <components/esm/loadsoun.hpp>
-#include <components/esm/loadscpt.hpp>
-#include <components/esm/loadregn.hpp>
-#include <components/esm/loadbsgn.hpp>
-#include <components/esm/loadspel.hpp>
-#include <components/esm/loaddial.hpp>
-#include <components/esm/loadench.hpp>
-#include <components/esm/loadbody.hpp>
-#include <components/esm/loadsndg.hpp>
-#include <components/esm/loadmgef.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/debugprofile.hpp>
 #include <components/esm/filter.hpp>
-
+#include <components/esm/loadbody.hpp>
+#include <components/esm/loadbsgn.hpp>
+#include <components/esm/loadclas.hpp>
+#include <components/esm/loaddial.hpp>
+#include <components/esm/loadench.hpp>
+#include <components/esm/loadfact.hpp>
+#include <components/esm/loadglob.hpp>
+#include <components/esm/loadgmst.hpp>
+#include <components/esm/loadmgef.hpp>
+#include <components/esm/loadrace.hpp>
+#include <components/esm/loadregn.hpp>
+#include <components/esm/loadscpt.hpp>
+#include <components/esm/loadskil.hpp>
+#include <components/esm/loadsndg.hpp>
+#include <components/esm/loadsoun.hpp>
+#include <components/esm/loadspel.hpp>
 #include <components/to_utf8/to_utf8.hpp>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <QModelIndex>
+#include <QObject>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../doc/stage.hpp"
-
-#include "idcollection.hpp"
-#include "universalid.hpp"
+#include "apps/opencs/model/world/record.hpp"
 #include "cell.hpp"
+#include "idcollection.hpp"
+#include "infocollection.hpp"
 #include "land.hpp"
 #include "landtexture.hpp"
-#include "refidcollection.hpp"
-#include "refcollection.hpp"
-#include "infocollection.hpp"
 #include "pathgrid.hpp"
+#include "refcollection.hpp"
+#include "refidcollection.hpp"
 #include "subcellcollection.hpp"
+#include "universalid.hpp"
 
 class QAbstractItemModel;
+class QModelIndex;
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace CSMWorld {
+class CollectionBase;
+}  // namespace CSMWorld
+namespace ESM {
+struct RefNum;
+}  // namespace ESM
 
 namespace ESM
 {
@@ -53,8 +63,8 @@ namespace ESM
 
 namespace CSMWorld
 {
-    class ResourcesManager;
     class Resources;
+    class ResourcesManager;
 
     class Data : public QObject
     {

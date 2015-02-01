@@ -1,9 +1,12 @@
 #ifndef CSM_WORLD_LANDTEXTURE_H
 #define CSM_WORLD_LANDTEXTURE_H
 
+#include <components/esm/loadltex.hpp>
 #include <string>
 
-#include <components/esm/loadltex.hpp>
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace CSMWorld
 {

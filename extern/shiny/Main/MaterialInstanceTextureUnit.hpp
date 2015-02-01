@@ -1,6 +1,8 @@
 #ifndef SH_MATERIALINSTANCETEXTUREUNIT_H
 #define SH_MATERIALINSTANCETEXTUREUNIT_H
 
+#include <string>
+
 #include "PropertyBase.hpp"
 
 namespace sh

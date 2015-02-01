@@ -2,7 +2,7 @@
 #define COMPONENTS_FILES_LOWLEVELFILE_HPP
 
 #include <OgrePlatform.h>
-
+#include <stddef.h>
 #include <cstdlib>
 
 #define FILE_API_STDIO	0

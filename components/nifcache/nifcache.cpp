@@ -1,3 +1,7 @@
+#include <assert.h>
+#include <utility>
+
+#include "components/nif/niffile.hpp"
 #include "nifcache.hpp"
 
 namespace Nif

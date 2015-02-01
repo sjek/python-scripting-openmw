@@ -1,19 +1,28 @@
 #ifndef GAME_MWMECHANICS_AIWANDER_H
 #define GAME_MWMECHANICS_AIWANDER_H
 
-#include "aipackage.hpp"
-
+#include <OgreVector3.h>
 #include <vector>
 
-#include <OgreVector3.h>
-
-#include "pathfinding.hpp"
-#include "obstacle.hpp"
-
 #include "../mwworld/timestamp.hpp"
-
-
+#include "aipackage.hpp"
 #include "aistate.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "obstacle.hpp"
+#include "pathfinding.hpp"
+
+namespace ESM {
+namespace AiSequence {
+struct AiSequence;
+}  // namespace AiSequence
+struct Cell;
+}  // namespace ESM
+namespace MWMechanics {
+class PathFinder;
+}  // namespace MWMechanics
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace ESM
 {

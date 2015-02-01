@@ -1,28 +1,29 @@
 
-#include "tools.hpp"
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
-#include <QThreadPool>
-
-#include "../doc/state.hpp"
-#include "../doc/operation.hpp"
 #include "../doc/document.hpp"
-
+#include "../doc/operation.hpp"
+#include "../doc/state.hpp"
 #include "../world/data.hpp"
 #include "../world/universalid.hpp"
-
-#include "reportmodel.hpp"
-#include "mandatoryid.hpp"
-#include "skillcheck.hpp"
+#include "apps/opencs/model/tools/../doc/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../doc/../world/refidcollection.hpp"
+#include "birthsigncheck.hpp"
+#include "bodypartcheck.hpp"
 #include "classcheck.hpp"
 #include "factioncheck.hpp"
+#include "mandatoryid.hpp"
 #include "racecheck.hpp"
-#include "soundcheck.hpp"
-#include "regioncheck.hpp"
-#include "birthsigncheck.hpp"
-#include "spellcheck.hpp"
 #include "referenceablecheck.hpp"
+#include "regioncheck.hpp"
+#include "reportmodel.hpp"
 #include "scriptcheck.hpp"
-#include "bodypartcheck.hpp"
+#include "skillcheck.hpp"
+#include "soundcheck.hpp"
+#include "spellcheck.hpp"
+#include "tools.hpp"
 
 CSMDoc::Operation *CSMTools::Tools::get (int type)
 {

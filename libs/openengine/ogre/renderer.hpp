@@ -5,24 +5,23 @@
   Ogre renderer class
  */
 
-#include <string>
-#include <stdint.h>
-
 #include <OgreTexture.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <string>
 
-
-struct SDL_Window;
 struct SDL_Surface;
+struct SDL_Window;
 
 namespace Ogre
 {
-    class Root;
-    class RenderWindow;
-    class SceneManager;
     class Camera;
-    class Viewport;
-    class ParticleEmitterFactory;
     class ParticleAffectorFactory;
+    class ParticleEmitterFactory;
+    class RenderWindow;
+    class Root;
+    class SceneManager;
+    class Viewport;
 }
 
 namespace OgreInit

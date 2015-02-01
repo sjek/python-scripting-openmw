@@ -1,3 +1,9 @@
+#include <stddef.h>
+#include <ostream>
+
+#include "MyGUI_Diagnostic.h"
+#include "MyGUI_LogStream.h"
+#include "MyGUI_Widget.h"
 #include "exposedwindow.hpp"
 
 namespace MWGui

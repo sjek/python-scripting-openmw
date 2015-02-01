@@ -1,12 +1,9 @@
-#include "loadskil.hpp"
-
 #include <sstream>
 
-#include <components/misc/stringops.hpp>
-
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadskil.hpp"
 
 namespace ESM
 {

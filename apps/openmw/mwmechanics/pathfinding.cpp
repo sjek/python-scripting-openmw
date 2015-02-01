@@ -1,13 +1,18 @@
-#include "pathfinding.hpp"
+#include <math.h>
+#include <stddef.h>
+#include <utility>
 
+#include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/esmstore.hpp"
 #include "OgreMath.h"
 #include "OgreVector3.h"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/cellstore.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "pathfinding.hpp"
 
 namespace
 {

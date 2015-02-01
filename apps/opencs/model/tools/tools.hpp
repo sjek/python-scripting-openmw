@@ -1,9 +1,11 @@
 #ifndef CSM_TOOLS_TOOLS_H
 #define CSM_TOOLS_TOOLS_H
 
+#include <qobject.h>
+#include <qobjectdefs.h>
 #include <QObject>
-
 #include <map>
+#include <string>
 
 namespace CSMWorld
 {
@@ -13,8 +15,8 @@ namespace CSMWorld
 
 namespace CSMDoc
 {
-    class Operation;
     class Document;
+    class Operation;
 }
 
 namespace CSMTools

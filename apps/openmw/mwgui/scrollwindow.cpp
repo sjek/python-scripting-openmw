@@ -1,18 +1,26 @@
-#include "scrollwindow.hpp"
-
 #include <MyGUI_ScrollView.h>
-
 #include <components/esm/loadbook.hpp>
 #include <components/widgets/imagebutton.hpp>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwworld/actiontake.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "formatting.hpp"
+#include "scrollwindow.hpp"
 
 namespace
 {

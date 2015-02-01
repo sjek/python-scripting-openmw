@@ -1,7 +1,12 @@
+#include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
 #include "referenceinterface.hpp"
 
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
+namespace MWWorld {
+class CellStore;
+}  // namespace MWWorld
 
 namespace MWGui
 {

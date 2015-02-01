@@ -1,9 +1,36 @@
-#include "referenceablecheck.hpp"
-
 #include <components/misc/stringops.hpp>
+#include <utility>
 
 #include "../world/record.hpp"
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/refiddata.hpp"
+#include "components/esm/loadacti.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
+#include "referenceablecheck.hpp"
+
+namespace ESM {
+struct Class;
+struct Faction;
+struct Race;
+}  // namespace ESM
 
 CSMTools::ReferenceableCheckStage::ReferenceableCheckStage(
     const CSMWorld::RefIdData& referenceable, const CSMWorld::IdCollection<ESM::Race >& races,

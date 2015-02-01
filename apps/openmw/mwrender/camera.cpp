@@ -1,16 +1,18 @@
-#include "camera.hpp"
-
-#include <OgreSceneNode.h>
 #include <OgreCamera.h>
 #include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
 #include <OgreTagPoint.h>
+#include <stddef.h>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
 #include "../mwworld/ptr.hpp"
 #include "../mwworld/refdata.hpp"
-
+#include "OgreMath.h"
+#include "OgreNode.h"
+#include "OgreQuaternion.h"
+#include "OgreVector3.h"
+#include "camera.hpp"
 #include "npcanimation.hpp"
 
 namespace MWRender

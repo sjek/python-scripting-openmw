@@ -1,9 +1,15 @@
 #ifndef OENGINE_OGRE_LIGHTS_H
 #define OENGINE_OGRE_LIGHTS_H
 
-#include <OgreController.h>
 #include <OgreColourValue.h>
+#include <OgreController.h>
 #include <OgreMath.h>
+
+#include "OgrePrerequisites.h"
+
+namespace Ogre {
+class Light;
+}  // namespace Ogre
 
 /*
  * Controller classes to handle pulsing and flicker lights

@@ -1,12 +1,14 @@
+#include <qboxlayout.h>
+#include <qprogressbar.h>
+#include <qpushbutton.h>
+#include <qstring.h>
+#include <sstream>
+#include <string>
+
+#include "apps/opencs/view/doc/../../model/doc/state.hpp"
 #include "operation.hpp"
 
-#include <sstream>
-
-#include <QProgressBar>
-#include <QPushButton>
-#include <QVBoxLayout>
-
-#include "../../model/doc/document.hpp"
+class QWidget;
 
 void CSVDoc::Operation::updateLabel (int threads)
 {

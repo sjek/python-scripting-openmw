@@ -1,28 +1,38 @@
 
-#include "misc.hpp"
-
+#include <assert.h>
 #include <boost/lexical_cast.hpp>
-
 #include <components/esm/loadmisc.hpp>
+#include <stddef.h>
+#include <sstream>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/manualref.hpp"
-#include "../mwworld/nullaction.hpp"
-#include "../mwworld/actionsoulgem.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwgui/tooltips.hpp"
-
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"
+#include "../mwworld/actionsoulgem.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/manualref.hpp"
+#include "../mwworld/nullaction.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/esmstore.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "apps/openmw/mwclass/../mwworld/store.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/misc/stringops.hpp"
+#include "misc.hpp"
 
-#include <boost/lexical_cast.hpp>
+namespace MWWorld {
+class Action;
+class Class;
+}  // namespace MWWorld
 
 namespace
 {

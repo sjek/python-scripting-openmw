@@ -2,6 +2,16 @@
 #define MWGUI_LIST_HPP
 
 #include <MyGUI_ScrollView.h>
+#include <string>
+#include <vector>
+
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Widget.h"
+
+namespace MyGUI {
+class ScrollView;
+}  // namespace MyGUI
 
 namespace Gui
 {

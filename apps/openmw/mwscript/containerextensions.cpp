@@ -1,30 +1,40 @@
 
-#include "containerextensions.hpp"
-
-#include <stdexcept>
-
-#include <boost/format.hpp>
-
 #include <MyGUI_LanguageManager.h>
-
-#include <components/compiler/extensions.hpp>
+#include <boost/format/alt_sstream.hpp>
+#include <boost/format/alt_sstream_impl.hpp>
+#include <boost/format/format_class.hpp>
+#include <boost/format/format_fwd.hpp>
+#include <boost/format/format_implementation.hpp>
+#include <boost/format/free_funcs.hpp>
+#include <boost/optional/optional.hpp>
 #include <components/compiler/opcodes.hpp>
-
-#include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
-#include <components/interpreter/opcodes.hpp>
-
 #include <components/esm/loadskil.hpp>
+#include <components/interpreter/interpreter.hpp>
+#include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <ostream>
+#include <stdexcept>
+#include <string>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwworld/actionequip.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
-#include "../mwworld/actionequip.hpp"
 #include "../mwworld/inventorystore.hpp"
-
-#include "interpretercontext.hpp"
+#include "MyGUI_UString.h"
+#include "apps/openmw/mwscript/../mwbase/world.hpp"
+#include "apps/openmw/mwscript/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwscript/../mwworld/cellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/interpreter/types.hpp"
+#include "components/misc/stringops.hpp"
+#include "containerextensions.hpp"
 #include "ref.hpp"
 
 namespace MWScript

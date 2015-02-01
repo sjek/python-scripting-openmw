@@ -1,31 +1,34 @@
 
-#include "player.hpp"
-
+#include <components/esm/defs.hpp>
+#include <components/esm/esmwriter.hpp>
+#include <components/esm/loadbsgn.hpp>
+#include <components/esm/player.hpp>
+#include <stddef.h>
+#include <list>
 #include <stdexcept>
 
-#include <components/esm/esmreader.hpp>
-#include <components/esm/esmwriter.hpp>
-#include <components/esm/player.hpp>
-#include <components/esm/defs.hpp>
-#include <components/esm/loadbsgn.hpp>
-
-#include "../mwworld/esmstore.hpp"
-
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/movement.hpp"
 #include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/actors.hpp"
-#include "../mwmechanics/mechanicsmanagerimp.hpp"
-
-#include "class.hpp"
-#include "ptr.hpp"
-#include "inventorystore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "OgreVector3.h"
+#include "apps/openmw/mwworld/../mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwworld/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwworld/../mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "cellstore.hpp"
+#include "class.hpp"
+#include "components/esm/cellid.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/npcstate.hpp"
+#include "player.hpp"
+#include "ptr.hpp"
 
 namespace MWWorld
 {

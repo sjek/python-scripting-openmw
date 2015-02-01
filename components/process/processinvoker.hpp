@@ -1,9 +1,14 @@
 #ifndef PROCESSINVOKER_HPP
 #define PROCESSINVOKER_HPP
 
-#include <QStringList>
-#include <QString>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qprocess.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QProcess>
+#include <QString>
+#include <QStringList>
 
 namespace Process
 {

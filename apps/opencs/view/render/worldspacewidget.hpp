@@ -1,16 +1,34 @@
 #ifndef OPENCS_VIEW_WORLDSPACEWIDGET_H
 #define OPENCS_VIEW_WORLDSPACEWIDGET_H
 
+#include <apps/opencs/model/doc/document.hpp>
+#include <apps/opencs/model/world/tablemimedata.hpp>
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <qobjectdefs.h>
+#include <string>
+#include <vector>
 
-#include "scenewidget.hpp"
 #include "mousestate.hpp"
-
 #include "navigation1st.hpp"
 #include "navigationfree.hpp"
 #include "navigationorbit.hpp"
-#include <apps/opencs/model/doc/document.hpp>
-#include <apps/opencs/model/world/tablemimedata.hpp>
+#include "scenewidget.hpp"
+
+class QDragEnterEvent;
+class QDragMoveEvent;
+class QDropEvent;
+class QKeyEvent;
+class QModelIndex;
+class QMouseEvent;
+class QWheelEvent;
+class QWidget;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
+namespace CSVRender {
+class MouseState;
+}  // namespace CSVRender
 
 namespace CSMWorld
 {
@@ -20,9 +38,9 @@ namespace CSMWorld
 namespace CSVWidget
 {
     class SceneToolMode;
+    class SceneToolRun;
     class SceneToolToggle2;
     class SceneToolbar;
-    class SceneToolRun;
 }
 
 namespace CSVWorld

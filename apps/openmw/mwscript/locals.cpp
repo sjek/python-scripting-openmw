@@ -1,16 +1,19 @@
-#include "locals.hpp"
-
-#include <components/esm/loadscpt.hpp>
-#include <components/esm/variant.hpp>
-#include <components/esm/locals.hpp>
-
 #include <components/compiler/locals.hpp>
-#include <components/compiler/exception.hpp>
+#include <components/esm/loadscpt.hpp>
+#include <components/esm/locals.hpp>
+#include <components/esm/variant.hpp>
+#include <exception>
+#include <iostream>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/scriptmanager.hpp"
+#include "components/interpreter/types.hpp"
+#include "locals.hpp"
 
-#include <iostream>
+namespace Compiler {
+class SourceException;
+}  // namespace Compiler
 
 namespace MWScript
 {

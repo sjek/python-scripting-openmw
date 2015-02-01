@@ -1,8 +1,10 @@
-#include "loadclot.hpp"
+#include <vector>
 
+#include "components/esm/loadarmo.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadclot.hpp"
 
 namespace ESM
 {

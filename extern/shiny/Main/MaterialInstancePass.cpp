@@ -1,6 +1,8 @@
-#include "MaterialInstancePass.hpp"
-
 #include <fstream>
+
+#include "MaterialInstancePass.hpp"
+#include "extern/shiny/Main/MaterialInstanceTextureUnit.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
 
 namespace sh
 {

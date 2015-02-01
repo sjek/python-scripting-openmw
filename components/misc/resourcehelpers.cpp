@@ -1,8 +1,10 @@
-#include "resourcehelpers.hpp"
-
-#include <components/misc/stringops.hpp>
-
 #include <OgreResourceGroupManager.h>
+#include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <ostream>
+
+#include "OgrePrerequisites.h"
+#include "resourcehelpers.hpp"
 
 namespace
 {

@@ -1,17 +1,21 @@
-#include "aiescort.hpp"
-
 #include <components/esm/aisequence.hpp>
+#include <limits>
+#include <memory>
+#include <vector>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/class.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
-
-#include "steering.hpp"
+#include "../mwworld/class.hpp"
+#include "aiescort.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadpgrd.hpp"
 #include "movement.hpp"
 
 /*

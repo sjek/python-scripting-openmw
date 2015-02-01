@@ -1,18 +1,16 @@
-#include "page.hpp"
+#include <qlabel.h>
 
-#include <QLabel>
-
-#include "view.hpp"
-#include "booleanview.hpp"
-#include "textview.hpp"
-#include "listview.hpp"
-#include "rangeview.hpp"
-
-#include "../../model/settings/usersettings.hpp"
-#include "../../model/settings/connector.hpp"
 #include "../../model/settings/support.hpp"
-
+#include "../../model/settings/usersettings.hpp"
+#include "apps/opencs/view/settings/../../model/settings/setting.hpp"
+#include "apps/opencs/view/settings/frame.hpp"
+#include "booleanview.hpp"
+#include "listview.hpp"
+#include "page.hpp"
+#include "rangeview.hpp"
 #include "settingwindow.hpp"
+#include "textview.hpp"
+#include "view.hpp"
 
 QMap <CSVSettings::ViewType, CSVSettings::IViewFactory *>
                                             CSVSettings::Page::mViewFactories;

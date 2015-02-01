@@ -1,16 +1,29 @@
 #ifndef CSV_FILTER_EDITWIDGET_H
 #define CSV_FILTER_EDITWIDGET_H
 
+#include <QtCore/qnamespace.h>
 #include <boost/shared_ptr.hpp>
-
+#include <qlineedit.h>
+#include <qobjectdefs.h>
+#include <qpalette.h>
+#include <qstring.h>
 #include <QLineEdit>
 #include <QPalette>
-#include <QtCore/qnamespace.h>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include "../../model/filter/parser.hpp"
 #include "../../model/filter/node.hpp"
+#include "../../model/filter/parser.hpp"
 
 class QModelIndex;
+class QWidget;
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace CSMWorld
 {

@@ -1,13 +1,22 @@
-#include "OgreTextureUnitState.hpp"
-
-#include <iomanip>
-
-#include <boost/algorithm/string.hpp>
+#include <assert.h>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/detail/classification.hpp>
+#include <boost/algorithm/string/replace.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/iterator/iterator_facade.hpp>
 #include <boost/lexical_cast.hpp>
+#include <iomanip>
+#include <sstream>
+#include <vector>
 
+#include "OgreMaterialSerializer.hpp"
+#include "OgrePass.h"
 #include "OgrePass.hpp"
 #include "OgrePlatform.hpp"
-#include "OgreMaterialSerializer.hpp"
+#include "OgrePrerequisites.h"
+#include "OgreTextureUnitState.h"
+#include "OgreTextureUnitState.hpp"
+#include "extern/shiny/Platforms/Ogre/../../Main/Platform.hpp"
 
 namespace sh
 {

@@ -1,3 +1,5 @@
+#include <algorithm>
+
 #include "sound.hpp"
 
 namespace MWSound

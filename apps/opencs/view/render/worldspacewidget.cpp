@@ -1,25 +1,36 @@
 
-#include "worldspacewidget.hpp"
-
+#include <QtGui/qevent.h>
+#include <qabstractitemmodel.h>
+#include <qbytearray.h>
+#include <qglobal.h>
+#include <qicon.h>
+#include <qmimedata.h>
+#include <qnamespace.h>
+#include <qstring.h>
+#include <qvariant.h>
 #include <algorithm>
 
-#include <OgreSceneNode.h>
-#include <OgreSceneManager.h>
-#include <OgreEntity.h>
-
-#include <QtGui/qevent.h>
-
-#include "../../model/world/universalid.hpp"
 #include "../../model/world/idtable.hpp"
-
+#include "../../model/world/universalid.hpp"
 #include "../widget/scenetoolmode.hpp"
-#include "../widget/scenetooltoggle2.hpp"
 #include "../widget/scenetoolrun.hpp"
-
+#include "../widget/scenetooltoggle2.hpp"
 #include "../world/physicssystem.hpp"
-
-#include "elements.hpp"
+#include "apps/opencs/model/doc/../world/columns.hpp"
+#include "apps/opencs/model/doc/../world/data.hpp"
+#include "apps/opencs/model/doc/../world/record.hpp"
+#include "apps/opencs/model/doc/document.hpp"
+#include "apps/opencs/model/world/tablemimedata.hpp"
+#include "apps/opencs/view/render/mousestate.hpp"
+#include "apps/opencs/view/render/navigation1st.hpp"
+#include "apps/opencs/view/render/navigationfree.hpp"
+#include "apps/opencs/view/render/navigationorbit.hpp"
+#include "apps/opencs/view/render/scenewidget.hpp"
 #include "editmode.hpp"
+#include "elements.hpp"
+#include "worldspacewidget.hpp"
+
+class QWidget;
 
 CSVRender::WorldspaceWidget::WorldspaceWidget (CSMDoc::Document& document, QWidget* parent)
 : SceneWidget (parent), mDocument(document), mSceneElements(0), mRun(0), mPhysics(boost::shared_ptr<CSVWorld::PhysicsSystem>()), mMouse(0),

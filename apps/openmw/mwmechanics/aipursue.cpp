@@ -1,17 +1,23 @@
-#include "aipursue.hpp"
-
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/aisequence.hpp>
+#include <memory>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-
 #include "../mwworld/class.hpp"
-#include "../mwworld/action.hpp"
-#include "../mwworld/cellstore.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-
-#include "movement.hpp"
+#include "aipursue.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/world.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadpgrd.hpp"
 #include "creaturestats.hpp"
+#include "movement.hpp"
 
 namespace MWMechanics
 {

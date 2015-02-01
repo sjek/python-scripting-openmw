@@ -1,18 +1,15 @@
 
-#include "scanner.hpp"
-
+#include <components/misc/stringops.hpp>
 #include <cassert>
 #include <cctype>
 #include <sstream>
-#include <algorithm>
-#include <iterator>
 
-#include "exception.hpp"
+#include "components/compiler/tokenloc.hpp"
 #include "errorhandler.hpp"
-#include "parser.hpp"
+#include "exception.hpp"
 #include "extensions.hpp"
-
-#include <components/misc/stringops.hpp>
+#include "parser.hpp"
+#include "scanner.hpp"
 
 namespace Compiler
 {

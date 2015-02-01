@@ -1,6 +1,11 @@
 #ifndef CSM_FILTER_VALUENODE_H
 #define CSM_FILTER_VALUENODE_H
 
+#include <map>
+#include <string>
+#include <vector>
+
+#include "apps/opencs/model/filter/../world/idtablebase.hpp"
 #include "leafnode.hpp"
 
 namespace CSMFilter

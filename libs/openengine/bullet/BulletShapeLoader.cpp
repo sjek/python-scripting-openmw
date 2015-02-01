@@ -1,4 +1,14 @@
+#include <assert.h>
+
+#include "BulletCollision/CollisionShapes/btCollisionShape.h"
+#include "BulletCollision/CollisionShapes/btCompoundShape.h"
 #include "BulletShapeLoader.h"
+#include "LinearMath/btScalar.h"
+#include "OgreResource.h"
+
+namespace Ogre {
+class ResourceManager;
+}  // namespace Ogre
 
 namespace OEngine {
 namespace Physic

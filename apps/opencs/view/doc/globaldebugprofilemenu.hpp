@@ -1,10 +1,15 @@
 #ifndef CSV_DOC_GLOBALDEBUGPROFILEMENU_H
 #define CSV_DOC_GLOBALDEBUGPROFILEMENU_H
 
+#include <qmenu.h>
+#include <qobjectdefs.h>
 #include <QMenu>
+#include <string>
 
-class QModelIndex;
+class QAction;
 class QActionGroup;
+class QModelIndex;
+class QWidget;
 
 namespace CSMWorld
 {

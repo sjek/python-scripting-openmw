@@ -1,22 +1,36 @@
 #ifndef OPENCS_VIEW_SCENEWIDGET_H
 #define OPENCS_VIEW_SCENEWIDGET_H
 
-#include <QWidget>
-
 #include <OgreColourValue.h>
+#include <qobjectdefs.h>
+#include <qpoint.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qwidget.h>
+#include <QWidget>
+#include <string>
 
+#include "lightingbright.hpp"
 #include "lightingday.hpp"
 #include "lightingnight.hpp"
-#include "lightingbright.hpp"
+
+class QEvent;
+class QFocusEvent;
+class QKeyEvent;
+class QMouseEvent;
+class QPaintEngine;
+class QPaintEvent;
+class QResizeEvent;
+class QWheelEvent;
 
 namespace Ogre
 {
     class Camera;
-    class SceneManager;
-    class RenderWindow;
-    class Viewport;
     class OverlaySystem;
     class RenderTargetListener;
+    class RenderWindow;
+    class SceneManager;
+    class Viewport;
 }
 
 namespace CSVWidget
@@ -27,8 +41,8 @@ namespace CSVWidget
 
 namespace CSVRender
 {
-    class Navigation;
     class Lighting;
+    class Navigation;
 
     class SceneWidget : public QWidget
     {

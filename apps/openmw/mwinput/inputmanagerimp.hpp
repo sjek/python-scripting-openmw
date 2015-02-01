@@ -1,12 +1,23 @@
 #ifndef MWINPUT_MWINPUTMANAGERIMP_H
 #define MWINPUT_MWINPUTMANAGERIMP_H
 
-#include "../mwgui/mode.hpp"
-
 #include <components/settings/settings.hpp>
+#include <extern/sdl4ogre/sdlinputwrapper.hpp>
 
 #include "../mwbase/inputmanager.hpp"
-#include <extern/sdl4ogre/sdlinputwrapper.hpp>
+#include "../mwgui/mode.hpp"
+#include "SDL_events.h"
+#include "SDL_scancode.h"
+#include "SDL_stdinc.h"
+#include "extern/oics/ICSControl.h"
+#include "extern/sdl4ogre/events.h"
+
+namespace ICS {
+class Channel;
+}  // namespace ICS
+namespace SFO {
+class InputWrapper;
+}  // namespace SFO
 
 namespace OEngine
 {
@@ -43,6 +54,9 @@ namespace MyGUI
 
 #include <extern/oics/ICSChannelListener.h>
 #include <extern/oics/ICSInputControlSystem.h>
+#include <map>
+#include <string>
+#include <vector>
 
 namespace MWInput
 {

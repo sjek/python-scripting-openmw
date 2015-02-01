@@ -1,7 +1,15 @@
 
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/esm/loadlevlist.hpp>
+#include <typeinfo>
+
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/ptr.hpp"
 #include "itemlevlist.hpp"
 
-#include <components/esm/loadlevlist.hpp>
+namespace MWWorld {
+class Class;
+}  // namespace MWWorld
 
 namespace MWClass
 {

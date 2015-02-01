@@ -2,6 +2,14 @@
 #define OPENMW_GAME_MWGUI_MAINMENU_H
 
 #include <openengine/gui/layout.hpp>
+#include <map>
+#include <string>
+
+namespace MyGUI {
+class ImageBox;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

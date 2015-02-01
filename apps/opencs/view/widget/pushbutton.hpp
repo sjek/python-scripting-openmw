@@ -1,7 +1,15 @@
 #ifndef CSV_WIDGET_PUSHBUTTON_H
 #define CSV_WIDGET_PUSHBUTTON_H
 
+#include <qicon.h>
+#include <qobjectdefs.h>
+#include <qpushbutton.h>
+#include <qstring.h>
 #include <QPushButton>
+
+class QKeyEvent;
+class QMouseEvent;
+class QWidget;
 
 namespace CSVWidget
 {

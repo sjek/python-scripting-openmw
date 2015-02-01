@@ -1,8 +1,13 @@
-#include "translation.hpp"
-
 #include <boost/filesystem/fstream.hpp>
-
 #include <components/misc/stringops.hpp>
+#include <stddef.h>
+#include <stdexcept>
+#include <utility>
+
+#include "components/files/collections.hpp"
+#include "components/files/multidircollection.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "translation.hpp"
 
 namespace Translation
 {

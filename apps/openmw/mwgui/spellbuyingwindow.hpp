@@ -1,8 +1,20 @@
 #ifndef MWGUI_SpellBuyingWINDOW_H
 #define MWGUI_SpellBuyingWINDOW_H
 
-#include "windowbase.hpp"
+#include <map>
+#include <string>
+
 #include "referenceinterface.hpp"
+#include "windowbase.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class ScrollView;
+class TextBox;
+}  // namespace MyGUI
 
 namespace MyGUI
 {

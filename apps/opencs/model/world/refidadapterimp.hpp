@@ -1,17 +1,34 @@
 #ifndef CSM_WOLRD_REFIDADAPTERIMP_H
 #define CSM_WOLRD_REFIDADAPTERIMP_H
 
-#include <map>
-
-#include <QVariant>
-
 #include <components/esm/loadalch.hpp>
 #include <components/esm/loadappa.hpp>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <QVariant>
+#include <map>
+#include <string>
+#include <utility>
 
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadweap.hpp"
 #include "record.hpp"
+#include "refidadapter.hpp"
 #include "refiddata.hpp"
 #include "universalid.hpp"
-#include "refidadapter.hpp"
+
+namespace CSMWorld {
+class RefIdColumn;
+}  // namespace CSMWorld
 
 namespace CSMWorld
 {

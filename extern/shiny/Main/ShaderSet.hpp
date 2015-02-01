@@ -1,11 +1,13 @@
 #ifndef SH_SHADERSET_H
 #define SH_SHADERSET_H
 
+#include <stddef.h>
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
 
 #include "ShaderInstance.hpp"
+#include "extern/shiny/Main/Platform.hpp"
 
 namespace sh
 {

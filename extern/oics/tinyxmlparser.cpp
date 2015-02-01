@@ -22,15 +22,19 @@ must not be misrepresented as being the original software.
 distribution.
 */
 
+#include <assert.h>
 #include <ctype.h>
 #include <stddef.h>
+#include <string.h>
 
+#include "extern/oics/tinystr.h"
 #include "tinyxml.h"
 
 //#define DEBUG_PARSER
 #if defined( DEBUG_PARSER )
 #	if defined( DEBUG ) && defined( _MSC_VER )
 #		include <windows.h>
+
 #		define TIXML_LOG OutputDebugString
 #	else
 #		define TIXML_LOG printf

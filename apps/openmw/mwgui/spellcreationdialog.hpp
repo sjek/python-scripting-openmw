@@ -3,9 +3,30 @@
 
 #include <components/esm/loadmgef.hpp>
 #include <components/esm/loadspel.hpp>
+#include <stddef.h>
+#include <map>
+#include <vector>
 
-#include "windowbase.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "components/esm/effectlist.hpp"
 #include "referenceinterface.hpp"
+#include "windowbase.hpp"
+
+namespace ESM {
+struct MagicEffect;
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class EditBox;
+class ImageBox;
+class ScrollBar;
+class ScrollView;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {
@@ -15,8 +36,8 @@ namespace Gui
 namespace MWGui
 {
 
-    class SelectSkillDialog;
     class SelectAttributeDialog;
+    class SelectSkillDialog;
 
     class EditEffectDialog : public WindowModal
     {

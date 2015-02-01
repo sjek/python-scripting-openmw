@@ -1,27 +1,32 @@
 #ifndef CSM_DOC_DOCUMENT_H
 #define CSM_DOC_DOCUMENT_H
 
-#include <string>
-
-#include <boost/shared_ptr.hpp>
 #include <boost/filesystem/path.hpp>
-
-#include <QUndoStack>
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/to_utf8/to_utf8.hpp>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qundostack.h>
 #include <QObject>
 #include <QTimer>
-
-#include <components/to_utf8/to_utf8.hpp>
-
-#include "../world/data.hpp"
+#include <QUndoStack>
+#include <string>
+#include <vector>
 
 #include "../tools/tools.hpp"
-
-#include "state.hpp"
-#include "saving.hpp"
+#include "../world/data.hpp"
+#include "apps/opencs/model/doc/../world/universalid.hpp"
 #include "blacklist.hpp"
 #include "runner.hpp"
+#include "saving.hpp"
+#include "state.hpp"
 
 class QAbstractItemModel;
+class QTextDocument;
+namespace CSMTools {
+class ReportModel;
+}  // namespace CSMTools
 
 namespace ESM
 {

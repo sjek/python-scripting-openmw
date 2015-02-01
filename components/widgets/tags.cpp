@@ -1,6 +1,12 @@
-#include "tags.hpp"
-
 #include <MyGUI_Colour.h>
+#include <stddef.h>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
+
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_UString.h"
+#include "tags.hpp"
 
 namespace Gui
 {

@@ -1,10 +1,17 @@
-#include "material.hpp"
-
 #include <OgreMaterialManager.h>
-#include <OgreTechnique.h>
 #include <OgrePass.h>
+#include <OgreTechnique.h>
+#include <assert.h>
+#include <cmath>
+#include <ostream>
 
-#include <boost/functional/hash.hpp>
+#include "OgreBlendMode.h"
+#include "OgreCommon.h"
+#include "OgreMaterial.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreTexture.h"
+#include "OgreTextureUnitState.h"
+#include "material.hpp"
 
 #if TERRAIN_USE_SHADER
 #include <extern/shiny/Main/Factory.hpp>

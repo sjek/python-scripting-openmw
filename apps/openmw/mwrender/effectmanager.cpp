@@ -1,14 +1,23 @@
-#include "effectmanager.hpp"
-
-#include <components/misc/resourcehelpers.hpp>
-
-#include <OgreSceneManager.h>
 #include <OgreParticleSystem.h>
+#include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
 #include <OgreTechnique.h>
+#include <components/misc/resourcehelpers.hpp>
+#include <stddef.h>
 
+#include "OgreMaterial.h"
+#include "OgrePass.h"
+#include "OgreSharedPtr.h"
+#include "OgreTextureUnitState.h"
 #include "animation.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
+#include "effectmanager.hpp"
 #include "renderconst.hpp"
+
+namespace Ogre {
+class Camera;
+class Vector3;
+}  // namespace Ogre
 
 namespace MWRender
 {

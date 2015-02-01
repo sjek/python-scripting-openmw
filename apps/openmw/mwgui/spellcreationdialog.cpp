@@ -1,28 +1,47 @@
-#include "spellcreationdialog.hpp"
-
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_Gui.h>
-
+#include <MyGUI_ImageBox.h>
 #include <components/misc/resourcehelpers.hpp>
-#include <components/esm/records.hpp>
 #include <components/widgets/list.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include <utility>
 
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/soundmanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/soundmanager.hpp"
+#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 #include "../mwmechanics/spells.hpp"
-#include "../mwmechanics/creaturestats.hpp"
-
-#include "tooltips.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_ScrollBar.h"
+#include "MyGUI_ScrollView.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetDefines.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "class.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadspel.hpp"
+#include "spellcreationdialog.hpp"
+#include "tooltips.hpp"
 #include "widgets.hpp"
 
 namespace

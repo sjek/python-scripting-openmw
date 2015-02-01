@@ -1,9 +1,12 @@
 // This program generates the file tables_gen.hpp
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 #include <iconv.h>
+#include <stddef.h>
 #include <cassert>
 
 void tab() { cout << "   "; }

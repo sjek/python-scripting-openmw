@@ -1,10 +1,10 @@
 #ifndef GAME_MWMECHANICS_ALCHEMY_H
 #define GAME_MWMECHANICS_ALCHEMY_H
 
-#include <vector>
-#include <set>
-
 #include <components/esm/effectlist.hpp>
+#include <set>
+#include <string>
+#include <vector>
 
 #include "../mwworld/ptr.hpp"
 

@@ -1,11 +1,19 @@
 #ifndef CSV_WORLD_TABLESUBVIEW_H
 #define CSV_WORLD_TABLESUBVIEW_H
 
-#include "../doc/subview.hpp"
-
 #include <QtCore/qnamespace.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <string>
+#include <vector>
 
+#include "../doc/subview.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/universalid.hpp"
+
+class QEvent;
 class QModelIndex;
+class QObject;
 
 namespace CSMWorld
 {
@@ -24,9 +32,9 @@ namespace CSVFilter
 
 namespace CSVWorld
 {
+    class CreatorFactoryBase;
     class Table;
     class TableBottomBox;
-    class CreatorFactoryBase;
 
     class TableSubView : public CSVDoc::SubView
     {

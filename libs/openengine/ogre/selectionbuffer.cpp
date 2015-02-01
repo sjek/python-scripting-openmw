@@ -1,16 +1,36 @@
-#include "selectionbuffer.hpp"
-
+#include <OgreEntity.h>
 #include <OgreHardwarePixelBuffer.h>
 #include <OgreRenderTexture.h>
 #include <OgreSubEntity.h>
-#include <OgreEntity.h>
 #include <OgreTechnique.h>
 #include <OgreTextureManager.h>
 #include <OgreViewport.h>
-
-#include <stdexcept>
-
+#include <assert.h>
 #include <extern/shiny/Main/Factory.hpp>
+#include <stdlib.h>
+#include <limits>
+#include <string>
+#include <typeinfo>
+#include <utility>
+
+#include "OgreAny.h"
+#include "OgreColourValue.h"
+#include "OgreCommon.h"
+#include "OgreMaterial.h"
+#include "OgreMaterialManager.h"
+#include "OgrePass.h"
+#include "OgrePixelFormat.h"
+#include "OgrePlatform.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreTexture.h"
+#include "OgreUserObjectBindings.h"
+#include "OgreVector4.h"
+#include "selectionbuffer.hpp"
+
+namespace Ogre {
+class Camera;
+class Renderable;
+}  // namespace Ogre
 
 namespace OEngine
 {

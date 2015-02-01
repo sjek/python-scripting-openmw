@@ -1,9 +1,11 @@
 #ifndef OPENMW_MWGUI_SCREENFADER_H
 #define OPENMW_MWGUI_SCREENFADER_H
 
-#include <deque>
-
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/detail/operator_bool.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <deque>
+#include <string>
 
 #include "windowbase.hpp"
 

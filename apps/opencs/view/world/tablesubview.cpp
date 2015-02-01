@@ -1,16 +1,22 @@
 
-#include "tablesubview.hpp"
-
-#include <QVBoxLayout>
-#include <QEvent>
+#include <qboxlayout.h>
+#include <qcoreevent.h>
+#include <qevent.h>
+#include <qmargins.h>
+#include <qmimedata.h>
+#include <qnamespace.h>
+#include <qwidget.h>
+#include <utility>
 
 #include "../../model/doc/document.hpp"
 #include "../../model/world/tablemimedata.hpp"
-
 #include "../filter/filterbox.hpp"
+#include "apps/opencs/view/world/../doc/subview.hpp"
 #include "table.hpp"
 #include "tablebottombox.hpp"
-#include "creator.hpp"
+#include "tablesubview.hpp"
+
+class QObject;
 
 CSVWorld::TableSubView::TableSubView (const CSMWorld::UniversalId& id, CSMDoc::Document& document,
     const CreatorFactoryBase& creatorFactory, bool sorting)

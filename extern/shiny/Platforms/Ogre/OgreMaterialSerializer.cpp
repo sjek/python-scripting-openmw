@@ -1,8 +1,12 @@
-#include "OgreMaterialSerializer.hpp"
-
 #include <OgrePass.h>
-
 #include <OgreStringConverter.h>
+#include <map>
+#include <utility>
+
+#include "OgreMaterialSerializer.h"
+#include "OgreMaterialSerializer.hpp"
+#include "OgreSharedPtr.h"
+#include "OgreTextureUnitState.h"
 
 namespace sh
 {

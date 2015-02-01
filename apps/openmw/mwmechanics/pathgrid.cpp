@@ -1,10 +1,15 @@
-#include "pathgrid.hpp"
+#include <stdlib.h>
+#include <algorithm>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "pathgrid.hpp"
 
 namespace
 {

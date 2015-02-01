@@ -1,6 +1,10 @@
+#include <qglobal.h>
+#include <qlineedit.h>
+#include <qvariant.h>
+
 #include "spinbox.hpp"
 
-#include <QLineEdit>
+class QWidget;
 
 CSVSettings::SpinBox::SpinBox(QWidget *parent)
     : mValueList(QStringList()), QSpinBox(parent)

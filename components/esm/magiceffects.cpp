@@ -1,7 +1,8 @@
-#include "magiceffects.hpp"
+#include <utility>
 
-#include "esmwriter.hpp"
 #include "esmreader.hpp"
+#include "esmwriter.hpp"
+#include "magiceffects.hpp"
 
 namespace ESM
 {

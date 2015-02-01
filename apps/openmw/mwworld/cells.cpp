@@ -1,17 +1,22 @@
-#include "cells.hpp"
-
+#include <components/esm/cellstate.hpp>
+#include <components/esm/defs.hpp>
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/defs.hpp>
-#include <components/esm/cellstate.hpp>
+#include <algorithm>
+#include <iterator>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "class.hpp"
-#include "esmstore.hpp"
-#include "containerstore.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/pathgrid.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "cells.hpp"
 #include "cellstore.hpp"
+#include "components/esm/cellid.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/loadinglistener/loadinglistener.hpp"
+#include "components/misc/stringops.hpp"
+#include "esmstore.hpp"
 
 MWWorld::CellStore *MWWorld::Cells::getCellStore (const ESM::Cell *cell)
 {

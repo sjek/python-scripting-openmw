@@ -1,14 +1,30 @@
-#include "class.hpp"
-
+#include <MyGUI_Gui.h>
 #include <MyGUI_ImageBox.h>
 #include <MyGUI_ListBox.h>
-#include <MyGUI_Gui.h>
+#include <algorithm>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_ISubWidgetText.h"
+#include "MyGUI_Macros.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/widgets.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "class.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/misc/stringops.hpp"
 #include "tooltips.hpp"
 
 #undef min

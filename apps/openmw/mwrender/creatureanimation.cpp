@@ -1,15 +1,26 @@
-#include "creatureanimation.hpp"
-
+#include <OgreBone.h>
 #include <OgreEntity.h>
 #include <OgreSkeletonInstance.h>
-#include <OgreBone.h>
-
 #include <components/esm/loadcrea.hpp>
-
-#include "../mwbase/world.hpp"
+#include <algorithm>
+#include <typeinfo>
+#include <vector>
 
 #include "../mwworld/class.hpp"
-
+#include "OgreController.h"
+#include "OgreMath.h"
+#include "OgreNode.h"
+#include "OgrePrerequisites.h"
+#include "apps/openmw/mwrender/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwrender/../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwrender/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "apps/openmw/mwrender/animation.hpp"
+#include "apps/openmw/mwrender/weaponanimation.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadweap.hpp"
+#include "creatureanimation.hpp"
 #include "renderconst.hpp"
 
 namespace MWRender

@@ -1,17 +1,22 @@
 
-#include "aipackage.hpp"
-
-#include <cmath>
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "creaturestats.hpp"
-#include "movement.hpp"
-#include "../mwworld/action.hpp"
-
 #include <OgreMath.h>
+#include <list>
+#include <string>
 
+#include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "aipackage.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/obstacle.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "movement.hpp"
 #include "steering.hpp"
 
 MWMechanics::AiPackage::~AiPackage() {}

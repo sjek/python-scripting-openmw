@@ -1,9 +1,10 @@
 
-#include "navigationfree.hpp"
-
 #include <OgreCamera.h>
+#include <qpoint.h>
 
-#include <QPoint>
+#include "OgreMath.h"
+#include "OgreVector3.h"
+#include "navigationfree.hpp"
 
 CSVRender::NavigationFree::NavigationFree() : mCamera (0) {}
 

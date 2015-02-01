@@ -1,15 +1,17 @@
-#include "scriptedit.hpp"
-
-#include <algorithm>
-
-#include <QDragEnterEvent>
-#include <QRegExp>
-#include <QString>
+#include <qatomic_i386.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qmimedata.h>
+#include <qnamespace.h>
+#include <qstring.h>
+#include <vector>
 
 #include "../../model/doc/document.hpp"
-
-#include "../../model/world/universalid.hpp"
 #include "../../model/world/tablemimedata.hpp"
+#include "../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/../../model/doc/../world/data.hpp"
+#include "apps/opencs/view/world/scripthighlighter.hpp"
+#include "scriptedit.hpp"
 
 
 CSVWorld::ScriptEdit::ChangeLock::ChangeLock (ScriptEdit& edit) : mEdit (edit)

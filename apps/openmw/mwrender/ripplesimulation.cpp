@@ -1,18 +1,30 @@
-#include "ripplesimulation.hpp"
-
-#include <OgreTextureManager.h>
-#include <OgreStringConverter.h>
 #include <OgreHardwarePixelBuffer.h>
-#include <OgreRoot.h>
 #include <OgreRectangle2D.h>
-#include <OgreSceneNode.h>
 #include <OgreRenderTexture.h>
+#include <OgreRoot.h>
+#include <OgreSceneNode.h>
+#include <OgreStringConverter.h>
+#include <OgreTextureManager.h>
 #include <OgreViewport.h>
-
 #include <extern/shiny/Main/Factory.hpp>
+#include <stddef.h>
+#include <cmath>
+#include <string>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
+#include "OgreAxisAlignedBox.h"
+#include "OgrePixelFormat.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSceneManager.h"
+#include "OgreTexture.h"
+#include "OgreVector2.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "ripplesimulation.hpp"
 
 namespace MWRender
 {

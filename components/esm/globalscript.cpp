@@ -1,8 +1,8 @@
 
-#include "globalscript.hpp"
-
+#include "components/esm/locals.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "globalscript.hpp"
 
 void ESM::GlobalScript::load (ESMReader &esm)
 {

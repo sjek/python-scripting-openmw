@@ -1,3 +1,16 @@
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
+#include <utility>
+#include <vector>
+
+#include "MyGUI_Button.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Widget.h"
 #include "box.hpp"
 
 namespace Gui

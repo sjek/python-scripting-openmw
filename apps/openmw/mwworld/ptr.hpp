@@ -2,16 +2,23 @@
 #define GAME_MWWORLD_PTR_H
 
 #include <cassert>
-
-#include <string>
 #include <sstream>
+#include <stdexcept>
+#include <string>
+#include <typeinfo>
 
 #include "livecellref.hpp"
 
+namespace MWWorld {
+class CellRef;
+class Class;
+class RefData;
+}  // namespace MWWorld
+
 namespace MWWorld
 {
-    class ContainerStore;
     class CellStore;
+    class ContainerStore;
     class LiveCellRefBase;
 
     /// \brief Pointer to a LiveCellRef

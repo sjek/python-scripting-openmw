@@ -1,10 +1,8 @@
 
-#include "universalid.hpp"
-
-#include <ostream>
-#include <stdexcept>
-#include <sstream>
 #include <iostream>
+#include <stdexcept>
+
+#include "universalid.hpp"
 
 namespace
 {

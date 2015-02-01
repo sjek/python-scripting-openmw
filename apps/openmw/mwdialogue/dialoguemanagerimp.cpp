@@ -1,49 +1,68 @@
 
-#include "dialoguemanagerimp.hpp"
-
-#include <cctype>
-#include <cstdlib>
-#include <algorithm>
-#include <iterator>
-#include <list>
-
+#include <components/compiler/locals.hpp>
+#include <components/compiler/scanner.hpp>
+#include <components/compiler/scriptparser.hpp>
+#include <components/esm/dialoguestate.hpp>
 #include <components/esm/loaddial.hpp>
 #include <components/esm/loadinfo.hpp>
-#include <components/esm/dialoguestate.hpp>
-
-#include <components/compiler/exception.hpp>
-#include <components/compiler/errorhandler.hpp>
-#include <components/compiler/scanner.hpp>
-#include <components/compiler/locals.hpp>
-#include <components/compiler/output.hpp>
-#include <components/compiler/scriptparser.hpp>
-
-#include <components/interpreter/interpreter.hpp>
 #include <components/interpreter/defines.hpp>
+#include <components/interpreter/interpreter.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <cstdlib>
+#include <exception>
+#include <iostream>
+#include <list>
+#include <typeinfo>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/journal.hpp"
-#include "../mwbase/scriptmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/scriptmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwgui/dialogue.hpp"
+#include "../mwmechanics/creaturestats.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwscript/compilercontext.hpp"
+#include "../mwscript/extensions.hpp"
+#include "../mwscript/interpretercontext.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwgui/dialogue.hpp"
-
-#include "../mwscript/compilercontext.hpp"
-#include "../mwscript/interpretercontext.hpp"
-#include "../mwscript/extensions.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/npcstats.hpp"
-
+#include "apps/openmw/mwdialogue/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/ptr.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/refdata.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/store.hpp"
+#include "components/compiler/streamerrorhandler.hpp"
+#include "components/esm/aipackage.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/translation/translation.hpp"
+#include "dialoguemanagerimp.hpp"
 #include "filter.hpp"
 #include "hypertextparser.hpp"
+
+namespace Compiler {
+class Extensions;
+class SourceException;
+}  // namespace Compiler
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace MWDialogue
 {

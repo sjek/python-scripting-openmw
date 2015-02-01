@@ -1,13 +1,15 @@
 
-#include "infocollection.hpp"
-
-#include <stdexcept>
-#include <iterator>
-
 #include <components/esm/esmreader.hpp>
 #include <components/esm/loaddial.hpp>
-
 #include <components/misc/stringops.hpp>
+#include <cstddef>
+#include <iterator>
+#include <map>
+#include <stdexcept>
+
+#include "apps/opencs/model/world/collection.hpp"
+#include "apps/opencs/model/world/info.hpp"
+#include "infocollection.hpp"
 
 void CSMWorld::InfoCollection::load (const Info& record, bool base)
 {

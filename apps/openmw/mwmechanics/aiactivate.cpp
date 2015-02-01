@@ -1,16 +1,20 @@
-#include "aiactivate.hpp"
-
 #include <components/esm/aisequence.hpp>
+#include <memory>
+#include <vector>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
-
 #include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-
-#include "steering.hpp"
+#include "aiactivate.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadpgrd.hpp"
 #include "movement.hpp"
 
 MWMechanics::AiActivate::AiActivate(const std::string &objectId)

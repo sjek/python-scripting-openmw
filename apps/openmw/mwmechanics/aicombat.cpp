@@ -1,29 +1,44 @@
-#include "aicombat.hpp"
-
 #include <OgreMath.h>
-
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/aisequence.hpp>
+#include <stdlib.h>
+#include <cmath>
+#include <list>
+#include <memory>
+#include <string>
+#include <vector>
 
-#include "../mwworld/class.hpp"
-#include "../mwworld/timestamp.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/cellstore.hpp"
-
-#include "../mwbase/environment.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
-
+#include "../mwbase/environment.hpp"
 #include "../mwrender/animation.hpp"
-
-
-#include "creaturestats.hpp"
-#include "steering.hpp"
-#include "movement.hpp"
-#include "character.hpp" // fixme: for getActiveWeapon
-
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "OgreVector3.h"
+#include "aicombat.hpp"
 #include "aicombataction.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/world.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/obstacle.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "character.hpp" // fixme: for getActiveWeapon
 #include "combat.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "components/esm/loadweap.hpp"
+#include "creaturestats.hpp"
+#include "movement.hpp"
+#include "steering.hpp"
 
 namespace
 {

@@ -2,10 +2,18 @@
 #define OPENMW_MWRENDER_WEAPONANIMATION_H
 
 #include <OgreController.h>
-
 #include <components/nifogre/ogrenifloader.hpp>
+#include <string>
 
 #include "../mwworld/ptr.hpp"
+#include "OgrePrerequisites.h"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace Ogre {
+class SkeletonInstance;
+}  // namespace Ogre
 
 namespace MWRender
 {

@@ -1,8 +1,15 @@
-#include "windowpinnablebase.hpp"
-
 #include <MyGUI_Button.h>
+#include <stddef.h>
+#include <vector>
 
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetDefines.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "exposedwindow.hpp"
+#include "windowpinnablebase.hpp"
 
 namespace MWGui
 {

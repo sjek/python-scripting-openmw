@@ -1,9 +1,14 @@
 #ifndef GAME_RENDER_CREATUREANIMATION_H
 #define GAME_RENDER_CREATUREANIMATION_H
 
-#include "animation.hpp"
-#include "weaponanimation.hpp"
+#include <string>
+
 #include "../mwworld/inventorystore.hpp"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
+#include "animation.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
+#include "weaponanimation.hpp"
 
 namespace MWWorld
 {

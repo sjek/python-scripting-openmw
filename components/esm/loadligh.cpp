@@ -1,8 +1,9 @@
-#include "loadligh.hpp"
+#include <assert.h>
 
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadligh.hpp"
 
 namespace ESM
 {

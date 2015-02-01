@@ -1,24 +1,32 @@
 #ifndef GAME_SOUND_SOUNDMANAGER_H
 #define GAME_SOUND_SOUNDMANAGER_H
 
+#include <OgreResourceGroupManager.h>
+#include <OgreVector3.h>
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/settings/settings.hpp>
+#include <map>
+#include <memory>
 #include <string>
 #include <utility>
-#include <map>
-
-#include <boost/shared_ptr.hpp>
-
-#include <OgreVector3.h>
-#include <OgreResourceGroupManager.h>
-
-#include <components/settings/settings.hpp>
 
 #include "../mwbase/soundmanager.hpp"
+#include "OgreStringVector.h"
+#include "apps/openmw/mwsound/../mwbase/../mwworld/ptr.hpp"
+
+namespace MWWorld {
+class CellStore;
+}  // namespace MWWorld
+namespace Ogre {
+class ResourceGroupManager;
+}  // namespace Ogre
 
 namespace MWSound
 {
+    class Sound;
     class Sound_Output;
     struct Sound_Decoder;
-    class Sound;
 
     enum Environment {
         Env_Normal,

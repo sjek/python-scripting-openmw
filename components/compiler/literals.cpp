@@ -1,7 +1,8 @@
 
-#include "literals.hpp"
-
 #include <algorithm>
+
+#include "components/interpreter/types.hpp"
+#include "literals.hpp"
 
 namespace Compiler
 {

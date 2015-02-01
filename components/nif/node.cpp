@@ -1,3 +1,11 @@
+#include <iostream>
+#include <string>
+
+#include "OgreMatrix4.h"
+#include "OgreQuaternion.h"
+#include "components/nif/niftypes.hpp"
+#include "components/nif/property.hpp"
+#include "components/nif/record.hpp"
 #include "node.hpp"
 
 namespace Nif

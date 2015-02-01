@@ -1,10 +1,28 @@
-#include "terraingrid.hpp"
-
+#include <OgreAxisAlignedBox.h>
 #include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-#include <OgreAxisAlignedBox.h>
+#include <stddef.h>
+#include <cmath>
+#include <string>
+#include <vector>
 
+#include "OgreDataStream.h"
+#include "OgrePixelFormat.h"
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "OgreStringConverter.h"
+#include "OgreTexture.h"
+#include "OgreTextureManager.h"
+#include "OgreVector2.h"
+#include "OgreVector3.h"
 #include "chunk.hpp"
+#include "components/terrain/buffercache.hpp"
+#include "components/terrain/material.hpp"
+#include "components/terrain/storage.hpp"
+#include "components/terrain/world.hpp"
+#include "terraingrid.hpp"
 
 namespace Terrain
 {

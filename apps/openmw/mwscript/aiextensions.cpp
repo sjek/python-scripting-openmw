@@ -1,31 +1,31 @@
 
-#include "aiextensions.hpp"
-
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
 
-#include "../mwworld/class.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
+#include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/aiactivate.hpp"
 #include "../mwmechanics/aiescort.hpp"
 #include "../mwmechanics/aifollow.hpp"
 #include "../mwmechanics/aitravel.hpp"
 #include "../mwmechanics/aiwander.hpp"
-
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-
+#include "../mwmechanics/creaturestats.hpp"
+#include "../mwworld/class.hpp"
+#include "aiextensions.hpp"
+#include "apps/openmw/mwscript/../mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwscript/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "components/interpreter/types.hpp"
 #include "interpretercontext.hpp"
 #include "ref.hpp"
-
-#include <iostream>
-
-#include "../mwbase/mechanicsmanager.hpp"
 
 namespace MWScript
 {

@@ -1,15 +1,32 @@
-#include "converter.hpp"
-
+#include <OgreImage.h>
+#include <components/esm/containerstate.hpp>
+#include <components/esm/creaturestate.hpp>
+#include <stddef.h>
+#include <istream>
+#include <set>
 #include <stdexcept>
 
-#include <OgreImage.h>
-#include <OgreColourValue.h>
-
-#include <components/esm/creaturestate.hpp>
-#include <components/esm/containerstate.hpp>
-
-#include "convertcrec.hpp"
+#include "OgreDataStream.h"
+#include "OgrePixelFormat.h"
+#include "OgrePlatform.h"
+#include "OgreSharedPtr.h"
+#include "apps/essimporter/convertacdt.hpp"
+#include "apps/essimporter/convertnpcc.hpp"
+#include "apps/essimporter/importcellref.hpp"
+#include "apps/essimporter/importcntc.hpp"
+#include "apps/essimporter/importcrec.hpp"
+#include "apps/essimporter/importercontext.hpp"
+#include "components/esm/cellid.hpp"
+#include "components/esm/cellstate.hpp"
+#include "components/esm/custommarkerstate.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/globalmap.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/locals.hpp"
 #include "convertcntc.hpp"
+#include "convertcrec.hpp"
+#include "converter.hpp"
 #include "convertscri.hpp"
 
 namespace

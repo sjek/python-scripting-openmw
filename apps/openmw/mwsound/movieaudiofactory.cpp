@@ -1,18 +1,29 @@
-#include "movieaudiofactory.hpp"
-
 #include <extern/ogre-ffmpeg-videoplayer/audiodecoder.hpp>
 #include <extern/ogre-ffmpeg-videoplayer/videostate.hpp>
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libavutil/channel_layout.h>
+#include <libavutil/samplefmt.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/types.h>
+#include <ostream>
+#include <stdexcept>
+#include <string>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/soundmanager.hpp"
-
-#include "sound_decoder.hpp"
+#include "OgreDataStream.h"
+#include "OgreSharedPtr.h"
+#include "movieaudiofactory.hpp"
 #include "sound.hpp"
+#include "sound_decoder.hpp"
 
 namespace MWSound
 {
 
     class MovieAudioDecoder;
+
     class MWSoundDecoderBridge : public Sound_Decoder
     {
     public:

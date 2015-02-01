@@ -1,22 +1,32 @@
-#include "scripttest.hpp"
-
-#include "../mwworld/manualref.hpp"
-#include "../mwworld/class.hpp"
+#include <components/compiler/locals.hpp>
+#include <components/compiler/scanner.hpp>
+#include <components/compiler/scriptparser.hpp>
+#include <components/compiler/streamerrorhandler.hpp>
+#include <exception>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/scriptmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwscript/compilercontext.hpp"
-
-#include <components/compiler/exception.hpp>
-#include <components/compiler/streamerrorhandler.hpp>
-#include <components/compiler/scanner.hpp>
-#include <components/compiler/locals.hpp>
-#include <components/compiler/output.hpp>
-#include <components/compiler/scriptparser.hpp>
-
+#include "../mwworld/class.hpp"
+#include "../mwworld/manualref.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/esmstore.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/ptr.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/store.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadinfo.hpp"
+#include "components/esm/loadnpc.hpp"
 #include "filter.hpp"
+#include "scripttest.hpp"
+
+namespace Compiler {
+class Extensions;
+class SourceException;
+}  // namespace Compiler
 
 namespace
 {

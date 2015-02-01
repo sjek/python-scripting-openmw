@@ -1,17 +1,23 @@
 #ifndef COMPILER_EXPRPARSER_H_INCLUDED
 #define COMPILER_EXPRPARSER_H_INCLUDED
 
-#include <vector>
-
 #include <components/interpreter/types.hpp>
+#include <string>
+#include <vector>
 
 #include "parser.hpp"
 #include "tokenloc.hpp"
 
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+}  // namespace Compiler
+
 namespace Compiler
 {
-    class Locals;
     class Literals;
+    class Locals;
 
     class ExprParser : public Parser
     {

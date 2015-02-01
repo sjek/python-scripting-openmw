@@ -2,6 +2,9 @@
 #define COMPONENTS_FILES_COLLECTION_HPP
 
 #include <boost/filesystem.hpp>
+#include <boost/filesystem/path.hpp>
+#include <map>
+#include <string>
 
 #include "multidircollection.hpp"
 

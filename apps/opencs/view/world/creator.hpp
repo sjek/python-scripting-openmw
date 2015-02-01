@@ -1,13 +1,14 @@
 #ifndef CSV_WORLD_CREATOR_H
 #define CSV_WORLD_CREATOR_H
 
-#include <memory>
-
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QWidget>
-
-#include "../../model/world/universalid.hpp"
+#include <memory>
+#include <string>
 
 #include "../../model/world/scope.hpp"
+#include "../../model/world/universalid.hpp"
 
 class QUndoStack;
 

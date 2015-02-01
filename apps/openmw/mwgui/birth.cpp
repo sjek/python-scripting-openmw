@@ -1,17 +1,31 @@
-#include "birth.hpp"
-
-#include <MyGUI_ListBox.h>
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_Gui.h>
-
-#include <components/esm/records.hpp>
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_ListBox.h>
 #include <components/misc/resourcehelpers.hpp>
+#include <algorithm>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_Macros.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "birth.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/misc/stringops.hpp"
 #include "widgets.hpp"
 
 namespace

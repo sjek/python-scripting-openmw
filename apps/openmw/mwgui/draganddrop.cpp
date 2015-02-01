@@ -1,19 +1,23 @@
-#include "draganddrop.hpp"
-
-#include <MyGUI_Gui.h>
 #include <MyGUI_ControllerManager.h>
+#include <MyGUI_Gui.h>
+#include <stddef.h>
+#include <string>
 
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/soundmanager.hpp"
-
+#include "../mwbase/windowmanager.hpp"
 #include "../mwworld/class.hpp"
-
-#include "sortfilteritemmodel.hpp"
-#include "inventorywindow.hpp"
-#include "itemwidget.hpp"
-#include "itemview.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_ControllerItem.h"
+#include "MyGUI_RTTI.h"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
 #include "controllers.hpp"
+#include "draganddrop.hpp"
+#include "inventorywindow.hpp"
+#include "itemview.hpp"
+#include "itemwidget.hpp"
+#include "sortfilteritemmodel.hpp"
 
 namespace MWGui
 {

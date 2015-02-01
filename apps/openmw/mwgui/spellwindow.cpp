@@ -1,25 +1,45 @@
-#include "spellwindow.hpp"
-
-#include <boost/format.hpp>
-
 #include <MyGUI_InputManager.h>
+#include <boost/format/alt_sstream.hpp>
+#include <boost/format/alt_sstream_impl.hpp>
+#include <boost/format/format_class.hpp>
+#include <boost/format/format_fwd.hpp>
+#include <boost/format/format_implementation.hpp>
+#include <boost/format/free_funcs.hpp>
+#include <boost/optional/optional.hpp>
+#include <stddef.h>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 #include "../mwmechanics/spells.hpp"
-#include "../mwmechanics/creaturestats.hpp"
-
-#include "spellicons.hpp"
-#include "inventorywindow.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Widget.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/spellmodel.hpp"
+#include "apps/openmw/mwgui/windowpinnablebase.hpp"
+#include "components/esm/loadspel.hpp"
 #include "confirmationdialog.hpp"
+#include "inventorywindow.hpp"
+#include "spellicons.hpp"
 #include "spellview.hpp"
+#include "spellwindow.hpp"
+
+namespace MWGui {
+class DragAndDrop;
+}  // namespace MWGui
 
 namespace MWGui
 {

@@ -1,14 +1,24 @@
 
-#include "enumdelegate.hpp"
-
+#include <qabstractitemmodel.h>
+#include <qapplication.h>
+#include <qcombobox.h>
+#include <qnamespace.h>
+#include <qstyle.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <qwidget.h>
 #include <cassert>
-#include <stdexcept>
-
-#include <QComboBox>
-#include <QApplication>
-#include <QUndoStack>
+#include <cstddef>
 
 #include "../../model/world/commands.hpp"
+#include "apps/opencs/view/world/util.hpp"
+#include "enumdelegate.hpp"
+
+class QObject;
+class QPainter;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 void CSVWorld::EnumDelegate::setModelDataImp (QWidget *editor, QAbstractItemModel *model,
     const QModelIndex& index) const

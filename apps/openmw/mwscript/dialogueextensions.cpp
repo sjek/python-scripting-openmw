@@ -1,21 +1,20 @@
 
-#include "dialogueextensions.hpp"
-
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <string>
 
-#include "../mwbase/environment.hpp"
 #include "../mwbase/dialoguemanager.hpp"
+#include "../mwbase/environment.hpp"
 #include "../mwbase/journal.hpp"
-
-#include "../mwworld/class.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
-#include "interpretercontext.hpp"
+#include "../mwworld/class.hpp"
+#include "apps/openmw/mwscript/../mwbase/world.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "components/interpreter/types.hpp"
+#include "dialogueextensions.hpp"
 #include "ref.hpp"
 
 namespace MWScript

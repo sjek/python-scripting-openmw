@@ -1,29 +1,40 @@
-#include "importer.hpp"
-#include <boost/shared_ptr.hpp>
-
 #include <OgreRoot.h>
-
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/esm/defs.hpp>
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/defs.hpp>
-
-#include <components/esm/savedgame.hpp>
-#include <components/esm/player.hpp>
-
 #include <components/esm/loadalch.hpp>
-#include <components/esm/loadclas.hpp>
-#include <components/esm/loadspel.hpp>
 #include <components/esm/loadarmo.hpp>
-#include <components/esm/loadweap.hpp>
 #include <components/esm/loadclot.hpp>
 #include <components/esm/loadench.hpp>
-#include <components/esm/loadweap.hpp>
 #include <components/esm/loadlevlist.hpp>
-#include <components/esm/loadglob.hpp>
+#include <components/esm/loadspel.hpp>
+#include <components/esm/loadweap.hpp>
+#include <components/esm/player.hpp>
+#include <components/esm/savedgame.hpp>
+#include <stddef.h>
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <set>
+#include <utility>
+#include <vector>
 
-#include "importercontext.hpp"
-
+#include "OgreDataStream.h"
+#include "OgreImage.h"
+#include "OgreLogManager.h"
+#include "OgrePixelFormat.h"
+#include "OgreSharedPtr.h"
+#include "components/esm/cellid.hpp"
+#include "components/esm/dialoguestate.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "components/esm/npcstate.hpp"
 #include "converter.hpp"
+#include "importer.hpp"
+#include "importercontext.hpp"
 
 namespace
 {

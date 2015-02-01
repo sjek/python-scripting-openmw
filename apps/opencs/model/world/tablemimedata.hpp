@@ -2,13 +2,15 @@
 #ifndef TABLEMIMEDATA_H
 #define TABLEMIMEDATA_H
 
+#include <qmimedata.h>
+#include <qstringlist.h>
+#include <QStringList>
+#include <QtCore/QMimeData>
+#include <string>
 #include <vector>
 
-#include <QtCore/QMimeData>
-#include <QStringList>
-
-#include "universalid.hpp"
 #include "columnbase.hpp"
+#include "universalid.hpp"
 
 namespace CSMDoc
 {

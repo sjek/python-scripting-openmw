@@ -1,19 +1,35 @@
 #ifndef MWGUI_QUICKKEYS_H
 #define MWGUI_QUICKKEYS_H
 
-#include "../mwworld/ptr.hpp"
+#include <stdint.h>
+#include <string>
+#include <vector>
 
+#include "../mwworld/ptr.hpp"
+#include "spellmodel.hpp"
 #include "windowbase.hpp"
 
-#include "spellmodel.hpp"
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class EditBox;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {
 
-    class QuickKeysMenuAssign;
     class ItemSelectionDialog;
-    class MagicSelectionDialog;
     class ItemWidget;
+    class MagicSelectionDialog;
+    class QuickKeysMenuAssign;
     class SpellView;
 
     class QuickKeysMenu : public WindowBase

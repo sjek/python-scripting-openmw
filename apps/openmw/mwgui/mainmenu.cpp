@@ -1,28 +1,35 @@
-#include "mainmenu.hpp"
-
-#include <OgreResourceGroupManager.h>
-
-#include <MyGUI_TextBox.h>
 #include <MyGUI_Gui.h>
 #include <MyGUI_RenderManager.h>
-
+#include <MyGUI_TextBox.h>
+#include <OgreResourceGroupManager.h>
+#include <assert.h>
 #include <components/version/version.hpp>
-
 #include <components/widgets/imagebutton.hpp>
+#include <stddef.h>
+#include <list>
+#include <ostream>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/journal.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/statemanager.hpp"
-
-#include "../mwstate/character.hpp"
-
-#include "savegamedialog.hpp"
-#include "confirmationdialog.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_ImageBox.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
 #include "backgroundimage.hpp"
+#include "components/settings/settings.hpp"
+#include "confirmationdialog.hpp"
+#include "mainmenu.hpp"
+#include "openengine/gui/layout.hpp"
+#include "savegamedialog.hpp"
 #include "videowidget.hpp"
 
 namespace MWGui

@@ -1,22 +1,50 @@
-#include "statswindow.hpp"
-
-#include <MyGUI_Window.h>
-#include <MyGUI_ScrollView.h>
-#include <MyGUI_ProgressBar.h>
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_Gui.h>
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_ProgressBar.h>
+#include <MyGUI_ScrollView.h>
+#include <MyGUI_Window.h>
+#include <assert.h>
+#include <boost/array.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <iterator>
+#include <sstream>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/player.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/player.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/windowpinnablebase.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadskil.hpp"
+#include "statswindow.hpp"
 #include "tooltips.hpp"
+
+namespace MWGui {
+class DragAndDrop;
+}  // namespace MWGui
 
 namespace MWGui
 {

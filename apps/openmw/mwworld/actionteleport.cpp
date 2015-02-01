@@ -1,8 +1,16 @@
-#include "actionteleport.hpp"
+#include <list>
+#include <set>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "OgreVector3.h"
+#include "actionteleport.hpp"
+#include "apps/openmw/mwworld/action.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
 #include "player.hpp"
 
 namespace

@@ -1,15 +1,18 @@
+#include <boost/version.hpp>
+#include <components/files/configurationmanager.hpp>
+#include <qatomic_i386.h>
+#include <qbytearray.h>
+#include <qchar.h>
+#include <qdir.h>
+#include <qiterator.h>
+#include <qlist.h>
+#include <qregexp.h>
+#include <qtextstream.h>
+#include <string>
+
+#include "components/files/multidircollection.hpp"
 #include "gamesettings.hpp"
 #include "launchersettings.hpp"
-
-#include <QTextStream>
-#include <QDir>
-#include <QString>
-#include <QRegExp>
-#include <QMap>
-
-#include <components/files/configurationmanager.hpp>
-
-#include <boost/version.hpp>
 
 /**
  * Workaround for problems with whitespaces in paths in older versions of Boost library

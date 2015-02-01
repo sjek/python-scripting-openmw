@@ -1,24 +1,27 @@
-#include "ogreinit.hpp"
-
-#include <string>
-#include <ctime>
+#include <OgreLog.h>
+#include <OgreLogManager.h>
+#include <OgreParticleSystemManager.h>
+#include <OgreRoot.h>
+#include <boost/filesystem/path_traits.hpp>
+#include <stdlib.h>
 #include <cstdio>
 #include <cstring>
+#include <ctime>
+#include <ostream>
+#include <stdexcept>
+#include <string>
 
-#include <OgreRoot.h>
-#include <OgreParticleEmitterFactory.h>
-#include <OgreParticleSystemManager.h>
-#include <OgreLogManager.h>
-#include <OgreLog.h>
+#include "OgreMemoryAllocatorConfig.h"
+#include "OgrePlatform.h"
+#include "ogreinit.hpp"
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 #include <OSX/macUtils.h>
 #endif
 
-#include <components/nifogre/particles.hpp>
-
-#include <boost/filesystem/path.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <components/nifogre/particles.hpp>
 
 #include "ogreplugin.hpp"
 

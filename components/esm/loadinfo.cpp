@@ -1,8 +1,9 @@
-#include "loadinfo.hpp"
-
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/variant.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadinfo.hpp"
 
 namespace ESM
 {

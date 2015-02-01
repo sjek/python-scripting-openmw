@@ -1,8 +1,20 @@
 #ifndef MWGUI_TRADEWINDOW_H
 #define MWGUI_TRADEWINDOW_H
 
+#include <stddef.h>
+
+#include "MyGUI_MouseButton.h"
 #include "referenceinterface.hpp"
 #include "windowbase.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

@@ -1,20 +1,40 @@
-#include "trainingwindow.hpp"
-
 #include <MyGUI_Gui.h>
+#include <algorithm>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
-
+#include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/npcstats.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetDefines.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
 #include "tooltips.hpp"
+#include "trainingwindow.hpp"
 
 namespace
 {

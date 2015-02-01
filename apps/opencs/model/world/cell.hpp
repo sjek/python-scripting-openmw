@@ -1,10 +1,13 @@
 #ifndef CSM_WOLRD_CELL_H
 #define CSM_WOLRD_CELL_H
 
-#include <vector>
-#include <string>
-
 #include <components/esm/loadcell.hpp>
+#include <string>
+#include <vector>
+
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace CSMWorld
 {

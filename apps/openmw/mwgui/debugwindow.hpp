@@ -3,6 +3,11 @@
 
 #include "windowbase.hpp"
 
+namespace MyGUI {
+class EditBox;
+class TabControl;
+}  // namespace MyGUI
+
 namespace MWGui
 {
 

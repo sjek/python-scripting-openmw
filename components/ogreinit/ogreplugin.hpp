@@ -1,10 +1,9 @@
 #ifndef COMPONENTS_FILES_OGREPLUGIN_H
 #define COMPONENTS_FILES_OGREPLUGIN_H
 
-#include <string>
-
 #include <boost/filesystem.hpp>
 #include <boost/version.hpp>
+#include <string>
 
 namespace Ogre {
 	class Root;

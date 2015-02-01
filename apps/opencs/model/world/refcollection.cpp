@@ -1,14 +1,20 @@
 
-#include "refcollection.hpp"
-
 #include <sstream>
+#include <utility>
 
-#include <components/misc/stringops.hpp>
-
-#include "ref.hpp"
+#include "apps/opencs/model/world/../doc/messages.hpp"
+#include "apps/opencs/model/world/collection.hpp"
 #include "cell.hpp"
-#include "universalid.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/loadcell.hpp"
 #include "record.hpp"
+#include "ref.hpp"
+#include "refcollection.hpp"
+#include "universalid.hpp"
+
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 void CSMWorld::RefCollection::load (ESM::ESMReader& reader, int cellIndex, bool base,
     std::map<ESM::RefNum, std::string>& cache, CSMDoc::Messages& messages)

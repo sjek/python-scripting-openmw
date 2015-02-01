@@ -1,26 +1,37 @@
-#include "maindialog.hpp"
-
+#include <boost/filesystem/path.hpp>
 #include <components/version/version.hpp>
+#include <qatomic_i386.h>
+#include <qdebug.h>
+#include <qdir.h>
+#include <qevent.h>
+#include <qfile.h>
+#include <qfontdatabase.h>
+#include <qglobal.h>
+#include <qicon.h>
+#include <qiodevice.h>
+#include <qlist.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qpoint.h>
+#include <qpushbutton.h>
+#include <qstring.h>
+#include <qtextcodec.h>
+#include <qtextstream.h>
+#include <string>
 
-#include <QLabel>
-#include <QDate>
-#include <QTime>
-#include <QMessageBox>
-#include <QPushButton>
-#include <QFontDatabase>
-#include <QInputDialog>
-#include <QFileDialog>
-#include <QCloseEvent>
-#include <QTextCodec>
-#include <QFile>
-#include <QDir>
-
-#include <QDebug>
-
-#include "playpage.hpp"
-#include "graphicspage.hpp"
+#include "apps/launcher/settings/graphicssettings.hpp"
+#include "components/config/gamesettings.hpp"
+#include "components/config/launchersettings.hpp"
+#include "components/files/configurationmanager.hpp"
+#include "components/process/processinvoker.hpp"
 #include "datafilespage.hpp"
+#include "graphicspage.hpp"
+#include "maindialog.hpp"
+#include "playpage.hpp"
 #include "settingspage.hpp"
+
+class QAbstractButton;
+class QWidget;
 
 using namespace Process;
 

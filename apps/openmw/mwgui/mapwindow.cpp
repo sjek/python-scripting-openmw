@@ -1,31 +1,59 @@
-#include "mapwindow.hpp"
-
+#include <MyGUI_FactoryManager.h>
+#include <MyGUI_Gui.h>
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_InputManager.h>
+#include <MyGUI_LanguageManager.h>
+#include <MyGUI_RenderManager.h>
+#include <MyGUI_RotatingSkin.h>
+#include <MyGUI_ScrollView.h>
 #include <OgreSceneNode.h>
 #include <OgreVector2.h>
+#include <components/esm/globalmap.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <cmath>
+#include <stdexcept>
 
-#include <MyGUI_ScrollView.h>
-#include <MyGUI_ImageBox.h>
-#include <MyGUI_RenderManager.h>
-#include <MyGUI_Gui.h>
-#include <MyGUI_LanguageManager.h>
-#include <MyGUI_InputManager.h>
-#include <MyGUI_RotatingSkin.h>
-#include <MyGUI_FactoryManager.h>
-
+#include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-
-#include "../mwworld/player.hpp"
+#include "../mwrender/globalmap.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwrender/globalmap.hpp"
-
-#include <components/esm/globalmap.hpp>
-
-#include "widgets.hpp"
+#include "../mwworld/player.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_Colour.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_ISubWidget.h"
+#include "MyGUI_ISubWidgetRect.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_TextIterator.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowpinnablebase.hpp"
+#include "components/esm/cellid.hpp"
+#include "components/esm/custommarkerstate.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/settings/settings.hpp"
 #include "confirmationdialog.hpp"
+#include "mapwindow.hpp"
+
+namespace MWGui {
+class DragAndDrop;
+}  // namespace MWGui
 
 namespace
 {

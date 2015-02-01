@@ -1,19 +1,30 @@
 #ifndef MWGUI_WIDGETS_H
 #define MWGUI_WIDGETS_H
 
-#include "../mwmechanics/stat.hpp"
-
-#include <components/esm/effectlist.hpp>
-#include <components/esm/loadskil.hpp>
-
 #include <MyGUI_Button.h>
 #include <MyGUI_EditBox.h>
 #include <MyGUI_ScrollBar.h>
+#include <components/esm/effectlist.hpp>
+#include <components/esm/loadskil.hpp>
+#include <string>
+#include <vector>
+
+#include "../mwmechanics/stat.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_MouseButton.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+
+namespace MyGUI {
+class ProgressBar;
+class TextBox;
+}  // namespace MyGUI
 
 namespace MyGUI
 {
-    class ImageBox;
     class ControllerItem;
+    class ImageBox;
 }
 
 namespace MWBase
@@ -173,6 +184,7 @@ namespace MWGui
          * @todo remove this class and use MWEffectList instead
          */
         class MWSpellEffect;
+
         class MWSpell : public MyGUI::Widget
         {
             MYGUI_RTTI_DERIVED( MWSpell )

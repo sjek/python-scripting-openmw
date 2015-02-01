@@ -1,32 +1,42 @@
 
-#include "container.hpp"
-
-#include <components/esm/loadcont.hpp>
+#include <assert.h>
 #include <components/esm/containerstate.hpp>
+#include <components/esm/loadcont.hpp>
+#include <stdlib.h>
+#include <memory>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/failedaction.hpp"
-#include "../mwworld/nullaction.hpp"
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/customdata.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/actionopen.hpp"
-#include "../mwworld/actiontrap.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/inventorystore.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwgui/tooltips.hpp"
-
+#include "../mwmechanics/npcstats.hpp"
 #include "../mwrender/actors.hpp"
 #include "../mwrender/renderinginterface.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
+#include "../mwworld/actionopen.hpp"
+#include "../mwworld/actiontrap.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/customdata.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/failedaction.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/nullaction.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwclass/../mwworld/action.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "apps/openmw/mwclass/../mwworld/store.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/esm/objectstate.hpp"
+#include "components/misc/stringops.hpp"
+#include "container.hpp"
 
 namespace
 {

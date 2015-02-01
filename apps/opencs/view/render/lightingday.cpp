@@ -1,7 +1,10 @@
 
-#include "lightingday.hpp"
-
 #include <OgreSceneManager.h>
+
+#include "OgreColourValue.h"
+#include "OgreLight.h"
+#include "OgreVector3.h"
+#include "lightingday.hpp"
 
 CSVRender::LightingDay::LightingDay() : mSceneManager (0), mLight (0) {}
 

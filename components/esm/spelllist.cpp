@@ -1,7 +1,7 @@
-#include "spelllist.hpp"
-
+#include "components/misc/stringops.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "spelllist.hpp"
 
 namespace ESM {
 

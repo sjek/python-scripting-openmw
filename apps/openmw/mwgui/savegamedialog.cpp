@@ -1,27 +1,50 @@
-#include "savegamedialog.hpp"
-#include "widgets.hpp"
-
-#include <OgreImage.h>
-#include <OgreTextureManager.h>
-
 #include <MyGUI_ComboBox.h>
 #include <MyGUI_ImageBox.h>
-#include <MyGUI_ListBox.h>
 #include <MyGUI_InputManager.h>
-
+#include <MyGUI_ListBox.h>
+#include <OgreImage.h>
+#include <OgreTextureManager.h>
+#include <assert.h>
+#include <boost/filesystem/path.hpp>
 #include <components/misc/stringops.hpp>
-
 #include <components/settings/settings.hpp>
+#include <locale.h>
+#include <time.h>
+#include <algorithm>
+#include <list>
+#include <ostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
 
-#include "../mwbase/statemanager.hpp"
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
+#include "../mwbase/statemanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwstate/character.hpp"
-
+#include "../mwworld/esmstore.hpp"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_Macros.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "OgreDataStream.h"
+#include "OgrePixelFormat.h"
+#include "OgrePrerequisites.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "OgreTexture.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/savedgame.hpp"
 #include "confirmationdialog.hpp"
+#include "savegamedialog.hpp"
 
 namespace MWGui
 {

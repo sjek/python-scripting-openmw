@@ -1,7 +1,13 @@
 #ifndef MWGUI_WINDOW_PINNABLE_BASE_H
 #define MWGUI_WINDOW_PINNABLE_BASE_H
 
+#include <string>
+
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

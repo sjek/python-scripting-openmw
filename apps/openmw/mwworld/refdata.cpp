@@ -1,15 +1,14 @@
 
-#include "refdata.hpp"
-
 #include <OgreSceneNode.h>
-
 #include <components/esm/objectstate.hpp>
-
-#include "customdata.hpp"
-#include "cellstore.hpp"
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
+#include "apps/openmw/mwworld/../mwscript/locals.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "customdata.hpp"
+#include "refdata.hpp"
 
 namespace MWWorld
 {

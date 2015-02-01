@@ -1,16 +1,24 @@
-#include "material.hpp"
-
-#include <components/nif/node.hpp>
-#include <components/misc/resourcehelpers.hpp>
-#include <components/settings/settings.hpp>
-#include <components/nifoverrides/nifoverrides.hpp>
-
-#include <extern/shiny/Main/Factory.hpp>
-
 #include <OgreMaterialManager.h>
-#include <OgreMaterial.h>
+#include <boost/functional/hash/hash.hpp>
+#include <components/misc/resourcehelpers.hpp>
+#include <components/nifoverrides/nifoverrides.hpp>
+#include <extern/shiny/Main/Factory.hpp>
+#include <utility>
+#include <vector>
 
-#include <boost/functional/hash.hpp>
+#include "OgreSharedPtr.h"
+#include "OgreStringConverter.h"
+#include "OgreVector3.h"
+#include "components/nif/base.hpp"
+#include "components/nif/controlled.hpp"
+#include "components/nif/data.hpp"
+#include "components/nif/property.hpp"
+#include "components/nif/record.hpp"
+#include "components/nif/recordptr.hpp"
+#include "extern/shiny/Main/MaterialInstance.hpp"
+#include "extern/shiny/Main/Platform.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "material.hpp"
 
 
 namespace NifOgre

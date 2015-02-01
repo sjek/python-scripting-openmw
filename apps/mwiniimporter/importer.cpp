@@ -1,15 +1,16 @@
-#include "importer.hpp"
-
-#include <iostream>
-#include <string>
-#include <map>
-#include <vector>
-#include <algorithm>
-#include <sstream>
-#include <components/misc/stringops.hpp>
-
-#include <boost/filesystem/path.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <iostream>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "components/to_utf8/to_utf8.hpp"
+#include "importer.hpp"
 
 namespace bfs = boost::filesystem;
 

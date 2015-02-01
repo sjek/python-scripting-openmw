@@ -1,6 +1,11 @@
+#include <sstream>
+
+#include "components/esm/loadland.hpp"
 #include "land.hpp"
 
-#include <sstream>
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace CSMWorld
 {

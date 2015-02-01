@@ -1,9 +1,18 @@
 #ifndef CSV_WORLD_INFOCREATOR_H
 #define CSV_WORLD_INFOCREATOR_H
 
+#include <qobjectdefs.h>
+#include <string>
+
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
 #include "genericcreator.hpp"
 
 class QLineEdit;
+class QUndoStack;
+namespace CSMWorld {
+class CreateCommand;
+class Data;
+}  // namespace CSMWorld
 
 namespace CSMWorld
 {

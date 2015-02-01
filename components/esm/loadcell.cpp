@@ -1,17 +1,15 @@
-#include "loadcell.hpp"
-
-#include <string>
-#include <sstream>
-#include <list>
-
-#include <boost/concept_check.hpp>
-
 #include <components/misc/stringops.hpp>
+#include <sstream>
+#include <string>
 
+#include "cellid.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
-#include "cellid.hpp"
+#include "loadcell.hpp"
 
 namespace
 {

@@ -1,6 +1,9 @@
-#include "windowcaption.hpp"
-
+#include <stddef.h>
 #include <stdexcept>
+
+#include "MyGUI_EditBox.h"
+#include "MyGUI_Widget.h"
+#include "windowcaption.hpp"
 
 namespace Gui
 {

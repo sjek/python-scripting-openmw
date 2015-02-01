@@ -1,12 +1,21 @@
 #ifndef MWGUI_JOURNALVIEWMODEL_HPP
 #define MWGUI_JOURNALVIEWMODEL_HPP
 
-#include <string>
-#include <memory>
-#include <functional>
-#include <stdint.h>
 #include <boost/function.hpp>
+#include <boost/function/function_template.hpp>
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/detail/operator_bool.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <stdint.h>
+#include <functional>
+#include <memory>
+#include <string>
+#include <utility>
+
+namespace boost {
+template <typename Signature> class function;
+}  // namespace boost
 
 namespace MWGui
 {

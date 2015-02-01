@@ -1,7 +1,11 @@
 
+#include <components/misc/stringops.hpp>
+#include <qbytearray.h>
+#include <qstring.h>
+
 #include "idvalidator.hpp"
 
-#include <components/misc/stringops.hpp>
+class QObject;
 
 bool CSVWorld::IdValidator::isValid (const QChar& c, bool first) const
 {

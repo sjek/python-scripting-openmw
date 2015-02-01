@@ -1,18 +1,29 @@
-#include "ShaderInstance.hpp"
-
-#include <stdexcept>
-#include <iostream>
-#include <fstream>
-
+#include <assert.h>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/detail/classification.hpp>
+#include <boost/algorithm/string/replace.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <boost/bind/arg.hpp>
+#include <boost/bind/bind.hpp>
+#include <boost/bind/bind_template.hpp>
+#include <boost/bind/placeholders.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/iterator/iterator_facade.hpp>
+#include <boost/iterator/iterator_traits.hpp>
 #include <boost/lexical_cast.hpp>
-#include <boost/algorithm/string.hpp>
-#include <boost/bind.hpp>
+#include <algorithm>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <stdexcept>
 
-#include <boost/filesystem.hpp>
-
-#include "Preprocessor.hpp"
 #include "Factory.hpp"
+#include "Preprocessor.hpp"
+#include "ShaderInstance.hpp"
 #include "ShaderSet.hpp"
+#include "extern/shiny/Main/Platform.hpp"
 
 namespace
 {

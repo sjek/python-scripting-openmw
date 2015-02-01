@@ -1,23 +1,25 @@
 
-#include "unpagedworldspacewidget.hpp"
-
+#include <OgreCamera.h>
+#include <OgreColourValue.h>
+#include <qabstractitemmodel.h>
+#include <qvariant.h>
 #include <sstream>
 
-#include <OgreColourValue.h>
-#include <OgreCamera.h>
-
-#include <QtGui/qevent.h>
-
 #include "../../model/doc/document.hpp"
-
 #include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
-#include "../../model/world/tablemimedata.hpp"
-
-#include "../widget/scenetooltoggle.hpp"
 #include "../widget/scenetooltoggle2.hpp"
-
+#include "OgreVector3.h"
+#include "apps/opencs/model/doc/../world/cell.hpp"
+#include "apps/opencs/model/doc/../world/columns.hpp"
+#include "apps/opencs/model/doc/../world/record.hpp"
+#include "apps/opencs/view/render/cell.hpp"
+#include "apps/opencs/view/render/worldspacewidget.hpp"
+#include "components/esm/loadcell.hpp"
 #include "elements.hpp"
+#include "unpagedworldspacewidget.hpp"
+
+class QWidget;
 
 void CSVRender::UnpagedWorldspaceWidget::update()
 {

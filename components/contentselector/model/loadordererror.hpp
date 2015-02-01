@@ -1,6 +1,7 @@
 #ifndef LOADORDERERROR_HPP
 #define LOADORDERERROR_HPP
 
+#include <qstring.h>
 #include <QString>
 
 namespace ContentSelectorModel

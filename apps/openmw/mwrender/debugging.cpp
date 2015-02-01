@@ -1,28 +1,37 @@
-#include "debugging.hpp"
-
-#include <cassert>
-
-#include <OgreNode.h>
-#include <OgreSceneManager.h>
+#include <OgreManualObject.h>
 #include <OgreMaterial.h>
 #include <OgreMaterialManager.h>
-#include <OgreManualObject.h>
-#include <OgreTechnique.h>
+#include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-
-#include <openengine/bullet/physic.hpp>
-
-#include <components/esm/loadstat.hpp>
+#include <OgreTechnique.h>
 #include <components/esm/loadpgrd.hpp>
+#include <math.h>
+#include <openengine/bullet/physic.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <cassert>
+#include <string>
 
-#include "../mwbase/world.hpp" // these includes can be removed once the static-hack is gone
 #include "../mwbase/environment.hpp"
-
-#include "../mwworld/ptr.hpp"
+#include "../mwbase/world.hpp" // these includes can be removed once the static-hack is gone
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "OgrePass.h"
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+#include "OgreRenderOperation.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwrender/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "debugging.hpp"
 #include "renderconst.hpp"
+
+namespace Ogre {
+class MovableObject;
+}  // namespace Ogre
 
 using namespace Ogre;
 

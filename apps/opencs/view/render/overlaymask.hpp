@@ -2,11 +2,12 @@
 #define OPENCS_VIEW_OVERLAYMASK_H
 
 #include <OgreRenderTargetListener.h>
+#include <map>
 
 namespace Ogre
 {
-    class Viewport;
     class RendertargetViewportEvent;
+    class Viewport;
 }
 
 namespace CSMWorld

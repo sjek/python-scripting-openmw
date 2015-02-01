@@ -1,13 +1,20 @@
-#include <QStandardItemModel>
-#include <QStandardItem>
-#include <QApplication>
-#include <QItemSelectionModel>
-#include <QStringListModel>
+#include <qabstractitemmodel.h>
+#include <qapplication.h>
+#include <qatomic_i386.h>
+#include <qfontmetrics.h>
+#include <qglobal.h>
+#include <qitemselectionmodel.h>
+#include <qstandarditemmodel.h>
+#include <qstringlist.h>
+#include <qstringlistmodel.h>
+#include <qvariant.h>
 
-#include "view.hpp"
-#include "../../model/settings/support.hpp"
 #include "../../model/settings/setting.hpp"
+#include "apps/opencs/view/settings/frame.hpp"
 #include "page.hpp"
+#include "view.hpp"
+
+class QShowEvent;
 
 CSVSettings::View::View(CSMSettings::Setting *setting,
                         Page *parent)

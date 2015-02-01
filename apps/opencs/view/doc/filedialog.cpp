@@ -1,21 +1,18 @@
-#include "filedialog.hpp"
+#include <qatomic_i386.h>
+#include <qglobal.h>
+#include <qlist.h>
+#include <qpushbutton.h>
+#include <stddef.h>
 
-#include <QCheckBox>
-#include <QPushButton>
-#include <QDialogButtonBox>
-#include <QSortFilterProxyModel>
-#include <QRegExpValidator>
-#include <QRegExp>
-#include <QSpacerItem>
-#include <QPushButton>
-#include <QLabel>
-#include <QGroupBox>
-
-#include "components/contentselector/model/esmfile.hpp"
-#include "components/contentselector/view/contentselector.hpp"
-
-#include "filewidget.hpp"
 #include "adjusterwidget.hpp"
+#include "components/contentselector/model/esmfile.hpp"
+#include "components/contentselector/view/../model/contentmodel.hpp"
+#include "components/contentselector/view/contentselector.hpp"
+#include "filedialog.hpp"
+#include "filewidget.hpp"
+
+class QModelIndex;
+class QWidget;
 
 CSVDoc::FileDialog::FileDialog(QWidget *parent) :
     QDialog(parent), mSelector (0), mFileWidget (0), mAdjusterWidget (0), mDialogBuilt(false), mAction(ContentAction_Undefined)

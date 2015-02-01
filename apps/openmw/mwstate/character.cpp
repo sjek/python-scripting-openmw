@@ -1,18 +1,19 @@
 
-#include "character.hpp"
-
-#include <ctime>
-
-#include <sstream>
+#include <boost/filesystem/operations.hpp>
+#include <boost/iterator/iterator_facade.hpp>
+#include <components/esm/defs.hpp>
+#include <components/esm/esmreader.hpp>
+#include <components/misc/stringops.hpp>
+#include <ctype.h>
 #include <algorithm>
+#include <ctime>
+#include <sstream>
 #include <stdexcept>
 
-#include <boost/filesystem.hpp>
-
-#include <components/esm/esmreader.hpp>
-#include <components/esm/defs.hpp>
-
-#include <components/misc/stringops.hpp>
+#include "character.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "components/esm/savedgame.hpp"
 
 bool MWState::operator< (const Slot& left, const Slot& right)
 {

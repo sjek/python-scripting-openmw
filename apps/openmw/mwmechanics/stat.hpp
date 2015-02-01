@@ -4,9 +4,13 @@
 #undef min
 #undef max
 
+#include <components/esm/statstate.hpp>
+#include <algorithm>
 #include <limits>
 
-#include <components/esm/statstate.hpp>
+namespace ESM {
+template <typename T> struct StatState;
+}  // namespace ESM
 
 namespace MWMechanics
 {

@@ -1,11 +1,15 @@
+#include <string>
+#include <vector>
+
+#include "../../model/world/columns.hpp"
+#include "apps/opencs/view/world/datadisplaydelegate.hpp"
+#include "apps/opencs/view/world/util.hpp"
 #include "recordstatusdelegate.hpp"
 
-#include <QPainter>
-#include <QApplication>
-#include <QUndoStack>
-
-#include "../../model/settings/usersettings.hpp"
-#include "../../model/world/columns.hpp"
+class QObject;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 CSVWorld::RecordStatusDelegate::RecordStatusDelegate(const ValueList& values,
                                                      const IconList & icons,

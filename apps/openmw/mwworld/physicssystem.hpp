@@ -1,13 +1,20 @@
 #ifndef GAME_MWWORLD_PHYSICSSYSTEM_H
 #define GAME_MWWORLD_PHYSICSSYSTEM_H
 
-#include <memory>
-
 #include <OgreVector3.h>
-
 #include <btBulletCollisionCommon.h>
+#include <stddef.h>
+#include <map>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 
+#include "OgreQuaternion.h"
 #include "ptr.hpp"
+
+class btCollisionObject;
+class btCollisionShape;
 
 
 namespace OEngine

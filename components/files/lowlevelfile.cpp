@@ -1,13 +1,13 @@
+#include <bits/fcntl-linux.h>
+#include <cassert>
+#include <sstream>
+#include <stdexcept>
+
 #include "lowlevelfile.hpp"
 
-#include <stdexcept>
-#include <sstream>
-#include <cassert>
-
 #if FILE_API == FILE_API_POSIX
-#include <sys/types.h>
-#include <unistd.h>
 #include <fcntl.h>
+#include <unistd.h>
 #endif
 
 #if FILE_API == FILE_API_STDIO

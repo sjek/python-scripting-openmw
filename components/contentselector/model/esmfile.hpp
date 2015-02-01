@@ -1,6 +1,12 @@
 #ifndef ESMFILE_HPP
 #define ESMFILE_HPP
 
+#include <qbytearray.h>
+#include <qdatetime.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qvariant.h>
 #include <QDateTime>
 #include <QStringList>
 

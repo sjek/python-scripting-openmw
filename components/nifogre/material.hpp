@@ -1,24 +1,26 @@
 #ifndef COMPONENTS_NIFOGRE_MATERIAL_HPP
 #define COMPONENTS_NIFOGRE_MATERIAL_HPP
 
-#include <iostream>
-#include <string>
-#include <map>
-#include <cassert>
-
 #include <OgreString.h>
+#include <stddef.h>
+#include <cassert>
+#include <iostream>
+#include <map>
+#include <string>
+
+#include "OgrePrerequisites.h"
 
 namespace Nif
 {
-    class ShapeData;
-    class NiTexturingProperty;
-    class NiMaterialProperty;
     class NiAlphaProperty;
-    class NiVertexColorProperty;
-    class NiZBufferProperty;
+    class NiMaterialProperty;
     class NiSpecularProperty;
-    class NiWireframeProperty;
     class NiStencilProperty;
+    class NiTexturingProperty;
+    class NiVertexColorProperty;
+    class NiWireframeProperty;
+    class NiZBufferProperty;
+    class ShapeData;
 }
 
 namespace NifOgre

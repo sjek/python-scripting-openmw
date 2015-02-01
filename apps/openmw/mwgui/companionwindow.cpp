@@ -1,21 +1,39 @@
-#include "companionwindow.hpp"
-
 #include <MyGUI_InputManager.h>
+#include <stddef.h>
+#include <string>
+#include <typeinfo>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
 #include "../mwmechanics/npcstats.hpp"
-
 #include "../mwworld/class.hpp"
-
-#include "messagebox.hpp"
-#include "itemview.hpp"
-#include "sortfilteritemmodel.hpp"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "apps/openmw/mwgui/referenceinterface.hpp"
+#include "apps/openmw/mwgui/widgets.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "companionitemmodel.hpp"
-#include "draganddrop.hpp"
+#include "companionwindow.hpp"
+#include "components/esm/loadnpc.hpp"
 #include "countdialog.hpp"
+#include "draganddrop.hpp"
+#include "itemview.hpp"
+#include "messagebox.hpp"
+#include "sortfilteritemmodel.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

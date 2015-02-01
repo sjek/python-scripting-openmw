@@ -1,15 +1,24 @@
 
-#include "reporttable.hpp"
-
+#include <qabstractitemmodel.h>
+#include <qabstractitemview.h>
+#include <qaction.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qheaderview.h>
+#include <qitemselectionmodel.h>
+#include <qlist.h>
+#include <qmenu.h>
+#include <qnamespace.h>
 #include <algorithm>
 
-#include <QHeaderView>
-#include <QAction>
-#include <QMenu>
-
 #include "../../model/tools/reportmodel.hpp"
-
 #include "../../view/world/idtypedelegate.hpp"
+#include "apps/opencs/view/tools/../world/../../model/doc/document.hpp"
+#include "apps/opencs/view/tools/../world/dragrecordtable.hpp"
+#include "apps/opencs/view/tools/../world/util.hpp"
+#include "reporttable.hpp"
+
+class QWidget;
 
 void CSVTools::ReportTable::contextMenuEvent (QContextMenuEvent *event)
 {

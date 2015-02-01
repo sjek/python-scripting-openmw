@@ -1,10 +1,10 @@
 #ifndef CSM_FILTER_NARYNODE_H
 #define CSM_FILTER_NARYNODE_H
 
-#include <vector>
-#include <string>
-
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <string>
+#include <vector>
 
 #include "node.hpp"
 

@@ -1,10 +1,21 @@
 
+#include <components/compiler/extensions0.hpp>
+#include <components/compiler/scanner.hpp>
+#include <qbytearray.h>
+#include <qnamespace.h>
+#include <sstream>
+#include <utility>
+
+#include "apps/opencs/view/world/../../model/world/scriptcontext.hpp"
+#include "components/compiler/nullerrorhandler.hpp"
+#include "components/compiler/parser.hpp"
+#include "components/compiler/tokenloc.hpp"
 #include "scripthighlighter.hpp"
 
-#include <sstream>
-
-#include <components/compiler/scanner.hpp>
-#include <components/compiler/extensions0.hpp>
+class QTextDocument;
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
 
 bool CSVWorld::ScriptHighlighter::parseInt (int value, const Compiler::TokenLoc& loc,
     Compiler::Scanner& scanner)

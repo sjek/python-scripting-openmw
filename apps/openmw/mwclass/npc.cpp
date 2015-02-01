@@ -1,44 +1,78 @@
 
-#include "npc.hpp"
-
-#include <memory>
-
-#include <OgreSceneNode.h>
-
+#include <assert.h>
 #include <components/esm/loadmgef.hpp>
 #include <components/esm/loadnpc.hpp>
 #include <components/esm/npcstate.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <memory>
+#include <stdexcept>
+#include <typeinfo>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
+#include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/movement.hpp"
-#include "../mwmechanics/spellcasting.hpp"
-#include "../mwmechanics/disease.hpp"
-#include "../mwmechanics/combat.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwgui/tooltips.hpp"
 #include "../mwmechanics/autocalcspell.hpp"
-#include "../mwmechanics/difficultyscaling.hpp"
 #include "../mwmechanics/character.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontalk.hpp"
-#include "../mwworld/actionopen.hpp"
-#include "../mwworld/failedaction.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/customdata.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/cellstore.hpp"
-
+#include "../mwmechanics/combat.hpp"
+#include "../mwmechanics/creaturestats.hpp"
+#include "../mwmechanics/difficultyscaling.hpp"
+#include "../mwmechanics/disease.hpp"
+#include "../mwmechanics/movement.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwmechanics/spellcasting.hpp"
 #include "../mwrender/actors.hpp"
 #include "../mwrender/renderinginterface.hpp"
+#include "../mwworld/actionopen.hpp"
+#include "../mwworld/actiontalk.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/customdata.hpp"
+#include "../mwworld/failedaction.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwmechanics/../mwworld/esmstore.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwmechanics/spells.hpp"
+#include "apps/openmw/mwclass/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwclass/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwclass/../mwworld/action.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "apps/openmw/mwclass/../mwworld/store.hpp"
+#include "components/esm/aipackage.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/esm/objectstate.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/misc/stringops.hpp"
+#include "npc.hpp"
 
-#include "../mwgui/tooltips.hpp"
+namespace ESM {
+struct InventoryList;
+}  // namespace ESM
 
 namespace
 {

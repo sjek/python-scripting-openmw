@@ -3,9 +3,15 @@
 
 #include <components/esm/loadrace.hpp>
 
+#include "../doc/stage.hpp"
 #include "../world/idcollection.hpp"
 
-#include "../doc/stage.hpp"
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace ESM {
+struct Race;
+}  // namespace ESM
 
 namespace CSMTools
 {

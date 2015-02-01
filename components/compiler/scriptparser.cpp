@@ -1,9 +1,17 @@
 
-#include "scriptparser.hpp"
-
-#include "scanner.hpp"
-#include "skipparser.hpp"
+#include "components/compiler/controlparser.hpp"
+#include "components/compiler/lineparser.hpp"
+#include "components/compiler/output.hpp"
+#include "components/compiler/parser.hpp"
 #include "errorhandler.hpp"
+#include "scanner.hpp"
+#include "scriptparser.hpp"
+#include "skipparser.hpp"
+
+namespace Compiler {
+class Context;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

@@ -1,9 +1,32 @@
 
+#include <components/misc/stringops.hpp>
+
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
+#include "components/esm/loadacti.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
 #include "refiddata.hpp"
 
-#include <cassert>
-
-#include <components/misc/stringops.hpp>
+namespace ESM {
+class ESMWriter;
+}  // namespace ESM
 
 CSMWorld::RefIdDataContainerBase::~RefIdDataContainerBase() {}
 

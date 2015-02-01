@@ -2,6 +2,11 @@
 #define OPENMW_MWGUI_VIDEOWIDGET_H
 
 #include <MyGUI_ImageBox.h>
+#include <memory>
+#include <string>
+
+#include "MyGUI_RTTI.h"
+#include "extern/ogre-ffmpeg-videoplayer/videoplayer.hpp"
 
 namespace Video
 {

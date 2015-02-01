@@ -5,6 +5,13 @@
 
 #include "importscpt.hpp"
 
+namespace ESM {
+struct GlobalScript;
+}  // namespace ESM
+namespace ESSImport {
+struct SCPT;
+}  // namespace ESSImport
+
 namespace ESSImport
 {
 

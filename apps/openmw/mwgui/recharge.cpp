@@ -1,25 +1,54 @@
-#include "recharge.hpp"
-
-#include <boost/format.hpp>
-
-#include <MyGUI_ScrollView.h>
 #include <MyGUI_Gui.h>
+#include <MyGUI_ScrollView.h>
+#include <boost/format/alt_sstream.hpp>
+#include <boost/format/alt_sstream_impl.hpp>
+#include <boost/format/format_class.hpp>
+#include <boost/format/format_fwd.hpp>
+#include <boost/format/format_implementation.hpp>
+#include <boost/format/free_funcs.hpp>
+#include <boost/optional/optional.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <ostream>
+#include <string>
 
-#include <components/esm/records.hpp>
-
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
-#include "widgets.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/misc/stringops.hpp"
 #include "itemwidget.hpp"
+#include "recharge.hpp"
+#include "widgets.hpp"
 
 namespace MWGui
 {

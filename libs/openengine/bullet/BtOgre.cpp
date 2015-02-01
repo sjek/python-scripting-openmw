@@ -13,13 +13,48 @@
  * =============================================================================================
  */
 
-#include "BtOgrePG.h"
-#include "BtOgreGP.h"
-#include "BtOgreExtras.h"
-
 #include <OgreEntity.h>
-#include <OgreSubMesh.h>
 #include <OgreSubEntity.h>
+#include <OgreSubMesh.h>
+#include <assert.h>
+#include <stddef.h>
+#include <string.h>
+#include <algorithm>
+#include <limits>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "BtOgreExtras.h"
+#include "BtOgreGP.h"
+#include "BulletCollision/CollisionShapes/btBoxShape.h"
+#include "BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h"
+#include "BulletCollision/CollisionShapes/btConvexHullShape.h"
+#include "BulletCollision/CollisionShapes/btCylinderShape.h"
+#include "BulletCollision/CollisionShapes/btSphereShape.h"
+#include "BulletCollision/CollisionShapes/btTriangleMesh.h"
+#include "LinearMath/btScalar.h"
+#include "LinearMath/btVector3.h"
+#include "OgreAxisAlignedBox.h"
+#include "OgreCamera.h"
+#include "OgreException.h"
+#include "OgreHardwareBuffer.h"
+#include "OgreHardwareBufferManager.h"
+#include "OgreHardwareIndexBuffer.h"
+#include "OgreHardwareVertexBuffer.h"
+#include "OgreLogManager.h"
+#include "OgreMath.h"
+#include "OgreMatrix4.h"
+#include "OgreMesh.h"
+#include "OgrePrerequisites.h"
+#include "OgreQuaternion.h"
+#include "OgreRenderOperation.h"
+#include "OgreRenderable.h"
+#include "OgreSceneNode.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
+#include "OgreVertexIndexData.h"
 
 using namespace Ogre;
 

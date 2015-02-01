@@ -1,20 +1,23 @@
 
-#include "subviews.hpp"
-
 #include "../doc/subviewfactoryimp.hpp"
-
-#include "tablesubview.hpp"
-#include "dialoguesubview.hpp"
-#include "scriptsubview.hpp"
-#include "regionmapsubview.hpp"
-#include "genericcreator.hpp"
+#include "apps/opencs/view/world/../../model/world/scope.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/universalid.hpp"
+#include "apps/opencs/view/world/../doc/subview.hpp"
+#include "apps/opencs/view/world/../doc/subviewfactory.hpp"
+#include "apps/opencs/view/world/creator.hpp"
 #include "cellcreator.hpp"
-#include "referenceablecreator.hpp"
-#include "referencecreator.hpp"
-#include "scenesubview.hpp"
 #include "dialoguecreator.hpp"
+#include "dialoguesubview.hpp"
+#include "genericcreator.hpp"
 #include "infocreator.hpp"
 #include "previewsubview.hpp"
+#include "referenceablecreator.hpp"
+#include "referencecreator.hpp"
+#include "regionmapsubview.hpp"
+#include "scenesubview.hpp"
+#include "scriptsubview.hpp"
+#include "subviews.hpp"
+#include "tablesubview.hpp"
 
 void CSVWorld::addSubViewFactories (CSVDoc::SubViewFactoryManager& manager)
 {

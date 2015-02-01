@@ -3,8 +3,14 @@
 
 #include <OgreVector3.h>
 
-#include "defs.hpp"
+#include "OgreAxisAlignedBox.h"
 #include "buffercache.hpp"
+#include "defs.hpp"
+
+namespace Ogre {
+class Vector2;
+class Vector3;
+}  // namespace Ogre
 
 namespace Ogre
 {

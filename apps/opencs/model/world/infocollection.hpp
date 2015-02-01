@@ -1,8 +1,18 @@
 #ifndef CSM_WOLRD_INFOCOLLECTION_H
 #define CSM_WOLRD_INFOCOLLECTION_H
 
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
 #include "collection.hpp"
 #include "info.hpp"
+
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace ESM
 {

@@ -1,37 +1,76 @@
-#include "inventorywindow.hpp"
-
-#include <stdexcept>
-
-#include <MyGUI_Window.h>
-#include <MyGUI_ImageBox.h>
-#include <MyGUI_RenderManager.h>
-#include <MyGUI_InputManager.h>
 #include <MyGUI_Button.h>
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_InputManager.h>
+#include <MyGUI_RenderManager.h>
+#include <MyGUI_Window.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
+#include <string>
+#include <typeinfo>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/scriptmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/action.hpp"
-#include "../mwscript/interpretercontext.hpp"
-#include "../mwbase/scriptmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwrender/characterpreview.hpp"
-
+#include "../mwscript/interpretercontext.hpp"
+#include "../mwworld/action.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_MouseButton.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TPoint.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "apps/openmw/mwgui/mode.hpp"
+#include "apps/openmw/mwgui/windowpinnablebase.hpp"
 #include "bookwindow.hpp"
-#include "scrollwindow.hpp"
-#include "spellwindow.hpp"
-#include "itemview.hpp"
-#include "inventoryitemmodel.hpp"
-#include "sortfilteritemmodel.hpp"
-#include "tradeitemmodel.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/settings/settings.hpp"
 #include "countdialog.hpp"
-#include "tradewindow.hpp"
 #include "draganddrop.hpp"
+#include "inventoryitemmodel.hpp"
+#include "inventorywindow.hpp"
+#include "itemview.hpp"
+#include "scrollwindow.hpp"
+#include "sortfilteritemmodel.hpp"
+#include "spellwindow.hpp"
+#include "tradeitemmodel.hpp"
+#include "tradewindow.hpp"
 #include "widgets.hpp"
+
+namespace MyGUI {
+class ITexture;
+}  // namespace MyGUI
 
 namespace
 {

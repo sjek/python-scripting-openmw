@@ -1,6 +1,13 @@
-#include "Actions.hpp"
+#include <assert.h>
+#include <algorithm>
+#include <vector>
 
 #include "../Main/Factory.hpp"
+#include "Actions.hpp"
+#include "extern/shiny/Editor/../Main/MaterialInstance.hpp"
+#include "extern/shiny/Editor/../Main/MaterialInstancePass.hpp"
+#include "extern/shiny/Editor/../Main/MaterialInstanceTextureUnit.hpp"
+#include "extern/shiny/Editor/../Main/PropertyBase.hpp"
 
 namespace sh
 {

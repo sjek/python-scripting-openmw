@@ -1,35 +1,55 @@
-#include "quickkeysmenu.hpp"
-
-#include <MyGUI_EditBox.h>
 #include <MyGUI_Button.h>
+#include <MyGUI_EditBox.h>
 #include <MyGUI_Gui.h>
-
+#include <assert.h>
 #include <components/esm/quickkeys.hpp>
 #include <components/misc/resourcehelpers.hpp>
-
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/player.hpp"
-#include "../mwworld/esmstore.hpp"
+#include <algorithm>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwmechanics/spellcasting.hpp"
-#include "../mwmechanics/creaturestats.hpp"
-
 #include "../mwgui/inventorywindow.hpp"
-#include "../mwgui/bookwindow.hpp"
-#include "../mwgui/scrollwindow.hpp"
-
-#include "windowmanagerimp.hpp"
+#include "../mwmechanics/creaturestats.hpp"
+#include "../mwmechanics/spellcasting.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/player.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/windowmanager.hpp"
+#include "apps/openmw/mwgui/../mwworld/../mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwgui/../mwworld/../mwmechanics/spells.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/mode.hpp"
+#include "apps/openmw/mwgui/spellmodel.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/misc/stringops.hpp"
 #include "itemselection.hpp"
-
+#include "itemwidget.hpp"
+#include "quickkeysmenu.hpp"
+#include "sortfilteritemmodel.hpp"
 #include "spellview.hpp"
 
-
-#include "itemwidget.hpp"
-#include "sortfilteritemmodel.hpp"
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 
 namespace MWGui

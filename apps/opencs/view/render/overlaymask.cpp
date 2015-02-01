@@ -1,10 +1,12 @@
-#include "overlaymask.hpp"
-
-#include <OgreOverlayManager.h>
 #include <OgreOverlayContainer.h>
+#include <OgreOverlayManager.h>
+#include <utility>
 
-#include "textoverlay.hpp"
 #include "../../model/world/cellcoordinates.hpp"
+#include "OgreOverlay.h"
+#include "OgreRenderTargetListener.h"
+#include "overlaymask.hpp"
+#include "textoverlay.hpp"
 
 namespace CSVRender
 {

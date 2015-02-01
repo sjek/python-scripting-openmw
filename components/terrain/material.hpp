@@ -2,7 +2,12 @@
 #define COMPONENTS_TERRAIN_MATERIAL_H
 
 #include <OgreMaterial.h>
+#include <string>
+#include <vector>
 
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
+#include "components/terrain/defs.hpp"
 #include "storage.hpp"
 
 namespace Terrain

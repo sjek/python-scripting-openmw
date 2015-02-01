@@ -1,34 +1,57 @@
-#include "dialogue.hpp"
-
-#include <boost/bind.hpp>
-
 #include <MyGUI_LanguageManager.h>
-#include <MyGUI_Window.h>
 #include <MyGUI_ProgressBar.h>
-
+#include <MyGUI_Window.h>
+#include <boost/bind/arg.hpp>
+#include <boost/bind/bind.hpp>
+#include <boost/bind/bind_template.hpp>
+#include <boost/bind/placeholders.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/widgets/list.hpp>
+#include <algorithm>
+#include <limits>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwdialogue/dialoguemanagerimp.hpp"
-
-#include "widgets.hpp"
-#include "tradewindow.hpp"
-#include "spellbuyingwindow.hpp"
-#include "travelwindow.hpp"
+#include "MyGUI_Button.h"
+#include "MyGUI_Colour.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_ScrollBar.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/../mwworld/timestamp.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwgui/../mwdialogue/../mwbase/dialoguemanager.hpp"
+#include "apps/openmw/mwgui/../mwdialogue/keywordsearch.hpp"
+#include "apps/openmw/mwgui/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "bookpage.hpp"
-
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/translation/translation.hpp"
+#include "dialogue.hpp"
 #include "journalbooks.hpp" // to_utf8_span
+#include "spellbuyingwindow.hpp"
+#include "tradewindow.hpp"
+#include "travelwindow.hpp"
 
 namespace
 {

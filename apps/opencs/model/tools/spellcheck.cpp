@@ -1,12 +1,13 @@
 
-#include "spellcheck.hpp"
-
-#include <sstream>
-#include <map>
-
 #include <components/esm/loadspel.hpp>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "spellcheck.hpp"
 
 CSMTools::SpellCheckStage::SpellCheckStage (const CSMWorld::IdCollection<ESM::Spell>& spells)
 : mSpells (spells)

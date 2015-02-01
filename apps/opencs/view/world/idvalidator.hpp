@@ -1,9 +1,13 @@
 #ifndef CSV_WORLD_IDVALIDATOR_H
 #define CSV_WORLD_IDVALIDATOR_H
 
+#include <qchar.h>
+#include <qvalidator.h>
+#include <QValidator>
 #include <string>
 
-#include <QValidator>
+class QObject;
+class QString;
 
 namespace CSVWorld
 {

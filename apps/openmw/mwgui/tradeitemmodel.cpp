@@ -1,10 +1,13 @@
-#include "tradeitemmodel.hpp"
-
 #include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <stdexcept>
 
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "tradeitemmodel.hpp"
 
 namespace MWGui
 {

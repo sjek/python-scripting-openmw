@@ -1,5 +1,5 @@
 #include "actor.hpp"
-
+#include "apps/openmw/mwmechanics/aistate.hpp"
 #include "character.hpp"
 
 namespace MWMechanics

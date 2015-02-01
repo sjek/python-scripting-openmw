@@ -1,9 +1,20 @@
 #ifndef OPENMW_GAME_MWGUI_HUD_H
 #define OPENMW_GAME_MWGUI_HUD_H
 
-#include "mapwindow.hpp"
+#include <string>
 
 #include "../mwmechanics/stat.hpp"
+#include "mapwindow.hpp"
+#include "openengine/gui/layout.hpp"
+
+namespace MyGUI {
+class Button;
+class ImageBox;
+class ProgressBar;
+class ScrollView;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWWorld
 {
@@ -13,8 +24,8 @@ namespace MWWorld
 namespace MWGui
 {
     class DragAndDrop;
-    class SpellIcons;
     class ItemWidget;
+    class SpellIcons;
 
     class HUD : public OEngine::GUI::Layout, public LocalMapBase
     {

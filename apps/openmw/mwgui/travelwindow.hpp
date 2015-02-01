@@ -2,8 +2,22 @@
 #define MWGUI_TravelWINDOW_H
 
 
-#include "windowbase.hpp"
+#include <string>
+
 #include "referenceinterface.hpp"
+#include "windowbase.hpp"
+
+namespace ESM {
+struct Position;
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class ScrollView;
+class TextBox;
+}  // namespace MyGUI
 
 namespace MyGUI
 {

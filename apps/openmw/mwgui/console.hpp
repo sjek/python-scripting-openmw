@@ -1,23 +1,35 @@
 #ifndef MWGUI_CONSOLE_H
 #define MWGUI_CONSOLE_H
 
+#include <components/compiler/errorhandler.hpp>
+#include <components/compiler/extensions.hpp>
+#include <components/compiler/lineparser.hpp>
+#include <components/compiler/locals.hpp>
+#include <components/compiler/output.hpp>
+#include <components/compiler/scanner.hpp>
+#include <components/interpreter/interpreter.hpp>
 #include <list>
 #include <string>
 #include <vector>
 
-#include <components/compiler/errorhandler.hpp>
-#include <components/compiler/lineparser.hpp>
-#include <components/compiler/scanner.hpp>
-#include <components/compiler/locals.hpp>
-#include <components/compiler/output.hpp>
-#include <components/compiler/extensions.hpp>
-#include <components/interpreter/interpreter.hpp>
-
 #include "../mwscript/compilercontext.hpp"
 #include "../mwscript/interpretercontext.hpp"
-
+#include "MyGUI_KeyCode.h"
+#include "MyGUI_Types.h"
 #include "referenceinterface.hpp"
 #include "windowbase.hpp"
+
+namespace Compiler {
+class Output;
+struct TokenLoc;
+}  // namespace Compiler
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class EditBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

@@ -1,7 +1,12 @@
 
-#include "cell.hpp"
-
 #include <sstream>
+
+#include "cell.hpp"
+#include "components/esm/loadcell.hpp"
+
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 void CSMWorld::Cell::load (ESM::ESMReader &esm)
 {

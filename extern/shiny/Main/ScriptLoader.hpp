@@ -1,10 +1,11 @@
 #ifndef SH_CONFIG_LOADER_H__
 #define SH_CONFIG_LOADER_H__
 
-#include <map>
-#include <vector>
 #include <cassert>
+#include <iosfwd>
+#include <map>
 #include <string>
+#include <vector>
  
 namespace sh
 {

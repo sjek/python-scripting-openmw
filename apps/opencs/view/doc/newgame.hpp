@@ -2,7 +2,10 @@
 #define CSV_DOC_NEWGAME_H
 
 #include <boost/filesystem/path.hpp>
-
+#include <qbasicatomic.h>
+#include <qdialog.h>
+#include <qmetatype.h>
+#include <qobjectdefs.h>
 #include <QDialog>
 #include <QMetaType>
 
@@ -15,8 +18,8 @@ class QPushButton;
 
 namespace CSVDoc
 {
-    class FileWidget;
     class AdjusterWidget;
+    class FileWidget;
 
     class NewGameDialogue : public QDialog
     {

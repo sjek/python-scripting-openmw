@@ -3,9 +3,16 @@
 #define MWGUI_TOOLTIPS_H
 
 #include <openengine/gui/layout.hpp>
-#include "../mwworld/ptr.hpp"
+#include <string>
 
+#include "../mwworld/ptr.hpp"
+#include "MyGUI_Types.h"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
 #include "widgets.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace ESM
 {

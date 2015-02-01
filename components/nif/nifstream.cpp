@@ -1,6 +1,17 @@
-#include "nifstream.hpp"
+#include <stdexcept>
+
+#include "OgreDataStream.h"
+#include "OgreMatrix3.h"
+#include "OgrePrerequisites.h"
+#include "OgreQuaternion.h"
+#include "OgreStringConverter.h"
+#include "OgreVector2.h"
+#include "OgreVector3.h"
+#include "OgreVector4.h"
+#include "components/nif/niftypes.hpp"
 //For error reporting
 #include "niffile.hpp"
+#include "nifstream.hpp"
 
 namespace Nif
 {

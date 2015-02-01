@@ -2,6 +2,9 @@
 #define OPENMW_COMPONENTS_NIFOVERRIDES_NIFOVERRIDES_HPP
 
 #include <OgreConfigFile.h>
+#include <map>
+#include <string>
+#include <utility>
 
 namespace sh
 {

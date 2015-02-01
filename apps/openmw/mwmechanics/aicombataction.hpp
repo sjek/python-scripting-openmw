@@ -2,11 +2,18 @@
 #define OPENMW_AICOMBAT_ACTION_H
 
 #include <boost/shared_ptr.hpp>
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/containerstore.hpp"
-
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/loadspel.hpp>
+#include <string>
+
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/ptr.hpp"
+
+namespace ESM {
+struct ENAMstruct;
+struct EffectList;
+struct Spell;
+}  // namespace ESM
 
 namespace MWMechanics
 {

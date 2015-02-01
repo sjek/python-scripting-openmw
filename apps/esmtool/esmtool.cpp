@@ -1,16 +1,34 @@
-#include <iostream>
-#include <vector>
+#include <boost/program_options/detail/parsers.hpp>
+#include <boost/program_options/detail/value_semantic.hpp>
+#include <boost/program_options/errors.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/parsers.hpp>
+#include <boost/program_options/positional_options.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <components/esm/esmreader.hpp>
+#include <components/esm/esmwriter.hpp>
+#include <stddef.h>
+#include <stdint.h>
+#include <algorithm>
 #include <deque>
+#include <exception>
+#include <iostream>
 #include <list>
 #include <map>
 #include <set>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include <boost/program_options.hpp>
-
-#include <components/esm/esmreader.hpp>
-#include <components/esm/esmwriter.hpp>
-#include <components/esm/records.hpp>
-
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/to_utf8/to_utf8.hpp"
 #include "record.hpp"
 
 #define ESMTOOL_VERSION 1.2

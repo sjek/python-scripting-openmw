@@ -1,20 +1,32 @@
-#include "weaponanimation.hpp"
-
-#include <OgreEntity.h>
 #include <OgreBone.h>
-#include <OgreSceneNode.h>
+#include <OgreEntity.h>
 #include <OgreSkeletonInstance.h>
+#include <stdexcept>
+#include <vector>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
-
-#include "../mwworld/inventorystore.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/creaturestats.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-
+#include "../mwworld/inventorystore.hpp"
+#include "OgreMath.h"
+#include "OgreNode.h"
+#include "OgreQuaternion.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
 #include "animation.hpp"
+#include "apps/openmw/mwrender/../mwworld/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwrender/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwrender/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "apps/openmw/mwrender/../mwworld/store.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
+#include "weaponanimation.hpp"
 
 namespace MWRender
 {

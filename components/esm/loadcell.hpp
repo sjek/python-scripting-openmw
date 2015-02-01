@@ -1,13 +1,13 @@
 #ifndef OPENMW_ESM_CELL_H
 #define OPENMW_ESM_CELL_H
 
+#include <list>
 #include <string>
 #include <vector>
-#include <list>
 
-#include "esmcommon.hpp"
-#include "defs.hpp"
 #include "cellref.hpp"
+#include "defs.hpp"
+#include "esmcommon.hpp"
 
 namespace MWWorld
 {

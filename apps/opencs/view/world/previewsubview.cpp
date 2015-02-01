@@ -1,12 +1,20 @@
 
-#include "previewsubview.hpp"
-
-#include <QHBoxLayout>
+#include <qboxlayout.h>
+#include <qmargins.h>
+#include <qstring.h>
+#include <qwidget.h>
 
 #include "../render/previewwidget.hpp"
-
 #include "../widget/scenetoolbar.hpp"
 #include "../widget/scenetoolmode.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/data.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/record.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/ref.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/refcollection.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/refidcollection.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/document.hpp"
+#include "apps/opencs/view/world/../doc/subview.hpp"
+#include "previewsubview.hpp"
 
 CSVWorld::PreviewSubView::PreviewSubView (const CSMWorld::UniversalId& id, CSMDoc::Document& document)
 : SubView (id), mTitle (id.toString().c_str())

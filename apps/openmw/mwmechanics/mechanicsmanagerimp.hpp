@@ -1,14 +1,26 @@
 #ifndef GAME_MWMECHANICS_MECHANICSMANAGERIMP_H
 #define GAME_MWMECHANICS_MECHANICSMANAGERIMP_H
 
+#include <stdint.h>
+#include <list>
+#include <string>
+#include <vector>
+
 #include "../mwbase/mechanicsmanager.hpp"
-
 #include "../mwworld/ptr.hpp"
-
+#include "actors.hpp"
 #include "creaturestats.hpp"
 #include "npcstats.hpp"
 #include "objects.hpp"
-#include "actors.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+struct Class;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace Ogre
 {

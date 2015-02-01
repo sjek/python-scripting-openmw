@@ -1,6 +1,8 @@
-#include "screenfader.hpp"
-
 #include <MyGUI_RenderManager.h>
+
+#include "MyGUI_Widget.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "screenfader.hpp"
 
 namespace MWGui
 {

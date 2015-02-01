@@ -1,12 +1,23 @@
 #ifndef MWGUI_LOADINGSCREEN_H
 #define MWGUI_LOADINGSCREEN_H
 
-#include <OgreTimer.h>
 #include <OgreStringVector.h>
+#include <OgreTimer.h>
+#include <components/loadinglistener/loadinglistener.hpp>
+#include <stddef.h>
+#include <string>
 
+#include "GLX/OgreTimerImp.h"
 #include "windowbase.hpp"
 
-#include <components/loadinglistener/loadinglistener.hpp>
+namespace MyGUI {
+class ScrollBar;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
+namespace Ogre {
+class RenderWindow;
+}  // namespace Ogre
 
 namespace Ogre
 {

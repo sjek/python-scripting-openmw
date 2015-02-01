@@ -1,12 +1,13 @@
 
-#include "birthsigncheck.hpp"
-
-#include <sstream>
-#include <map>
-
 #include <components/esm/loadbsgn.hpp>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "birthsigncheck.hpp"
 
 CSMTools::BirthsignCheckStage::BirthsignCheckStage (const CSMWorld::IdCollection<ESM::BirthSign>& birthsigns)
 : mBirthsigns (birthsigns)

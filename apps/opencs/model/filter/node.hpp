@@ -1,13 +1,14 @@
 #ifndef CSM_FILTER_NODE_H
 #define CSM_FILTER_NODE_H
 
-#include <string>
-#include <map>
-#include <vector>
-
 #include <boost/shared_ptr.hpp>
-
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <qbasicatomic.h>
+#include <qmetatype.h>
 #include <QMetaType>
+#include <map>
+#include <string>
+#include <vector>
 
 namespace CSMWorld
 {

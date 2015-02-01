@@ -1,27 +1,48 @@
-#include "water.hpp"
-
-#include <OgreRenderTexture.h>
-#include <OgreEntity.h>
-#include <OgreMeshManager.h>
-#include <OgreMaterialManager.h>
-#include <OgreHardwarePixelBuffer.h>
-#include <OgreRoot.h>
 #include <OgreCamera.h>
-#include <OgreTextureManager.h>
-#include <OgreViewport.h>
+#include <OgreEntity.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreMaterialManager.h>
+#include <OgreMeshManager.h>
+#include <OgreRenderTexture.h>
+#include <OgreRoot.h>
 #include <OgreSceneNode.h>
 #include <OgreTechnique.h>
-
-#include "sky.hpp"
-#include "renderingmanager.hpp"
-#include "ripplesimulation.hpp"
-#include "refraction.hpp"
-
+#include <OgreTextureManager.h>
+#include <OgreViewport.h>
 #include <extern/shiny/Main/Factory.hpp>
 #include <extern/shiny/Platforms/Ogre/OgreMaterial.hpp>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
+#include "OgreBlendMode.h"
+#include "OgreCommon.h"
+#include "OgreMatrix4.h"
+#include "OgrePass.h"
+#include "OgrePixelFormat.h"
+#include "OgrePlane.h"
+#include "OgreRenderSystem.h"
+#include "OgreRenderTarget.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSceneManager.h"
+#include "OgreStringConverter.h"
+#include "OgreTexture.h"
+#include "OgreTextureUnitState.h"
+#include "OgreVector2.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwrender/renderconst.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/settings/settings.hpp"
+#include "extern/shiny/Main/MaterialInstance.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "refraction.hpp"
+#include "renderingmanager.hpp"
+#include "ripplesimulation.hpp"
+#include "sky.hpp"
+#include "water.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 using namespace Ogre;
 

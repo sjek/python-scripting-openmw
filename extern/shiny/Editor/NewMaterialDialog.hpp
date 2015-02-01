@@ -1,7 +1,11 @@
 #ifndef NEWMATERIALDIALOG_HPP
 #define NEWMATERIALDIALOG_HPP
 
+#include <qdialog.h>
+#include <qobjectdefs.h>
 #include <QDialog>
+
+class QWidget;
 
 namespace Ui {
 class NewMaterialDialog;

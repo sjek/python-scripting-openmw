@@ -1,11 +1,31 @@
 #ifndef GAME_RENDER_NPCANIMATION_H
 #define GAME_RENDER_NPCANIMATION_H
 
-#include "animation.hpp"
+#include <stddef.h>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../mwworld/inventorystore.hpp"
-
+#include "OgreController.h"
+#include "OgreMath.h"
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
+#include "OgreVector3.h"
+#include "animation.hpp"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
 #include "weaponanimation.hpp"
+
+namespace ESM {
+struct MagicEffect;
+}  // namespace ESM
+namespace Ogre {
+class Camera;
+class Entity;
+class SceneNode;
+}  // namespace Ogre
 
 namespace ESM
 {

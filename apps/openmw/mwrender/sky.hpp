@@ -1,31 +1,38 @@
 #ifndef GAME_RENDER_SKY_H
 #define GAME_RENDER_SKY_H
 
-#include <vector>
-
-#include <OgreVector3.h>
-#include <OgreString.h>
-#include <OgreMaterial.h>
 #include <OgreColourValue.h>
 #include <OgreHighLevelGpuProgram.h>
-
-#include <extern/shiny/Main/Factory.hpp>
-
+#include <OgreMaterial.h>
+#include <OgreString.h>
+#include <OgreVector3.h>
 #include <components/nifogre/ogrenifloader.hpp>
-
+#include <extern/shiny/Main/Factory.hpp>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../mwworld/weather.hpp"
+#include "OgrePrerequisites.h"
+#include "extern/shiny/Main/MaterialInstance.hpp"
+
+namespace MWWorld {
+struct WeatherResult;
+}  // namespace MWWorld
+namespace Ogre {
+class Light;
+}  // namespace Ogre
 
 namespace Ogre
 {
-    class RenderWindow;
-    class SceneNode;
-    class Camera;
-    class Viewport;
-    class SceneManager;
-    class Entity;
     class BillboardSet;
+    class Camera;
+    class Entity;
+    class RenderWindow;
+    class SceneManager;
+    class SceneNode;
     class TextureUnitState;
+    class Viewport;
 }
 
 namespace MWRender

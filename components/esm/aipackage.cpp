@@ -1,5 +1,5 @@
 #include "aipackage.hpp"
-
+#include "components/esm/esmcommon.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
 

@@ -1,31 +1,37 @@
-#include "container.hpp"
-
-#include <MyGUI_InputManager.h>
 #include <MyGUI_Button.h>
+#include <MyGUI_InputManager.h>
+#include <stddef.h>
+#include <string>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwbase/dialoguemanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/containerstore.hpp"
-
-#include "../mwmechanics/pickpocket.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
-
+#include "../mwmechanics/pickpocket.hpp"
+#include "../mwworld/class.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "apps/openmw/mwgui/referenceinterface.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "container.hpp"
 #include "countdialog.hpp"
-#include "tradewindow.hpp"
-#include "inventorywindow.hpp"
-
-#include "itemview.hpp"
-#include "itemwidget.hpp"
-#include "inventoryitemmodel.hpp"
-#include "sortfilteritemmodel.hpp"
-#include "pickpocketitemmodel.hpp"
 #include "draganddrop.hpp"
+#include "inventoryitemmodel.hpp"
+#include "inventorywindow.hpp"
+#include "itemview.hpp"
+#include "pickpocketitemmodel.hpp"
+#include "sortfilteritemmodel.hpp"
 
 namespace MWGui
 {

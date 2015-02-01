@@ -2,8 +2,16 @@
 #define MWGUI_ITEMVIEW_H
 
 #include <MyGUI_Widget.h>
+#include <string>
 
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
 #include "itemmodel.hpp"
+
+namespace MyGUI {
+class ScrollView;
+}  // namespace MyGUI
 
 namespace MWGui
 {

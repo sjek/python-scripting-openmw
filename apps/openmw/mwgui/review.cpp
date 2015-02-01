@@ -1,15 +1,38 @@
-#include "review.hpp"
-
-#include <MyGUI_ScrollView.h>
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_Gui.h>
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_ScrollView.h>
+#include <assert.h>
+#include <boost/array.hpp>
+#include <algorithm>
+#include <cmath>
+#include <iterator>
+#include <set>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TCoord.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/widgets.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadrace.hpp"
+#include "review.hpp"
 #include "tooltips.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 #undef min
 #undef max

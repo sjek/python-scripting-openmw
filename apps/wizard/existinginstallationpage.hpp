@@ -1,9 +1,14 @@
 #ifndef EXISTINGINSTALLATIONPAGE_HPP
 #define EXISTINGINSTALLATIONPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qwizard.h>
 #include <QWizardPage>
 
 #include "ui_existinginstallationpage.h"
+
+class QWidget;
 
 namespace Wizard
 {

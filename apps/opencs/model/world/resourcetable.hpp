@@ -1,7 +1,18 @@
 #ifndef CSM_WOLRD_RESOURCETABLE_H
 #define CSM_WOLRD_RESOURCETABLE_H
 
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qvariant.h>
+#include <string>
+#include <utility>
+
+#include "apps/opencs/model/world/columns.hpp"
 #include "idtablebase.hpp"
+
+namespace CSMWorld {
+class UniversalId;
+}  // namespace CSMWorld
 
 namespace CSMWorld
 {

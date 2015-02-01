@@ -1,7 +1,11 @@
 #ifndef CSM_WOLRD_IDTABLEBASE_H
 #define CSM_WOLRD_IDTABLEBASE_H
 
+#include <qabstractitemmodel.h>
+#include <qobjectdefs.h>
 #include <QAbstractItemModel>
+#include <string>
+#include <utility>
 
 #include "columns.hpp"
 

@@ -3,6 +3,8 @@
 
 #include <MyGUI_Plugin.h>
 #include <MyGUI_UString.h>
+#include <map>
+#include <string>
 
 namespace MyGUIPlugin
 {

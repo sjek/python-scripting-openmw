@@ -1,6 +1,8 @@
-#include "importscpt.hpp"
-
 #include <components/esm/esmreader.hpp>
+
+#include "apps/essimporter/importscri.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "importscpt.hpp"
 
 
 

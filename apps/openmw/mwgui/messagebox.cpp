@@ -1,16 +1,23 @@
-#include "messagebox.hpp"
-
-#include <MyGUI_LanguageManager.h>
-#include <MyGUI_EditBox.h>
-#include <MyGUI_RenderManager.h>
 #include <MyGUI_Button.h>
-
+#include <MyGUI_EditBox.h>
+#include <MyGUI_LanguageManager.h>
+#include <MyGUI_RenderManager.h>
 #include <components/misc/stringops.hpp>
+#include <stddef.h>
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/inputmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_TSize.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "MyGUI_WidgetStyle.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "messagebox.hpp"
 
 #undef MessageBox
 

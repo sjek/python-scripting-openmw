@@ -1,7 +1,18 @@
 #ifndef MWGUI_WAIT_DIALOG_H
 #define MWGUI_WAIT_DIALOG_H
 
+#include <stddef.h>
+#include <string>
+
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Button;
+class ProgressBar;
+class ScrollBar;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

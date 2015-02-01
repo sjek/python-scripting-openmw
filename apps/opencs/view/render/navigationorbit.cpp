@@ -1,9 +1,10 @@
 
-#include "navigationorbit.hpp"
-
 #include <OgreCamera.h>
+#include <qpoint.h>
 
-#include <QPoint>
+#include "OgreMath.h"
+#include "OgreVector3.h"
+#include "navigationorbit.hpp"
 
 void CSVRender::NavigationOrbit::rotateCamera (const Ogre::Vector3& diff)
 {

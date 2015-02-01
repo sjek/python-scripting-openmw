@@ -1,4 +1,9 @@
-#include <QDrag>
+#include <qdrag.h>
+#include <qevent.h>
+#include <qnamespace.h>
+#include <qpixmap.h>
+#include <qstring.h>
+#include <string>
 
 #include "../../model/world/tablemimedata.hpp"
 #include "dragrecordtable.hpp"

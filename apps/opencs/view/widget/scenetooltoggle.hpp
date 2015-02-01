@@ -1,17 +1,22 @@
 #ifndef CSV_WIDGET_SCENETOOL_TOGGLE_H
 #define CSV_WIDGET_SCENETOOL_TOGGLE_H
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <map>
+#include <string>
+
 #include "scenetool.hpp"
 
-#include <map>
-
 class QHBoxLayout;
+class QPoint;
 class QRect;
+class QWidget;
 
 namespace CSVWidget
 {
-    class SceneToolbar;
     class PushButton;
+    class SceneToolbar;
 
     ///< \brief Multi-Toggle tool
     class SceneToolToggle : public SceneTool

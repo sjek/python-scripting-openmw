@@ -1,12 +1,15 @@
 
+#include <components/esm/loaddial.hpp>
+#include <qabstractitemmodel.h>
+
+#include "../../model/world/columns.hpp"
+#include "../../model/world/commands.hpp"
+#include "../../model/world/data.hpp"
+#include "../../model/world/idtable.hpp"
+#include "apps/opencs/view/world/genericcreator.hpp"
 #include "dialoguecreator.hpp"
 
-#include <components/esm/loaddial.hpp>
-
-#include "../../model/world/data.hpp"
-#include "../../model/world/commands.hpp"
-#include "../../model/world/columns.hpp"
-#include "../../model/world/idtable.hpp"
+class QUndoStack;
 
 void CSVWorld::DialogueCreator::configureCreateCommand (CSMWorld::CreateCommand& command) const
 {

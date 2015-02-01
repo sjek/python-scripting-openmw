@@ -1,30 +1,28 @@
 
-#include "scenesubview.hpp"
-
+#include <qboxlayout.h>
+#include <qmargins.h>
+#include <qwidget.h>
+#include <stddef.h>
+#include <cassert>
+#include <map>
 #include <sstream>
 
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QLabel>
-#include <cassert>
-
 #include "../../model/doc/document.hpp"
-
 #include "../../model/world/cellselection.hpp"
-
 #include "../filter/filterbox.hpp"
-
 #include "../render/pagedworldspacewidget.hpp"
 #include "../render/unpagedworldspacewidget.hpp"
-
 #include "../widget/scenetoolbar.hpp"
 #include "../widget/scenetoolmode.hpp"
+#include "../widget/scenetoolrun.hpp"
 #include "../widget/scenetooltoggle.hpp"
 #include "../widget/scenetooltoggle2.hpp"
-#include "../widget/scenetoolrun.hpp"
-
-#include "tablebottombox.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/cellcoordinates.hpp"
+#include "apps/opencs/view/world/../doc/subview.hpp"
+#include "apps/opencs/view/world/../render/worldspacewidget.hpp"
 #include "creator.hpp"
+#include "scenesubview.hpp"
+#include "tablebottombox.hpp"
 
 CSVWorld::SceneSubView::SceneSubView (const CSMWorld::UniversalId& id, CSMDoc::Document& document)
 : SubView (id), mLayout(new QHBoxLayout), mDocument(document), mScene(NULL), mToolbar(NULL)

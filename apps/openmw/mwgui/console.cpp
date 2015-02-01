@@ -1,20 +1,52 @@
-#include "console.hpp"
-
 #include <MyGUI_EditBox.h>
-
-#include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
-
-#include <components/compiler/exception.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
 #include <components/compiler/extensions0.hpp>
-
-#include "../mwscript/extensions.hpp"
+#include <ctype.h>
+#include <stddef.h>
+#include <algorithm>
+#include <exception>
+#include <istream>
+#include <map>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
+#include "../mwscript/extensions.hpp"
 #include "../mwworld/esmstore.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwscript/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwscript/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/../mwscript/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwscript/compilercontext.hpp"
+#include "apps/openmw/mwgui/../mwscript/interpretercontext.hpp"
+#include "apps/openmw/mwgui/referenceinterface.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/compiler/errorhandler.hpp"
+#include "components/compiler/lineparser.hpp"
+#include "components/compiler/locals.hpp"
+#include "components/compiler/output.hpp"
+#include "components/compiler/scanner.hpp"
+#include "components/compiler/tokenloc.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/interpreter/interpreter.hpp"
+#include "components/interpreter/types.hpp"
+#include "console.hpp"
+
+namespace Compiler {
+class SourceException;
+}  // namespace Compiler
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

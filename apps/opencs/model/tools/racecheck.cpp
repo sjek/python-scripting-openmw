@@ -1,11 +1,13 @@
 
-#include "racecheck.hpp"
-
-#include <sstream>
-
 #include <components/esm/loadrace.hpp>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "racecheck.hpp"
 
 void CSMTools::RaceCheckStage::performPerRecord (int stage, CSMDoc::Messages& messages)
 {

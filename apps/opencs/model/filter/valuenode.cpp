@@ -1,11 +1,13 @@
 
-#include "valuenode.hpp"
-
+#include <qabstractitemmodel.h>
+#include <qvariant.h>
 #include <sstream>
 #include <stdexcept>
+#include <utility>
 
 #include "../world/columns.hpp"
 #include "../world/idtablebase.hpp"
+#include "valuenode.hpp"
 
 CSMFilter::ValueNode::ValueNode (int columnId, Type lowerType, Type upperType,
     double lower, double upper)

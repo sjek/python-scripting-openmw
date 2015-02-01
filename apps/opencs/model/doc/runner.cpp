@@ -1,12 +1,13 @@
 
-#include "runner.hpp"
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qtemporaryfile.h>
+#include <qtextstream.h>
 
-#include <QApplication>
-#include <QDir>
-#include <QTemporaryFile>
-#include <QTextStream>
-
+#include "components/esm/debugprofile.hpp"
 #include "operation.hpp"
+#include "runner.hpp"
 
 CSMDoc::Runner::Runner (const boost::filesystem::path& projectPath)
 : mRunning (false), mStartup (0), mProjectPath (projectPath)

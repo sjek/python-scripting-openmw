@@ -1,14 +1,17 @@
-#include "ShaderSet.hpp"
-
+#include <assert.h>
+#include <boost/algorithm/string/predicate.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/functional/hash/hash.hpp>
+#include <boost/lexical_cast.hpp>
+#include <algorithm>
 #include <fstream>
 #include <sstream>
-
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost/functional/hash.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/filesystem.hpp>
+#include <utility>
 
 #include "Factory.hpp"
+#include "ShaderSet.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "extern/shiny/Main/ShaderInstance.hpp"
 
 namespace sh
 {

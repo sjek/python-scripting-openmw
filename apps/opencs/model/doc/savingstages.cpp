@@ -1,20 +1,40 @@
 
-#include "savingstages.hpp"
-
-#include <fstream>
-
-#include <boost/filesystem.hpp>
-
-#include <QUndoStack>
-
+#include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
 #include <components/esm/loaddial.hpp>
-
 #include <components/misc/stringops.hpp>
+#include <qundostack.h>
+#include <stdint.h>
+#include <fstream>
+#include <map>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../world/infocollection.hpp"
-
+#include "apps/opencs/model/doc/../world/cell.hpp"
+#include "apps/opencs/model/doc/../world/data.hpp"
+#include "apps/opencs/model/doc/../world/idcollection.hpp"
+#include "apps/opencs/model/doc/../world/info.hpp"
+#include "apps/opencs/model/doc/../world/pathgrid.hpp"
+#include "apps/opencs/model/doc/../world/record.hpp"
+#include "apps/opencs/model/doc/../world/ref.hpp"
+#include "apps/opencs/model/doc/../world/refcollection.hpp"
+#include "apps/opencs/model/doc/../world/refidcollection.hpp"
+#include "apps/opencs/model/doc/../world/subcellcollection.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadinfo.hpp"
+#include "components/esm/loadpgrd.hpp"
 #include "document.hpp"
+#include "savingstages.hpp"
 #include "savingstate.hpp"
+
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
 
 CSMDoc::OpenSaveStage::OpenSaveStage (Document& document, SavingState& state, bool projectFile)
 : mDocument (document), mState (state), mProjectFile (projectFile)

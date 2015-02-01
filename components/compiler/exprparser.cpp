@@ -1,23 +1,25 @@
 
-#include "exprparser.hpp"
-
-#include <stdexcept>
-#include <cassert>
-#include <algorithm>
-#include <stack>
-#include <iterator>
-
 #include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <cassert>
+#include <iterator>
+#include <stack>
+#include <stdexcept>
+#include <utility>
 
-#include "generator.hpp"
-#include "scanner.hpp"
-#include "errorhandler.hpp"
-#include "locals.hpp"
-#include "stringparser.hpp"
-#include "extensions.hpp"
+#include "components/compiler/parser.hpp"
+#include "components/compiler/tokenloc.hpp"
+#include "components/interpreter/types.hpp"
 #include "context.hpp"
 #include "discardparser.hpp"
+#include "errorhandler.hpp"
+#include "exprparser.hpp"
+#include "extensions.hpp"
+#include "generator.hpp"
 #include "junkparser.hpp"
+#include "locals.hpp"
+#include "scanner.hpp"
+#include "stringparser.hpp"
 
 namespace Compiler
 {

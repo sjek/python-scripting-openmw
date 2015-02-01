@@ -1,18 +1,21 @@
+#include <qatomic_i386.h>
+#include <qbytearray.h>
+#include <qchar.h>
+#include <qdebug.h>
+#include <qdir.h>
+#include <qfile.h>
+#include <qfileinfo.h>
+#include <qglobal.h>
+#include <qiodevice.h>
+#include <qlist.h>
+#include <qmetatype.h>
+#include <qtextcodec.h>
+#include <qtextstream.h>
+#include <qvariant.h>
+#include <stddef.h>
+
+#include "apps/wizard/unshield/../inisettings.hpp"
 #include "unshieldworker.hpp"
-
-#include <QDebug>
-
-#include <QReadLocker>
-#include <QWriteLocker>
-#include <QFileDialog>
-#include <QFileInfo>
-#include <QFileInfoListIterator>
-#include <QStringList>
-#include <QTextStream>
-#include <QTextCodec>
-#include <QFile>
-#include <QDir>
-#include <QDirIterator>
 
 Wizard::UnshieldWorker::UnshieldWorker(QObject *parent) :
     QObject(parent),

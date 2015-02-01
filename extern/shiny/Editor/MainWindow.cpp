@@ -1,17 +1,32 @@
+#include <qabstractitemmodel.h>
+#include <qatomic_i386.h>
+#include <qcolor.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qinputdialog.h>
+#include <qlist.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qpoint.h>
+#include <qsortfilterproxymodel.h>
+#include <qstandarditemmodel.h>
+#include <qstringlist.h>
+#include <qstringlistmodel.h>
+#include <qtimer.h>
+#include <qvariant.h>
+#include <iostream>
+#include <typeinfo>
+#include <utility>
+
+#include "AddPropertyDialog.hpp"
 #include "MainWindow.hpp"
+#include "extern/shiny/Editor/Actions.hpp"
+#include "extern/shiny/Editor/PropertySortModel.hpp"
+#include "extern/shiny/Editor/Query.hpp"
 #include "ui_mainwindow.h"
 
-#include <iostream>
-
-#include <QCloseEvent>
-#include <QTimer>
-
-#include <QInputDialog>
-#include <QMessageBox>
-
-#include "Editor.hpp"
-#include "ColoredTabWidget.hpp"
-#include "AddPropertyDialog.hpp"
+class QAction;
+class QWidget;
 
 sh::MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)

@@ -1,5 +1,13 @@
 
+#include "components/esm/creaturestats.hpp"
+#include "components/esm/inventorystate.hpp"
+#include "components/esm/objectstate.hpp"
 #include "creaturestate.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 void ESM::CreatureState::load (ESMReader &esm)
 {

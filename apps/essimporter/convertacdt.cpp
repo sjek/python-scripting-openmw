@@ -1,3 +1,8 @@
+#include "apps/essimporter/importacdt.hpp"
+#include "components/esm/creaturestats.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/npcstats.hpp"
+#include "components/esm/statstate.hpp"
 #include "convertacdt.hpp"
 
 namespace ESSImport

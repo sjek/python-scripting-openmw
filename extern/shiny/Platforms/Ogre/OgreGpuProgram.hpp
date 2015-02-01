@@ -1,11 +1,12 @@
 #ifndef SH_OGREGPUPROGRAM_H
 #define SH_OGREGPUPROGRAM_H
 
+#include <OgreHighLevelGpuProgram.h>
 #include <string>
 
-#include <OgreHighLevelGpuProgram.h>
-
 #include "../../Main/Platform.hpp"
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
 
 namespace sh
 {

@@ -3,8 +3,24 @@
 
 #include <components/esm/attr.hpp>
 #include <components/esm/loadclas.hpp>
+#include <stddef.h>
+#include <string>
+#include <vector>
+
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EditBox.h"
+#include "MyGUI_UString.h"
+#include "components/esm/loadskil.hpp"
 #include "widgets.hpp"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Button;
+class ImageBox;
+class ListBox;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

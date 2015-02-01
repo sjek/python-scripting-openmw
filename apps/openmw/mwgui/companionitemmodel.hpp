@@ -1,7 +1,14 @@
 #ifndef MWGUI_COMPANION_ITEM_MODEL_H
 #define MWGUI_COMPANION_ITEM_MODEL_H
 
+#include <stddef.h>
+
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
 #include "inventoryitemmodel.hpp"
+
+namespace MWGui {
+struct ItemStack;
+}  // namespace MWGui
 
 namespace MWGui
 {

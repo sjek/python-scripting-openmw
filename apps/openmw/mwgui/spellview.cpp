@@ -1,11 +1,20 @@
-#include "spellview.hpp"
-
 #include <MyGUI_FactoryManager.h>
-#include <MyGUI_ScrollView.h>
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_Gui.h>
-
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_ScrollView.h>
 #include <components/widgets/sharedstatebutton.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
+
+#include "MyGUI_Align.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/spellmodel.hpp"
+#include "spellview.hpp"
 
 namespace MWGui
 {

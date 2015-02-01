@@ -1,11 +1,21 @@
 #ifndef CSVSETTINGS_RANGEVIEW_HPP
 #define CSVSETTINGS_RANGEVIEW_HPP
 
-#include "view.hpp"
-#include "../../model/settings/support.hpp"
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qwidget.h>
 
-class QStringListModel;
+#include "../../model/settings/support.hpp"
+#include "view.hpp"
+
 class QAbstractSpinBox;
+class QStringListModel;
+namespace CSMSettings {
+class Setting;
+}  // namespace CSMSettings
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 namespace CSVSettings
 {

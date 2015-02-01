@@ -1,9 +1,21 @@
-#include "niffile.hpp"
-#include "effect.hpp"
-
-#include <map>
-
 #include <OgreResourceGroupManager.h>
+#include <assert.h>
+#include <stdint.h>
+#include <map>
+#include <utility>
+
+#include "OgreStringConverter.h"
+#include "components/nif/base.hpp"
+#include "components/nif/controlled.hpp"
+#include "components/nif/controller.hpp"
+#include "components/nif/data.hpp"
+#include "components/nif/extra.hpp"
+#include "components/nif/nifstream.hpp"
+#include "components/nif/node.hpp"
+#include "components/nif/property.hpp"
+#include "components/nif/record.hpp"
+#include "effect.hpp"
+#include "niffile.hpp"
 
 namespace Nif
 {

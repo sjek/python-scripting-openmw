@@ -1,7 +1,12 @@
+#include <components/esm/esmreader.hpp>
+
+#include "apps/openmw/mwworld/contentloader.hpp"
 #include "esmloader.hpp"
 #include "esmstore.hpp"
 
-#include <components/esm/esmreader.hpp>
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace MWWorld
 {

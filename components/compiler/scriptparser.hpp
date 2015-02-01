@@ -2,10 +2,21 @@
 #define COMPILER_SCRIPTPARSER_H_INCLUDED
 
 
-#include "parser.hpp"
-#include "lineparser.hpp"
+#include <string>
+#include <vector>
+
+#include "components/interpreter/types.hpp"
 #include "controlparser.hpp"
+#include "lineparser.hpp"
 #include "output.hpp"
+#include "parser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

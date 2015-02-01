@@ -1,11 +1,17 @@
 #ifndef CSM_WOLRD_IDTABLE_H
 #define CSM_WOLRD_IDTABLE_H
 
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qobjectdefs.h>
+#include <qvariant.h>
+#include <string>
+#include <utility>
 #include <vector>
 
+#include "columns.hpp"
 #include "idtablebase.hpp"
 #include "universalid.hpp"
-#include "columns.hpp"
 
 namespace CSMWorld
 {

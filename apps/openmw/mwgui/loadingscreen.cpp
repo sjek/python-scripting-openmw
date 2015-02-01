@@ -1,28 +1,37 @@
-#include "loadingscreen.hpp"
-
-#include <OgreRenderWindow.h>
-#include <OgreMaterialManager.h>
-#include <OgreTechnique.h>
-#include <OgreRectangle2D.h>
-#include <OgreSceneNode.h>
-#include <OgreTextureManager.h>
-#include <OgreViewport.h>
-#include <OgreHardwarePixelBuffer.h>
-#include <OgreSceneManager.h>
-
+#include <MyGUI_Gui.h>
 #include <MyGUI_RenderManager.h>
 #include <MyGUI_ScrollBar.h>
-#include <MyGUI_Gui.h>
 #include <MyGUI_TextBox.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreRenderWindow.h>
+#include <OgreSceneManager.h>
+#include <OgreTextureManager.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <iostream>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/statemanager.hpp"
-
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/inputmanager.hpp"
-
+#include "../mwbase/statemanager.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "OgreHardwareBuffer.h"
+#include "OgreImage.h"
+#include "OgrePrerequisites.h"
+#include "OgreRenderQueue.h"
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "OgreStringVector.h"
+#include "OgreTexture.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "backgroundimage.hpp"
+#include "components/settings/settings.hpp"
+#include "loadingscreen.hpp"
 
 namespace MWGui
 {

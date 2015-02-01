@@ -1,10 +1,14 @@
-#include "containeritemmodel.hpp"
+#include <assert.h>
+#include <algorithm>
+#include <stdexcept>
 
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/class.hpp"
-
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "apps/openmw/mwgui/../mwworld/refdata.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "containeritemmodel.hpp"
 
 namespace
 {

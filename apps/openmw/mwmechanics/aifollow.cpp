@@ -1,20 +1,26 @@
-#include "aifollow.hpp"
-
-#include <iostream>
-
-#include <components/esm/aisequence.hpp>
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "creaturestats.hpp"
-#include "movement.hpp"
-
 #include <OgreMath.h>
 #include <OgreVector3.h>
+#include <components/esm/aisequence.hpp>
+#include <list>
+#include <memory>
+#include <vector>
 
+#include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "aifollow.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "creaturestats.hpp"
+#include "movement.hpp"
 #include "steering.hpp"
 
 namespace MWMechanics

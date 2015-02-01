@@ -1,7 +1,12 @@
 #ifndef ADDPROPERTYDIALOG_H
 #define ADDPROPERTYDIALOG_H
 
+#include <qdialog.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QDialog>
+
+class QWidget;
 
 namespace Ui {
 class AddPropertyDialog;

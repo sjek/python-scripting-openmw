@@ -1,8 +1,8 @@
-#include "loadappa.hpp"
-
+#include "components/esm/esmcommon.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadappa.hpp"
 
 namespace ESM
 {

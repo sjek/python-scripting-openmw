@@ -1,9 +1,20 @@
-#include "ffmpeg_decoder.hpp"
-
-// auto_ptr
-#include <memory>
-
+#include <libavformat/avio.h>
+#include <libavutil/avutil.h>
+#include <libavutil/channel_layout.h>
+#include <libavutil/log.h>
+#include <libavutil/mem.h>
+#include <libavutil/rational.h>
+#include <stdio.h>
+#include <string.h>
+#include <algorithm>
+#include <exception>
+#include <ostream>
 #include <stdexcept>
+
+#include "OgreResourceGroupManager.h"
+#include "OgreSharedPtr.h"
+#include "apps/openmw/mwsound/sound_decoder.hpp"
+#include "ffmpeg_decoder.hpp"
 
 extern "C" {
 #ifndef HAVE_LIBSWRESAMPLE

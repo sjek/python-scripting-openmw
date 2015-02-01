@@ -1,9 +1,8 @@
 #ifndef OPENMW_ESSIMPORT_CELLREF_H
 #define OPENMW_ESSIMPORT_CELLREF_H
 
-#include <string>
-
 #include <components/esm/cellref.hpp>
+#include <string>
 
 #include "importacdt.hpp"
 

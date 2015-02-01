@@ -1,28 +1,29 @@
-#include "objects.hpp"
-
-#include <cmath>
-
-#include <OgreSceneNode.h>
 #include <OgreSceneManager.h>
-#include <OgreEntity.h>
-#include <OgreLight.h>
-#include <OgreSubEntity.h>
-#include <OgreParticleSystem.h>
-#include <OgreParticleEmitter.h>
+#include <OgreSceneNode.h>
 #include <OgreStaticGeometry.h>
-
-#include <components/esm/loadligh.hpp>
-#include <components/esm/loadstat.hpp>
-
-#include <components/nifogre/ogrenifloader.hpp>
 #include <components/settings/settings.hpp>
+#include <algorithm>
+#include <memory>
+#include <utility>
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/class.hpp"
 #include "../mwworld/cellstore.hpp"
-
-#include "renderconst.hpp"
+#include "../mwworld/ptr.hpp"
+#include "OgreAxisAlignedBox.h"
+#include "OgreMath.h"
+#include "OgreQuaternion.h"
+#include "OgreStringConverter.h"
+#include "OgreVector3.h"
 #include "animation.hpp"
+#include "apps/openmw/mwrender/../mwworld/cellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
+#include "objects.hpp"
+#include "openengine/ogre/renderer.hpp"
+#include "renderconst.hpp"
+
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
 
 using namespace MWRender;
 

@@ -1,9 +1,18 @@
 #ifndef OPENMW_MWGUI_REPAIR_H
 #define OPENMW_MWGUI_REPAIR_H
 
+#include "../mwmechanics/repair.hpp"
 #include "windowbase.hpp"
 
-#include "../mwmechanics/repair.hpp"
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class ScrollView;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

@@ -1,11 +1,20 @@
 #ifndef MAINWIZARD_HPP
 #define MAINWIZARD_HPP
 
+#include <components/process/processinvoker.hpp>
+#include <qmap.h>
+#include <qobjectdefs.h>
+#include <qprocess.h>
+#include <qstring.h>
+#include <qwizard.h>
+#include <QMap>
 #include <QProcess>
 #include <QWizard>
-#include <QMap>
 
-#include <components/process/processinvoker.hpp>
+class QWidget;
+namespace Process {
+class ProcessInvoker;
+}  // namespace Process
 
 #ifndef Q_MOC_RUN
 #include <components/files/configurationmanager.hpp>

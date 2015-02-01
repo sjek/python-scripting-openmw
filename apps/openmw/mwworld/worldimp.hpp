@@ -1,23 +1,77 @@
 #ifndef GAME_MWWORLD_WORLDIMP_H
 #define GAME_MWWORLD_WORLDIMP_H
 
-#include "../mwrender/debugging.hpp"
-
+#include <boost/filesystem/path.hpp>
 #include <boost/shared_ptr.hpp>
-
-#include "ptr.hpp"
-#include "scene.hpp"
-#include "esmstore.hpp"
-#include "physicssystem.hpp"
-#include "cells.hpp"
-#include "localscripts.hpp"
-#include "timestamp.hpp"
-#include "fallback.hpp"
-#include "globals.hpp"
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stdint.h>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/world.hpp"
-
+#include "../mwrender/debugging.hpp"
+#include "OgreQuaternion.h"
+#include "OgreVector2.h"
+#include "OgreVector3.h"
+#include "apps/openmw/mwworld/../mwrender/animation.hpp"
+#include "apps/openmw/mwworld/../mwrender/camera.hpp"
+#include "apps/openmw/mwworld/../mwrender/renderingmanager.hpp"
+#include "apps/openmw/mwworld/cellstore.hpp"
+#include "apps/openmw/mwworld/player.hpp"
+#include "cells.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/settings/settings.hpp"
 #include "contentloader.hpp"
+#include "esmstore.hpp"
+#include "fallback.hpp"
+#include "globals.hpp"
+#include "localscripts.hpp"
+#include "physicssystem.hpp"
+#include "ptr.hpp"
+#include "scene.hpp"
+#include "timestamp.hpp"
+
+namespace ESM {
+class ESMWriter;
+struct CellId;
+struct EffectList;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
+namespace MWWorld {
+class PhysicsSystem;
+class RefData;
+class Scene;
+struct ContentLoader;
+}  // namespace MWWorld
+namespace OEngine {
+namespace Physic {
+class PhysicEngine;
+}  // namespace Physic
+namespace Render {
+class OgreRenderer;
+}  // namespace Render
+}  // namespace OEngine
+namespace Ogre {
+class Image;
+}  // namespace Ogre
+namespace ToUTF8 {
+class Utf8Encoder;
+}  // namespace ToUTF8
 
 namespace Ogre
 {
@@ -41,19 +95,19 @@ namespace Render
 
 namespace MWRender
 {
-    class SkyManager;
-    class CellRender;
     class Animation;
     class Camera;
+    class CellRender;
+    class SkyManager;
 }
 
 struct ContentLoader;
 
 namespace MWWorld
 {
-    class WeatherManager;
     class Player;
     class ProjectileManager;
+    class WeatherManager;
 
     /// \brief The game world and its visual representation
 

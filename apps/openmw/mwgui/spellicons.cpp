@@ -1,23 +1,32 @@
-#include "spellicons.hpp"
-
-#include <sstream>
-#include <iomanip>
-
 #include <MyGUI_ImageBox.h>
-
 #include <components/esm/loadmgef.hpp>
 #include <components/misc/resourcehelpers.hpp>
+#include <algorithm>
+#include <iomanip>
+#include <sstream>
+#include <utility>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/creaturestats.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/inventorystore.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/activespells.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/spells.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadskil.hpp"
+#include "spellicons.hpp"
 #include "tooltips.hpp"
 
 

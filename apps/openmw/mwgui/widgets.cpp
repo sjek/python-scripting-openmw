@@ -1,21 +1,37 @@
-#include "widgets.hpp"
-
-#include <sstream>
-#include <iomanip>
-
-#include <MyGUI_ProgressBar.h>
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_ControllerManager.h>
-
+#include <MyGUI_ImageBox.h>
+#include <MyGUI_ProgressBar.h>
+#include <assert.h>
 #include <components/misc/resourcehelpers.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <iomanip>
+#include <sstream>
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_ControllerItem.h"
+#include "MyGUI_Diagnostic.h"
+#include "MyGUI_LogStream.h"
+#include "MyGUI_ScrollBar.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/stat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadspel.hpp"
 #include "controllers.hpp"
+#include "widgets.hpp"
 
 #undef min
 #undef max

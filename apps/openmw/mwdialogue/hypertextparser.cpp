@@ -1,14 +1,13 @@
 #include <components/esm/loaddial.hpp>
+#include <list>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/store.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "keywordsearch.hpp"
-
+#include "../mwworld/store.hpp"
+#include "components/misc/stringops.hpp"
 #include "hypertextparser.hpp"
+#include "keywordsearch.hpp"
 
 namespace MWDialogue
 {

@@ -1,34 +1,52 @@
 
-#include "miscextensions.hpp"
-
-#include <cstdlib>
-
-#include <components/compiler/extensions.hpp>
-#include <components/compiler/opcodes.hpp>
 #include <components/compiler/locals.hpp>
-
-#include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
-#include <components/interpreter/opcodes.hpp>
-
-#include <components/esm/loadmgef.hpp>
+#include <components/compiler/opcodes.hpp>
 #include <components/esm/loadcrea.hpp>
+#include <components/esm/loadmgef.hpp>
+#include <components/interpreter/interpreter.hpp>
+#include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <stddef.h>
+#include <cmath>
+#include <cstdlib>
+#include <ostream>
+#include <stdexcept>
+#include <string>
+#include <typeinfo>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/scriptmanager.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwmechanics/creaturestats.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwmechanics/spellcasting.hpp"
+#include "../mwworld/cellstore.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/player.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/cellstore.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/spellcasting.hpp"
-
+#include "../mwworld/player.hpp"
+#include "OgreVector3.h"
+#include "apps/openmw/mwscript/../mwbase/../mwmechanics/activespells.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwscript/../mwbase/world.hpp"
+#include "apps/openmw/mwscript/../mwworld/../mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwscript/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwscript/../mwworld/cellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "apps/openmw/mwscript/../mwworld/store.hpp"
+#include "apps/openmw/mwscript/../mwworld/timestamp.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/interpreter/context.hpp"
+#include "components/interpreter/types.hpp"
+#include "components/misc/stringops.hpp"
 #include "interpretercontext.hpp"
+#include "miscextensions.hpp"
 #include "ref.hpp"
 
 namespace

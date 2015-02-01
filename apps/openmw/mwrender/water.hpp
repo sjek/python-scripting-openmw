@@ -1,41 +1,53 @@
 #ifndef GAME_MWRENDER_WATER_H
 #define GAME_MWRENDER_WATER_H
 
+#include <OgreMaterial.h>
 #include <OgrePlane.h>
 #include <OgreRenderQueue.h>
 #include <OgreRenderQueueListener.h>
 #include <OgreRenderTargetListener.h>
-#include <OgreMaterial.h>
 #include <OgreTexture.h>
 #include <OgreVector2.h>
-
 #include <components/esm/loadcell.hpp>
 #include <components/settings/settings.hpp>
-
 #include <extern/shiny/Main/MaterialInstance.hpp>
-
-
-#include "renderconst.hpp"
+#include <stddef.h>
+#include <string>
 
 #include "../mwworld/ptr.hpp"
+#include "OgreColourValue.h"
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
+#include "renderconst.hpp"
+
+namespace ESM {
+struct Cell;
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace Ogre {
+class RenderTarget;
+}  // namespace Ogre
 
 namespace Ogre
 {
     class Camera;
+    class Entity;
+    class Rectangle2D;
     class SceneManager;
     class SceneNode;
-    class Entity;
     class Vector3;
-    class Rectangle2D;
     struct RenderTargetEvent;
 }
 
 namespace MWRender {
 
-    class SkyManager;
+    class Refraction;
     class RenderingManager;
     class RippleSimulation;
-    class Refraction;
+    class SkyManager;
 
     class Reflection
     {

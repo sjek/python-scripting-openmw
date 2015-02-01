@@ -1,9 +1,19 @@
 #ifndef CSV_WORLD_REFERENCECREATOR_H
 #define CSV_WORLD_REFERENCECREATOR_H
 
+#include <qobjectdefs.h>
+#include <memory>
+#include <string>
+
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
 #include "genericcreator.hpp"
 
 class QLineEdit;
+class QUndoStack;
+namespace CSMWorld {
+class CreateCommand;
+class Data;
+}  // namespace CSMWorld
 
 namespace CSVWorld
 {

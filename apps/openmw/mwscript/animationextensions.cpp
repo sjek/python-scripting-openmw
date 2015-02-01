@@ -1,18 +1,17 @@
 
-#include "animationextensions.hpp"
-
-#include <stdexcept>
-
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <limits>
+#include <stdexcept>
+#include <string>
 
 #include "../mwbase/mechanicsmanager.hpp"
-
-#include "interpretercontext.hpp"
+#include "animationextensions.hpp"
+#include "apps/openmw/mwscript/../mwbase/environment.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "components/interpreter/types.hpp"
 #include "ref.hpp"
 
 namespace MWScript

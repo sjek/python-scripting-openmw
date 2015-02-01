@@ -1,15 +1,37 @@
-#include "document.hpp"
-
-#include <cassert>
+#include <boost/filesystem/operations.hpp>
+#include <boost/smart_ptr/detail/operator_bool.hpp>
 #include <fstream>
+#include <iostream>
+#include <stdexcept>
 
-#include <boost/filesystem.hpp>
+#include "apps/opencs/model/doc/../tools/tools.hpp"
+#include "apps/opencs/model/doc/../world/data.hpp"
+#include "apps/opencs/model/doc/../world/idcollection.hpp"
+#include "apps/opencs/model/doc/../world/record.hpp"
+#include "apps/opencs/model/doc/blacklist.hpp"
+#include "apps/opencs/model/doc/runner.hpp"
+#include "apps/opencs/model/doc/saving.hpp"
+#include "apps/opencs/model/doc/state.hpp"
+#include "components/esm/debugprofile.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadglob.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/variant.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "document.hpp"
 
 #ifndef Q_MOC_RUN
 #include <components/files/configurationmanager.hpp>
 #endif
 
 #include "../../view/world/physicssystem.hpp"
+
+class QTextDocument;
+namespace CSMTools {
+class ReportModel;
+}  // namespace CSMTools
 
 void CSMDoc::Document::addGmsts()
 {

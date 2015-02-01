@@ -1,7 +1,21 @@
 #ifndef MWGUI_RACE_H
 #define MWGUI_RACE_H
 
+#include <stddef.h>
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "MyGUI_DelegateImplement.h"
+#include "apps/openmw/mwgui/../mwrender/characterpreview.hpp"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class ImageBox;
+class ListBox;
+class ScrollBar;
+class Widget;
+}  // namespace MyGUI
 
 
 namespace MWGui

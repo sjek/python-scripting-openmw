@@ -1,17 +1,31 @@
 #ifndef OPENMW_MWGUI_COMPANIONWINDOW_H
 #define OPENMW_MWGUI_COMPANIONWINDOW_H
 
+#include "referenceinterface.hpp"
 #include "widgets.hpp"
 #include "windowbase.hpp"
-#include "referenceinterface.hpp"
+
+namespace MWGui {
+namespace Widgets {
+class MWDynamicStat;
+}  // namespace Widgets
+}  // namespace MWGui
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+class TextBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {
-    class MessageBoxManager;
-    class ItemView;
-    class DragAndDrop;
-    class SortFilterItemModel;
     class CompanionItemModel;
+    class DragAndDrop;
+    class ItemView;
+    class MessageBoxManager;
+    class SortFilterItemModel;
 
     class CompanionWindow : public WindowBase, public ReferenceInterface
     {

@@ -1,10 +1,18 @@
 #ifndef CSVSETTINGS_FRAME_HPP
 #define CSVSETTINGS_FRAME_HPP
 
-#include <QSizePolicy>
-#include <QGroupBox>
+#include <qglobal.h>
+#include <qgridlayout.h>
+#include <qgroupbox.h>
+#include <qnamespace.h>
+#include <qstring.h>
 #include <QGridLayout>
+#include <QGroupBox>
+#include <QSizePolicy>
+
 #include "../../model/settings/support.hpp"
+
+class QWidget;
 
 namespace CSVSettings
 {

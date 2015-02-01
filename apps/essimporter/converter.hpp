@@ -2,39 +2,60 @@
 #define OPENMW_ESSIMPORT_CONVERTER_H
 
 #include <OgreImage.h>
-
+#include <assert.h>
+#include <components/esm/cellstate.hpp>
+#include <components/esm/custommarkerstate.hpp>
+#include <components/esm/dialoguestate.hpp>
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
-
-#include <components/esm/loadcell.hpp>
-#include <components/esm/loadbook.hpp>
-#include <components/esm/loadclas.hpp>
-#include <components/esm/loadglob.hpp>
-#include <components/esm/cellstate.hpp>
-#include <components/esm/loadfact.hpp>
-#include <components/esm/dialoguestate.hpp>
-#include <components/esm/custommarkerstate.hpp>
-#include <components/esm/loadcrea.hpp>
-#include <components/esm/weatherstate.hpp>
 #include <components/esm/globalscript.hpp>
+#include <components/esm/loadbook.hpp>
+#include <components/esm/loadcell.hpp>
+#include <components/esm/loadclas.hpp>
+#include <components/esm/loadcrea.hpp>
+#include <components/esm/loadfact.hpp>
+#include <components/esm/loadglob.hpp>
 #include <components/esm/queststate.hpp>
+#include <components/esm/weatherstate.hpp>
+#include <map>
+#include <ostream>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include "importcrec.hpp"
-#include "importcntc.hpp"
-
-#include "importercontext.hpp"
-#include "importcellref.hpp"
-#include "importklst.hpp"
-#include "importgame.hpp"
-#include "importinfo.hpp"
-#include "importdial.hpp"
-#include "importques.hpp"
-#include "importjour.hpp"
-#include "importscpt.hpp"
-
+#include "apps/essimporter/importacdt.hpp"
+#include "apps/essimporter/importnpcc.hpp"
+#include "apps/essimporter/importplayer.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/creaturestats.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/inventorystate.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/npcstate.hpp"
+#include "components/esm/npcstats.hpp"
+#include "components/esm/objectstate.hpp"
+#include "components/esm/player.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/esm/spellstate.hpp"
+#include "components/esm/variant.hpp"
+#include "components/misc/stringops.hpp"
 #include "convertacdt.hpp"
 #include "convertnpcc.hpp"
 #include "convertscpt.hpp"
+#include "importcellref.hpp"
+#include "importcntc.hpp"
+#include "importcrec.hpp"
+#include "importdial.hpp"
+#include "importercontext.hpp"
+#include "importgame.hpp"
+#include "importinfo.hpp"
+#include "importjour.hpp"
+#include "importklst.hpp"
+#include "importques.hpp"
+#include "importscpt.hpp"
 
 namespace ESSImport
 {

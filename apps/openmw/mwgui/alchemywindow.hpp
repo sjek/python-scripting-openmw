@@ -1,10 +1,19 @@
 #ifndef MWGUI_ALCHEMY_H
 #define MWGUI_ALCHEMY_H
 
+#include <memory>
+#include <string>
 #include <vector>
 
+#include "apps/openmw/mwgui/../mwmechanics/alchemy.hpp"
 #include "widgets.hpp"
 #include "windowbase.hpp"
+
+namespace MyGUI {
+class Button;
+class EditBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWMechanics
 {

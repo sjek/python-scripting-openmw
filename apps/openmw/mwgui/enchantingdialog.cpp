@@ -1,28 +1,44 @@
-#include "enchantingdialog.hpp"
-
-#include <iomanip>
-
-#include <boost/lexical_cast.hpp>
-
 #include <MyGUI_Button.h>
 #include <MyGUI_ScrollView.h>
-
-#include <components/esm/records.hpp>
 #include <components/widgets/list.hpp>
+#include <stddef.h>
+#include <iomanip>
+#include <ostream>
+#include <string>
+#include <vector>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
+#include "../mwbase/environment.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/soundmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/../mwbase/windowmanager.hpp"
+#include "apps/openmw/mwgui/../mwmechanics/enchanting.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "apps/openmw/mwgui/spellcreationdialog.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/misc/stringops.hpp"
+#include "enchantingdialog.hpp"
 #include "itemselection.hpp"
 #include "itemwidget.hpp"
-
 #include "sortfilteritemmodel.hpp"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

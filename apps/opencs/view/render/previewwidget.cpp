@@ -1,11 +1,23 @@
 
-#include "previewwidget.hpp"
-
 #include <OgreSceneManager.h>
-#include <OgreSceneNode.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <qabstractitemmodel.h>
+#include <qvariant.h>
 
 #include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
+#include "apps/opencs/view/render/../../model/world/../doc/../world/universalid.hpp"
+#include "apps/opencs/view/render/../../model/world/columns.hpp"
+#include "apps/opencs/view/render/../../model/world/record.hpp"
+#include "apps/opencs/view/render/navigationorbit.hpp"
+#include "apps/opencs/view/render/object.hpp"
+#include "apps/opencs/view/render/scenewidget.hpp"
+#include "previewwidget.hpp"
+
+class QWidget;
+namespace CSVWorld {
+class PhysicsSystem;
+}  // namespace CSVWorld
 
 CSVRender::PreviewWidget::PreviewWidget (CSMWorld::Data& data,
     const std::string& id, bool referenceable, QWidget *parent)

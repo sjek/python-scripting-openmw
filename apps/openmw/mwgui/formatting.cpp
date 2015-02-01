@@ -1,22 +1,26 @@
-#include "formatting.hpp"
-
-#include <OgreUTFString.h>
-#include <OgreResourceGroupManager.h>
-
-#include <MyGUI_EditText.h>
-#include <MyGUI_Gui.h>
 #include <MyGUI_EditBox.h>
-#include <MyGUI_ImageBox.h>
 #include <MyGUI_FontManager.h>
-
+#include <MyGUI_Gui.h>
+#include <MyGUI_ImageBox.h>
 #include <boost/algorithm/string/replace.hpp>
-#include <boost/algorithm/string/predicate.hpp>
-
+#include <boost/iterator/iterator_traits.hpp>
 #include <components/interpreter/defines.hpp>
 #include <components/misc/resourcehelpers.hpp>
 #include <components/misc/stringops.hpp>
+#include <istream>
+#include <stdexcept>
 
 #include "../mwscript/interpretercontext.hpp"
+#include "MyGUI_Colour.h"
+#include "MyGUI_IFont.h"
+#include "MyGUI_Prerequest.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextIterator.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "apps/openmw/mwgui/../mwscript/../mwworld/ptr.hpp"
+#include "formatting.hpp"
 
 namespace MWGui
 {

@@ -1,32 +1,44 @@
 
-#include "statsextensions.hpp"
-
-#include <cmath>
-
-#include <components/esm/loadnpc.hpp>
-
-#include "../mwworld/esmstore.hpp"
-
-#include <components/compiler/extensions.hpp>
+#include <assert.h>
 #include <components/compiler/opcodes.hpp>
-
+#include <components/esm/loadnpc.hpp>
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <iostream>
+#include <map>
+#include <stdexcept>
+#include <string>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/player.hpp"
-
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
-#include "interpretercontext.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/player.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwmechanics/activespells.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwmechanics/spells.hpp"
+#include "apps/openmw/mwscript/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwscript/../mwbase/world.hpp"
+#include "apps/openmw/mwscript/../mwworld/cellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "apps/openmw/mwscript/../mwworld/store.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/interpreter/types.hpp"
+#include "components/misc/stringops.hpp"
 #include "ref.hpp"
+#include "statsextensions.hpp"
 
 namespace
 {

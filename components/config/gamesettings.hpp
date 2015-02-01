@@ -1,12 +1,18 @@
 #ifndef GAMESETTINGS_HPP
 #define GAMESETTINGS_HPP
 
-#include <QTextStream>
-#include <QStringList>
-#include <QString>
-#include <QMap>
-
 #include <boost/filesystem/path.hpp>
+#include <qglobal.h>
+#include <qmap.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <QMap>
+#include <QString>
+#include <QStringList>
+#include <QTextStream>
+#include <vector>
+
+class QTextStream;
 
 namespace Files
 {

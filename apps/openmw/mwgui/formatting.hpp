@@ -2,7 +2,19 @@
 #define MWGUI_FORMATTING_H
 
 #include <MyGUI_Colour.h>
+#include <stddef.h>
 #include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "MyGUI_Align.h"
+
+namespace MyGUI {
+class EditBox;
+class ImageBox;
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

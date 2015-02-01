@@ -36,6 +36,7 @@ distribution.
 
 #ifndef TIXML_USE_STL
 
+#include <stddef.h>
 #ifndef TIXML_STRING_INCLUDED
 #define TIXML_STRING_INCLUDED
 

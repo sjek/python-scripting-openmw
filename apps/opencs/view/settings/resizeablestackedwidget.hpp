@@ -1,9 +1,12 @@
 #ifndef CSVSETTINGS_RESIZEABLESTACKEDWIDGET_HPP
 #define CSVSETTINGS_RESIZEABLESTACKEDWIDGET_HPP
 
+#include <qobjectdefs.h>
+#include <qstackedwidget.h>
 #include <QStackedWidget>
 
 class QListWidgetItem;
+class QWidget;
 
 namespace CSVSettings
 {

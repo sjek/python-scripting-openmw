@@ -1,10 +1,27 @@
 #ifndef GAME_MWDIALOG_JOURNAL_H
 #define GAME_MWDIALOG_JOURNAL_H
 
-#include "../mwbase/journal.hpp"
+#include <stdint.h>
+#include <string>
 
+#include "../mwbase/journal.hpp"
 #include "journalentry.hpp"
 #include "quest.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
+namespace MWDialogue {
+class Quest;
+class Topic;
+}  // namespace MWDialogue
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWDialogue
 {

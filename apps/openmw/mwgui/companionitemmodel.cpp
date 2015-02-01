@@ -1,7 +1,8 @@
-#include "companionitemmodel.hpp"
-
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwworld/class.hpp"
+#include "apps/openmw/mwgui/inventoryitemmodel.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "companionitemmodel.hpp"
 
 namespace MWGui
 {

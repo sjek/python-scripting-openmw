@@ -1,6 +1,12 @@
-#include "videoplayer.hpp"
+#include <stddef.h>
+#include <exception>
+#include <iostream>
 
+#include "OgrePrerequisites.h"
+#include "OgreSharedPtr.h"
+#include "OgreTexture.h"
 #include "audiofactory.hpp"
+#include "videoplayer.hpp"
 #include "videostate.hpp"
 
 namespace Video

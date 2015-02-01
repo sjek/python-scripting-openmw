@@ -1,8 +1,16 @@
-#include "sdlinputwrapper.hpp"
-#include <SDL_syswm.h>
-
 #include <OgrePlatform.h>
-#include <OgreRoot.h>
+#include <boost/unordered/detail/buckets.hpp>
+#include <stddef.h>
+#include <iostream>
+#include <stdexcept>
+
+#include "OgreRenderWindow.h"
+#include "SDL_events.h"
+#include "SDL_keyboard.h"
+#include "SDL_mouse.h"
+#include "extern/sdl4ogre/OISCompat.h"
+#include "extern/sdl4ogre/events.h"
+#include "sdlinputwrapper.hpp"
 
 
 namespace SFO

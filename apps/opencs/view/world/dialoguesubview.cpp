@@ -1,36 +1,47 @@
-#include "dialoguesubview.hpp"
-
-#include <utility>
+#include <qabstractitemmodel.h>
+#include <qabstractspinbox.h>
+#include <qboxlayout.h>
+#include <qbytearray.h>
+#include <qcheckbox.h>
+#include <qcombobox.h>
+#include <qdatawidgetmapper.h>
+#include <qframe.h>
+#include <qglobal.h>
+#include <qgridlayout.h>
+#include <qicon.h>
+#include <qlabel.h>
+#include <qlineedit.h>
+#include <qnamespace.h>
+#include <qplaintextedit.h>
+#include <qrect.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qstring.h>
+#include <qtoolbutton.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <qwidget.h>
+#include <stddef.h>
 #include <memory>
+#include <utility>
 
-#include <QGridLayout>
-#include <QLabel>
-#include <QSize>
-#include <QAbstractItemModel>
-#include <QDoubleSpinBox>
-#include <QSpinBox>
-#include <QLineEdit>
-#include <QEvent>
-#include <QDataWidgetMapper>
-#include <QCheckBox>
-#include <QLineEdit>
-#include <QPlainTextEdit>
-#include <QComboBox>
-#include <QScrollArea>
-#include <QPushButton>
-#include <QToolButton>
-
+#include "../../model/doc/document.hpp"
 #include "../../model/world/columnbase.hpp"
-#include "../../model/world/idtable.hpp"
 #include "../../model/world/columns.hpp"
+#include "../../model/world/commands.hpp"
+#include "../../model/world/idtable.hpp"
 #include "../../model/world/record.hpp"
 #include "../../model/world/tablemimedata.hpp"
-#include "../../model/doc/document.hpp"
-#include "../../model/world/commands.hpp"
-
-#include "recordstatusdelegate.hpp"
-#include "util.hpp"
+#include "apps/opencs/view/world/../../model/world/commanddispatcher.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/data.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/idtablebase.hpp"
+#include "apps/opencs/view/world/../doc/subview.hpp"
+#include "dialoguesubview.hpp"
 #include "tablebottombox.hpp"
+#include "util.hpp"
+
+class QPainter;
+
 /*
 ==============================NotEditableSubDelegate==========================================
 */

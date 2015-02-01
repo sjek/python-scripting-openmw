@@ -1,12 +1,21 @@
 #ifndef SH_MATERIALINSTANCE_H
 #define SH_MATERIALINSTANCE_H
 
-#include <vector>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <fstream>
+#include <string>
+#include <vector>
 
-#include "PropertyBase.hpp"
-#include "Platform.hpp"
 #include "MaterialInstancePass.hpp"
+#include "Platform.hpp"
+#include "PropertyBase.hpp"
+
+namespace sh {
+class Material;
+class MaterialInstance;
+class Platform;
+class TextureUnitState;
+}  // namespace sh
 
 namespace sh
 {

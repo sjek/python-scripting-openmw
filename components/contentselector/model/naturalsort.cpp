@@ -3,6 +3,9 @@
  * See Qt's qfilesystemmodel source files for more information
  */
 
+#include <qchar.h>
+#include <qnamespace.h>
+
 #include "naturalsort.hpp"
 
 static inline QChar getNextChar(const QString &s, int location)

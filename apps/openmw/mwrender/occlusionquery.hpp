@@ -6,12 +6,27 @@
 
 namespace Ogre
 {
-    class HardwareOcclusionQuery;
     class Entity;
+    class HardwareOcclusionQuery;
     class SceneNode;
 }
 
 #include <openengine/ogre/renderer.hpp>
+
+#include "OgreCommon.h"
+#include "OgrePlatform.h"
+#include "OgrePrerequisites.h"
+
+namespace OEngine {
+namespace Render {
+class OgreRenderer;
+}  // namespace Render
+}  // namespace OEngine
+namespace Ogre {
+class AutoParamDataSource;
+class Pass;
+class Renderable;
+}  // namespace Ogre
 
 namespace MWRender
 {

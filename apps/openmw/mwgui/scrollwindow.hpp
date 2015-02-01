@@ -1,9 +1,13 @@
 #ifndef MWGUI_SCROLLWINDOW_H
 #define MWGUI_SCROLLWINDOW_H
 
+#include "../mwworld/ptr.hpp"
 #include "windowbase.hpp"
 
-#include "../mwworld/ptr.hpp"
+namespace MyGUI {
+class ScrollView;
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

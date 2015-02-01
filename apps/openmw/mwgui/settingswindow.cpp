@@ -1,28 +1,50 @@
-#include "settingswindow.hpp"
-
-#include <OgreRoot.h>
-
-#include <MyGUI_ScrollBar.h>
-#include <MyGUI_Window.h>
 #include <MyGUI_ComboBox.h>
-#include <MyGUI_ListBox.h>
-#include <MyGUI_ScrollView.h>
 #include <MyGUI_Gui.h>
-
-#include <boost/algorithm/string.hpp>
-#include <boost/math/common_factor_rt.hpp>
-
+#include <MyGUI_ListBox.h>
+#include <MyGUI_ScrollBar.h>
+#include <MyGUI_ScrollView.h>
+#include <MyGUI_Window.h>
+#include <OgreRoot.h>
 #include <SDL_video.h>
-
+#include <assert.h>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/detail/classification.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <boost/iterator/iterator_facade.hpp>
+#include <boost/math/common_factor_rt.hpp>
 #include <components/widgets/sharedstatebutton.hpp>
+#include <algorithm>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/inputmanager.hpp"
+#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
+#include "MyGUI_Align.h"
+#include "MyGUI_Button.h"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_Macros.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_TextBox.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_Widget.h"
+#include "MyGUI_WidgetDefines.h"
+#include "MyGUI_WidgetInput.h"
+#include "OgrePrerequisites.h"
+#include "OgreRenderSystem.h"
+#include "apps/openmw/mwgui/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/settings/settings.hpp"
 #include "confirmationdialog.hpp"
+#include "settingswindow.hpp"
 
 namespace
 {

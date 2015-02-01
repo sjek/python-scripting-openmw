@@ -1,10 +1,19 @@
+#include <MyGUI_Button.h>
+#include <MyGUI_EditBox.h>
+
+#include "../mwbase/environment.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_EventPair.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_UString.h"
+#include "MyGUI_WidgetInput.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
 #include "textinput.hpp"
 
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/environment.hpp"
-
-#include <MyGUI_EditBox.h>
-#include <MyGUI_Button.h>
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {

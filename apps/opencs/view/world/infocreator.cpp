@@ -1,18 +1,23 @@
 
-#include "infocreator.hpp"
-
+#include <components/misc/stringops.hpp>
+#include <qabstractitemmodel.h>
+#include <qbytearray.h>
+#include <qlabel.h>
+#include <qlineedit.h>
+#include <qstring.h>
+#include <quuid.h>
+#include <qvariant.h>
 #include <algorithm>
 
-#include <QLabel>
-#include <QLineEdit>
-#include <QUuid>
-
-#include <components/misc/stringops.hpp>
-
-#include "../../model/world/data.hpp"
-#include "../../model/world/commands.hpp"
 #include "../../model/world/columns.hpp"
+#include "../../model/world/commands.hpp"
+#include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
+#include "apps/opencs/view/world/../../model/world/idcollection.hpp"
+#include "apps/opencs/view/world/genericcreator.hpp"
+#include "infocreator.hpp"
+
+class QUndoStack;
 
 std::string CSVWorld::InfoCreator::getId() const
 {

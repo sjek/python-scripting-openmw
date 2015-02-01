@@ -27,9 +27,17 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef OICS_Channel_H_
 #define OICS_Channel_H_
 
-#include "ICSPrerequisites.h"
+#include <stddef.h>
+#include <list>
+#include <vector>
 
 #include "ICSChannelListener.h"
+#include "ICSPrerequisites.h"
+
+namespace ICS {
+class ChannelListener;
+class Control;
+}  // namespace ICS
 
 namespace ICS
 {	

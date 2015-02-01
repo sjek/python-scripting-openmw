@@ -2,8 +2,19 @@
 #define CSV_WORLD_VARTYPEDELEGATE_H
 
 #include <components/esm/variant.hpp>
+#include <utility>
+#include <vector>
 
+#include "apps/opencs/view/world/util.hpp"
 #include "enumdelegate.hpp"
+
+class QAbstractItemModel;
+class QModelIndex;
+class QObject;
+class QString;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 namespace CSVWorld
 {

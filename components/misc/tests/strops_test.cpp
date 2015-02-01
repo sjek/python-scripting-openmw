@@ -1,7 +1,5 @@
 #include <cassert>
 
-#include "../stringops.hpp"
-
 int main()
 {
   assert(Misc::begins("abc", "a"));

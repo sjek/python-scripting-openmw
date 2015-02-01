@@ -1,14 +1,11 @@
 
-#include "selectwrapper.hpp"
-
-#include <cctype>
-
-#include <stdexcept>
-#include <algorithm>
-#include <sstream>
-#include <iterator>
-
 #include <components/misc/stringops.hpp>
+#include <sstream>
+#include <stdexcept>
+
+#include "components/esm/loadinfo.hpp"
+#include "components/esm/variant.hpp"
+#include "selectwrapper.hpp"
 
 namespace
 {

@@ -1,7 +1,12 @@
-#include "pickpocketitemmodel.hpp"
+#include <stdlib.h>
+#include <algorithm>
+#include <stdexcept>
 
-#include "../mwmechanics/npcstats.hpp"
 #include "../mwworld/class.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/itemmodel.hpp"
+#include "components/esm/loadskil.hpp"
+#include "pickpocketitemmodel.hpp"
 
 namespace MWGui
 {

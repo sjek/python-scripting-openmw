@@ -1,10 +1,23 @@
 #ifndef MGUI_CONTAINER_H
 #define MGUI_CONTAINER_H
 
-#include "windowbase.hpp"
-#include "referenceinterface.hpp"
-
+#include "MyGUI_KeyCode.h"
+#include "MyGUI_Types.h"
 #include "itemmodel.hpp"
+#include "referenceinterface.hpp"
+#include "windowbase.hpp"
+
+namespace MWGui {
+class DragAndDrop;
+class ItemModel;
+struct ItemStack;
+}  // namespace MWGui
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+namespace MyGUI {
+class Button;
+}  // namespace MyGUI
 
 namespace MWWorld
 {
@@ -19,10 +32,10 @@ namespace MyGUI
 
 namespace MWGui
 {
-    class WindowManager;
     class ContainerWindow;
     class ItemView;
     class SortFilterItemModel;
+    class WindowManager;
 }
 
 

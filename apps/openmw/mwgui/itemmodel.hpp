@@ -1,6 +1,8 @@
 #ifndef MWGUI_ITEM_MODEL_H
 #define MWGUI_ITEM_MODEL_H
 
+#include <stddef.h>
+
 #include "../mwworld/ptr.hpp"
 
 namespace MWGui

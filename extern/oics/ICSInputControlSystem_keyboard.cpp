@@ -24,7 +24,18 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------------------------------- */
 
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
 #include "ICSInputControlSystem.h"
+#include "SDL_events.h"
+#include "SDL_keyboard.h"
+#include "SDL_scancode.h"
+#include "extern/oics/ICSControl.h"
+#include "extern/oics/ICSPrerequisites.h"
+#include "extern/oics/tinyxml.h"
 
 namespace ICS
 {

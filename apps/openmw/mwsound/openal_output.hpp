@@ -1,20 +1,27 @@
 #ifndef GAME_SOUND_OPENAL_OUTPUT_H
 #define GAME_SOUND_OPENAL_OUTPUT_H
 
+#include <stdint.h>
+#include <deque>
+#include <map>
+#include <memory>
 #include <string>
 #include <vector>
-#include <map>
-#include <deque>
 
-#include "alc.h"
 #include "al.h"
-
+#include "alc.h"
+#include "apps/openmw/mwsound/../mwbase/soundmanager.hpp"
+#include "apps/openmw/mwsound/soundmanagerimp.hpp"
 #include "sound_output.hpp"
+
+namespace Ogre {
+class Vector3;
+}  // namespace Ogre
 
 namespace MWSound
 {
-    class SoundManager;
     class Sound;
+    class SoundManager;
 
     struct CachedSound
     {
@@ -70,6 +77,7 @@ namespace MWSound
         virtual ~OpenAL_Output();
 
         class StreamThread;
+
         std::auto_ptr<StreamThread> mStreamThread;
 
         friend class OpenAL_Sound;

@@ -1,10 +1,11 @@
-#include "videowidget.hpp"
-
-#include <extern/ogre-ffmpeg-videoplayer/videoplayer.hpp>
-
 #include <MyGUI_RenderManager.h>
+#include <extern/ogre-ffmpeg-videoplayer/videoplayer.hpp>
+#include <algorithm>
 
 #include "../mwsound/movieaudiofactory.hpp"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "videowidget.hpp"
 
 namespace MWGui
 {

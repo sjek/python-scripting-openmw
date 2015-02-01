@@ -2,6 +2,10 @@
 #define COMPONENTS_SETTINGS_H
 
 #include <OgreConfigFile.h>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 namespace Settings
 {

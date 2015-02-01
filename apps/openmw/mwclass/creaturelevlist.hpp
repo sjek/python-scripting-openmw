@@ -1,7 +1,19 @@
 #ifndef GAME_MWCLASS_CREATURELEVLIST_H
 #define GAME_MWCLASS_CREATURELEVLIST_H
 
+#include <string>
+
 #include "../mwworld/class.hpp"
+
+namespace ESM {
+struct ObjectState;
+}  // namespace ESM
+namespace MWRender {
+class RenderingInterface;
+}  // namespace MWRender
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWClass
 {

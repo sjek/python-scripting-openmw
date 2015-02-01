@@ -1,7 +1,15 @@
 #ifndef MWGUI_SORT_FILTER_ITEM_MODEL_H
 #define MWGUI_SORT_FILTER_ITEM_MODEL_H
 
+#include <stddef.h>
+#include <utility>
+#include <vector>
+
 #include "itemmodel.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWGui
 {

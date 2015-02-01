@@ -1,13 +1,24 @@
 #ifndef GAME_MWMECHANICS_ACTORS_H
 #define GAME_MWMECHANICS_ACTORS_H
 
-#include <set>
-#include <vector>
-#include <string>
+#include <stdint.h>
+#include <list>
 #include <map>
+#include <set>
+#include <string>
+#include <vector>
 
-#include "movement.hpp"
 #include "../mwbase/world.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "movement.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace Ogre
 {
@@ -16,8 +27,8 @@ namespace Ogre
 
 namespace MWWorld
 {
-    class Ptr;
     class CellStore;
+    class Ptr;
 }
 
 namespace MWMechanics

@@ -1,11 +1,21 @@
-#include "debugwindow.hpp"
-
+#include <LinearMath/btQuickprof.h>
+#include <MyGUI_EditBox.h>
+#include <MyGUI_RenderManager.h>
 #include <MyGUI_TabControl.h>
 #include <MyGUI_TabItem.h>
-#include <MyGUI_RenderManager.h>
-#include <MyGUI_EditBox.h>
+#include <stddef.h>
+#include <algorithm>
+#include <ostream>
+#include <string>
 
-#include <LinearMath/btQuickprof.h>
+#include "LinearMath/btScalar.h"
+#include "MyGUI_Align.h"
+#include "MyGUI_RTTI.h"
+#include "MyGUI_StringUtility.h"
+#include "MyGUI_Types.h"
+#include "MyGUI_Widget.h"
+#include "apps/openmw/mwgui/windowbase.hpp"
+#include "debugwindow.hpp"
 
 namespace
 {

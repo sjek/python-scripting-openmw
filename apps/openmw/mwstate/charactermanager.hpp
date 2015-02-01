@@ -2,6 +2,8 @@
 #define GAME_STATE_CHARACTERMANAGER_H
 
 #include <boost/filesystem/path.hpp>
+#include <list>
+#include <string>
 
 #include "character.hpp"
 

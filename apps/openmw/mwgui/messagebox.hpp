@@ -1,22 +1,30 @@
 #ifndef MWGUI_MESSAGE_BOX_H
 #define MWGUI_MESSAGE_BOX_H
 
+#include <string>
+#include <vector>
+
+#include "MyGUI_DelegateImplement.h"
+#include "MyGUI_KeyCode.h"
+#include "MyGUI_Types.h"
+#include "openengine/gui/layout.hpp"
 #include "windowbase.hpp"
 
 #undef MessageBox
 
 namespace MyGUI
 {
-    class Widget;
     class Button;
     class EditBox;
+    class Widget;
 }
 
 namespace MWGui
 {
     class InteractiveMessageBox;
-    class MessageBoxManager;
     class MessageBox;
+    class MessageBoxManager;
+
     class MessageBoxManager
     {
         public:

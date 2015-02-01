@@ -1,17 +1,27 @@
-#include "spellmodel.hpp"
-
 #include <boost/lexical_cast.hpp>
+#include <algorithm>
+#include <map>
+#include <sstream>
+#include <stdexcept>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
-
+#include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/inventorystore.hpp"
-#include "../mwworld/class.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwmechanics/spells.hpp"
+#include "apps/openmw/mwgui/../mwworld/cellref.hpp"
+#include "apps/openmw/mwgui/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwgui/../mwworld/ptr.hpp"
+#include "apps/openmw/mwgui/../mwworld/store.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/misc/stringops.hpp"
+#include "spellmodel.hpp"
 
 namespace
 {

@@ -6,9 +6,9 @@
 #include <string>
 #include <vector>
 
-#include "stat.hpp"
-
+#include "components/esm/loadskil.hpp"
 #include "creaturestats.hpp"
+#include "stat.hpp"
 
 namespace ESM
 {

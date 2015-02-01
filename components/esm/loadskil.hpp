@@ -1,9 +1,8 @@
 #ifndef OPENMW_ESM_SKIL_H
 #define OPENMW_ESM_SKIL_H
 
-#include <string>
-
 #include <boost/array.hpp>
+#include <string>
 
 #include "defs.hpp"
 

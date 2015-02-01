@@ -1,3 +1,5 @@
+#include <qvariant.h>
+
 #include "setting.hpp"
 #include "support.hpp"
 

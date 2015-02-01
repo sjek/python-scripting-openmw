@@ -1,16 +1,17 @@
 #ifndef CSM_DOC_RUNNER_H
 #define CSM_DOC_RUNNER_H
 
-#include <vector>
-#include <string>
-
 #include <boost/filesystem/path.hpp>
-
+#include <components/esm/debugprofile.hpp>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qprocess.h>
+#include <qtextdocument.h>
 #include <QObject>
 #include <QProcess>
 #include <QTextDocument>
-
-#include <components/esm/debugprofile.hpp>
+#include <string>
+#include <vector>
 
 class QTemporaryFile;
 

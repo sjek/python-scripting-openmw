@@ -3,10 +3,17 @@
 
 #include <components/compiler/errorhandler.hpp>
 #include <components/compiler/extensions.hpp>
+#include <string>
 
 #include "../doc/stage.hpp"
-
 #include "../world/scriptcontext.hpp"
+
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace Compiler {
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace CSMDoc
 {

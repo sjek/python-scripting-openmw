@@ -1,15 +1,24 @@
 #ifndef GAME_MWMECHANICS_ACTIVATORS_H
 #define GAME_MWMECHANICS_ACTIVATORS_H
 
-#include <string>
 #include <map>
+#include <string>
+#include <vector>
 
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
 #include "character.hpp"
+
+namespace MWMechanics {
+class CharacterController;
+}  // namespace MWMechanics
+namespace Ogre {
+class Vector3;
+}  // namespace Ogre
 
 namespace MWWorld
 {
-    class Ptr;
     class CellStore;
+    class Ptr;
 }
 
 namespace MWMechanics

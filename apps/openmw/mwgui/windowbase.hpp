@@ -2,6 +2,13 @@
 #define MWGUI_WINDOW_BASE_H
 
 #include <openengine/gui/layout.hpp>
+#include <string>
+
+#include "MyGUI_DelegateImplement.h"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWBase
 {
@@ -10,8 +17,8 @@ namespace MWBase
 
 namespace MWGui
 {
-    class WindowManager;
     class DragAndDrop;
+    class WindowManager;
 
     class WindowBase: public OEngine::GUI::Layout
     {

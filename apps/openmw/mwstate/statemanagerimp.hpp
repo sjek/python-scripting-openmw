@@ -1,13 +1,18 @@
 #ifndef GAME_STATE_STATEMANAGER_H
 #define GAME_STATE_STATEMANAGER_H
 
+#include <boost/filesystem/path.hpp>
 #include <map>
+#include <string>
 
 #include "../mwbase/statemanager.hpp"
-
-#include <boost/filesystem/path.hpp>
-
+#include "apps/openmw/mwstate/character.hpp"
 #include "charactermanager.hpp"
+
+namespace ESM {
+class ESMReader;
+struct SavedGame;
+}  // namespace ESM
 
 namespace MWState
 {

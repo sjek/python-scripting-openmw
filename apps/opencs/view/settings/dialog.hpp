@@ -1,18 +1,24 @@
 #ifndef CSVSETTINGS_DIALOG_H
 #define CSVSETTINGS_DIALOG_H
 
-#include "settingwindow.hpp"
-#include "resizeablestackedwidget.hpp"
+#include <qobjectdefs.h>
 #include <QStandardItem>
 
-class QStackedWidget;
+#include "resizeablestackedwidget.hpp"
+#include "settingwindow.hpp"
+
+class QCloseEvent;
 class QListWidget;
 class QListWidgetItem;
+class QMainWindow;
 class QSplitter;
+class QStackedWidget;
+class QStandardItemModel;
 
 namespace CSVSettings {
 
     class Page;
+class ResizeableStackedWidget;
 
     class Dialog : public SettingWindow
     {

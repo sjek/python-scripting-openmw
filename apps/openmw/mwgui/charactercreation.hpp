@@ -1,28 +1,27 @@
 #ifndef CHARACTER_CREATION_HPP
 #define CHARACTER_CREATION_HPP
 
-#include <components/esm/loadskil.hpp>
 #include <components/esm/loadclas.hpp>
-
+#include <components/esm/loadskil.hpp>
+#include <string>
 #include <vector>
 
 #include "../mwmechanics/stat.hpp"
 
 namespace MWGui
 {
-    class WindowBase;
-
-    class TextInputDialog;
-    class InfoBoxDialog;
-    class RaceDialog;
-    class DialogueWindow;
-    class ClassChoiceDialog;
-    class GenerateClassResultDialog;
-    class PickClassDialog;
-    class CreateClassDialog;
     class BirthDialog;
-    class ReviewDialog;
+    class ClassChoiceDialog;
+    class CreateClassDialog;
+    class DialogueWindow;
+    class GenerateClassResultDialog;
+    class InfoBoxDialog;
     class MessageBoxManager;
+    class PickClassDialog;
+    class RaceDialog;
+    class ReviewDialog;
+    class TextInputDialog;
+    class WindowBase;
 
     class CharacterCreation
     {

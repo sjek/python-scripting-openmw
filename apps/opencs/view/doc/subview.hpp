@@ -1,14 +1,18 @@
 #ifndef CSV_DOC_SUBVIEW_H
 #define CSV_DOC_SUBVIEW_H
 
+#include <qdockwidget.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <QDockWidget>
+#include <string>
+
 #include "../../model/doc/document.hpp"
-
 #include "../../model/world/universalid.hpp"
-
 #include "subviewfactory.hpp"
 
-#include <QDockWidget>
-
+class QCloseEvent;
 class QUndoStack;
 
 namespace CSMWorld

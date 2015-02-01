@@ -1,14 +1,19 @@
 
-#include "livecellref.hpp"
-
 #include <components/esm/objectstate.hpp>
+#include <exception>
+#include <iostream>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "ptr.hpp"
+#include "apps/openmw/mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "class.hpp"
+#include "components/esm/loadscpt.hpp"
 #include "esmstore.hpp"
+#include "livecellref.hpp"
+#include "ptr.hpp"
 
 MWWorld::LiveCellRefBase::LiveCellRefBase(std::string type, const ESM::CellRef &cref)
   : mClass(&Class::get(type)), mRef(cref), mData(cref)

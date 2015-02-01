@@ -1,14 +1,16 @@
 
-#include "globals.hpp"
-
-#include <stdexcept>
-
-#include <components/misc/stringops.hpp>
-
-#include <components/esm/esmwriter.hpp>
 #include <components/esm/esmreader.hpp>
+#include <components/esm/esmwriter.hpp>
+#include <components/misc/stringops.hpp>
+#include <stdexcept>
+#include <utility>
 
+#include "apps/openmw/mwworld/store.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadglob.hpp"
+#include "components/esm/variant.hpp"
 #include "esmstore.hpp"
+#include "globals.hpp"
 
 namespace MWWorld
 {

@@ -1,8 +1,9 @@
 
-#include "inventorystate.hpp"
-
+#include "components/esm/cellref.hpp"
+#include "components/esm/objectstate.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "inventorystate.hpp"
 
 void ESM::InventoryState::load (ESMReader &esm)
 {

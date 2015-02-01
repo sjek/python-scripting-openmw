@@ -1,24 +1,26 @@
-#include "journalviewmodel.hpp"
-
-#include <map>
-#include <sstream>
-#include <boost/make_shared.hpp>
-
 #include <MyGUI_LanguageManager.h>
+#include <boost/smart_ptr/make_shared_object.hpp>
+#include <algorithm>
+#include <deque>
+#include <map>
+#include <set>
+#include <sstream>
+#include <vector>
 
-#include <components/misc/utf8stream.hpp>
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/journal.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/journal.hpp"
 #include "../mwbase/windowmanager.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwdialogue/journalentry.hpp"
 #include "../mwdialogue/keywordsearch.hpp"
+#include "MyGUI_UString.h"
+#include "apps/openmw/mwgui/../mwbase/../mwdialogue/quest.hpp"
+#include "apps/openmw/mwgui/../mwbase/../mwdialogue/topic.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/translation/translation.hpp"
+#include "journalviewmodel.hpp"
 
 namespace MWGui {
-
-struct JournalViewModelImpl;
 
 struct JournalViewModelImpl : JournalViewModel
 {

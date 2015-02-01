@@ -21,39 +21,72 @@
 
  */
 
-#include "ogrenifloader.hpp"
-
-#include <algorithm>
-
-#include <OgreTechnique.h>
+#include <OgreCamera.h>
+#include <OgreControllerManager.h>
 #include <OgreEntity.h>
+#include <OgreMaterialManager.h>
+#include <OgreMesh.h>
+#include <OgreMeshManager.h>
+#include <OgreParticleAffector.h>
+#include <OgreParticleEmitter.h>
+#include <OgreParticleSystem.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreSkeletonInstance.h>
+#include <OgreSkeletonManager.h>
 #include <OgreSubEntity.h>
 #include <OgreTagPoint.h>
-#include <OgreParticleSystem.h>
-#include <OgreParticleEmitter.h>
-#include <OgreParticleAffector.h>
-#include <OgreMeshManager.h>
-#include <OgreSkeletonManager.h>
-#include <OgreControllerManager.h>
-#include <OgreMaterialManager.h>
-#include <OgreCamera.h>
-#include <OgreSceneManager.h>
-#include <OgreSkeletonInstance.h>
-#include <OgreSceneNode.h>
-#include <OgreMesh.h>
-
-#include <extern/shiny/Main/Factory.hpp>
-
+#include <OgreTechnique.h>
+#include <assert.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/misc/resourcehelpers.hpp>
+#include <components/misc/stringops.hpp>
 #include <components/nif/node.hpp>
 #include <components/nifcache/nifcache.hpp>
-#include <components/misc/stringops.hpp>
-#include <components/misc/resourcehelpers.hpp>
+#include <ctype.h>
+#include <extern/shiny/Main/Factory.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <stdexcept>
+#include <utility>
 
-#include "skeleton.hpp"
+#include "OgreAnimationState.h"
+#include "OgreAny.h"
+#include "OgreBone.h"
+#include "OgreColourValue.h"
+#include "OgreController.h"
+#include "OgreLight.h"
+#include "OgreMaterial.h"
+#include "OgreMath.h"
+#include "OgreMemoryAllocatorConfig.h"
+#include "OgreMovableObject.h"
+#include "OgreNode.h"
+#include "OgreParticle.h"
+#include "OgreParticleIterator.h"
+#include "OgrePass.h"
+#include "OgreSkeleton.h"
+#include "OgreStringConverter.h"
+#include "OgreTextureUnitState.h"
+#include "OgreUserObjectBindings.h"
+#include "OgreVector4.h"
+#include "components/nif/base.hpp"
+#include "components/nif/controlled.hpp"
+#include "components/nif/controller.hpp"
+#include "components/nif/data.hpp"
+#include "components/nif/extra.hpp"
+#include "components/nif/niffile.hpp"
+#include "components/nif/nifkey.hpp"
+#include "components/nif/property.hpp"
+#include "components/nif/record.hpp"
+#include "components/nif/recordptr.hpp"
+#include "controller.hpp"
 #include "material.hpp"
 #include "mesh.hpp"
-#include "controller.hpp"
+#include "ogrenifloader.hpp"
 #include "particles.hpp"
+#include "skeleton.hpp"
 
 namespace
 {

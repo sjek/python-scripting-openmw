@@ -1,7 +1,12 @@
-#include "esmreader.hpp"
+#include <string.h>
 #include <stdexcept>
 
 #include "../files/constrainedfiledatastream.hpp"
+#include "OgreDataStream.h"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "esmreader.hpp"
 
 namespace ESM
 {

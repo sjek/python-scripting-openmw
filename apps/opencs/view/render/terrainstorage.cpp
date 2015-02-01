@@ -1,3 +1,13 @@
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <ostream>
+#include <stdexcept>
+
+#include "apps/opencs/view/render/../../model/world/data.hpp"
+#include "apps/opencs/view/render/../../model/world/idcollection.hpp"
+#include "apps/opencs/view/render/../../model/world/land.hpp"
+#include "apps/opencs/view/render/../../model/world/landtexture.hpp"
+#include "apps/opencs/view/render/../../model/world/record.hpp"
 #include "terrainstorage.hpp"
 
 namespace CSVRender

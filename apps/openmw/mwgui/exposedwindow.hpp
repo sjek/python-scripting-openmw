@@ -2,6 +2,14 @@
 #define MWGUI_EXPOSEDWINDOW_H
 
 #include <MyGUI_Window.h>
+#include <string>
+
+#include "MyGUI_RTTI.h"
+#include "MyGUI_WidgetDefines.h"
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace MWGui
 {
