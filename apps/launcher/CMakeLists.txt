@@ -74,7 +74,7 @@ QT4_WRAP_UI(UI_HDRS ${LAUNCHER_UI})
 include(${QT_USE_FILE})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 if(NOT WIN32)
-    include_directories(${LIBUNSHIELD_INCLUDE_DIR})
+    include_directories(SYSTEM ${LIBUNSHIELD_INCLUDE_DIR})
 endif(NOT WIN32)
 
 # Main executable
