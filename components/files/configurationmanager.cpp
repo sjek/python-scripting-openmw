@@ -1,12 +1,27 @@
+#include <boost/algorithm/string/erase.hpp>
+#include <boost/bind.hpp>
+#include <boost/bind/arg.hpp>
+#include <boost/bind/bind.hpp>
+#include <boost/bind/placeholders.hpp>
+#include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/iterator/iterator_traits.hpp>
+#include <boost/program_options/parsers.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "components/files/fixedpath.hpp"
 #include "configurationmanager.hpp"
 
-#include <string>
-#include <iostream>
-#include <algorithm>
-
-#include <boost/bind.hpp>
-#include <boost/algorithm/string/erase.hpp>
-#include <boost/filesystem/fstream.hpp>
+namespace boost {
+namespace program_options {
+class options_description;
+}  // namespace program_options
+}  // namespace boost
 
 /**
  * \namespace Files

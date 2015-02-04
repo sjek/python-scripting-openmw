@@ -1,5 +1,10 @@
 #include "BulletShapeLoader.h"
 
+#include <BulletCollision/CollisionShapes/btCollisionShape.h>
+#include <BulletCollision/CollisionShapes/btCompoundShape.h>
+#include <LinearMath/btScalar.h>
+#include <assert.h>
+
 namespace OEngine {
 namespace Physic
 {

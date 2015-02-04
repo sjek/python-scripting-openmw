@@ -1,21 +1,44 @@
 #ifndef GAME_RENDERING_MANAGER_H
 #define GAME_RENDERING_MANAGER_H
 
-#include "sky.hpp"
-#include "debugging.hpp"
-
-#include <components/settings/settings.hpp>
-
-#include <boost/filesystem.hpp>
-
+#include <OgreAxisAlignedBox.h>
+#include <OgreColourValue.h>
 #include <OgreRenderTargetListener.h>
+#include <OgreVector2.h>
+#include <OgreVector4.h>
+#include <boost/filesystem.hpp>
+#include <boost/filesystem/path.hpp>
+#include <components/settings/settings.hpp>
+#include <string>
 
-#include "renderinginterface.hpp"
-
-#include "objects.hpp"
 #include "actors.hpp"
 #include "camera.hpp"
+#include "debugging.hpp"
+#include "objects.hpp"
 #include "occlusionquery.hpp"
+#include "openengine/ogre/renderer.hpp"
+#include "renderinginterface.hpp"
+#include "sky.hpp"
+
+namespace MWRender {
+class Debugging;
+class NpcAnimation;
+class SkyManager;
+}  // namespace MWRender
+namespace MWWorld {
+class Fallback;
+}  // namespace MWWorld
+namespace OEngine {
+namespace Physic {
+class PhysicEngine;
+}  // namespace Physic
+}  // namespace OEngine
+namespace Ogre {
+class Image;
+class Light;
+class Vector3;
+class Viewport;
+}  // namespace Ogre
 
 namespace Ogre
 {
@@ -24,8 +47,8 @@ namespace Ogre
 
 namespace MWWorld
 {
-    class Ptr;
     class CellStore;
+    class Ptr;
 }
 
 namespace sh
@@ -40,12 +63,12 @@ namespace Terrain
 
 namespace MWRender
 {
-    class Shadows;
-    class LocalMap;
-    class Water;
-    class GlobalMap;
     class Animation;
     class EffectManager;
+    class GlobalMap;
+    class LocalMap;
+    class Shadows;
+    class Water;
 
 class RenderingManager: private RenderingInterface, public Ogre::RenderTargetListener, public OEngine::Render::WindowSizeListener
 {

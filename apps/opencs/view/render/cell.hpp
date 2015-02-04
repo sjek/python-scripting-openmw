@@ -1,13 +1,12 @@
 #ifndef OPENCS_VIEW_CELL_H
 #define OPENCS_VIEW_CELL_H
 
-#include <string>
+#include <OgreVector3.h>
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <map>
 #include <memory>
-
-#include <boost/shared_ptr.hpp>
-
-#include <OgreVector3.h>
+#include <string>
 
 #ifndef Q_MOC_RUN
 #include <components/terrain/terraingrid.hpp>
@@ -16,6 +15,12 @@
 #include "object.hpp"
 
 class QModelIndex;
+namespace CSVRender {
+class Object;
+}  // namespace CSVRender
+namespace Terrain {
+class TerrainGrid;
+}  // namespace Terrain
 
 namespace Ogre
 {

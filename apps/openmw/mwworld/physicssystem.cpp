@@ -1,42 +1,53 @@
-#include "physicssystem.hpp"
-
-#include <stdexcept>
-
-#include <OgreRoot.h>
-#include <OgreRenderWindow.h>
-#include <OgreSceneManager.h>
-#include <OgreViewport.h>
+#include <BulletCollision/BroadphaseCollision/btBroadphaseProxy.h>
+#include <BulletCollision/CollisionDispatch/btCollisionObject.h>
+#include <BulletCollision/CollisionDispatch/btCollisionWorld.h>
+#include <BulletCollision/CollisionShapes/btBoxShape.h>
+#include <BulletCollision/CollisionShapes/btCollisionShape.h>
+#include <BulletCollision/CollisionShapes/btCompoundShape.h>
+#include <BulletCollision/CollisionShapes/btConeShape.h>
+#include <BulletCollision/CollisionShapes/btStaticPlaneShape.h>
+#include <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
+#include <BulletDynamics/Dynamics/btDynamicsWorld.h>
+#include <LinearMath/btQuaternion.h>
+#include <LinearMath/btScalar.h>
+#include <LinearMath/btTransform.h>
+#include <LinearMath/btVector3.h>
 #include <OgreCamera.h>
-#include <OgreTextureManager.h>
+#include <OgreMath.h>
+#include <OgreNode.h>
+#include <OgrePrerequisites.h>
+#include <OgreRay.h>
 #include <OgreSceneNode.h>
-
-#include <openengine/bullet/trace.h>
-#include <openengine/bullet/physic.hpp>
-#include <openengine/bullet/BtOgreExtras.h>
-#include <openengine/ogre/renderer.hpp>
-#include <openengine/bullet/BulletShapeLoader.h>
-
+#include <components/esm/loadgmst.hpp>
+#include <components/misc/resourcehelpers.hpp>
 #include <components/nifbullet/bulletnifloader.hpp>
 #include <components/nifogre/skeleton.hpp>
-#include <components/misc/resourcehelpers.hpp>
+#include <openengine/bullet/BtOgreExtras.h>
+#include <openengine/bullet/BulletShapeLoader.h>
+#include <openengine/bullet/physic.hpp>
+#include <openengine/bullet/trace.h>
+#include <openengine/ogre/renderer.hpp>
+#include <algorithm>
+#include <limits>
+#include <stdexcept>
 
-#include <components/esm/loadgmst.hpp>
-
-#include "../mwbase/world.hpp" // FIXME
-#include "../mwbase/environment.hpp"
-
+#include "../apps/openmw/mwbase/environment.hpp"
+#include "../apps/openmw/mwbase/world.hpp"
+#include "../apps/openmw/mwrender/animation.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/movement.hpp"
-
-#include "../mwworld/esmstore.hpp"
 #include "../mwworld/cellstore.hpp"
-
-#include "../apps/openmw/mwrender/animation.hpp"
-#include "../apps/openmw/mwbase/world.hpp"
-#include "../apps/openmw/mwbase/environment.hpp"
-
-#include "ptr.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "class.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "physicssystem.hpp"
+#include "ptr.hpp"
 
 using namespace Ogre;
 

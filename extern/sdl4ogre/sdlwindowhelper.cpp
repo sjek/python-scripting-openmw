@@ -1,12 +1,26 @@
-#include "sdlwindowhelper.hpp"
-
-#include <OgreStringConverter.h>
+#include <OgreColourValue.h>
+#include <OgreImage.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreRoot.h>
+#include <OgreSharedPtr.h>
+#include <OgreStringConverter.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
-
-#include <SDL_syswm.h>
 #include <SDL_endian.h>
+#include <SDL_pixels.h>
+#include <SDL_stdinc.h>
+#include <SDL_surface.h>
+#include <SDL_syswm.h>
+#include <SDL_version.h>
+#include <SDL_video.h>
+#include <stddef.h>
+#include <ostream>
 #include <stdexcept>
+#include <utility>
+
+#include "sdlwindowhelper.hpp"
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 #include "osx_utils.h"

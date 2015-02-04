@@ -1,16 +1,27 @@
-#include "quadtreenode.hpp"
-
-#include <OgreSceneManager.h>
+#include <OgreCommon.h>
+#include <OgreDataStream.h>
 #include <OgreManualObject.h>
+#include <OgreMaterial.h>
+#include <OgrePixelFormat.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-#include <OgreMaterialManager.h>
+#include <OgreStringConverter.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
+#include <OgreVector3.h>
+#include <assert.h>
+#include <ostream>
+#include <string>
+#include <vector>
 
-#include "defaultworld.hpp"
-#include "chunk.hpp"
-#include "storage.hpp"
 #include "buffercache.hpp"
+#include "chunk.hpp"
+#include "components/terrain/defs.hpp"
+#include "defaultworld.hpp"
 #include "material.hpp"
+#include "quadtreenode.hpp"
+#include "storage.hpp"
 
 using namespace Terrain;
 

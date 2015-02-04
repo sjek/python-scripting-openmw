@@ -1,10 +1,35 @@
-#include "enchanting.hpp"
-#include "../mwworld/manualref.hpp"
+#include <stdlib.h>
+#include <algorithm>
+#include <typeinfo>
+#include <vector>
+
+#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-
+#include "apps/openmw/mwmechanics/../mwbase/environment.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/world.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/esmstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/misc/stringops.hpp"
 #include "creaturestats.hpp"
+#include "enchanting.hpp"
 #include "npcstats.hpp"
 #include "spellcasting.hpp"
 

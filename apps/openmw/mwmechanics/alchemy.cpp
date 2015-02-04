@@ -1,30 +1,34 @@
 
-#include "alchemy.hpp"
-
-#include <cassert>
-#include <cstdlib>
-
-#include <algorithm>
-#include <stdexcept>
-#include <map>
-
-#include <components/esm/loadskil.hpp>
 #include <components/esm/loadappa.hpp>
 #include <components/esm/loadgmst.hpp>
 #include <components/esm/loadmgef.hpp>
-
+#include <components/esm/loadskil.hpp>
+#include <algorithm>
+#include <cassert>
+#include <cstdlib>
+#include <map>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/containerstore.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/manualref.hpp"
-
-#include "magiceffects.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "alchemy.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/misc/stringops.hpp"
 #include "creaturestats.hpp"
+#include "magiceffects.hpp"
 #include "npcstats.hpp"
 
 MWMechanics::Alchemy::Alchemy()

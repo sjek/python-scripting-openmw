@@ -1,10 +1,21 @@
 #ifndef COMPILER_FILEPARSER_H_INCLUDED
 #define COMPILER_FILEPARSER_H_INCLUDED
 
+#include <string>
+#include <vector>
+
+#include "components/interpreter/types.hpp"
+#include "literals.hpp"
+#include "locals.hpp"
 #include "parser.hpp"
 #include "scriptparser.hpp"
-#include "locals.hpp"
-#include "literals.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

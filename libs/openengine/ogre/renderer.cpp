@@ -1,24 +1,35 @@
-#include "renderer.hpp"
-
-#include <SDL.h>
-
-#include <OgreRoot.h>
-#include <OgreRenderWindow.h>
-#include <OgreTextureManager.h>
-#include <OgreTexture.h>
-#include <OgreHardwarePixelBuffer.h>
 #include <OgreCamera.h>
+#include <OgreCommon.h>
+#include <OgreDataStream.h>
+#include <OgreImage.h>
+#include <OgreMath.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgrePixelFormat.h>
+#include <OgrePrerequisites.h>
+#include <OgreRenderSystem.h>
+#include <OgreRenderWindow.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
+#include <OgreSceneManager.h>
+#include <OgreSharedPtr.h>
+#include <OgreTexture.h>
+#include <OgreTextureManager.h>
 #include <OgreViewport.h>
-
-#include <extern/sdl4ogre/sdlwindowhelper.hpp>
-
-#include <components/ogreinit/ogreinit.hpp>
-
-#include <boost/filesystem/path.hpp>
+#include <SDL_error.h>
+#include <SDL_stdinc.h>
+#include <SDL_video.h>
 #include <boost/filesystem/fstream.hpp>
-
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <components/ogreinit/ogreinit.hpp>
+#include <extern/sdl4ogre/sdlwindowhelper.hpp>
+#include <math.h>
 #include <cassert>
+#include <iostream>
 #include <stdexcept>
+#include <utility>
+
+#include "renderer.hpp"
 
 using namespace Ogre;
 using namespace OEngine::Render;

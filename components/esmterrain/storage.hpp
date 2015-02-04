@@ -1,10 +1,30 @@
 #ifndef COMPONENTS_ESM_TERRAIN_STORAGE_H
 #define COMPONENTS_ESM_TERRAIN_STORAGE_H
 
-#include <components/terrain/storage.hpp>
-
+#include <OgrePlatform.h>
 #include <components/esm/loadland.hpp>
 #include <components/esm/loadltex.hpp>
+#include <components/terrain/storage.hpp>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "components/terrain/defs.hpp"
+
+namespace ESM {
+struct Land;
+struct LandTexture;
+}  // namespace ESM
+namespace Ogre {
+class ColourValue;
+class PixelBox;
+class Vector2;
+class Vector3;
+}  // namespace Ogre
+namespace Terrain {
+class QuadTreeNode;
+}  // namespace Terrain
 
 namespace ESMTerrain
 {

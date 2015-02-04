@@ -1,20 +1,19 @@
 #ifndef CSM_DOC_SAVINGSTATE_H
 #define CSM_DOC_SAVINGSTATE_H
 
+#include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <components/esm/esmwriter.hpp>
+#include <components/to_utf8/to_utf8.hpp>
 #include <fstream>
 #include <map>
-
-#include <boost/filesystem/path.hpp>
-#include <boost/filesystem/fstream.hpp>
-
-#include <components/esm/esmwriter.hpp>
-
-#include <components/to_utf8/to_utf8.hpp>
+#include <string>
+#include <vector>
 
 namespace CSMDoc
 {
-    class Operation;
     class Document;
+    class Operation;
 
     class SavingState
     {

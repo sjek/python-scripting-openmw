@@ -1,18 +1,36 @@
 
-#include "compilercontext.hpp"
-
-#include "../mwworld/esmstore.hpp"
-
+#include <components/compiler/locals.hpp>
 #include <components/esm/loaddial.hpp>
 
-#include <components/compiler/locals.hpp>
-
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/scriptmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/store.hpp"
+#include "compilercontext.hpp"
+#include "components/esm/loadacti.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/misc/stringops.hpp"
 
 namespace MWScript
 {

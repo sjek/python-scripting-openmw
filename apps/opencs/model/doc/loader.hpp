@@ -1,11 +1,16 @@
 #ifndef CSM_DOC_LOADER_H
 #define CSM_DOC_LOADER_H
 
-#include <vector>
-
-#include <QObject>
+#include <qmutex.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qwaitcondition.h>
 #include <QMutex>
+#include <QObject>
 #include <QWaitCondition>
+#include <string>
+#include <utility>
+#include <vector>
 
 namespace CSMDoc
 {

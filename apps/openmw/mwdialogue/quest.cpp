@@ -1,12 +1,17 @@
 
-#include "quest.hpp"
-
 #include <components/esm/queststate.hpp>
-
-#include "../mwworld/esmstore.hpp"
+#include <list>
+#include <stdexcept>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/store.hpp"
+#include "apps/openmw/mwdialogue/topic.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadinfo.hpp"
+#include "quest.hpp"
 
 namespace MWDialogue
 {

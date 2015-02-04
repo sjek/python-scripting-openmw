@@ -1,8 +1,15 @@
 
+#include "components/compiler/declarationparser.hpp"
+#include "components/compiler/parser.hpp"
 #include "quickfileparser.hpp"
-
-#include "skipparser.hpp"
 #include "scanner.hpp"
+#include "skipparser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+struct TokenLoc;
+}  // namespace Compiler
 
 Compiler::QuickFileParser::QuickFileParser (ErrorHandler& errorHandler, const Context& context,
     Locals& locals)

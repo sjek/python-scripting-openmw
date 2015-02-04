@@ -1,14 +1,22 @@
 
-#include "controlparser.hpp"
-
 #include <algorithm>
 #include <iterator>
 #include <stdexcept>
 
-#include "scanner.hpp"
-#include "generator.hpp"
+#include "components/compiler/exprparser.hpp"
+#include "components/compiler/lineparser.hpp"
+#include "components/compiler/parser.hpp"
+#include "components/interpreter/types.hpp"
+#include "controlparser.hpp"
 #include "errorhandler.hpp"
+#include "generator.hpp"
+#include "scanner.hpp"
 #include "skipparser.hpp"
+
+namespace Compiler {
+class Context;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

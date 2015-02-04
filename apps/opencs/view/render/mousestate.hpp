@@ -1,10 +1,14 @@
 #ifndef OPENCS_VIEW_MOUSESTATE_H
 #define OPENCS_VIEW_MOUSESTATE_H
 
-#include <map>
-#include <boost/shared_ptr.hpp>
-#include <QPoint>
 #include <OgreVector3.h>
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <qpoint.h>
+#include <QPoint>
+#include <map>
+#include <string>
+#include <utility>
 
 class QElapsedTimer;
 class QMouseEvent;
@@ -12,9 +16,9 @@ class QWheelEvent;
 
 namespace Ogre
 {
+    class Camera;
     class Plane;
     class SceneManager;
-    class Camera;
     class Viewport;
 }
 

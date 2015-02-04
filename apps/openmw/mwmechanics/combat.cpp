@@ -1,22 +1,43 @@
-#include "combat.hpp"
-
+#include <OgreMath.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneNode.h>
+#include <OgreVector3.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/movement.hpp"
-#include "../mwmechanics/spellcasting.hpp"
-#include "../mwmechanics/difficultyscaling.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/esmstore.hpp"
-
 #include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwmechanics/difficultyscaling.hpp"
+#include "../mwmechanics/movement.hpp"
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwmechanics/spellcasting.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "combat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/esm/loadweap.hpp"
 
 namespace
 {

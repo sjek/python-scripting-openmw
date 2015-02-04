@@ -1,11 +1,14 @@
 #ifndef GAME_MWMECHANICS_AIAVOIDDOOR_H
 #define GAME_MWMECHANICS_AIAVOIDDOOR_H
 
-#include "aipackage.hpp"
-#include <string>
-#include "pathfinding.hpp"
 #include <components/esm/defs.hpp>
+#include <string>
+
 #include "../mwworld/class.hpp"
+#include "aipackage.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/aistate.hpp"
+#include "pathfinding.hpp"
 
 namespace MWMechanics
 {

@@ -1,7 +1,13 @@
 
+#include "components/compiler/parser.hpp"
+#include "scanner.hpp"
 #include "skipparser.hpp"
 
-#include "scanner.hpp"
+namespace Compiler {
+class Context;
+class ErrorHandler;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

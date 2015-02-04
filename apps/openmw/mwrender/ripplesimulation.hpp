@@ -1,19 +1,22 @@
 #ifndef RIPPLE_SIMULATION_H
 #define RIPPLE_SIMULATION_H
 
-#include <OgreTexture.h>
 #include <OgreMaterial.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
+#include <OgreTexture.h>
 #include <OgreVector2.h>
 #include <OgreVector3.h>
+#include <vector>
 
 #include "../mwworld/ptr.hpp"
 
 namespace Ogre
 {
-    class RenderTexture;
     class Camera;
-    class SceneManager;
     class Rectangle2D;
+    class RenderTexture;
+    class SceneManager;
 }
 
 namespace MWRender

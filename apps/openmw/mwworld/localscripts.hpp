@@ -3,14 +3,15 @@
 
 #include <list>
 #include <string>
+#include <utility>
 
 #include "ptr.hpp"
 
 namespace MWWorld
 {
-    struct ESMStore;
     class CellStore;
     class RefData;
+    struct ESMStore;
 
     /// \brief List of active local scripts
     class LocalScripts

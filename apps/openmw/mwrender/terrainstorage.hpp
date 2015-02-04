@@ -3,6 +3,11 @@
 
 #include <components/esmterrain/storage.hpp>
 
+namespace ESM {
+struct Land;
+struct LandTexture;
+}  // namespace ESM
+
 namespace MWRender
 {
 

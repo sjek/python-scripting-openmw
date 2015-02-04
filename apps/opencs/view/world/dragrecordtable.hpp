@@ -1,11 +1,16 @@
 #ifndef CSV_WORLD_DRAGRECORDTABLE_H
 #define CSV_WORLD_DRAGRECORDTABLE_H
 
-#include <QTableView>
 #include <QtGui/qevent.h>
+#include <qtableview.h>
+#include <stddef.h>
+#include <QTableView>
+#include <vector>
 
-class QWidget;
 class QAction;
+class QDragEnterEvent;
+class QDragMoveEvent;
+class QWidget;
 
 namespace CSMDoc
 {

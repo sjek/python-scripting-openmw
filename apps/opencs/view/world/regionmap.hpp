@@ -1,15 +1,21 @@
 #ifndef CSV_WORLD_REGIONMAP_H
 #define CSV_WORLD_REGIONMAP_H
 
-#include <cstddef>
-#include <vector>
-
+#include <qabstractitemmodel.h>
+#include <qobjectdefs.h>
 #include <QObject>
 #include <QTableView>
+#include <cstddef>
+#include <string>
+#include <vector>
 
 #include "./dragrecordtable.hpp"
 
 class QAction;
+class QContextMenuEvent;
+class QDropEvent;
+class QMouseEvent;
+class QWidget;
 
 namespace CSMDoc
 {

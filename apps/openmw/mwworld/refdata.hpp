@@ -2,6 +2,7 @@
 #define GAME_MWWORLD_REFDATA_H
 
 #include <components/esm/defs.hpp>
+#include <string>
 
 #include "../mwscript/locals.hpp"
 
@@ -12,8 +13,8 @@ namespace Ogre
 
 namespace ESM
 {
-    class Script;
     class CellRef;
+    class Script;
     struct ObjectState;
 }
 

@@ -1,11 +1,14 @@
 
-#include "skillcheck.hpp"
-
-#include <sstream>
-
 #include <components/esm/loadskil.hpp>
+#include <sstream>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "skillcheck.hpp"
 
 CSMTools::SkillCheckStage::SkillCheckStage (const CSMWorld::IdCollection<ESM::Skill>& skills)
 : mSkills (skills)

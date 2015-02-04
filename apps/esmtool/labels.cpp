@@ -1,5 +1,5 @@
-#include "labels.hpp"
-
+#include <boost/format.hpp>
+#include <components/esm/aipackage.hpp>
 #include <components/esm/loadbody.hpp>
 #include <components/esm/loadcell.hpp>
 #include <components/esm/loadcont.hpp>
@@ -11,9 +11,8 @@
 #include <components/esm/loadrace.hpp>
 #include <components/esm/loadspel.hpp>
 #include <components/esm/loadweap.hpp>
-#include <components/esm/aipackage.hpp>
 
-#include <boost/format.hpp>
+#include "labels.hpp"
 
 std::string bodyPartLabel(int idx)
 {

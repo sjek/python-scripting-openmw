@@ -1,43 +1,70 @@
 
-#include "actors.hpp"
-
-#include <typeinfo>
-
-#include <OgreVector3.h>
+#include <OgreMath.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneNode.h>
-
+#include <OgreVector3.h>
 #include <components/esm/loadnpc.hpp>
-
-#include "../mwworld/esmstore.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/manualref.hpp"
-#include "../mwworld/actionequip.hpp"
-#include "../mwworld/player.hpp"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/soundmanager.hpp"
-
-#include "../mwrender/animation.hpp"
-
-#include "npcstats.hpp"
-#include "creaturestats.hpp"
-#include "movement.hpp"
-#include "character.hpp"
+#include <stddef.h>
+#include <algorithm>
+#include <cmath>
+#include <limits>
+#include <set>
+#include <typeinfo>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-
-#include "aicombat.hpp"
+#include "../mwbase/soundmanager.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/actionequip.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/player.hpp"
+#include "actor.hpp"
+#include "actors.hpp"
 #include "aifollow.hpp"
 #include "aipursue.hpp"
-
-#include "actor.hpp"
-#include "summoning.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/cellstore.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/timestamp.hpp"
+#include "apps/openmw/mwmechanics/activespells.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/spells.hpp"
+#include "character.hpp"
 #include "combat.hpp"
+#include "components/esm/activespells.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/misc/stringops.hpp"
+#include "creaturestats.hpp"
+#include "npcstats.hpp"
+#include "summoning.hpp"
+
+namespace Loading {
+class Listener;
+}  // namespace Loading
+namespace MWRender {
+class Animation;
+}  // namespace MWRender
 
 namespace
 {

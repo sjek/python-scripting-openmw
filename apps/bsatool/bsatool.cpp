@@ -1,12 +1,23 @@
-#include <iostream>
-#include <vector>
-#include <exception>
-
-#include <boost/program_options.hpp>
-#include <boost/filesystem.hpp>
+#include <OgreDataStream.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
 #include <boost/filesystem/fstream.hpp>
-
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <boost/program_options/errors.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/parsers.hpp>
+#include <boost/program_options/positional_options.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
 #include <components/bsa/bsa_file.hpp>
+#include <stddef.h>
+#include <exception>
+#include <iomanip>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define BSATOOL_VERSION 1.1
 

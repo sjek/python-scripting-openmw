@@ -1,6 +1,8 @@
 #ifndef COMPONENTS_FILES_LINUXPATH_H
 #define COMPONENTS_FILES_LINUXPATH_H
 
+#include <boost/filesystem/path.hpp>
+#include <string>
 #if defined(__linux__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
 
 #include <boost/filesystem.hpp>

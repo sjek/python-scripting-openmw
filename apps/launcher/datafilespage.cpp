@@ -1,24 +1,23 @@
-#include "datafilespage.hpp"
-
-#include <QDebug>
-
-#include <QPushButton>
-#include <QMessageBox>
-#include <QCheckBox>
-#include <QMenu>
-#include <QSortFilterProxyModel>
-
-#include <components/files/configurationmanager.hpp>
-
-#include <components/contentselector/model/esmfile.hpp>
-#include <components/contentselector/model/naturalsort.hpp>
-#include <components/contentselector/view/contentselector.hpp>
-
 #include <components/config/gamesettings.hpp>
 #include <components/config/launchersettings.hpp>
+#include <components/contentselector/model/esmfile.hpp>
+#include <components/contentselector/view/contentselector.hpp>
+#include <qaction.h>
+#include <qboxlayout.h>
+#include <qdebug.h>
+#include <qdialog.h>
+#include <qglobal.h>
+#include <qmessagebox.h>
+#include <qpushbutton.h>
+#include <qtoolbutton.h>
 
-#include "utils/textinputdialog.hpp"
+#include "apps/launcher/utils/lineedit.hpp"
+#include "components/contentselector/view/../model/contentmodel.hpp"
+#include "datafilespage.hpp"
 #include "utils/profilescombobox.hpp"
+#include "utils/textinputdialog.hpp"
+
+class QAbstractButton;
 
 Launcher::DataFilesPage::DataFilesPage(Files::ConfigurationManager &cfg, Config::GameSettings &gameSettings, Config::LauncherSettings &launcherSettings, QWidget *parent)
     : mCfgMgr(cfg)

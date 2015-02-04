@@ -1,5 +1,16 @@
 
+#include <stddef.h>
+
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/refiddata.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
 #include "refidadapterimp.hpp"
+
+namespace CSMWorld {
+class RefIdColumn;
+}  // namespace CSMWorld
 
 CSMWorld::PotionRefIdAdapter::PotionRefIdAdapter (const InventoryColumns& columns,
     const RefIdColumn *autoCalc)

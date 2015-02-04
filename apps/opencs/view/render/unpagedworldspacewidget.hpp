@@ -1,13 +1,20 @@
 #ifndef OPENCS_VIEW_UNPAGEDWORLDSPACEWIDGET_H
 #define OPENCS_VIEW_UNPAGEDWORLDSPACEWIDGET_H
 
-#include <string>
+#include <qobjectdefs.h>
 #include <memory>
+#include <string>
+#include <vector>
 
-#include "worldspacewidget.hpp"
+#include "apps/opencs/model/doc/../world/universalid.hpp"
 #include "cell.hpp"
+#include "worldspacewidget.hpp"
 
 class QModelIndex;
+class QWidget;
+namespace CSVWidget {
+class SceneToolToggle2;
+}  // namespace CSVWidget
 
 namespace CSMDoc
 {

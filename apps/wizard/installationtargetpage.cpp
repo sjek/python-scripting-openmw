@@ -1,9 +1,21 @@
+#include <boost/filesystem/path.hpp>
+#include <qchar.h>
+#include <qdebug.h>
+#include <qdir.h>
+#include <qfile.h>
+#include <qfiledialog.h>
+#include <qfileinfo.h>
+#include <qglobal.h>
+#include <qlineedit.h>
+#include <qmessagebox.h>
+#include <qobject.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <qwidget.h>
+#include <string>
+
+#include "components/files/configurationmanager.hpp"
 #include "installationtargetpage.hpp"
-
-#include <QDebug>
-#include <QFileDialog>
-#include <QMessageBox>
-
 #include "mainwizard.hpp"
 
 Wizard::InstallationTargetPage::InstallationTargetPage(QWidget *parent, const Files::ConfigurationManager &cfg) :

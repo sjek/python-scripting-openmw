@@ -1,10 +1,20 @@
+#include <OgreVector3.h>
+#include <cmath>
+#include <list>
+
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
 #include "obstacle.hpp"
 
-#include <OgreVector3.h>
-
-#include "../mwbase/world.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
+namespace ESM {
+struct Door;
+}  // namespace ESM
 
 namespace MWMechanics
 {

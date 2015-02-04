@@ -1,13 +1,15 @@
 #ifndef CSM_DOC_SAVINGSTAGES_H
 #define CSM_DOC_SAVINGSTAGES_H
 
+#include "../world/idcollection.hpp"
+#include "../world/record.hpp"
+#include "../world/scope.hpp"
+#include "savingstate.hpp"
 #include "stage.hpp"
 
-#include "../world/record.hpp"
-#include "../world/idcollection.hpp"
-#include "../world/scope.hpp"
-
-#include "savingstate.hpp"
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
 
 namespace ESM
 {

@@ -1,19 +1,20 @@
 #ifndef GAME_MWWORLD_WEATHER_H
 #define GAME_MWWORLD_WEATHER_H
 
-#include <stdint.h>
-#include <string>
-
 #include <OgreColourValue.h>
 #include <OgreVector3.h>
+#include <stdint.h>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../mwbase/soundmanager.hpp"
 
 namespace ESM
 {
-    struct Region;
-    class ESMWriter;
     class ESMReader;
+    class ESMWriter;
+    struct Region;
 }
 
 namespace MWRender

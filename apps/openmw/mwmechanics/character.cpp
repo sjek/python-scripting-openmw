@@ -17,27 +17,56 @@
  * http://www.gnu.org/licenses/ .
  */
 
-#include "character.hpp"
-
-#include <OgreStringConverter.h>
+#include <OgreMath.h>
+#include <OgreNode.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneNode.h>
-
-#include "movement.hpp"
-#include "npcstats.hpp"
-#include "creaturestats.hpp"
-#include "security.hpp"
-
-#include "../mwrender/animation.hpp"
+#include <OgreStringConverter.h>
+#include <OgreVector3.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <typeinfo>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/statemanager.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwrender/animation.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
 #include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwmechanics/spells.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "character.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/settings/settings.hpp"
+#include "creaturestats.hpp"
+#include "movement.hpp"
+#include "npcstats.hpp"
+#include "security.hpp"
 
 namespace
 {

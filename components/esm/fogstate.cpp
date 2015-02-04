@@ -1,7 +1,8 @@
-#include "fogstate.hpp"
+#include <stddef.h>
 
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "fogstate.hpp"
 
 void ESM::FogState::load (ESMReader &esm)
 {

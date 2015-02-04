@@ -1,10 +1,14 @@
 #ifndef CSM_TOOLS_REPORTMODEL_H
 #define CSM_TOOLS_REPORTMODEL_H
 
-#include <vector>
-#include <string>
-
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qobjectdefs.h>
+#include <qvariant.h>
 #include <QAbstractTableModel>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../world/universalid.hpp"
 

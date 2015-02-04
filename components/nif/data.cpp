@@ -1,3 +1,4 @@
+#include "components/nif/niffile.hpp"
 #include "data.hpp"
 #include "node.hpp"
 

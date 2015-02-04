@@ -1,10 +1,20 @@
-#include "MaterialInstance.hpp"
-
-#include <stdexcept>
+#include <assert.h>
+#include <stddef.h>
+#include <algorithm>
 #include <iostream>
+#include <map>
+#include <stdexcept>
+#include <utility>
 
 #include "Factory.hpp"
+#include "MaterialInstance.hpp"
 #include "ShaderSet.hpp"
+#include "extern/shiny/Main/Language.hpp"
+#include "extern/shiny/Main/MaterialInstancePass.hpp"
+#include "extern/shiny/Main/MaterialInstanceTextureUnit.hpp"
+#include "extern/shiny/Main/Platform.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "extern/shiny/Main/ShaderInstance.hpp"
 
 namespace sh
 {

@@ -1,10 +1,12 @@
-#include "esmwriter.hpp"
-
+#include <components/to_utf8/to_utf8.hpp>
 #include <cassert>
 #include <fstream>
 #include <stdexcept>
+#include <vector>
 
-#include <components/to_utf8/to_utf8.hpp>
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "esmwriter.hpp"
 
 namespace ESM
 {

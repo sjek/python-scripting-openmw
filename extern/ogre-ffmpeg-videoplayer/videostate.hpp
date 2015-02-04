@@ -1,9 +1,20 @@
 #ifndef VIDEOPLAYER_VIDEOSTATE_H
 #define VIDEOPLAYER_VIDEOSTATE_H
 
-#include <boost/thread.hpp>
-
+#include <OgreDataStream.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
 #include <OgreTexture.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <boost/thread.hpp>
+#include <boost/thread/pthread/condition_variable_fwd.hpp>
+#include <boost/thread/pthread/mutex.hpp>
+#include <boost/thread/thread_only.hpp>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/types.h>
+#include <string>
+#include <vector>
 
 #include "videodefs.hpp"
 
@@ -11,21 +22,20 @@
 
 extern "C"
 {
-    struct SwsContext;
-    struct AVPacketList;
-    struct AVPacket;
     struct AVFormatContext;
-    struct AVStream;
     struct AVFrame;
+    struct AVPacket;
+    struct AVPacketList;
+    struct AVStream;
+    struct SwsContext;
 }
 
 namespace Video
 {
 
-struct VideoState;
-
-class MovieAudioFactory;
 class MovieAudioDecoder;
+class MovieAudioFactory;
+struct VideoState;
 
 struct ExternalClock
 {

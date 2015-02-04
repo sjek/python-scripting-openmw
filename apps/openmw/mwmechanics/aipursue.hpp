@@ -1,11 +1,17 @@
 #ifndef GAME_MWMECHANICS_AIPURSUE_H
 #define GAME_MWMECHANICS_AIPURSUE_H
 
-#include "aipackage.hpp"
-
 #include "../mwbase/world.hpp"
-
+#include "aipackage.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/aistate.hpp"
 #include "pathfinding.hpp"
+
+namespace ESM {
+namespace AiSequence {
+struct AiSequence;
+}  // namespace AiSequence
+}  // namespace ESM
 
 namespace ESM
 {

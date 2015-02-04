@@ -1,16 +1,25 @@
 #ifndef GAME_MWMECHANICS_CREATURESTATS_H
 #define GAME_MWMECHANICS_CREATURESTATS_H
 
+#include <map>
 #include <set>
-#include <string>
 #include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include "stat.hpp"
-#include "magiceffects.hpp"
-#include "spells.hpp"
 #include "activespells.hpp"
 #include "aisequence.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/timestamp.hpp"
 #include "drawstate.hpp"
+#include "magiceffects.hpp"
+#include "spells.hpp"
+#include "stat.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 namespace ESM
 {

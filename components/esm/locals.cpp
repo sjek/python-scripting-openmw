@@ -1,8 +1,8 @@
 
-#include "locals.hpp"
-
+#include "components/esm/variant.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "locals.hpp"
 
 void ESM::Locals::load (ESMReader &esm)
 {

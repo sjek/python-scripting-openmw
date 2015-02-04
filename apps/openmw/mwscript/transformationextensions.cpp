@@ -1,23 +1,34 @@
+#include <OgreMath.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneNode.h>
-
-#include <components/esm/loadcell.hpp>
-
-#include <components/compiler/extensions.hpp>
+#include <OgreVector3.h>
 #include <components/compiler/opcodes.hpp>
-
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
+#include <stddef.h>
+#include <exception>
+#include <stdexcept>
+#include <string>
 
 #include "../mwbase/environment.hpp"
-
 #include "../mwworld/class.hpp"
 #include "../mwworld/manualref.hpp"
 #include "../mwworld/player.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "apps/openmw/mwscript/../mwbase/world.hpp"
+#include "apps/openmw/mwscript/../mwworld/cellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/cellstore.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
+#include "components/interpreter/context.hpp"
+#include "components/interpreter/types.hpp"
 #include "interpretercontext.hpp"
 #include "ref.hpp"
+
+namespace ESM {
+struct Cell;
+}  // namespace ESM
 
 namespace MWScript
 {

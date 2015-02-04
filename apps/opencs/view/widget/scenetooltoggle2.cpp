@@ -1,16 +1,23 @@
 
+#include <qboxlayout.h>
+#include <qframe.h>
+#include <qicon.h>
+#include <qmargins.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qpixmap.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qwidget.h>
+#include <sstream>
+#include <utility>
+
+#include "apps/opencs/view/widget/scenetool.hpp"
+#include "pushbutton.hpp"
+#include "scenetoolbar.hpp"
 #include "scenetooltoggle2.hpp"
 
-#include <stdexcept>
-#include <sstream>
-
-#include <QHBoxLayout>
-#include <QFrame>
-#include <QIcon>
-#include <QPainter>
-
-#include "scenetoolbar.hpp"
-#include "pushbutton.hpp"
+class QPoint;
 
 void CSVWidget::SceneToolToggle2::adjustToolTip()
 {

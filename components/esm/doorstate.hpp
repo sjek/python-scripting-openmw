@@ -3,6 +3,11 @@
 
 #include "objectstate.hpp"
 
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+
 namespace ESM
 {
     // format 0, saved games only

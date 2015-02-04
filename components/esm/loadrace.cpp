@@ -1,8 +1,10 @@
-#include "loadrace.hpp"
+#include <vector>
 
+#include "components/esm/spelllist.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadrace.hpp"
 
 namespace ESM
 {

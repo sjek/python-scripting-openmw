@@ -1,12 +1,20 @@
 #ifndef CONTENTSELECTOR_HPP
 #define CONTENTSELECTOR_HPP
 
+#include <qgroupbox.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QDialog>
 
-#include "ui_contentselector.h"
 #include "../model/contentmodel.hpp"
+#include "components/contentselector/view/combobox.hpp"
+#include "ui_contentselector.h"
 
+class QModelIndex;
 class QSortFilterProxyModel;
+class QWidget;
 
 namespace ContentSelectorView
 {

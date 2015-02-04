@@ -2,7 +2,13 @@
 #ifndef COMPILER_NULLERRORHANDLER_H_INCLUDED
 #define COMPILER_NULLERRORHANDLER_H_INCLUDED
 
+#include <string>
+
 #include "errorhandler.hpp"
+
+namespace Compiler {
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

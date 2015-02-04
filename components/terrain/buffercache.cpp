@@ -1,7 +1,11 @@
-#include "buffercache.hpp"
-
+#include <OgreHardwareBuffer.h>
 #include <OgreHardwareBufferManager.h>
+#include <OgreSharedPtr.h>
+#include <assert.h>
+#include <stddef.h>
+#include <vector>
 
+#include "buffercache.hpp"
 #include "defs.hpp"
 
 namespace

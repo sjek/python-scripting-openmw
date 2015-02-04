@@ -1,52 +1,90 @@
-#include "renderingmanager.hpp"
-
-#include <cassert>
-
-#include <OgreRoot.h>
+#include <LinearMath/btVector3.h>
+#include <OgreCamera.h>
+#include <OgreCommon.h>
+#include <OgreControllerManager.h>
+#include <OgreHardwareBuffer.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreImage.h>
+#include <OgreLight.h>
+#include <OgreMaterialManager.h>
+#include <OgreMath.h>
+#include <OgreMatrix4.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgreMeshManager.h>
+#include <OgrePixelFormat.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreQuaternion.h>
+#include <OgreRenderSystem.h>
+#include <OgreRenderTarget.h>
+#include <OgreRenderTexture.h>
 #include <OgreRenderWindow.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
 #include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-#include <OgreViewport.h>
-#include <OgreCamera.h>
+#include <OgreSharedPtr.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
-#include <OgreHardwarePixelBuffer.h>
-#include <OgreControllerManager.h>
-#include <OgreMeshManager.h>
-#include <OgreRenderTexture.h>
-
+#include <OgreVector3.h>
+#include <OgreViewport.h>
+#include <SDL_stdinc.h>
 #include <SDL_video.h>
-
-#include <extern/shiny/Main/Factory.hpp>
-#include <extern/shiny/Platforms/Ogre/OgrePlatform.hpp>
-
-#include <openengine/bullet/physic.hpp>
-
+#include <boost/filesystem/operations.hpp>
 #include <components/settings/settings.hpp>
 #include <components/terrain/defaultworld.hpp>
 #include <components/terrain/terraingrid.hpp>
+#include <extern/shiny/Main/Factory.hpp>
+#include <extern/shiny/Platforms/Ogre/OgrePlatform.hpp>
+#include <openengine/bullet/physic.hpp>
+#include <string.h>
+#include <algorithm>
+#include <cassert>
+#include <limits>
+#include <new>
+#include <utility>
+#include <vector>
 
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-
-#include "../mwbase/world.hpp" // these includes can be removed once the static-hack is gone
 #include "../mwbase/environment.hpp"
-#include "../mwbase/inputmanager.hpp" // FIXME
-#include "../mwbase/windowmanager.hpp" // FIXME
 #include "../mwbase/statemanager.hpp"
-
+#include "../mwbase/windowmanager.hpp" // FIXME
+#include "../mwbase/world.hpp" // these includes can be removed once the static-hack is gone
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
 #include "../mwworld/ptr.hpp"
-
-#include "shadows.hpp"
-#include "localmap.hpp"
-#include "water.hpp"
-#include "npcanimation.hpp"
-#include "globalmap.hpp"
-#include "terrainstorage.hpp"
+#include "apps/openmw/mwrender/../mwworld/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "apps/openmw/mwrender/../mwworld/store.hpp"
+#include "apps/openmw/mwrender/actors.hpp"
+#include "apps/openmw/mwrender/animation.hpp"
+#include "apps/openmw/mwrender/camera.hpp"
+#include "apps/openmw/mwrender/debugging.hpp"
+#include "apps/openmw/mwrender/objects.hpp"
+#include "apps/openmw/mwrender/occlusionquery.hpp"
+#include "apps/openmw/mwrender/renderconst.hpp"
+#include "apps/openmw/mwrender/sky.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/terrain/defs.hpp"
+#include "components/terrain/world.hpp"
 #include "effectmanager.hpp"
+#include "extern/shiny/Main/Language.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "localmap.hpp"
+#include "npcanimation.hpp"
+#include "renderingmanager.hpp"
+#include "shadows.hpp"
+#include "terrainstorage.hpp"
+#include "water.hpp"
+
+namespace MWWorld {
+class Fallback;
+}  // namespace MWWorld
 
 using namespace MWRender;
 using namespace Ogre;

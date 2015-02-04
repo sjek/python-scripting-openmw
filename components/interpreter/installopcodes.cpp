@@ -1,13 +1,13 @@
 
-#include "installopcodes.hpp"
-
 #include <functional>
 
-#include "interpreter.hpp"
+#include "components/interpreter/types.hpp"
+#include "controlopcodes.hpp"
 #include "genericopcodes.hpp"
+#include "installopcodes.hpp"
+#include "interpreter.hpp"
 #include "localopcodes.hpp"
 #include "mathopcodes.hpp"
-#include "controlopcodes.hpp"
 #include "miscopcodes.hpp"
 #include "scriptopcodes.hpp"
 #include "spatialopcodes.hpp"

@@ -1,6 +1,9 @@
+#include <qnamespace.h>
+
+#include "apps/opencs/view/doc/../../model/doc/../world/universalid.hpp"
 #include "subview.hpp"
 
-#include "view.hpp"
+class QCloseEvent;
 
 CSVDoc::SubView::SubView (const CSMWorld::UniversalId& id)
  : mUniversalId (id)

@@ -1,12 +1,17 @@
 #ifndef COMPONENTS_NIFOGRE_MESH_HPP
 #define COMPONENTS_NIFOGRE_MESH_HPP
 
-#include <iostream>
-#include <string>
-#include <map>
-#include <cassert>
-
 #include <OgreResource.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <cassert>
+#include <iostream>
+#include <map>
+#include <string>
+
+namespace Ogre {
+class Mesh;
+}  // namespace Ogre
 
 namespace Nif
 {

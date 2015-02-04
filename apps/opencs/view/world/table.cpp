@@ -1,29 +1,44 @@
 
-#include "table.hpp"
-
-#include <QHeaderView>
-#include <QAction>
-#include <QApplication>
-#include <QMenu>
-#include <QContextMenuEvent>
-#include <QString>
 #include <QtCore/qnamespace.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <qabstractitemdelegate.h>
+#include <qabstractitemmodel.h>
+#include <qabstractitemview.h>
+#include <qaction.h>
+#include <qbytearray.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qheaderview.h>
+#include <qitemselectionmodel.h>
+#include <qlist.h>
+#include <qmenu.h>
+#include <qmimedata.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <memory>
+#include <stdexcept>
+#include <utility>
 
 #include "../../model/doc/document.hpp"
-
-#include "../../model/world/data.hpp"
-#include "../../model/world/commands.hpp"
-#include "../../model/world/idtableproxymodel.hpp"
-#include "../../model/world/idtablebase.hpp"
-#include "../../model/world/idtable.hpp"
-#include "../../model/world/record.hpp"
 #include "../../model/world/columns.hpp"
-#include "../../model/world/tablemimedata.hpp"
-#include "../../model/world/tablemimedata.hpp"
 #include "../../model/world/commanddispatcher.hpp"
-
-#include "recordstatusdelegate.hpp"
+#include "../../model/world/commands.hpp"
+#include "../../model/world/data.hpp"
+#include "../../model/world/idtable.hpp"
+#include "../../model/world/idtablebase.hpp"
+#include "../../model/world/idtableproxymodel.hpp"
+#include "../../model/world/record.hpp"
+#include "../../model/world/tablemimedata.hpp"
+#include "apps/opencs/view/world/../../model/world/columnbase.hpp"
+#include "apps/opencs/view/world/../../model/world/idcollection.hpp"
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/dragrecordtable.hpp"
+#include "table.hpp"
 #include "util.hpp"
+
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
 
 void CSVWorld::Table::contextMenuEvent (QContextMenuEvent *event)
 {

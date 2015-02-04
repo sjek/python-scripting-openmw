@@ -1,15 +1,22 @@
 #ifndef RECORDSTATUSDELEGATE_H
 #define RECORDSTATUSDELEGATE_H
 
-#include "util.hpp"
-#include <QTextOption>
 #include <QFont>
+#include <QTextOption>
 
-#include "datadisplaydelegate.hpp"
 #include "../../model/world/record.hpp"
+#include "datadisplaydelegate.hpp"
+#include "util.hpp"
 
-class QIcon;
 class QFont;
+class QIcon;
+class QObject;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
+namespace CSVWorld {
+class CommandDelegate;
+}  // namespace CSVWorld
 
 namespace CSVWorld
 {

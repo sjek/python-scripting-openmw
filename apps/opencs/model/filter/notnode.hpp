@@ -1,7 +1,19 @@
 #ifndef CSM_FILTER_NOTNODE_H
 #define CSM_FILTER_NOTNODE_H
 
+#include <map>
+
 #include "unarynode.hpp"
+
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
+namespace CSMWorld {
+class IdTableBase;
+}  // namespace CSMWorld
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace CSMFilter
 {

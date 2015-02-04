@@ -1,7 +1,10 @@
 
-#include "lightingnight.hpp"
-
+#include <OgreColourValue.h>
+#include <OgreLight.h>
 #include <OgreSceneManager.h>
+#include <OgreVector3.h>
+
+#include "lightingnight.hpp"
 
 CSVRender::LightingNight::LightingNight() : mSceneManager (0), mLight (0) {}
 

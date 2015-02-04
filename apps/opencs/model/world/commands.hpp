@@ -1,20 +1,21 @@
 #ifndef CSM_WOLRD_COMMANDS_H
 #define CSM_WOLRD_COMMANDS_H
 
-#include "record.hpp"
-
-#include <string>
+#include <qabstractitemmodel.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <QModelIndex>
+#include <QUndoCommand>
+#include <QVariant>
 #include <map>
+#include <string>
 #include <vector>
 
-#include <QVariant>
-#include <QUndoCommand>
-#include <QModelIndex>
-
+#include "record.hpp"
 #include "universalid.hpp"
 
-class QModelIndex;
 class QAbstractItemModel;
+class QModelIndex;
 
 namespace CSMWorld
 {

@@ -1,10 +1,15 @@
 #ifndef OPENMW_ESM_NPCSTATE_H
 #define OPENMW_ESM_NPCSTATE_H
 
-#include "objectstate.hpp"
+#include "creaturestats.hpp"
 #include "inventorystate.hpp"
 #include "npcstats.hpp"
-#include "creaturestats.hpp"
+#include "objectstate.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 namespace ESM
 {

@@ -1,15 +1,21 @@
 #ifndef CSM_WOLRD_IDTABLEPROXYMODEL_H
 #define CSM_WOLRD_IDTABLEPROXYMODEL_H
 
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <qabstractitemmodel.h>
+#include <qobjectdefs.h>
+#include <qsortfilterproxymodel.h>
+#include <QSortFilterProxyModel>
+#include <map>
 #include <string>
 
-#include <boost/shared_ptr.hpp>
-
-#include <map>
-
-#include <QSortFilterProxyModel>
-
 #include "../filter/node.hpp"
+
+class QObject;
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
 
 namespace CSMWorld
 {

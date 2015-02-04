@@ -1,50 +1,66 @@
-#include "engine.hpp"
-
-#include <stdexcept>
-#include <iomanip>
-
-#include <OgreRoot.h>
+#include <GLX/OgreTimerImp.h>
+#include <OgrePlatform.h>
 #include <OgreRenderWindow.h>
-
-#include <MyGUI_WidgetManager.h>
-
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
 #include <SDL.h>
-
-#include <components/compiler/extensions0.hpp>
-
+#include <SDL_error.h>
+#include <SDL_hints.h>
+#include <SDL_main.h>
+#include <SDL_stdinc.h>
+#include <assert.h>
+#include <boost/filesystem/operations.hpp>
 #include <components/bsa/resources.hpp>
+#include <components/compiler/extensions0.hpp>
 #include <components/files/configurationmanager.hpp>
-#include <components/translation/translation.hpp>
 #include <components/nifoverrides/nifoverrides.hpp>
+#include <components/translation/translation.hpp>
+#include <stddef.h>
+#include <stdlib.h>
+#include <time.h>
+#include <algorithm>
+#include <exception>
+#include <iomanip>
+#include <iostream>
+#include <stdexcept>
+#include <utility>
 
-#include <components/nifbullet/bulletnifloader.hpp>
-#include <components/nifogre/ogrenifloader.hpp>
-
-#include <components/esm/loadcell.hpp>
-
-#include "mwinput/inputmanagerimp.hpp"
-
-#include "mwgui/windowmanagerimp.hpp"
-
-#include "mwscript/scriptmanagerimp.hpp"
-#include "mwscript/extensions.hpp"
-#include "mwscript/interpretercontext.hpp"
-
-#include "mwsound/soundmanagerimp.hpp"
-
-#include "mwworld/class.hpp"
-#include "mwworld/player.hpp"
-#include "mwworld/worldimp.hpp"
-
+#include "apps/openmw/mwbase/../mwmechanics/../mwbase/mechanicsmanager.hpp"
+#include "apps/openmw/mwbase/../mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwbase/../mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwbase/../mwmechanics/magiceffects.hpp"
+#include "apps/openmw/mwbase/environment.hpp"
+#include "apps/openmw/mwdialogue/../mwscript/compilercontext.hpp"
+#include "apps/openmw/mwinput/../mwbase/inputmanager.hpp"
+#include "apps/openmw/mwinput/../mwgui/../mwbase/windowmanager.hpp"
+#include "apps/openmw/mwinput/../mwgui/mode.hpp"
+#include "apps/openmw/mwsound/../mwbase/soundmanager.hpp"
+#include "apps/openmw/mwstate/../mwbase/statemanager.hpp"
+#include "apps/openmw/mwworld/../mwbase/world.hpp"
+#include "apps/openmw/mwworld/../mwscript/../mwbase/scriptmanager.hpp"
+#include "apps/openmw/mwworld/../mwscript/globalscripts.hpp"
+#include "apps/openmw/mwworld/localscripts.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "components/compiler/context.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/files/collections.hpp"
+#include "components/settings/settings.hpp"
+#include "engine.hpp"
 #include "mwclass/classes.hpp"
-
 #include "mwdialogue/dialoguemanagerimp.hpp"
 #include "mwdialogue/journalimp.hpp"
 #include "mwdialogue/scripttest.hpp"
-
+#include "mwgui/windowmanagerimp.hpp"
+#include "mwinput/inputmanagerimp.hpp"
 #include "mwmechanics/mechanicsmanagerimp.hpp"
-
+#include "mwscript/interpretercontext.hpp"
+#include "mwscript/scriptmanagerimp.hpp"
+#include "mwsound/soundmanagerimp.hpp"
 #include "mwstate/statemanagerimp.hpp"
+#include "mwworld/class.hpp"
+#include "mwworld/worldimp.hpp"
+#include "openengine/ogre/renderer.hpp"
 
 void OMW::Engine::executeLocalScripts()
 {

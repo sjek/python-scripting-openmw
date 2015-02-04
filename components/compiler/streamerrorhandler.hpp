@@ -3,8 +3,13 @@
 #define COMPILER_STREAMERRORHANDLER_H_INCLUDED
 
 #include <ostream>
+#include <string>
 
 #include "errorhandler.hpp"
+
+namespace Compiler {
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {

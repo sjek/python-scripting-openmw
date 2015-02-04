@@ -1,11 +1,10 @@
-#include "steering.hpp"
-
+#include "../mwbase/environment.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/ptr.hpp"
-
-#include "../mwbase/environment.hpp"
-
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
 #include "movement.hpp"
+#include "steering.hpp"
 
 namespace MWMechanics
 {

@@ -1,32 +1,40 @@
 
-#include "interpretercontext.hpp"
-
-#include <cmath>
-#include <stdexcept>
-#include <sstream>
-
-#include <components/interpreter/types.hpp>
-
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/compiler/locals.hpp>
-
 #include <components/esm/cellid.hpp>
-
-#include "../mwworld/esmstore.hpp"
+#include <cmath>
+#include <limits>
+#include <map>
+#include <sstream>
+#include <stdexcept>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
+#include "../mwbase/inputmanager.hpp"
 #include "../mwbase/scriptmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwbase/inputmanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/containerstore.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/npcstats.hpp"
-
-#include "locals.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwscript/../mwworld/action.hpp"
+#include "apps/openmw/mwscript/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/refdata.hpp"
+#include "apps/openmw/mwscript/../mwworld/store.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadglob.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/misc/stringops.hpp"
 #include "globalscripts.hpp"
+#include "interpretercontext.hpp"
+#include "locals.hpp"
 
 namespace MWScript
 {

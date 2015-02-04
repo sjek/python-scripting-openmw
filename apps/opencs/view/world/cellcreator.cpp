@@ -1,12 +1,17 @@
 
-#include "cellcreator.hpp"
-
+#include <qcombobox.h>
+#include <qlabel.h>
+#include <qspinbox.h>
 #include <limits>
 #include <sstream>
 
-#include <QComboBox>
-#include <QSpinBox>
-#include <QLabel>
+#include "apps/opencs/view/world/genericcreator.hpp"
+#include "cellcreator.hpp"
+
+class QUndoStack;
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
 
 std::string CSVWorld::CellCreator::getId() const
 {

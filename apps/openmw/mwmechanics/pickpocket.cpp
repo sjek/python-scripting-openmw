@@ -1,12 +1,18 @@
-#include "pickpocket.hpp"
+#include <stdlib.h>
+#include <algorithm>
 
+#include "../mwbase/environment.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadskil.hpp"
 #include "npcstats.hpp"
+#include "pickpocket.hpp"
 
 namespace MWMechanics
 {

@@ -2,10 +2,24 @@
 #define COMPONENTS_TERRAIN_H
 
 #include <OgreAxisAlignedBox.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
 #include <OgreTexture.h>
 #include <OgreWorkQueue.h>
+#include <iosfwd>
+#include <vector>
 
+#include "components/terrain/defs.hpp"
 #include "world.hpp"
+
+namespace Ogre {
+class RenderTarget;
+class SceneManager;
+class SceneNode;
+class Vector2;
+class Vector3;
+}  // namespace Ogre
 
 namespace Ogre
 {

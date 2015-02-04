@@ -1,10 +1,15 @@
-#include "sdlcursormanager.hpp"
-
-#include <OgreHardwarePixelBuffer.h>
+#include <OgreColourValue.h>
+#include <OgreImage.h>
+#include <OgreSharedPtr.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
-#include <OgreRoot.h>
-
+#include <SDL_endian.h>
+#include <SDL_pixels.h>
 #include <openengine/ogre/imagerotate.hpp>
+#include <stddef.h>
+#include <utility>
+
+#include "sdlcursormanager.hpp"
 
 namespace SFO
 {

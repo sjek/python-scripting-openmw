@@ -1,12 +1,19 @@
-#include "importer.hpp"
-
-#include <string>
-#include <iostream>
-
-#include <boost/program_options.hpp>
-#include <boost/filesystem.hpp>
-#include <boost/filesystem/path.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <boost/program_options/errors.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/parsers.hpp>
+#include <boost/program_options/positional_options.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <exception>
+#include <iostream>
+#include <string>
+
+#include "components/to_utf8/to_utf8.hpp"
+#include "importer.hpp"
 
 namespace bpo = boost::program_options;
 namespace bfs = boost::filesystem;

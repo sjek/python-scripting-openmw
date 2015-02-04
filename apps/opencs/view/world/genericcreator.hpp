@@ -1,18 +1,25 @@
 #ifndef CSV_WORLD_GENERICCREATOR_H
 #define CSV_WORLD_GENERICCREATOR_H
 
+#include <qobjectdefs.h>
 #include <memory>
+#include <string>
 
 #include "../../model/world/universalid.hpp"
-
+#include "apps/opencs/view/world/../../model/world/scope.hpp"
 #include "creator.hpp"
 
-class QString;
-class QPushButton;
-class QLineEdit;
-class QHBoxLayout;
 class QComboBox;
+class QHBoxLayout;
 class QLabel;
+class QLineEdit;
+class QPushButton;
+class QString;
+class QUndoStack;
+class QWidget;
+namespace CSMWorld {
+class Data;
+}  // namespace CSMWorld
 
 namespace CSMWorld
 {

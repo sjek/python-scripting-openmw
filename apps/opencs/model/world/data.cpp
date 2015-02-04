@@ -1,20 +1,56 @@
 
-#include "data.hpp"
-
-#include <stdexcept>
-#include <algorithm>
-
-#include <QAbstractItemModel>
-
-#include <components/esm/esmreader.hpp>
-#include <components/esm/defs.hpp>
-#include <components/esm/loadglob.hpp>
 #include <components/esm/cellref.hpp>
+#include <components/esm/defs.hpp>
+#include <components/esm/esmreader.hpp>
+#include <components/esm/loadglob.hpp>
+#include <qabstractitemmodel.h>
+#include <algorithm>
+#include <stdexcept>
+#include <utility>
 
-#include "idtable.hpp"
+#include "apps/opencs/model/world/../doc/../world/universalid.hpp"
+#include "apps/opencs/model/world/../doc/messages.hpp"
+#include "apps/opencs/model/world/cell.hpp"
+#include "apps/opencs/model/world/collectionbase.hpp"
+#include "apps/opencs/model/world/columnbase.hpp"
+#include "apps/opencs/model/world/idcollection.hpp"
+#include "apps/opencs/model/world/idtablebase.hpp"
+#include "apps/opencs/model/world/info.hpp"
+#include "apps/opencs/model/world/infocollection.hpp"
+#include "apps/opencs/model/world/land.hpp"
+#include "apps/opencs/model/world/landtexture.hpp"
+#include "apps/opencs/model/world/pathgrid.hpp"
+#include "apps/opencs/model/world/ref.hpp"
+#include "apps/opencs/model/world/refcollection.hpp"
+#include "apps/opencs/model/world/refidcollection.hpp"
+#include "apps/opencs/model/world/subcellcollection.hpp"
 #include "columnimp.hpp"
-#include "regionmap.hpp"
 #include "columns.hpp"
+#include "components/esm/debugprofile.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/filter.hpp"
+#include "components/esm/loadbody.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadsndg.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/to_utf8/to_utf8.hpp"
+#include "data.hpp"
+#include "idtable.hpp"
+#include "regionmap.hpp"
 #include "resourcesmanager.hpp"
 #include "resourcetable.hpp"
 

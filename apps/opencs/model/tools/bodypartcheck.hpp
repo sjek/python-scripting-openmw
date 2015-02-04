@@ -4,10 +4,20 @@
 #include <components/esm/loadbody.hpp>
 #include <components/esm/loadrace.hpp>
 
-#include "../world/resources.hpp"
-#include "../world/idcollection.hpp"
-
 #include "../doc/stage.hpp"
+#include "../world/idcollection.hpp"
+#include "../world/resources.hpp"
+
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace CSMWorld {
+class Resources;
+}  // namespace CSMWorld
+namespace ESM {
+struct BodyPart;
+struct Race;
+}  // namespace ESM
 
 namespace CSMTools
 {

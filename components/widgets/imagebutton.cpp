@@ -1,6 +1,12 @@
+#include <MyGUI_ITexture.h>
+#include <MyGUI_RenderManager.h>
+#include <iostream>
+
 #include "imagebutton.hpp"
 
-#include <MyGUI_RenderManager.h>
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

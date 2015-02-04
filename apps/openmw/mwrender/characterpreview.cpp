@@ -1,23 +1,38 @@
-#include "characterpreview.hpp"
-
-#include <OgreSceneManager.h>
-#include <OgreRoot.h>
-#include <OgreHardwarePixelBuffer.h>
 #include <OgreCamera.h>
+#include <OgreColourValue.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreLight.h>
+#include <OgreNode.h>
+#include <OgrePixelFormat.h>
+#include <OgreQuaternion.h>
+#include <OgreRenderTarget.h>
+#include <OgreRenderTexture.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
+#include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
 #include <OgreViewport.h>
-#include <OgreRenderTexture.h>
-
 #include <libs/openengine/ogre/selectionbuffer.hpp>
-
+#include <stddef.h>
+#include <algorithm>
+#include <typeinfo>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/inventorystore.hpp"
-
-#include "renderconst.hpp"
+#include "apps/openmw/mwrender/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/animation.hpp"
+#include "characterpreview.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadweap.hpp"
 #include "npcanimation.hpp"
 
 namespace MWRender

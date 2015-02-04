@@ -3,13 +3,21 @@
 
 #define NOMINMAX
 
-#include <SDL_events.h>
-
 #include <OgreRenderWindow.h>
+#include <SDL_events.h>
+#include <SDL_keycode.h>
+#include <SDL_scancode.h>
+#include <SDL_stdinc.h>
+#include <SDL_video.h>
+#include <boost/unordered/unordered_map.hpp>
 #include <boost/unordered_map.hpp>
 
 #include "OISCompat.h"
 #include "events.h"
+
+namespace Ogre {
+class RenderWindow;
+}  // namespace Ogre
 
 
 

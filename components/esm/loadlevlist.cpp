@@ -1,8 +1,9 @@
-#include "loadlevlist.hpp"
+#include <stddef.h>
 
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadlevlist.hpp"
 
 namespace ESM
 {

@@ -1,12 +1,12 @@
-#include "widgets.hpp"
-
 #include <MyGUI_FactoryManager.h>
+#include <MyGUI_RTTI.h>
 
-#include "list.hpp"
-#include "numericeditbox.hpp"
 #include "box.hpp"
 #include "imagebutton.hpp"
+#include "list.hpp"
+#include "numericeditbox.hpp"
 #include "sharedstatebutton.hpp"
+#include "widgets.hpp"
 #include "windowcaption.hpp"
 
 namespace Gui

@@ -1,10 +1,10 @@
 #ifndef OPENENGINE_MYGUI_LOGLISTENER_H
 #define OPENENGINE_MYGUI_LOGLISTENER_H
 
-#include <string>
-#include <boost/filesystem/fstream.hpp>
-
 #include <MyGUI_ILogListener.h>
+#include <MyGUI_LogLevel.h>
+#include <boost/filesystem/fstream.hpp>
+#include <string>
 
 namespace MyGUI
 {

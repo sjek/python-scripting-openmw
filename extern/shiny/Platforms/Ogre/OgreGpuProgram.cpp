@@ -1,12 +1,15 @@
+#include <OgreGpuProgram.h>
+#include <OgreGpuProgramParams.h>
+#include <OgreHighLevelGpuProgram.h>
+#include <OgreHighLevelGpuProgramManager.h>
+#include <assert.h>
+#include <boost/lexical_cast.hpp>
+#include <iostream>
+#include <sstream>
 #include <stdexcept>
 
 #include "OgreGpuProgram.hpp"
-
-#include <boost/lexical_cast.hpp>
-
-#include <OgreHighLevelGpuProgramManager.h>
-#include <OgreGpuProgramManager.h>
-#include <OgreVector4.h>
+#include "extern/shiny/Platforms/Ogre/../../Main/Platform.hpp"
 
 namespace sh
 {

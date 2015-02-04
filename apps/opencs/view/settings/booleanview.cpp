@@ -1,14 +1,19 @@
-#include <QHBoxLayout>
-#include <QVBoxLayout>
+#include <qabstractbutton.h>
+#include <qcheckbox.h>
+#include <qglobal.h>
+#include <qlist.h>
+#include <qradiobutton.h>
+#include <qstringlist.h>
 
-#include <QCheckBox>
-#include <QRadioButton>
-#include <QGroupBox>
-
-#include <QAbstractButton>
-
-#include "booleanview.hpp"
 #include "../../model/settings/setting.hpp"
+#include "apps/opencs/view/settings/../../model/settings/support.hpp"
+#include "apps/opencs/view/settings/frame.hpp"
+#include "apps/opencs/view/settings/view.hpp"
+#include "booleanview.hpp"
+
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 CSVSettings::BooleanView::BooleanView (CSMSettings::Setting *setting,
                                        Page *parent)

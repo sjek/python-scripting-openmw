@@ -1,11 +1,17 @@
 #ifndef SH_OGREMATERIAL_H
 #define SH_OGREMATERIAL_H
 
+#include <OgreMaterial.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <string>
 
-#include <OgreMaterial.h>
-
 #include "../../Main/Platform.hpp"
+
+namespace Ogre {
+class Technique;
+}  // namespace Ogre
 
 namespace sh
 {

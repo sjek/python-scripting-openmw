@@ -1,6 +1,11 @@
-#include "actiontrap.hpp"
+#include <OgreVector3.h>
 
 #include "../mwmechanics/spellcasting.hpp"
+#include "actiontrap.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
 
 namespace MWWorld
 {

@@ -1,15 +1,16 @@
 #ifndef USERSETTINGS_HPP
 #define USERSETTINGS_HPP
 
-#include <map>
-
+#include <boost/filesystem/path.hpp>
 #include <QList>
-#include <QStringList>
-#include <QString>
 #include <QMap>
 #include <QPair>
+#include <QString>
+#include <QStringList>
+#include <QtCore>
+#include <map>
+#include <vector>
 
-#include <boost/filesystem/path.hpp>
 #include "support.hpp"
 
 #ifndef Q_MOC_RUN
@@ -17,14 +18,14 @@
 #endif
 
 namespace Files { typedef std::vector<boost::filesystem::path> PathContainer;
-                  struct ConfigurationManager;}
-
 class QFile;
 class QSettings;
+                  struct ConfigurationManager;}
 
 namespace CSMSettings {
 
     class Setting;
+
     typedef QMap <QString, QPair<QString, QList <Setting *> > > SettingPageMap;
 
     class UserSettings: public QObject

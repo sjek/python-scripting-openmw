@@ -1,11 +1,12 @@
 #ifndef GAME_MWWORLD_CLASS_H
 #define GAME_MWWORLD_CLASS_H
 
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
-
-#include <boost/shared_ptr.hpp>
 
 #include "ptr.hpp"
 
@@ -43,11 +44,11 @@ namespace ESM
 
 namespace MWWorld
 {
+    class Action;
+    class CellStore;
     class ContainerStore;
     class InventoryStore;
     class PhysicsSystem;
-    class CellStore;
-    class Action;
 
     /// \brief Base class for referenceable esm records
     class Class

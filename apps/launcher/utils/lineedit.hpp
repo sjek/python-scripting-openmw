@@ -10,12 +10,17 @@
 #ifndef LINEEDIT_H
 #define LINEEDIT_H
 
+#include <qlineedit.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QLineEdit>
 #include <QStyle>
 #include <QStylePainter>
 #include <QToolButton>
 
+class QResizeEvent;
 class QToolButton;
+class QWidget;
 
 class LineEdit : public QLineEdit
 {

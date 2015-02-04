@@ -1,6 +1,8 @@
 #ifndef MWMECHANICS_SECURITY_H
 #define MWMECHANICS_SECURITY_H
 
+#include <string>
+
 #include "../mwworld/ptr.hpp"
 
 namespace MWMechanics

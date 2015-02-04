@@ -1,18 +1,47 @@
-#include "manager.hpp"
-#include "loglistener.hpp"
-
-#include <MyGUI_Gui.h>
+#include <MyGUI.h>
 #include <MyGUI_OgrePlatform.h>
-#include <MyGUI_Timer.h>
-
+#include <MyGUI_LogManager.h>
 #include <MyGUI_LevelLogFilter.h>
 #include <MyGUI_LogSource.h>
 #include <MyGUI_ConsoleLogListener.h>
 
-#include <cassert>
-
+#include <OgreBlendMode.h>
+#include <OgreBuildSettings.h>
+#include <OgreCommon.h>
+#include <OgreGpuProgram.h>
+#include <OgreHardwareVertexBuffer.h>
+#include <OgreMatrix4.h>
+#include <OgrePass.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreRenderOperation.h>
+#include <OgreRenderQueue.h>
+#include <OgreRenderQueueListener.h>
+#include <OgreRenderSystem.h>
+#include <OgreRenderSystemCapabilities.h>
+#include <OgreRenderWindow.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
+#include <OgreSceneManager.h>
+#include <OgreSharedPtr.h>
+#include <OgreTechnique.h>
+#include <OgreTexture.h>
+#include <OgreTextureManager.h>
+#include <OgreTextureUnitState.h>
+#include <OgreVertexIndexData.h>
+#include <OgreViewport.h>
+#include <OgreWindowEventUtilities.h>
 #include <extern/shiny/Main/Factory.hpp>
 #include <extern/shiny/Platforms/Ogre/OgreMaterial.hpp>
+#include <stddef.h>
+#include <cassert>
+#include <map>
+#include <ostream>
+#include <utility>
+
+#include "extern/shiny/Main/MaterialInstance.hpp"
+#include "loglistener.hpp"
+#include "manager.hpp"
 
 using namespace OEngine::GUI;
 

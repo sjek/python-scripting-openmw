@@ -1,24 +1,40 @@
 
-#include "filter.hpp"
-
 #include <components/compiler/locals.hpp>
+#include <stddef.h>
+#include <list>
+#include <map>
+#include <stdexcept>
+#include <typeinfo>
+#include <utility>
 
+#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/journal.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/scriptmanager.hpp"
-
-#include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/magiceffects.hpp"
-
+#include "../mwmechanics/npcstats.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/../mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/ptr.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/refdata.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/store.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadinfo.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/misc/stringops.hpp"
+#include "filter.hpp"
 #include "selectwrapper.hpp"
 
 bool MWDialogue::Filter::testActor (const ESM::DialInfo& info) const

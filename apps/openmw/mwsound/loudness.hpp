@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "sound_decoder.hpp"
 
 namespace MWSound

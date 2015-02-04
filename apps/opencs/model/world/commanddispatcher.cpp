@@ -1,15 +1,24 @@
 
-#include "commanddispatcher.hpp"
-
+#include <components/misc/stringops.hpp>
+#include <qabstractitemmodel.h>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qundostack.h>
+#include <qvariant.h>
 #include <algorithm>
 
-#include <components/misc/stringops.hpp>
-
 #include "../doc/document.hpp"
-
+#include "apps/opencs/model/world/../doc/../world/data.hpp"
+#include "apps/opencs/model/world/columns.hpp"
+#include "apps/opencs/model/world/idtablebase.hpp"
+#include "apps/opencs/model/world/ref.hpp"
+#include "apps/opencs/model/world/refcollection.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
+#include "commanddispatcher.hpp"
+#include "commands.hpp"
+#include "components/esm/loaddial.hpp"
 #include "idtable.hpp"
 #include "record.hpp"
-#include "commands.hpp"
 
 std::vector<std::string> CSMWorld::CommandDispatcher::getDeletableRecords() const
 {

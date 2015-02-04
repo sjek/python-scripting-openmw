@@ -2,6 +2,14 @@
 #define COMPONENTS_SETTINGS_H
 
 #include <OgreConfigFile.h>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
+namespace Ogre {
+class ConfigFile;
+}  // namespace Ogre
 
 namespace Settings
 {

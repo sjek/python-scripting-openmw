@@ -1,8 +1,13 @@
+#include <qcombobox.h>
+#include <qmap.h>
+#include <qobject.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qvariant.h>
+#include <qwidget.h>
+
 #include "languageselectionpage.hpp"
-
 #include "mainwizard.hpp"
-
-#include <QDebug>
 
 Wizard::LanguageSelectionPage::LanguageSelectionPage(QWidget *parent) :
     QWizardPage(parent)

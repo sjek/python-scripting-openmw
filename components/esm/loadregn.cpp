@@ -1,8 +1,8 @@
-#include "loadregn.hpp"
-
+#include "components/esm/esmcommon.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadregn.hpp"
 
 namespace ESM
 {

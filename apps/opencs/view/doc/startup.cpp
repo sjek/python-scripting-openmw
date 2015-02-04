@@ -1,15 +1,22 @@
 
-#include "startup.hpp"
+#include <qapplication.h>
+#include <qboxlayout.h>
+#include <qdesktopwidget.h>
+#include <qfont.h>
+#include <qgridlayout.h>
+#include <qicon.h>
+#include <qlabel.h>
+#include <qlayout.h>
+#include <qlayoutitem.h>
+#include <qnamespace.h>
+#include <qpoint.h>
+#include <qpushbutton.h>
+#include <qrect.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qstring.h>
 
-#include <QApplication>
-#include <QDesktopWidget>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QRect>
-#include <QGridLayout>
-#include <QLabel>
-#include <QIcon>
-#include <QPushButton>
+#include "startup.hpp"
 
 QPushButton *CSVDoc::StartupDialogue::addButton (const QString& label, const QIcon& icon)
 {

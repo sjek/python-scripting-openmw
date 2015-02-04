@@ -1,11 +1,14 @@
 
-#include "charactermanager.hpp"
-
+#include <boost/filesystem/operations.hpp>
+#include <boost/iterator/iterator_facade.hpp>
+#include <stddef.h>
+#include <cctype> // std::isalnum
 #include <sstream>
 #include <stdexcept>
-#include <cctype> // std::isalnum
+#include <vector>
 
-#include <boost/filesystem.hpp>
+#include "apps/openmw/mwstate/character.hpp"
+#include "charactermanager.hpp"
 
 MWState::CharacterManager::CharacterManager (const boost::filesystem::path& saves,
     const std::string& game)

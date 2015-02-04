@@ -1,10 +1,16 @@
 #ifndef GAME_MWWORLD_SCENE_H
 #define GAME_MWWORLD_SCENE_H
 
-#include "../mwrender/renderingmanager.hpp"
+#include <set>
+#include <string>
 
-#include "ptr.hpp"
+#include "../mwrender/renderingmanager.hpp"
 #include "globals.hpp"
+#include "ptr.hpp"
+
+namespace MWRender {
+class RenderingManager;
+}  // namespace MWRender
 
 namespace Ogre
 {
@@ -33,15 +39,15 @@ namespace Render
 
 namespace MWRender
 {
-    class SkyManager;
     class CellRender;
+    class SkyManager;
 }
 
 namespace MWWorld
 {
+    class CellStore;
     class PhysicsSystem;
     class Player;
-    class CellStore;
 
     class Scene
     {

@@ -1,10 +1,23 @@
 
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qstring.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <stddef.h>
+#include <stdexcept>
+#include <string>
+
+#include "../../model/world/columns.hpp"
+#include "../../model/world/commands.hpp"
+#include "apps/opencs/view/world/enumdelegate.hpp"
+#include "components/esm/variant.hpp"
 #include "vartypedelegate.hpp"
 
-#include <QUndoStack>
-
-#include "../../model/world/commands.hpp"
-#include "../../model/world/columns.hpp"
+class QObject;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 void CSVWorld::VarTypeDelegate::addCommands (QAbstractItemModel *model, const QModelIndex& index, int type)
     const

@@ -1,13 +1,25 @@
 #ifndef CSVSETTINGS_BOOLEANVIEW_HPP
 #define CSVSETTINGS_BOOLEANVIEW_HPP
 
-#include <QWidget>
+#include <qmap.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qwidget.h>
 #include <QAbstractButton>
+#include <QWidget>
 
-#include "view.hpp"
 #include "../../model/settings/support.hpp"
+#include "view.hpp"
 
+class QAbstractButton;
 class QStringListModel;
+namespace CSMSettings {
+class Setting;
+}  // namespace CSMSettings
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 namespace CSVSettings
 {

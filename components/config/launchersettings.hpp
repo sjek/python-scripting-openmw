@@ -1,8 +1,14 @@
 #ifndef LAUNCHERSETTINGS_HPP
 #define LAUNCHERSETTINGS_HPP
 
-#include "settingsbase.hpp"
+#include <qmap.h>
+#include <qstring.h>
+#include <qstringlist.h>
+
 #include "gamesettings.hpp"
+#include "settingsbase.hpp"
+
+class QTextStream;
 
 namespace Config
 {

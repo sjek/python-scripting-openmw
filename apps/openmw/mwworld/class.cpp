@@ -1,29 +1,24 @@
 
-#include "class.hpp"
-
-#include <stdexcept>
-
 #include <OgreVector3.h>
-
-#include <components/esm/defs.hpp>
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
+#include "../mwgui/tooltips.hpp"
+#include "../mwmechanics/npcstats.hpp"
 #include "../mwworld/esmstore.hpp"
-
+#include "actiontake.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwworld/action.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "class.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "failedaction.hpp"
+#include "nullaction.hpp"
 #include "ptr.hpp"
 #include "refdata.hpp"
-#include "nullaction.hpp"
-#include "failedaction.hpp"
-#include "actiontake.hpp"
-#include "containerstore.hpp"
-
-#include "../mwgui/tooltips.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/magiceffects.hpp"
 
 namespace MWWorld
 {

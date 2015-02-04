@@ -1,12 +1,35 @@
 #ifndef GAME_RENDER_ANIMATION_H
 #define GAME_RENDER_ANIMATION_H
 
+#include <OgreAxisAlignedBox.h>
 #include <OgreController.h>
+#include <OgreMath.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
 #include <OgreVector3.h>
-
 #include <components/nifogre/ogrenifloader.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../mwworld/ptr.hpp"
+
+namespace Ogre {
+class Camera;
+class Entity;
+class Light;
+class MovableObject;
+class Node;
+class SceneManager;
+class SceneNode;
+class SkeletonInstance;
+class StaticGeometry;
+class TagPoint;
+}  // namespace Ogre
 
 namespace ESM
 {

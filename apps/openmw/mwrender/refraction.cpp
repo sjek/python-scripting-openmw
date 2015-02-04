@@ -1,17 +1,24 @@
-#include "refraction.hpp"
-
 #include <OgreCamera.h>
-#include <OgreTextureManager.h>
-#include <OgreSceneManager.h>
+#include <OgreColourValue.h>
 #include <OgreHardwarePixelBuffer.h>
+#include <OgreMatrix4.h>
+#include <OgrePixelFormat.h>
+#include <OgreRenderSystem.h>
 #include <OgreRenderTarget.h>
-#include <OgreViewport.h>
-#include <OgreRoot.h>
 #include <OgreRenderTexture.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
+#include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-
+#include <OgreSharedPtr.h>
+#include <OgreTexture.h>
+#include <OgreTextureManager.h>
+#include <OgreVector3.h>
+#include <OgreViewport.h>
 #include <extern/shiny/Main/Factory.hpp>
 
+#include "extern/shiny/Main/PropertyBase.hpp"
+#include "refraction.hpp"
 #include "renderconst.hpp"
 
 namespace MWRender

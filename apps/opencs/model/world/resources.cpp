@@ -1,13 +1,15 @@
 
-#include "resources.hpp"
-
+#include <OgreResourceGroupManager.h>
+#include <OgreSharedPtr.h>
+#include <OgreStringVector.h>
+#include <components/misc/stringops.hpp>
+#include <algorithm>
 #include <sstream>
 #include <stdexcept>
-#include <algorithm>
+#include <utility>
 
-#include <OgreResourceGroupManager.h>
-
-#include <components/misc/stringops.hpp>
+#include "apps/opencs/model/world/universalid.hpp"
+#include "resources.hpp"
 
 CSMWorld::Resources::Resources (const std::string& baseDirectory, UniversalId::Type type,
     const char * const *extensions)

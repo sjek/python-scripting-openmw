@@ -1,10 +1,11 @@
 #ifndef MISC_STRINGOPS_H
 #define MISC_STRINGOPS_H
 
-#include <cctype>
-#include <string>
+#include <stddef.h>
 #include <algorithm>
+#include <cctype>
 #include <locale>
+#include <string>
 
 namespace Misc
 {

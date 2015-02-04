@@ -1,10 +1,13 @@
-#include "actionalchemy.hpp"
-
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwworld/player.hpp"
+#include "actionalchemy.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwgui/mode.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWWorld
 {

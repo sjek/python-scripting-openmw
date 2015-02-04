@@ -1,8 +1,13 @@
 #ifndef OPENMW_ESM_CONTAINERSTATE_H
 #define OPENMW_ESM_CONTAINERSTATE_H
 
-#include "objectstate.hpp"
 #include "inventorystate.hpp"
+#include "objectstate.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 namespace ESM
 {

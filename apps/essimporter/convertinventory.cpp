@@ -1,6 +1,14 @@
-#include "convertinventory.hpp"
-
 #include <components/misc/stringops.hpp>
+#include <stdlib.h>
+#include <map>
+#include <string>
+#include <vector>
+
+#include "apps/essimporter/importinventory.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/inventorystate.hpp"
+#include "components/esm/objectstate.hpp"
+#include "convertinventory.hpp"
 
 namespace ESSImport
 {

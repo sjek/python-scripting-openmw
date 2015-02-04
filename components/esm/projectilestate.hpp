@@ -1,14 +1,17 @@
 #ifndef OPENMW_ESM_PROJECTILESTATE_H
 #define OPENMW_ESM_PROJECTILESTATE_H
 
+#include <OgreQuaternion.h>
+#include <OgreVector3.h>
 #include <string>
 
-#include <OgreVector3.h>
-#include <OgreQuaternion.h>
-
 #include "effectlist.hpp"
-
 #include "util.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 namespace ESM
 {

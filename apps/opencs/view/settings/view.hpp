@@ -1,20 +1,25 @@
 #ifndef CSVSETTINGS_VIEW_HPP
 #define CSVSETTINGS_VIEW_HPP
 
-#include <QWidget>
+#include <qlist.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QList>
+#include <QWidget>
 
-#include "frame.hpp"
 #include "../../model/settings/support.hpp"
+#include "frame.hpp"
 
-class QGroupBox;
-class QStringList;
-class QStandardItem;
-class QItemSelection;
 class QAbstractItemModel;
+class QGroupBox;
+class QItemSelection;
 class QItemSelectionModel;
-
-namespace CSMSettings { class Setting; }
+class QShowEvent;
+class QStandardItem;
+class QStringList;
+namespace CSMSettings {
+class Setting;
+}  // namespace CSMSettings
 
 namespace CSVSettings
 {

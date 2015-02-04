@@ -1,12 +1,34 @@
-#include "localscripts.hpp"
-
+#include <assert.h>
+#include <exception>
 #include <iostream>
 
-#include "esmstore.hpp"
+#include "apps/openmw/mwworld/cellreflist.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "cellstore.hpp"
-
 #include "class.hpp"
+#include "components/esm/loadacti.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/loadweap.hpp"
 #include "containerstore.hpp"
+#include "esmstore.hpp"
+#include "localscripts.hpp"
 
 
 namespace

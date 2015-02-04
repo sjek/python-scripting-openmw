@@ -1,11 +1,17 @@
-#include "objects.hpp"
-
 #include <OgreVector3.h>
-
-#include "movement.hpp"
+#include <stddef.h>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/character.hpp"
+#include "components/esm/defs.hpp"
+#include "objects.hpp"
+
+namespace MWRender {
+class Animation;
+}  // namespace MWRender
 
 namespace MWMechanics
 {

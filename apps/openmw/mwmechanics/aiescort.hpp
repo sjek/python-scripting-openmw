@@ -1,10 +1,20 @@
 #ifndef GAME_MWMECHANICS_AIESCORT_H
 #define GAME_MWMECHANICS_AIESCORT_H
 
-#include "aipackage.hpp"
 #include <string>
 
+#include "aipackage.hpp"
+#include "apps/openmw/mwmechanics/aistate.hpp"
 #include "pathfinding.hpp"
+
+namespace ESM {
+namespace AiSequence {
+struct AiSequence;
+}  // namespace AiSequence
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace ESM
 {

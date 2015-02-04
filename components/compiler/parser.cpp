@@ -1,15 +1,10 @@
 
-#include "parser.hpp"
-
-#include <cctype>
-#include <algorithm>
-#include <iterator>
+#include <components/misc/stringops.hpp>
 
 #include "errorhandler.hpp"
 #include "exception.hpp"
+#include "parser.hpp"
 #include "scanner.hpp"
-
-#include <components/misc/stringops.hpp>
 
 namespace Compiler
 {

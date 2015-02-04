@@ -1,8 +1,5 @@
+#include "components/ogreinit/ogreinit.hpp"
 #include "graphicspage.hpp"
-
-#include <QDesktopWidget>
-#include <QMessageBox>
-#include <QDir>
 
 #ifdef MAC_OS_X_VERSION_MIN_REQUIRED
 #undef MAC_OS_X_VERSION_MIN_REQUIRED
@@ -10,16 +7,36 @@
 #define MAC_OS_X_VERSION_MIN_REQUIRED __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__
 #endif // MAC_OS_X_VERSION_MIN_REQUIRED
 
-#include <SDL.h>
-
-#include <OgreRoot.h>
+#include <OgreConfigOptionMap.h>
+#include <OgreException.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
 #include <OgreRenderSystem.h>
-
-#include <boost/math/common_factor.hpp>
-
-#include <components/files/configurationmanager.hpp>
-
+#include <OgreRoot.h>
+#include <OgreStringVector.h>
+#include <SDL_error.h>
+#include <SDL_video.h>
+#include <boost/filesystem/path.hpp>
+#include <boost/math/common_factor_rt.hpp>
 #include <components/contentselector/model/naturalsort.hpp>
+#include <components/files/configurationmanager.hpp>
+#include <qalgorithms.h>
+#include <qapplication.h>
+#include <qcheckbox.h>
+#include <qcombobox.h>
+#include <qdesktopwidget.h>
+#include <qglobal.h>
+#include <qlist.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qradiobutton.h>
+#include <qregexp.h>
+#include <qspinbox.h>
+#include <string.h>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "settings/graphicssettings.hpp"
 

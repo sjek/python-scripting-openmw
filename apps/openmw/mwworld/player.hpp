@@ -1,24 +1,27 @@
 #ifndef GAME_MWWORLD_PLAYER_H
 #define GAME_MWWORLD_PLAYER_H
 
-#include "../mwworld/refdata.hpp"
-#include "../mwworld/livecellref.hpp"
+#include <OgreVector3.h>
+#include <stdint.h>
+#include <string>
 
 #include "../mwmechanics/drawstate.hpp"
-
-#include <OgreVector3.h>
+#include "../mwworld/livecellref.hpp"
+#include "../mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwworld/ptr.hpp"
+#include "components/esm/defs.hpp"
 
 namespace ESM
 {
-    struct NPC;
-    class ESMWriter;
     class ESMReader;
+    class ESMWriter;
+    struct NPC;
 }
 
 namespace MWBase
 {
-    class World;
     class Ptr;
+    class World;
 }
 
 namespace Loading

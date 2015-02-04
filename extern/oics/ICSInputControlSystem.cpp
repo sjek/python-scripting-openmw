@@ -26,6 +26,17 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ICSInputControlSystem.h"
 
+#include <SDL_keyboard.h>
+#include <SDL_keycode.h>
+#include <SDL_mouse.h>
+#include <algorithm>
+#include <ostream>
+
+#include "extern/oics/ICSChannel.h"
+#include "extern/oics/ICSControl.h"
+#include "extern/oics/ICSPrerequisites.h"
+#include "extern/oics/tinyxml.h"
+
 namespace ICS
 {
 	InputControlSystem::InputControlSystem(std::string file, bool active

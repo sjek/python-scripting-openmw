@@ -1,22 +1,20 @@
 
-#include "extensions.hpp"
-
-#include <components/interpreter/interpreter.hpp>
 #include <components/interpreter/installopcodes.hpp>
 
-#include "soundextensions.hpp"
-#include "cellextensions.hpp"
-#include "miscextensions.hpp"
-#include "guiextensions.hpp"
-#include "skyextensions.hpp"
-#include "statsextensions.hpp"
-#include "containerextensions.hpp"
 #include "aiextensions.hpp"
+#include "animationextensions.hpp"
+#include "cellextensions.hpp"
+#include "consoleextensions.hpp"
+#include "containerextensions.hpp"
 #include "controlextensions.hpp"
 #include "dialogueextensions.hpp"
-#include "animationextensions.hpp"
+#include "extensions.hpp"
+#include "guiextensions.hpp"
+#include "miscextensions.hpp"
+#include "skyextensions.hpp"
+#include "soundextensions.hpp"
+#include "statsextensions.hpp"
 #include "transformationextensions.hpp"
-#include "consoleextensions.hpp"
 #include "userextensions.hpp"
 
 namespace MWScript

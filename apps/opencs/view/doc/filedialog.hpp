@@ -1,10 +1,15 @@
 #ifndef FILEDIALOG_HPP
 #define FILEDIALOG_HPP
 
+#include <boost/filesystem/path.hpp>
+#include <qdialog.h>
+#include <qmetatype.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QDialog>
 #include <QModelIndex>
 
-#include <boost/filesystem/path.hpp>
 #include "adjusterwidget.hpp"
 
 #ifndef CS_QT_BOOST_FILESYSTEM_PATH_DECLARED
@@ -16,6 +21,8 @@ Q_DECLARE_METATYPE (boost::filesystem::path)
 
 class DataFilesModel;
 class PluginsProxyModel;
+class QModelIndex;
+class QWidget;
 
 namespace ContentSelectorView
 {

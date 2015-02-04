@@ -1,9 +1,12 @@
 #ifndef CSM_DOC_OPERATION_H
 #define CSM_DOC_OPERATION_H
 
-#include <vector>
-
+#include <qobjectdefs.h>
+#include <qthread.h>
 #include <QThread>
+#include <string>
+#include <utility>
+#include <vector>
 
 namespace CSMWorld
 {

@@ -1,21 +1,18 @@
 #ifndef GAME_MWMECHANICS_SPELLS_H
 #define GAME_MWMECHANICS_SPELLS_H
 
+#include <components/misc/stringops.hpp>
 #include <map>
 #include <string>
 
-#include <components/misc/stringops.hpp>
-
 #include "../mwworld/ptr.hpp"
 #include "../mwworld/timestamp.hpp"
-
 #include "magiceffects.hpp"
 
 
 namespace ESM
 {
     struct Spell;
-
     struct SpellState;
 }
 

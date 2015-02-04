@@ -1,9 +1,7 @@
 #ifndef CSM_WOLRD_REFIDDATA_H
 #define CSM_WOLRD_REFIDDATA_H
 
-#include <vector>
-#include <map>
-
+#include <components/esm/esmwriter.hpp>
 #include <components/esm/loadacti.hpp>
 #include <components/esm/loadalch.hpp>
 #include <components/esm/loadappa.hpp>
@@ -17,13 +15,17 @@
 #include <components/esm/loadlevlist.hpp>
 #include <components/esm/loadligh.hpp>
 #include <components/esm/loadlock.hpp>
+#include <components/esm/loadmisc.hpp>
+#include <components/esm/loadnpc.hpp>
 #include <components/esm/loadprob.hpp>
 #include <components/esm/loadrepa.hpp>
 #include <components/esm/loadstat.hpp>
 #include <components/esm/loadweap.hpp>
-#include <components/esm/loadnpc.hpp>
-#include <components/esm/loadmisc.hpp>
-#include <components/esm/esmwriter.hpp>
+#include <map>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "record.hpp"
 #include "universalid.hpp"

@@ -1,6 +1,7 @@
-#include "connector.hpp"
+#include <qglobal.h>
+
 #include "../../view/settings/view.hpp"
-#include "../../view/settings/page.hpp"
+#include "connector.hpp"
 
 CSMSettings::Connector::Connector(CSVSettings::View *master,
                                             QObject *parent)

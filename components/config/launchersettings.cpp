@@ -1,11 +1,17 @@
+#include <qchar.h>
+#include <qdebug.h>
+#include <qglobal.h>
+#include <qiterator.h>
+#include <qlist.h>
+#include <qregexp.h>
+#include <qtextstream.h>
+#include <time.h>
+#include <algorithm>
+#include <iterator>
+
+#include "components/config/gamesettings.hpp"
+#include "components/config/settingsbase.hpp"
 #include "launchersettings.hpp"
-
-#include <QTextStream>
-#include <QString>
-#include <QRegExp>
-#include <QMap>
-
-#include <QDebug>
 
 const char Config::LauncherSettings::sCurrentContentListKey[] = "Profiles/currentprofile";
 const char Config::LauncherSettings::sLauncherConfigFileName[] = "launcher.cfg";

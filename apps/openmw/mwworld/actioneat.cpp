@@ -1,15 +1,11 @@
 
-#include "actioneat.hpp"
-
-#include <cstdlib>
-
 #include <components/esm/loadskil.hpp>
-
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
+#include <string>
 
 #include "../mwworld/containerstore.hpp"
-
+#include "actioneat.hpp"
+#include "apps/openmw/mwworld/action.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
 #include "class.hpp"
 
 namespace MWWorld

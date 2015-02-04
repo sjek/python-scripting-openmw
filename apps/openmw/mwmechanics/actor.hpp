@@ -4,6 +4,7 @@
 #include <memory>
 
 #include "aistate.hpp"
+#include "apps/openmw/mwmechanics/character.hpp"
 
 namespace MWRender
 {

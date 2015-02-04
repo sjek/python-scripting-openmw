@@ -1,10 +1,14 @@
-#include "layout.hpp"
-
-#include <MyGUI_LayoutManager.h>
-#include <MyGUI_Widget.h>
 #include <MyGUI_Gui.h>
+#include <MyGUI_LayoutManager.h>
+#include <MyGUI_LogStream.h>
+#include <MyGUI_StringUtility.h>
 #include <MyGUI_TextBox.h>
+#include <MyGUI_Widget.h>
 #include <MyGUI_Window.h>
+#include <ostream>
+#include <vector>
+
+#include "layout.hpp"
 
 namespace OEngine
 {

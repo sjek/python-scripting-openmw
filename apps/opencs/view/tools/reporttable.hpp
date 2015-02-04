@@ -1,9 +1,22 @@
 #ifndef CSV_TOOLS_REPORTTABLE_H
 #define CSV_TOOLS_REPORTTABLE_H
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <string>
+#include <vector>
+
 #include "../world/dragrecordtable.hpp"
+#include "apps/opencs/view/tools/../../model/tools/../world/universalid.hpp"
 
 class QAction;
+class QContextMenuEvent;
+class QMouseEvent;
+class QWidget;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 namespace CSMTools
 {

@@ -1,9 +1,12 @@
 #ifndef OENGINE_MYGUI_LAYOUT_H
 #define OENGINE_MYGUI_LAYOUT_H
 
-#include <string>
-#include <MyGUI_WidgetDefines.h>
+#include <MyGUI_Diagnostic.h>
+#include <MyGUI_Prerequest.h>
+#include <MyGUI_RTTI.h>
 #include <MyGUI_Widget.h>
+#include <MyGUI_WidgetDefines.h>
+#include <string>
 
 namespace OEngine {
 namespace GUI

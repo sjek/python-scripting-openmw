@@ -1,11 +1,11 @@
-#include "tablemimedata.hpp"
-
+#include <qdebug.h>
+#include <qstring.h>
+#include <stdexcept>
 #include <string>
 
-#include <QDebug>
-
-#include "universalid.hpp"
 #include "columnbase.hpp"
+#include "tablemimedata.hpp"
+#include "universalid.hpp"
 
 CSMWorld::TableMimeData::TableMimeData (UniversalId id, const CSMDoc::Document& document) :
 mDocument(document)

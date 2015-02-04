@@ -1,9 +1,14 @@
 
-#include "idtableproxymodel.hpp"
-
+#include <qnamespace.h>
+#include <utility>
 #include <vector>
 
+#include "apps/opencs/model/world/../filter/node.hpp"
+#include "apps/opencs/model/world/columns.hpp"
 #include "idtablebase.hpp"
+#include "idtableproxymodel.hpp"
+
+class QObject;
 
 void CSMWorld::IdTableProxyModel::updateColumnMap()
 {

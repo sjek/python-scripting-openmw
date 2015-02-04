@@ -1,26 +1,55 @@
-#include "spellcasting.hpp"
-
+#include <assert.h>
+#include <boost/format/alt_sstream.hpp>
+#include <boost/format/format_class.hpp>
+#include <boost/format/format_fwd.hpp>
+#include <boost/format/format_implementation.hpp>
+#include <boost/format/free_funcs.hpp>
+#include <stdlib.h>
+#include <algorithm>
 #include <cfloat>
+#include <map>
+#include <stdexcept>
+#include <typeinfo>
+#include <utility>
+#include <vector>
 
-#include <boost/format.hpp>
-
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/soundmanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/soundmanager.hpp"
+#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/actionteleport.hpp"
-#include "../mwworld/player.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-
 #include "../mwrender/animation.hpp"
-
+#include "../mwworld/actionteleport.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/player.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/activespells.hpp"
+#include "apps/openmw/mwmechanics/creaturestats.hpp"
+#include "apps/openmw/mwmechanics/spells.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/esm/loadstat.hpp"
 #include "magiceffects.hpp"
 #include "npcstats.hpp"
+#include "spellcasting.hpp"
 #include "summoning.hpp"
 
 namespace

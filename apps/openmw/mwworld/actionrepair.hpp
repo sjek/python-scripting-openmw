@@ -3,6 +3,10 @@
 
 #include "action.hpp"
 
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
+
 namespace MWWorld
 {
     class ActionRepair : public Action

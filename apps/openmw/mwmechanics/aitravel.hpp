@@ -2,8 +2,17 @@
 #define GAME_MWMECHANICS_AITRAVEL_H
 
 #include "aipackage.hpp"
-
+#include "apps/openmw/mwmechanics/aistate.hpp"
 #include "pathfinding.hpp"
+
+namespace ESM {
+namespace AiSequence {
+struct AiSequence;
+}  // namespace AiSequence
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace ESM
 {

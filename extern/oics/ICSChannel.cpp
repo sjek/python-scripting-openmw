@@ -24,7 +24,16 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------------------------------- */
 
-#include "ICSInputControlSystem.h"
+#include "extern/oics/ICSChannel.h"
+
+#include <assert.h>
+#include <stddef.h>
+#include <algorithm>
+#include <list>
+#include <vector>
+
+#include "extern/oics/ICSChannelListener.h"
+#include "extern/oics/ICSControl.h"
 
 #define	B1(t) (t*t)
 #define	B2(t) (2*t*(1-t))

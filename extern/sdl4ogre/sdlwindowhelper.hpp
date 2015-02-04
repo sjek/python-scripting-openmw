@@ -1,7 +1,9 @@
 #ifndef SDL4OGRE_SDLWINDOWHELPER_H
 #define SDL4OGRE_SDLWINDOWHELPER_H
 
+#include <OgreCommon.h>
 #include <OgreRenderWindow.h>
+#include <string>
 
 namespace Ogre
 {

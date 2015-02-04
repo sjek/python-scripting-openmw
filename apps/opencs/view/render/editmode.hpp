@@ -1,7 +1,16 @@
 #ifndef CSV_RENDER_EDITMODE_H
 #define CSV_RENDER_EDITMODE_H
 
+#include <qicon.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+
 #include "../widget/modebutton.hpp"
+
+class QWidget;
+namespace CSVWidget {
+class SceneToolbar;
+}  // namespace CSVWidget
 
 namespace CSVRender
 {

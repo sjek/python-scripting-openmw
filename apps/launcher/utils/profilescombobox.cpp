@@ -1,10 +1,17 @@
-#include <QRegExpValidator>
-#include <QLineEdit>
-#include <QString>
-#include <QApplication>
-#include <QKeyEvent>
+#include <qapplication.h>
+#include <qcombobox.h>
+#include <qlineedit.h>
+#include <qnamespace.h>
+#include <qpalette.h>
+#include <qsize.h>
+#include <qstyle.h>
+#include <qtoolbutton.h>
+#include <qvalidator.h>
 
+#include "apps/launcher/utils/lineedit.hpp"
 #include "profilescombobox.hpp"
+
+class QWidget;
 
 ProfilesComboBox::ProfilesComboBox(QWidget *parent) :
     ContentSelectorView::ComboBox(parent)

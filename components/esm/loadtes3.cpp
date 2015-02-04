@@ -1,10 +1,8 @@
 
-#include "loadtes3.hpp"
-
 #include "esmcommon.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadtes3.hpp"
 
 void ESM::Header::blank()
 {

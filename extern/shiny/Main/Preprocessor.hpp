@@ -1,22 +1,19 @@
 #ifndef SH_PREPROCESSOR_H
 #define SH_PREPROCESSOR_H
 
-#include <string>
-#include <vector>
-
+#include <boost/assert.hpp>
+#include <boost/config.hpp>
+#include <boost/wave/cpp_exceptions.hpp>
+#include <boost/wave/cpp_throw.hpp>
+#include <boost/wave/preprocessing_hooks.hpp>
+#include <boost/wave/token_ids.hpp>
+#include <boost/wave/util/macro_helpers.hpp>
+#include <algorithm>
 #include <cstdio>
 #include <ostream>
 #include <string>
-#include <algorithm>
-
-#include <boost/assert.hpp>
-#include <boost/config.hpp>
-
-#include <boost/wave/cpp_throw.hpp>
-#include <boost/wave/cpp_exceptions.hpp>
-#include <boost/wave/token_ids.hpp>
-#include <boost/wave/util/macro_helpers.hpp>
-#include <boost/wave/preprocessing_hooks.hpp>
+#include <string>
+#include <vector>
 
 namespace sh
 {

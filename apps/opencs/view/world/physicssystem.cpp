@@ -1,15 +1,21 @@
-#include "physicssystem.hpp"
-
+#include <LinearMath/btVector3.h>
+#include <OgreCamera.h>
+#include <OgreQuaternion.h>
+#include <OgreRay.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreVector3.h>
+#include <OgreViewport.h>
+#include <components/nifbullet/bulletnifloader.hpp>
+#include <openengine/bullet/physic.hpp>
+#include <qstring.h>
+#include <stddef.h>
+#include <stdint.h>
 #include <iostream>
 
-#include <OgreRay.h>
-#include <OgreCamera.h>
-#include <OgreSceneManager.h>
-
-#include <openengine/bullet/physic.hpp>
-#include <components/nifbullet/bulletnifloader.hpp>
 #include "../../model/settings/usersettings.hpp"
 #include "../render/elements.hpp"
+#include "physicssystem.hpp"
 
 namespace CSVWorld
 {

@@ -1,9 +1,14 @@
 #ifndef OPENMW_ESM_CREATURESTATE_H
 #define OPENMW_ESM_CREATURESTATE_H
 
-#include "objectstate.hpp"
-#include "inventorystate.hpp"
 #include "creaturestats.hpp"
+#include "inventorystate.hpp"
+#include "objectstate.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 namespace ESM
 {

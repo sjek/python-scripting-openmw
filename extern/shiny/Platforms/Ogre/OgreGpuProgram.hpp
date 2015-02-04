@@ -1,9 +1,10 @@
 #ifndef SH_OGREGPUPROGRAM_H
 #define SH_OGREGPUPROGRAM_H
 
-#include <string>
-
 #include <OgreHighLevelGpuProgram.h>
+#include <OgrePrerequisites.h>
+#include <OgreSharedPtr.h>
+#include <string>
 
 #include "../../Main/Platform.hpp"
 

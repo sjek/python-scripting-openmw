@@ -1,8 +1,11 @@
 
-#include "player.hpp"
-
+#include "components/esm/cellid.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/npcstate.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "player.hpp"
 
 void ESM::Player::load (ESMReader &esm)
 {

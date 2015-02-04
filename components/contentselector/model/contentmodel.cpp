@@ -1,13 +1,26 @@
+#include <qalgorithms.h>
+#include <qbytearray.h>
+#include <qdatastream.h>
+#include <qdatetime.h>
+#include <qdebug.h>
+#include <qdir.h>
+#include <qfileinfo.h>
+#include <qglobal.h>
+#include <qiodevice.h>
+#include <qmimedata.h>
+#include <qtextcodec.h>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+#include "components/contentselector/model/loadordererror.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "components/to_utf8/to_utf8.hpp"
 #include "contentmodel.hpp"
 #include "esmfile.hpp"
 
-#include <stdexcept>
-
-#include <QDir>
-#include <QTextCodec>
-#include <QDebug>
-
-#include "components/esm/esmreader.hpp"
+class QObject;
 
 ContentSelectorModel::ContentModel::ContentModel(QObject *parent, QIcon warningIcon) :
     QAbstractTableModel(parent),

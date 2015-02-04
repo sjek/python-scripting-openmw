@@ -1,12 +1,18 @@
 
-#include "interpreter.hpp"
-
 #include <cassert>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include <utility>
 
+#include "components/interpreter/runtime.hpp"
+#include "components/interpreter/types.hpp"
+#include "interpreter.hpp"
 #include "opcodes.hpp"
+
+namespace Interpreter {
+class Context;
+}  // namespace Interpreter
 
 namespace Interpreter
 {

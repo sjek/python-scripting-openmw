@@ -1,10 +1,18 @@
-#include "record.hpp"
-#include "labels.hpp"
-
+#include <boost/format.hpp>
 #include <iostream>
 #include <sstream>
+#include <list>
+#include <map>
+#include <utility>
+#include <vector>
 
-#include <boost/format.hpp>
+#include "components/esm/aipackage.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/spelllist.hpp"
+#include "components/esm/variant.hpp"
+#include "labels.hpp"
+#include "record.hpp"
 
 void printAIPackage(ESM::AIPackage p)
 {

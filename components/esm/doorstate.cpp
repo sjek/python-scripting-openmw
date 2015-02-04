@@ -1,5 +1,5 @@
+#include "components/esm/objectstate.hpp"
 #include "doorstate.hpp"
-
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
 

@@ -8,7 +8,6 @@ namespace ESM
 {
     struct ENAMstruct;
     struct EffectList;
-
     struct MagicEffects;
 }
 

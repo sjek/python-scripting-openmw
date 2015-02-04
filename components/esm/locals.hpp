@@ -1,10 +1,15 @@
 #ifndef OPENMW_ESM_LOCALS_H
 #define OPENMW_ESM_LOCALS_H
 
-#include <vector>
 #include <string>
+#include <utility>
+#include <vector>
 
 #include "variant.hpp"
+
+namespace ESM {
+class Variant;
+}  // namespace ESM
 
 namespace ESM
 {

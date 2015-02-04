@@ -1,11 +1,12 @@
 
-#include "filewidget.hpp"
+#include <qboxlayout.h>
+#include <qlabel.h>
+#include <qlineedit.h>
+#include <qregexp.h>
+#include <qstring.h>
+#include <qvalidator.h>
 
-#include <QHBoxLayout>
-#include <QLineEdit>
-#include <QLabel>
-#include <QRegExpValidator>
-#include <QRegExp>
+#include "filewidget.hpp"
 
 QString CSVDoc::FileWidget::getExtension() const
 {

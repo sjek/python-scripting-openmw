@@ -2,7 +2,9 @@
 #define CSV_DOC_ADJUSTERWIDGET_H
 
 #include <boost/filesystem/path.hpp>
-
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qwidget.h>
 #include <QWidget>
 
 class QLabel;

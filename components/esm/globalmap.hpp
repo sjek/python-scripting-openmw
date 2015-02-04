@@ -1,8 +1,9 @@
 #ifndef OPENMW_COMPONENTS_ESM_GLOBALMAP_H
 #define OPENMW_COMPONENTS_ESM_GLOBALMAP_H
 
-#include <vector>
 #include <set>
+#include <utility>
+#include <vector>
 
 namespace ESM
 {

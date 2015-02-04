@@ -1,11 +1,12 @@
 #ifndef GAME_MWMECHANICS_AIPACKAGE_H
 #define GAME_MWMECHANICS_AIPACKAGE_H
 
-#include "pathfinding.hpp"
 #include <components/esm/defs.hpp>
 
-#include "obstacle.hpp"
 #include "aistate.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "obstacle.hpp"
+#include "pathfinding.hpp"
 
 namespace MWWorld
 {

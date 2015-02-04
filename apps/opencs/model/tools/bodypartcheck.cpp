@@ -1,4 +1,17 @@
+#include <string>
+#include <utility>
+
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "apps/opencs/model/tools/../world/resources.hpp"
+#include "apps/opencs/model/tools/../world/universalid.hpp"
 #include "bodypartcheck.hpp"
+#include "components/esm/loadbody.hpp"
+
+namespace ESM {
+struct Race;
+}  // namespace ESM
 
 CSMTools::BodyPartCheckStage::BodyPartCheckStage(
         const CSMWorld::IdCollection<ESM::BodyPart> &bodyParts,

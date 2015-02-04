@@ -3,9 +3,15 @@
 
 #include <components/esm/loadspel.hpp>
 
+#include "../doc/stage.hpp"
 #include "../world/idcollection.hpp"
 
-#include "../doc/stage.hpp"
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
+namespace ESM {
+struct Spell;
+}  // namespace ESM
 
 namespace CSMTools
 {

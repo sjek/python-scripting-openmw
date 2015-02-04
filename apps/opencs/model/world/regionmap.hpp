@@ -1,15 +1,24 @@
 #ifndef CSM_WOLRD_REGIONMAP_H
 #define CSM_WOLRD_REGIONMAP_H
 
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qobjectdefs.h>
+#include <qvariant.h>
+#include <QAbstractTableModel>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
 
-#include <QAbstractTableModel>
-
-#include "record.hpp"
 #include "cell.hpp"
 #include "cellcoordinates.hpp"
+#include "record.hpp"
+
+namespace CSMWorld {
+struct Cell;
+template <typename ESXRecordT> struct Record;
+}  // namespace CSMWorld
 
 namespace CSMWorld
 {

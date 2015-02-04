@@ -1,12 +1,13 @@
-#include "PropertyBase.hpp"
-
-#include <vector>
-#include <iostream>
-
+#include <assert.h>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/split.hpp>
 #include <boost/lexical_cast.hpp>
-#include <boost/algorithm/string.hpp>
-
 #include <fstream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
+
+#include "PropertyBase.hpp"
 
 namespace sh
 {

@@ -2,8 +2,14 @@
 #define CSM_FILTER_PARSER_H
 
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <string>
 
 #include "node.hpp"
+
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
 
 namespace CSMWorld
 {

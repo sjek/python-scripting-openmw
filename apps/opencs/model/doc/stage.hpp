@@ -1,12 +1,15 @@
 #ifndef CSM_DOC_STAGE_H
 #define CSM_DOC_STAGE_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 #include "../world/universalid.hpp"
-
 #include "messages.hpp"
+
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
 
 namespace CSMDoc
 {

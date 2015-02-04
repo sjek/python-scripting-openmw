@@ -21,18 +21,32 @@
 
  */
 
-#include "bsa_archive.hpp"
-
-#include <boost/filesystem.hpp>
-
-#include <OgreFileSystem.h>
 #include <OgreArchive.h>
 #include <OgreArchiveFactory.h>
 #include <OgreArchiveManager.h>
+#include <OgreDataStream.h>
+#include <OgrePrerequisites.h>
 #include <OgreResourceGroupManager.h>
-#include "bsa_file.hpp"
+#include <OgreSharedPtr.h>
+#include <OgreString.h>
+#include <OgreStringVector.h>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/iterator/iterator_facade.hpp>
+#include <stddef.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
+#include <iterator>
+#include <map>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
 #include "../files/constrainedfiledatastream.hpp"
+#include "bsa_archive.hpp"
+#include "bsa_file.hpp"
 
 using namespace Ogre;
 

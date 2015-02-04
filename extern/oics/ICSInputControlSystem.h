@@ -27,12 +27,28 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef OICS_InputControlSystem_H_
 #define OICS_InputControlSystem_H_
 
-#include "ICSPrerequisites.h"
-
-#include "ICSControl.h"
-#include "ICSChannel.h"
+#include <SDL_events.h>
+#include <SDL_scancode.h>
+#include <SDL_stdinc.h>
+#include <stddef.h>
+#include <limits>
+#include <list>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../sdl4ogre/events.h"
+#include "ICSChannel.h"
+#include "ICSControl.h"
+#include "ICSPrerequisites.h"
+
+class TiXmlElement;
+namespace ICS {
+class Channel;
+class DetectingBindingListener;
+class InputControlSystem;
+class InputControlSystemLog;
+}  // namespace ICS
 
 #define ICS_LOG(text) if(mLog) mLog->logMessage( ("ICS: " + std::string(text)).c_str() );
 #define ICS_MAX_JOYSTICK_AXIS 16

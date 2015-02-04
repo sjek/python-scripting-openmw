@@ -2,6 +2,10 @@
 #define GRAPHICSSETTINGS_HPP
 
 #include <components/config/settingsbase.hpp>
+#include <qmap.h>
+
+class QString;
+class QTextStream;
 
 namespace Launcher
 {

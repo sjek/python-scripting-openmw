@@ -1,19 +1,29 @@
-#include "weather.hpp"
-
+#include <OgrePrerequisites.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/weatherstate.hpp>
+#include <ctype.h>
+#include <stdlib.h>
+#include <cmath>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
-
-#include "../mwsound/sound.hpp"
-
+#include "../mwbase/world.hpp"
 #include "../mwrender/renderingmanager.hpp"
-
-#include "player.hpp"
+#include "../mwsound/sound.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/../mwrender/sky.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "cellstore.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/misc/stringops.hpp"
 #include "esmstore.hpp"
 #include "fallback.hpp"
-#include "cellstore.hpp"
+#include "weather.hpp"
 
 using namespace Ogre;
 using namespace MWWorld;

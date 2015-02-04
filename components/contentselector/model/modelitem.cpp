@@ -1,3 +1,6 @@
+#include <qalgorithms.h>
+#include <qglobal.h>
+
 #include "modelitem.hpp"
 
 ContentSelectorModel::ModelItem::ModelItem(ModelItem *parent)

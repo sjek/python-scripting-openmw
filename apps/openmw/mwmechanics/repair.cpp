@@ -1,19 +1,33 @@
-#include "repair.hpp"
+#include <boost/format/alt_sstream.hpp>
+#include <boost/format/format_class.hpp>
+#include <boost/format/format_fwd.hpp>
+#include <boost/format/format_implementation.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
 
-#include <boost/format.hpp>
-
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-
-#include "../mwworld/containerstore.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/esmstore.hpp"
-
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/containerstore.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/misc/stringops.hpp"
+#include "repair.hpp"
 
 namespace MWMechanics
 {

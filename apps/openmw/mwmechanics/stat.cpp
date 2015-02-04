@@ -1,4 +1,5 @@
 
+#include "components/esm/statstate.hpp"
 #include "stat.hpp"
 
 void MWMechanics::AttributeValue::writeState (ESM::StatState<int>& state) const

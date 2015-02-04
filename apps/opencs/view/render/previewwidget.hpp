@@ -1,12 +1,15 @@
 #ifndef OPENCS_VIEW_PREVIEWWIDGET_H
 #define OPENCS_VIEW_PREVIEWWIDGET_H
 
-#include "scenewidget.hpp"
+#include <qobjectdefs.h>
+#include <string>
 
 #include "navigationorbit.hpp"
 #include "object.hpp"
+#include "scenewidget.hpp"
 
 class QModelIndex;
+class QWidget;
 
 namespace CSMWorld
 {

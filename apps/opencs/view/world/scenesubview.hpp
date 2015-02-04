@@ -1,10 +1,17 @@
 #ifndef CSV_WORLD_SCENESUBVIEW_H
 #define CSV_WORLD_SCENESUBVIEW_H
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QHBoxLayout>
+#include <string>
+#include <vector>
 
 #include "../doc/subview.hpp"
+#include "apps/opencs/view/world/../doc/../../model/doc/../world/universalid.hpp"
 
+class QHBoxLayout;
 class QModelIndex;
 
 namespace CSMWorld
@@ -19,9 +26,9 @@ namespace CSMDoc
 
 namespace CSVRender
 {
-    class WorldspaceWidget;
     class PagedWorldspaceWidget;
     class UnpagedWorldspaceWidget;
+    class WorldspaceWidget;
 }
 
 namespace CSVWidget
@@ -31,9 +38,9 @@ namespace CSVWidget
 
 namespace CSVWorld
 {
+    class CreatorFactoryBase;
     class Table;
     class TableBottomBox;
-    class CreatorFactoryBase;
 
     class SceneSubView : public CSVDoc::SubView
     {

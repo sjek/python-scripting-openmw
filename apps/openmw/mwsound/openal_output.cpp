@@ -1,17 +1,32 @@
+#include <OgreVector3.h>
+#include <al.h>
+#include <alc.h>
+#include <boost/date_time/posix_time/posix_time_duration.hpp>
+#include <boost/date_time/time_duration.hpp>
+#include <boost/ref.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <boost/thread/pthread/recursive_mutex.hpp>
+#include <boost/thread/pthread/thread_data.hpp>
+#include <boost/thread/thread_only.hpp>
+#include <stddef.h>
+#include <string.h>
 #include <algorithm>
-#include <stdexcept>
+#include <exception>
 #include <iostream>
+#include <stdexcept>
+#include <utility>
 #include <vector>
 
-#include <stdint.h>
-
-#include <boost/thread.hpp>
-
-#include "openal_output.hpp"
-#include "sound_decoder.hpp"
-#include "sound.hpp"
-#include "soundmanagerimp.hpp"
+#include "apps/openmw/mwsound/sound_output.hpp"
 #include "loudness.hpp"
+#include "openal_output.hpp"
+#include "sound.hpp"
+#include "sound_decoder.hpp"
+#include "soundmanagerimp.hpp"
+
+namespace Ogre {
+class FileNotFoundException;
+}  // namespace Ogre
 
 #ifndef ALC_ALL_DEVICES_SPECIFIER
 #define ALC_ALL_DEVICES_SPECIFIER 0x1013

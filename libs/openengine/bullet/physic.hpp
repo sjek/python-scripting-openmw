@@ -1,22 +1,42 @@
 #ifndef OENGINE_BULLET_PHYSIC_H
 #define OENGINE_BULLET_PHYSIC_H
 
+#include <BulletCollision/CollisionDispatch/btCollisionWorld.h>
 #include <BulletDynamics/Dynamics/btRigidBody.h>
-#include "BulletCollision/CollisionDispatch/btGhostObject.h"
-#include <string>
+#include <LinearMath/btScalar.h>
+#include <OgreQuaternion.h>
+#include <OgreVector3.h>
+#include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
 #include <list>
 #include <map>
-#include "BulletShapeLoader.h"
-#include "BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h"
-#include <boost/shared_ptr.hpp>
+#include <string>
+#include <utility>
+#include <vector>
 
-class btRigidBody;
+#include "BulletCollision/CollisionDispatch/btGhostObject.h"
+#include "BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h"
+#include "BulletShapeLoader.h"
+
 class btBroadphaseInterface;
-class btDefaultCollisionConfiguration;
-class btSequentialImpulseConstraintSolver;
 class btCollisionDispatcher;
+class btCollisionObject;
+class btCollisionShape;
+class btDefaultCollisionConfiguration;
 class btDiscreteDynamicsWorld;
 class btHeightfieldTerrainShape;
+class btRigidBody;
+class btSequentialImpulseConstraintSolver;
+class btVector3;
+namespace OEngine {
+namespace Physic {
+class BulletShapeLoader;
+}  // namespace Physic
+}  // namespace OEngine
+namespace Ogre {
+class SceneNode;
+}  // namespace Ogre
 
 namespace BtOgre
 {
@@ -37,9 +57,9 @@ namespace MWWorld
 namespace OEngine {
 namespace Physic
 {
-    struct PhysicEvent;
     class PhysicEngine;
     class RigidBody;
+    struct PhysicEvent;
 
     enum CollisionType {
         CollisionType_Nothing = 0, //<Collide with nothing

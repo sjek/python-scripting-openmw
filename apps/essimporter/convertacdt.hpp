@@ -2,10 +2,19 @@
 #define OPENMW_ESSIMPORT_CONVERTACDT_H
 
 #include <components/esm/creaturestats.hpp>
-#include <components/esm/npcstats.hpp>
 #include <components/esm/loadskil.hpp>
+#include <components/esm/npcstats.hpp>
 
 #include "importacdt.hpp"
+
+namespace ESM {
+struct CreatureStats;
+struct NpcStats;
+}  // namespace ESM
+namespace ESSImport {
+struct ACDT;
+struct ActorData;
+}  // namespace ESSImport
 
 namespace ESSImport
 {

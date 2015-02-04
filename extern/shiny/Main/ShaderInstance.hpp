@@ -1,9 +1,21 @@
 #ifndef SH_SHADERINSTANCE_H
 #define SH_SHADERINSTANCE_H
 
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <map>
+#include <string>
+#include <utility>
 #include <vector>
 
 #include "Platform.hpp"
+#include "extern/shiny/Main/Language.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
+
+namespace sh {
+class GpuProgram;
+class Pass;
+}  // namespace sh
 
 namespace sh
 {

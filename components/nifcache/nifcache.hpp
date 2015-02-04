@@ -1,11 +1,15 @@
 #ifndef OPENMW_COMPONENTS_NIFCACHE_H
 #define OPENMW_COMPONENTS_NIFCACHE_H
 
-#include <components/nif/niffile.hpp>
-
 #include <boost/shared_ptr.hpp>
-
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <components/nif/niffile.hpp>
 #include <map>
+#include <string>
+
+namespace Nif {
+class NIFFile;
+}  // namespace Nif
 
 namespace Nif
 {

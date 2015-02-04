@@ -1,11 +1,13 @@
 
-#include "soundcheck.hpp"
-
-#include <sstream>
-
-#include <components/esm/loadskil.hpp>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "soundcheck.hpp"
 
 CSMTools::SoundCheckStage::SoundCheckStage (const CSMWorld::IdCollection<ESM::Sound>& sounds)
 : mSounds (sounds)

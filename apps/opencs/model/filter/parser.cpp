@@ -1,22 +1,26 @@
 
-#include "parser.hpp"
-
-#include <cctype>
-#include <stdexcept>
-#include <sstream>
-
 #include <components/misc/stringops.hpp>
+#include <cctype>
+#include <sstream>
+#include <stdexcept>
+#include <vector>
 
 #include "../world/columns.hpp"
 #include "../world/data.hpp"
 #include "../world/idcollection.hpp"
-
-#include "booleannode.hpp"
-#include "ornode.hpp"
 #include "andnode.hpp"
+#include "apps/opencs/model/filter/../world/record.hpp"
+#include "booleannode.hpp"
+#include "components/esm/filter.hpp"
 #include "notnode.hpp"
+#include "ornode.hpp"
+#include "parser.hpp"
 #include "textnode.hpp"
 #include "valuenode.hpp"
+
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
 
 namespace CSMFilter
 {

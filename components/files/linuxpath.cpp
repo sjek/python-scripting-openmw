@@ -1,12 +1,16 @@
+#include <boost/filesystem/operations.hpp>
+#include <ctype.h>
+#include <istream>
+
 #include "linuxpath.hpp"
 
 #if defined(__linux__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
 
-#include <cstdlib>
-#include <cstring>
+#include <boost/filesystem/fstream.hpp>
 #include <pwd.h>
 #include <unistd.h>
-#include <boost/filesystem/fstream.hpp>
+#include <cstdlib>
+#include <cstring>
 
 
 namespace

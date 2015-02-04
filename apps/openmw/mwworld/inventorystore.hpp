@@ -1,9 +1,21 @@
 #ifndef GAME_MWWORLD_INVENTORYSTORE_H
 #define GAME_MWWORLD_INVENTORYSTORE_H
 
-#include "containerstore.hpp"
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../mwmechanics/magiceffects.hpp"
+#include "containerstore.hpp"
+
+namespace ESM {
+struct InventoryState;
+}  // namespace ESM
+namespace MWWorld {
+class Ptr;
+struct LiveCellRefBase;
+}  // namespace MWWorld
 
 namespace ESM
 {

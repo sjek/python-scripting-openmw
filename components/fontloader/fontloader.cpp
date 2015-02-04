@@ -1,18 +1,31 @@
-#include "fontloader.hpp"
-
-#include <stdexcept>
-
-#include <OgreResourceGroupManager.h>
-#include <OgreTextureManager.h>
-
-#include <MyGUI_ResourceManager.h>
-#include <MyGUI_FontManager.h>
-#include <MyGUI_ResourceManualFont.h>
-#include <MyGUI_XmlDocument.h>
 #include <MyGUI_FactoryManager.h>
-
-
+#include <MyGUI_FontData.h>
+#include <MyGUI_ResourceManager.h>
+#include <MyGUI_ResourceManualFont.h>
+#include <MyGUI_StringUtility.h>
+#include <MyGUI_TSize.h>
+#include <MyGUI_Types.h>
+#include <MyGUI_Version.h>
+#include <MyGUI_XmlDocument.h>
+#include <OgreDataStream.h>
+#include <OgreImage.h>
+#include <OgrePixelFormat.h>
+#include <OgrePrerequisites.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreSharedPtr.h>
+#include <OgreStringVector.h>
+#include <OgreTexture.h>
+#include <OgreTextureManager.h>
 #include <components/misc/stringops.hpp>
+#include <stddef.h>
+#include <map>
+#include <ostream>
+#include <stdexcept>
+#include <utility>
+#include <vector>
+
+#include "components/to_utf8/to_utf8.hpp"
+#include "fontloader.hpp"
 
 namespace
 {

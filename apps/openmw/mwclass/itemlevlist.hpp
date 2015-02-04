@@ -1,7 +1,13 @@
 #ifndef GAME_MWCLASS_ITEMLEVLIST_H
 #define GAME_MWCLASS_ITEMLEVLIST_H
 
+#include <string>
+
 #include "../mwworld/class.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWClass
 {

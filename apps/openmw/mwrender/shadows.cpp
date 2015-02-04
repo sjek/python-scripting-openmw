@@ -1,20 +1,25 @@
-#include "shadows.hpp"
-
-#include <components/settings/settings.hpp>
-#include <openengine/ogre/renderer.hpp>
-
+#include <OgreCamera.h>
+#include <OgreCommon.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreLight.h>
+#include <OgrePixelFormat.h>
+#include <OgrePrerequisites.h>
+#include <OgreRenderTexture.h>
 #include <OgreSceneManager.h>
-#include <OgreColourValue.h>
+#include <OgreShadowCameraSetup.h>
 #include <OgreShadowCameraSetupLiSPSM.h>
 #include <OgreShadowCameraSetupPSSM.h>
-#include <OgreHardwarePixelBuffer.h>
-#include <OgreCamera.h>
-#include <OgreRenderTexture.h>
+#include <OgreSharedPtr.h>
+#include <OgreTexture.h>
 #include <OgreViewport.h>
-
+#include <components/settings/settings.hpp>
 #include <extern/shiny/Main/Factory.hpp>
+#include <openengine/ogre/renderer.hpp>
+#include <stddef.h>
 
+#include "extern/shiny/Main/PropertyBase.hpp"
 #include "renderconst.hpp"
+#include "shadows.hpp"
 
 using namespace Ogre;
 using namespace MWRender;

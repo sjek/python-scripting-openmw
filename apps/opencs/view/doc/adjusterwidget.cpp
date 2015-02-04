@@ -1,14 +1,16 @@
 
-#include "adjusterwidget.hpp"
-
+#include <boost/filesystem/operations.hpp>
+#include <qboxlayout.h>
+#include <qbytearray.h>
+#include <qicon.h>
+#include <qlabel.h>
+#include <qsize.h>
+#include <qsizepolicy.h>
+#include <qstyle.h>
 #include <stdexcept>
 #include <string>
 
-#include <boost/filesystem.hpp>
-
-#include <QHBoxLayout>
-#include <QLabel>
-#include <QStyle>
+#include "adjusterwidget.hpp"
 
 CSVDoc::AdjusterWidget::AdjusterWidget (QWidget *parent)
     : QWidget (parent), mValid (false), mAction (ContentAction_Undefined)

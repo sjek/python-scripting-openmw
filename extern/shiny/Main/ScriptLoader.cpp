@@ -1,11 +1,14 @@
-#include "ScriptLoader.hpp"
-
-#include <vector>
-#include <map>
-#include <exception>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/iterator/iterator_facade.hpp>
+#include <stddef.h>
 #include <fstream>
+#include <map>
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
-#include <boost/filesystem.hpp>
+#include "ScriptLoader.hpp"
 
 namespace sh
 {

@@ -1,13 +1,14 @@
-#include "loadmgef.hpp"
-
-#include <stdexcept>
-#include <sstream>
-
 #include <boost/lexical_cast.hpp>
+#include <algorithm>
+#include <sstream>
+#include <stdexcept>
+#include <utility>
 
+#include "components/misc/stringops.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadmgef.hpp"
 
 namespace
 {

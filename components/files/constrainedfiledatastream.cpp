@@ -1,10 +1,12 @@
+#include <OgrePrerequisites.h>
+#include <stdint.h>
+#include <string.h>
+#include <algorithm>
+#include <cassert>
+#include <stdexcept>
+
 #include "constrainedfiledatastream.hpp"
 #include "lowlevelfile.hpp"
-
-#include <stdexcept>
-#include <cassert>
-
-#include <stdint.h>
 
 namespace {
 

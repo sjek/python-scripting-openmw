@@ -1,7 +1,13 @@
 #ifndef GAME_RENDER_ACTIVATORANIMATION_H
 #define GAME_RENDER_ACTIVATORANIMATION_H
 
+#include <string>
+
 #include "animation.hpp"
+
+namespace ESM {
+struct Light;
+}  // namespace ESM
 
 namespace MWWorld
 {

@@ -1,23 +1,41 @@
-#include "localmap.hpp"
-
-#include <OgreMaterialManager.h>
+#include <OgreCamera.h>
+#include <OgreColourValue.h>
+#include <OgreCommon.h>
+#include <OgreDataStream.h>
+#include <OgreFrustum.h>
+#include <OgreHardwareBuffer.h>
 #include <OgreHardwarePixelBuffer.h>
+#include <OgreImage.h>
+#include <OgreLight.h>
+#include <OgreMath.h>
+#include <OgrePixelFormat.h>
+#include <OgreRenderTarget.h>
+#include <OgreRenderTexture.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-#include <OgreCamera.h>
+#include <OgreStringConverter.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
-#include <OgreRenderTexture.h>
+#include <OgreVector3.h>
 #include <OgreViewport.h>
-
 #include <components/esm/fogstate.hpp>
+#include <stddef.h>
+#include <string.h>
+#include <algorithm>
+#include <cmath>
+#include <memory>
+#include <stdexcept>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "../mwworld/esmstore.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/cellstore.hpp"
-
+#include "components/esm/loadcell.hpp"
+#include "components/settings/settings.hpp"
+#include "localmap.hpp"
+#include "openengine/ogre/renderer.hpp"
 #include "renderconst.hpp"
 #include "renderingmanager.hpp"
 

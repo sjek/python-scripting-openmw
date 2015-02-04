@@ -1,7 +1,12 @@
 #ifndef CSV_WIDGET_SCENETOOL_H
 #define CSV_WIDGET_SCENETOOL_H
 
+#include <qobjectdefs.h>
+
 #include "pushbutton.hpp"
+
+class QMouseEvent;
+class QPoint;
 
 namespace CSVWidget
 {

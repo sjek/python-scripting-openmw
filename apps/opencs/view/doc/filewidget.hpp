@@ -1,11 +1,13 @@
 #ifndef CSV_DOC_FILEWIDGET_H
 #define CSV_DOC_FILEWIDGET_H
 
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QWidget>
 
 class QLabel;
-class QString;
 class QLineEdit;
+class QString;
 
 namespace CSVDoc
 {

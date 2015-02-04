@@ -2,6 +2,7 @@
 #define COMPONENTS_FILES_CONSTRAINEDFILEDATASTREAM_HPP
 
 #include <OgreDataStream.h>
+#include <stddef.h>
 
 Ogre::DataStreamPtr openConstrainedFileDataStream (char const * filename, size_t offset = 0, size_t length = 0xFFFFFFFF);
 

@@ -1,14 +1,22 @@
-#include <QSpinBox>
-#include <QDoubleSpinBox>
-#include <QAbstractSpinBox>
-#include <QAbstractSlider>
-#include <QDial>
-#include <QSlider>
+#include <qabstractspinbox.h>
+#include <qdial.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+#include <qslider.h>
+#include <qspinbox.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qvariant.h>
 
-#include "rangeview.hpp"
-#include "spinbox.hpp"
 #include "../../model/settings/setting.hpp"
 #include "../../model/settings/support.hpp"
+#include "apps/opencs/view/settings/view.hpp"
+#include "rangeview.hpp"
+#include "spinbox.hpp"
+
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 CSVSettings::RangeView::RangeView (CSMSettings::Setting *setting,
                                        Page *parent)

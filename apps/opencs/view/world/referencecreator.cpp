@@ -1,13 +1,20 @@
 
-#include "referencecreator.hpp"
+#include <qabstractitemmodel.h>
+#include <qbytearray.h>
+#include <qlabel.h>
+#include <qlineedit.h>
+#include <qstring.h>
+#include <qundostack.h>
+#include <qvariant.h>
 
-#include <QLabel>
-#include <QLineEdit>
-
-#include "../../model/world/data.hpp"
-#include "../../model/world/commands.hpp"
 #include "../../model/world/columns.hpp"
+#include "../../model/world/commands.hpp"
+#include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
+#include "apps/opencs/view/world/../../model/world/idcollection.hpp"
+#include "apps/opencs/view/world/../../model/world/refcollection.hpp"
+#include "apps/opencs/view/world/genericcreator.hpp"
+#include "referencecreator.hpp"
 
 std::string CSVWorld::ReferenceCreator::getId() const
 {

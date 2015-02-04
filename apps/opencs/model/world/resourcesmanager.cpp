@@ -1,7 +1,10 @@
 
-#include "resourcesmanager.hpp"
-
 #include <stdexcept>
+#include <utility>
+
+#include "apps/opencs/model/world/resources.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
+#include "resourcesmanager.hpp"
 
 void CSMWorld::ResourcesManager::addResources (const Resources& resources)
 {

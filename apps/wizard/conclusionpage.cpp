@@ -1,7 +1,12 @@
+#include <qdebug.h>
+#include <qlabel.h>
+#include <qobject.h>
+#include <qpixmap.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <qwidget.h>
+
 #include "conclusionpage.hpp"
-
-#include <QDebug>
-
 #include "mainwizard.hpp"
 
 Wizard::ConclusionPage::ConclusionPage(QWidget *parent) :

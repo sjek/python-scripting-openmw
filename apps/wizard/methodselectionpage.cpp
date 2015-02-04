@@ -1,6 +1,11 @@
-#include "methodselectionpage.hpp"
-#include <QDebug>
+#include <qobject.h>
+#include <qradiobutton.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <qwidget.h>
+
 #include "mainwizard.hpp"
+#include "methodselectionpage.hpp"
 
 Wizard::MethodSelectionPage::MethodSelectionPage(QWidget *parent) :
     QWizardPage(parent)

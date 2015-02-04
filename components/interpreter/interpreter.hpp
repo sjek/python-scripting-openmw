@@ -6,6 +6,10 @@
 #include "runtime.hpp"
 #include "types.hpp"
 
+namespace Interpreter {
+class Context;
+}  // namespace Interpreter
+
 namespace Interpreter
 {
     class Opcode0;

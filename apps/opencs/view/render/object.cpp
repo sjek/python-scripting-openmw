@@ -1,17 +1,33 @@
 
-#include "object.hpp"
-
+#include <OgreEntity.h>
+#include <OgreMath.h>
+#include <OgreNode.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-#include <OgreEntity.h>
+#include <OgreSharedPtr.h>
+#include <OgreVector3.h>
+#include <qabstractitemmodel.h>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <stdexcept>
 
 #include "../../model/world/data.hpp"
 #include "../../model/world/ref.hpp"
 #include "../../model/world/refidcollection.hpp"
-
 #include "../world/physicssystem.hpp"
-
+#include "apps/opencs/view/render/../../model/world/columns.hpp"
+#include "apps/opencs/view/render/../../model/world/record.hpp"
+#include "apps/opencs/view/render/../../model/world/refcollection.hpp"
+#include "components/esm/defs.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
 #include "elements.hpp"
+#include "object.hpp"
+
+namespace Ogre {
+class MovableObject;
+}  // namespace Ogre
 
 void CSVRender::Object::clearSceneNode (Ogre::SceneNode *node)
 {

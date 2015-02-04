@@ -1,10 +1,12 @@
 #ifndef SH_MATERIALINSTANCEPASS_H
 #define SH_MATERIALINSTANCEPASS_H
 
+#include <iosfwd>
+#include <string>
 #include <vector>
 
-#include "PropertyBase.hpp"
 #include "MaterialInstanceTextureUnit.hpp"
+#include "PropertyBase.hpp"
 
 namespace sh
 {

@@ -1,6 +1,15 @@
-#include "idtypedelegate.hpp"
+#include <qstring.h>
+#include <string>
 
 #include "../../model/world/universalid.hpp"
+#include "apps/opencs/view/world/datadisplaydelegate.hpp"
+#include "apps/opencs/view/world/util.hpp"
+#include "idtypedelegate.hpp"
+
+class QObject;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 CSVWorld::IdTypeDelegate::IdTypeDelegate
     (const ValueList &values, const IconList &icons, CSMDoc::Document& document, QObject *parent)

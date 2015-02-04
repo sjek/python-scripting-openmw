@@ -1,17 +1,39 @@
 #ifndef OPENMW_MWWORLD_STORE_H
 #define OPENMW_MWWORLD_STORE_H
 
-#include <string>
-#include <vector>
-#include <map>
-#include <stdexcept>
-#include <sstream>
-
+#include <assert.h>
 #include <components/esm/esmwriter.hpp>
-
 #include <components/loadinglistener/loadinglistener.hpp>
+#include <stddef.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <map>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
 
+#include "components/esm/attr.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadltex.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadsscr.hpp"
+#include "components/misc/stringops.hpp"
 #include "recordcmp.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace MWWorld
 {

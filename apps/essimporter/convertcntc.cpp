@@ -1,5 +1,6 @@
+#include "apps/essimporter/importcntc.hpp"
+#include "components/esm/containerstate.hpp"
 #include "convertcntc.hpp"
-
 #include "convertinventory.hpp"
 
 namespace ESSImport

@@ -1,6 +1,8 @@
-#include "convertnpcc.hpp"
-
+#include "apps/essimporter/importnpcc.hpp"
+#include "components/esm/npcstate.hpp"
+#include "components/esm/npcstats.hpp"
 #include "convertinventory.hpp"
+#include "convertnpcc.hpp"
 
 namespace ESSImport
 {

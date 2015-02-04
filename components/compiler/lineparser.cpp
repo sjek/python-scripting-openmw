@@ -1,19 +1,28 @@
 
-#include "lineparser.hpp"
-
-#include <memory>
-
 #include <components/misc/stringops.hpp>
+#include <cstddef>
+#include <memory>
+#include <stdexcept>
+#include <utility>
 
-#include "scanner.hpp"
+#include "components/compiler/exprparser.hpp"
+#include "components/compiler/parser.hpp"
+#include "components/compiler/tokenloc.hpp"
+#include "components/interpreter/types.hpp"
 #include "context.hpp"
-#include "errorhandler.hpp"
-#include "skipparser.hpp"
-#include "locals.hpp"
-#include "generator.hpp"
-#include "extensions.hpp"
 #include "declarationparser.hpp"
+#include "errorhandler.hpp"
+#include "extensions.hpp"
 #include "exception.hpp"
+#include "generator.hpp"
+#include "lineparser.hpp"
+#include "locals.hpp"
+#include "scanner.hpp"
+#include "skipparser.hpp"
+
+namespace Compiler {
+class SourceException;
+}  // namespace Compiler
 
 namespace Compiler
 {

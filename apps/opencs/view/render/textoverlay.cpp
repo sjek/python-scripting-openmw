@@ -1,17 +1,40 @@
-#include "textoverlay.hpp"
-
+#include <OgreAxisAlignedBox.h>
+#include <OgreBlendMode.h>
 #include <OgreCamera.h>
-#include <OgreMaterialManager.h>
-#include <OgreTechnique.h>
-
-#include <OgreOverlayManager.h>
-#include <OgreOverlayContainer.h>
+#include <OgreColourValue.h>
+#include <OgreCommon.h>
+#include <OgreFont.h>
 #include <OgreFontManager.h>
-#include <OgreTextAreaOverlayElement.h>
-#include <OgreEntity.h>
-#include <OgreViewport.h>
-#include <OgreRoot.h>
+#include <OgreHardwareBuffer.h>
 #include <OgreHardwarePixelBuffer.h>
+#include <OgreMaterial.h>
+#include <OgreMaterialManager.h>
+#include <OgreMatrix4.h>
+#include <OgreMovableObject.h>
+#include <OgreOverlay.h>
+#include <OgreOverlayContainer.h>
+#include <OgreOverlayElement.h>
+#include <OgreOverlayManager.h>
+#include <OgrePass.h>
+#include <OgrePixelFormat.h>
+#include <OgrePlane.h>
+#include <OgrePlatform.h>
+#include <OgreQuaternion.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreSharedPtr.h>
+#include <OgreStringConverter.h>
+#include <OgreTechnique.h>
+#include <OgreTextAreaOverlayElement.h>
+#include <OgreTexture.h>
+#include <OgreTextureManager.h>
+#include <OgreTextureUnitState.h>
+#include <OgreVector3.h>
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
+#include <string>
+
+#include "textoverlay.hpp"
 
 namespace CSVRender
 {

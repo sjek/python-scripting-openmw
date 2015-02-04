@@ -1,18 +1,26 @@
 #ifndef COMPILER_CONTROLPARSER_H_INCLUDED
 #define COMPILER_CONTROLPARSER_H_INCLUDED
 
+#include <components/interpreter/types.hpp>
+#include <string>
+#include <utility>
 #include <vector>
 
-#include <components/interpreter/types.hpp>
-
-#include "parser.hpp"
 #include "exprparser.hpp"
 #include "lineparser.hpp"
+#include "parser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {
-    class Locals;
     class Literals;
+    class Locals;
 
     // Control structure parser
 

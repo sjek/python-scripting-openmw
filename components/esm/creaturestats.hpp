@@ -1,18 +1,17 @@
 #ifndef OPENMW_ESM_CREATURESTATS_H
 #define OPENMW_ESM_CREATURESTATS_H
 
-#include <string>
-#include <vector>
 #include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include "statstate.hpp"
-
-#include "defs.hpp"
-
-#include "spellstate.hpp"
 #include "activespells.hpp"
-#include "magiceffects.hpp"
 #include "aisequence.hpp"
+#include "defs.hpp"
+#include "magiceffects.hpp"
+#include "spellstate.hpp"
+#include "statstate.hpp"
 
 namespace ESM
 {

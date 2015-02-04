@@ -1,19 +1,26 @@
 #ifndef COMPONENTS_NIFOGRE_SKELETON_HPP
 #define COMPONENTS_NIFOGRE_SKELETON_HPP
 
-#include <iostream>
-#include <string>
-#include <cassert>
-
+#include <OgrePrerequisites.h>
 #include <OgreResource.h>
+#include <stdlib.h>
+#include <cassert>
+#include <iostream>
+#include <map>
+#include <string>
 
 #include "ogrenifloader.hpp"
 
+namespace Ogre {
+class Bone;
+class Skeleton;
+}  // namespace Ogre
+
 namespace Nif
 {
+    class NiKeyframeController;
     class NiTextKeyExtraData;
     class Node;
-    class NiKeyframeController;
 }
 
 namespace NifOgre

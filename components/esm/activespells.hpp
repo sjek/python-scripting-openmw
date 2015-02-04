@@ -1,11 +1,12 @@
 #ifndef OPENMW_ESM_ACTIVESPELLS_H
 #define OPENMW_ESM_ACTIVESPELLS_H
 
-#include "effectlist.hpp"
-#include "defs.hpp"
-
-#include <string>
 #include <map>
+#include <string>
+#include <vector>
+
+#include "defs.hpp"
+#include "effectlist.hpp"
 
 namespace ESM
 {

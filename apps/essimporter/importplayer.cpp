@@ -1,6 +1,9 @@
-#include "importplayer.hpp"
-
 #include <components/esm/esmreader.hpp>
+
+#include "apps/essimporter/importacdt.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "importplayer.hpp"
 
 namespace ESSImport
 {

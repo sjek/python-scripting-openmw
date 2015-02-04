@@ -2,6 +2,14 @@
 #define MWGUI_IMAGEBUTTON_H
 
 #include <MyGUI_ImageBox.h>
+#include <MyGUI_MouseButton.h>
+#include <MyGUI_RTTI.h>
+#include <MyGUI_Types.h>
+#include <string>
+
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

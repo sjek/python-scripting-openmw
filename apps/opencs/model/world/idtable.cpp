@@ -1,8 +1,15 @@
 
-#include "idtable.hpp"
+#include <qbytearray.h>
+#include <qglobal.h>
+#include <qstring.h>
 
+#include "apps/opencs/model/world/columns.hpp"
+#include "apps/opencs/model/world/idtablebase.hpp"
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
 #include "collectionbase.hpp"
 #include "columnbase.hpp"
+#include "idtable.hpp"
 
 CSMWorld::IdTable::IdTable (CollectionBase *idCollection, unsigned int features)
 : IdTableBase (features), mIdCollection (idCollection)

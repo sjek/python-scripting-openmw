@@ -1,13 +1,16 @@
 
-#include "classcheck.hpp"
-
-#include <sstream>
-#include <map>
-
 #include <components/esm/loadclas.hpp>
 #include <components/esm/loadskil.hpp>
+#include <map>
+#include <sstream>
+#include <string>
+#include <utility>
 
 #include "../world/universalid.hpp"
+#include "apps/opencs/model/tools/../doc/messages.hpp"
+#include "apps/opencs/model/tools/../world/idcollection.hpp"
+#include "apps/opencs/model/tools/../world/record.hpp"
+#include "classcheck.hpp"
 
 CSMTools::ClassCheckStage::ClassCheckStage (const CSMWorld::IdCollection<ESM::Class>& classes)
 : mClasses (classes)

@@ -1,14 +1,15 @@
 
-#include "newgame.hpp"
+#include <qapplication.h>
+#include <qboxlayout.h>
+#include <qdesktopwidget.h>
+#include <qdialogbuttonbox.h>
+#include <qpoint.h>
+#include <qpushbutton.h>
+#include <qrect.h>
 
-#include <QApplication>
-#include <QDesktopWidget>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <QPushButton>
-
-#include "filewidget.hpp"
 #include "adjusterwidget.hpp"
+#include "filewidget.hpp"
+#include "newgame.hpp"
 
 CSVDoc::NewGameDialogue::NewGameDialogue()
 {

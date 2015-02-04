@@ -1,4 +1,5 @@
 
+#include "components/esm/cellref.hpp"
 #include "ref.hpp"
 
 CSMWorld::CellRef::CellRef()

@@ -2,9 +2,11 @@
 #define OPENMW_MECHANICS_SUMMONING_H
 
 #include <set>
+#include <string>
+#include <utility>
 
-#include "magiceffects.hpp"
 #include "../mwworld/ptr.hpp"
+#include "magiceffects.hpp"
 
 namespace MWMechanics
 {

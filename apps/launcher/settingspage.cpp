@@ -1,15 +1,29 @@
-#include "settingspage.hpp"
-
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QDebug>
-#include <QDir>
-
-#include <components/files/configurationmanager.hpp>
-
+#include <boost/filesystem/path.hpp>
 #include <components/config/gamesettings.hpp>
 #include <components/config/launchersettings.hpp>
+#include <components/files/configurationmanager.hpp>
+#include <qapplication.h>
+#include <qcheckbox.h>
+#include <qcombobox.h>
+#include <qdebug.h>
+#include <qdialog.h>
+#include <qdir.h>
+#include <qfile.h>
+#include <qfiledialog.h>
+#include <qfileinfo.h>
+#include <qglobal.h>
+#include <qiodevice.h>
+#include <qlist.h>
+#include <qmessagebox.h>
+#include <qobject.h>
+#include <qpushbutton.h>
+#include <qstringlist.h>
+#include <string>
 
+#include "apps/launcher/maindialog.hpp"
+#include "apps/launcher/utils/lineedit.hpp"
+#include "components/process/processinvoker.hpp"
+#include "settingspage.hpp"
 #include "utils/textinputdialog.hpp"
 
 using namespace Process;

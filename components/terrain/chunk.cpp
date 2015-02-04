@@ -1,12 +1,25 @@
+#include <OgreHardwareBuffer.h>
+#include <OgreHardwareBufferManager.h>
+#include <OgreHardwareIndexBuffer.h>
+#include <OgreHardwareVertexBuffer.h>
+#include <OgreMaterial.h>
+#include <OgreMaterialManager.h>
+#include <OgreMatrix4.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgreRenderOperation.h>
+#include <OgreRenderQueue.h>
+#include <OgreSceneNode.h>
+#include <OgreVector3.h>
+#include <OgreVertexIndexData.h>
+#include <assert.h>
+#include <extern/shiny/Main/Factory.hpp>
+#include <stddef.h>
+
 #include "chunk.hpp"
 
-#include <OgreSceneNode.h>
-#include <OgreHardwareBufferManager.h>
-#include <OgreRenderQueue.h>
-#include <OgreMaterialManager.h>
-#include <OgreStringConverter.h>
-
-#include <extern/shiny/Main/Factory.hpp>
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
 
 namespace Terrain
 {

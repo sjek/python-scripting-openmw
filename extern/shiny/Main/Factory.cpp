@@ -1,16 +1,25 @@
-#include "Factory.hpp"
-
-#include <stdexcept>
-#include <iostream>
-
-#include <boost/algorithm/string.hpp>
-#include <boost/filesystem.hpp>
+#include <assert.h>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/iterator/iterator_facade.hpp>
 #include <boost/lexical_cast.hpp>
+#include <stddef.h>
+#include <exception>
+#include <fstream>
+#include <iostream>
+#include <stdexcept>
+#include <utility>
 
+#include "Factory.hpp"
+#include "MaterialInstanceTextureUnit.hpp"
 #include "Platform.hpp"
 #include "ScriptLoader.hpp"
 #include "ShaderSet.hpp"
-#include "MaterialInstanceTextureUnit.hpp"
+#include "extern/shiny/Main/Language.hpp"
+#include "extern/shiny/Main/MaterialInstance.hpp"
+#include "extern/shiny/Main/MaterialInstancePass.hpp"
 
 namespace sh
 {

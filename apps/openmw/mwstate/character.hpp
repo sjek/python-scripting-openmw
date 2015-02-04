@@ -2,8 +2,10 @@
 #define GAME_STATE_CHARACTER_H
 
 #include <boost/filesystem/path.hpp>
-
 #include <components/esm/savedgame.hpp>
+#include <time.h>
+#include <string>
+#include <vector>
 
 namespace MWState
 {

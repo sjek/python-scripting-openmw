@@ -1,16 +1,24 @@
 #ifndef CSV_WIDGET_SCENETOOL_MODE_H
 #define CSV_WIDGET_SCENETOOL_MODE_H
 
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <map>
+#include <string>
+
 #include "scenetool.hpp"
 
-#include <map>
-
 class QHBoxLayout;
+class QPoint;
+class QWidget;
+namespace CSVWidget {
+class PushButton;
+}  // namespace CSVWidget
 
 namespace CSVWidget
 {
-    class SceneToolbar;
     class ModeButton;
+    class SceneToolbar;
 
     ///< \brief Mode selector tool
     class SceneToolMode : public SceneTool

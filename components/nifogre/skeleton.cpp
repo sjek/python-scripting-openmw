@@ -1,13 +1,25 @@
-#include "skeleton.hpp"
-
-#include <OgreSkeletonManager.h>
-#include <OgreResource.h>
-#include <OgreSkeleton.h>
 #include <OgreBone.h>
-
+#include <OgreException.h>
+#include <OgreResource.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreSkeleton.h>
+#include <OgreSkeletonManager.h>
+#include <OgreStringConverter.h>
+#include <OgreVector3.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/nif/node.hpp>
 #include <components/nifcache/nifcache.hpp>
-#include <components/misc/stringops.hpp>
+#include <stddef.h>
+#include <exception>
+#include <stdexcept>
+#include <utility>
+
+#include "components/nif/base.hpp"
+#include "components/nif/niffile.hpp"
+#include "components/nif/niftypes.hpp"
+#include "components/nif/record.hpp"
+#include "components/nif/recordptr.hpp"
+#include "skeleton.hpp"
 
 namespace NifOgre
 {

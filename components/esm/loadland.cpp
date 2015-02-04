@@ -1,8 +1,10 @@
-#include "loadland.hpp"
+#include <stddef.h>
 
+#include "components/esm/esmcommon.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadland.hpp"
 
 namespace ESM
 {

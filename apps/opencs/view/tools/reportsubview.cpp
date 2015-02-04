@@ -1,6 +1,6 @@
 
+#include "apps/opencs/view/tools/../doc/subview.hpp"
 #include "reportsubview.hpp"
-
 #include "reporttable.hpp"
 
 CSVTools::ReportSubView::ReportSubView (const CSMWorld::UniversalId& id, CSMDoc::Document& document)

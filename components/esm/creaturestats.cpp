@@ -1,3 +1,11 @@
+#include "components/esm/activespells.hpp"
+#include "components/esm/aisequence.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/magiceffects.hpp"
+#include "components/esm/spellstate.hpp"
+#include "components/esm/statstate.hpp"
 #include "creaturestats.hpp"
 
 void ESM::CreatureStats::load (ESMReader &esm)

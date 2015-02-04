@@ -1,12 +1,34 @@
 #ifndef OPENCS_VIEW_PAGEDWORLDSPACEWIDGET_H
 #define OPENCS_VIEW_PAGEDWORLDSPACEWIDGET_H
 
+#include <qobjectdefs.h>
 #include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include "../../model/world/cellselection.hpp"
-
-#include "worldspacewidget.hpp"
+#include "apps/opencs/view/render/../../model/world/cellcoordinates.hpp"
 #include "cell.hpp"
+#include "worldspacewidget.hpp"
+
+class QModelIndex;
+class QMouseEvent;
+class QWidget;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
+namespace CSMWorld {
+class UniversalId;
+}  // namespace CSMWorld
+namespace CSVRender {
+class Cell;
+}  // namespace CSVRender
+namespace CSVWidget {
+class SceneToolMode;
+class SceneToolToggle2;
+class SceneToolbar;
+}  // namespace CSVWidget
 
 namespace CSVWidget
 {
@@ -15,8 +37,8 @@ namespace CSVWidget
 
 namespace CSVRender
 {
-    class TextOverlay;
     class OverlayMask;
+    class TextOverlay;
 
     class PagedWorldspaceWidget : public WorldspaceWidget
     {

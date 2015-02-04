@@ -1,22 +1,37 @@
-#include "mainwizard.hpp"
+#include <boost/filesystem/path.hpp>
+#include <qapplication.h>
+#include <qdatetime.h>
+#include <qdebug.h>
+#include <qdir.h>
+#include <qfile.h>
+#include <qglobal.h>
+#include <qicon.h>
+#include <qiodevice.h>
+#include <qlist.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qstringlist.h>
+#include <qtextcodec.h>
+#include <qtextstream.h>
+#include <qvariant.h>
+#include <stdbool.h>
+#include <string>
 
-#include <QDebug>
-
-#include <QTime>
-#include <QDateTime>
-#include <QCloseEvent>
-#include <QMessageBox>
-#include <QTextCodec>
-#include <QDir>
-
-#include "intropage.hpp"
-#include "methodselectionpage.hpp"
-#include "languageselectionpage.hpp"
-#include "existinginstallationpage.hpp"
-#include "installationtargetpage.hpp"
+#include "components/config/gamesettings.hpp"
+#include "components/config/launchersettings.hpp"
+#include "components/files/configurationmanager.hpp"
+#include "components/process/processinvoker.hpp"
 #include "componentselectionpage.hpp"
-#include "importpage.hpp"
 #include "conclusionpage.hpp"
+#include "existinginstallationpage.hpp"
+#include "importpage.hpp"
+#include "installationtargetpage.hpp"
+#include "intropage.hpp"
+#include "languageselectionpage.hpp"
+#include "mainwizard.hpp"
+#include "methodselectionpage.hpp"
+
+class QWidget;
 
 #ifdef OPENMW_USE_UNSHIELD
 #include "installationpage.hpp"

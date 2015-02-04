@@ -1,11 +1,21 @@
+#include <qglobal.h>
+#include <qlist.h>
+#include <qlistwidget.h>
+#include <qmap.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qpushbutton.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qvariant.h>
+#include <qwidget.h>
+
+#include "apps/wizard/utils/componentlistwidget.hpp"
 #include "componentselectionpage.hpp"
-
-#include <QDebug>
-#include <QPushButton>
-#include <QAbstractButton>
-#include <QMessageBox>
-
 #include "mainwizard.hpp"
+
+class QAbstractButton;
 
 Wizard::ComponentSelectionPage::ComponentSelectionPage(QWidget *parent) :
     QWizardPage(parent)

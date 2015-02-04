@@ -1,12 +1,12 @@
 #ifndef CSM_WORLD_SCRIPTCONTEXT_H
 #define CSM_WORLD_SCRIPTCONTEXT_H
 
-#include <string>
-#include <vector>
-#include <map>
-
 #include <components/compiler/context.hpp>
 #include <components/compiler/locals.hpp>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 
 namespace CSMWorld
 {

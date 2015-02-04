@@ -1,7 +1,10 @@
 
-#include "lightingbright.hpp"
-
+#include <OgreColourValue.h>
+#include <OgreLight.h>
 #include <OgreSceneManager.h>
+#include <OgreVector3.h>
+
+#include "lightingbright.hpp"
 
 CSVRender::LightingBright::LightingBright() : mSceneManager (0), mLight (0) {}
 

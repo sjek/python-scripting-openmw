@@ -1,11 +1,18 @@
-#include "activatoranimation.hpp"
-
-#include <OgreSceneNode.h>
 #include <OgreParticleSystem.h>
+#include <OgreSceneNode.h>
+#include <OgreSharedPtr.h>
+#include <vector>
 
-#include <components/esm/loadacti.hpp>
-
+#include "activatoranimation.hpp"
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "apps/openmw/mwrender/animation.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
 #include "renderconst.hpp"
+
+namespace ESM {
+struct Light;
+}  // namespace ESM
 
 namespace MWRender
 {

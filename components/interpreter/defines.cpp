@@ -1,10 +1,13 @@
-#include "defines.hpp"
-
+#include <ctype.h>
 #include <algorithm>
+#include <exception>
+#include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <iostream>
+
+#include "components/interpreter/context.hpp"
+#include "defines.hpp"
 
 namespace Interpreter{
 

@@ -1,29 +1,44 @@
-#include "projectilemanager.hpp"
-
+#include <LinearMath/btVector3.h>
+#include <OgreController.h>
+#include <OgreMath.h>
 #include <OgreSceneManager.h>
 #include <OgreSceneNode.h>
-
-#include <libs/openengine/bullet/physic.hpp>
-
 #include <components/esm/projectilestate.hpp>
+#include <libs/openengine/bullet/physic.hpp>
+#include <stddef.h>
+#include <utility>
 
-#include "../mwworld/manualref.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
-
+#include "../mwbase/environment.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-
 #include "../mwmechanics/combat.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
-
-#include "../mwrender/effectmanager.hpp"
 #include "../mwrender/animation.hpp"
+#include "../mwrender/effectmanager.hpp"
 #include "../mwrender/renderconst.hpp"
-
 #include "../mwsound/sound.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/inventorystore.hpp"
+#include "../mwworld/manualref.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/containerstore.hpp"
+#include "apps/openmw/mwworld/esmstore.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/util.hpp"
+#include "components/misc/stringops.hpp"
+#include "components/nifogre/ogrenifloader.hpp"
+#include "projectilemanager.hpp"
+
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace MWWorld
 {

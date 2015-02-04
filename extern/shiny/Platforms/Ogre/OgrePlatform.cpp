@@ -1,18 +1,27 @@
-#include <stdexcept>
-
-#include "OgrePlatform.hpp"
-
 #include <OgreDataStream.h>
 #include <OgreGpuProgramManager.h>
 #include <OgreHighLevelGpuProgramManager.h>
-#include <OgreRoot.h>
-
-#include "OgreMaterial.hpp"
-#include "OgreGpuProgram.hpp"
-#include "OgreMaterialSerializer.hpp"
+#include <OgreMaterial.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgreSharedPtr.h>
+#include <OgreVector4.h>
+#include <assert.h>
+#include <stddef.h>
+#include <iostream>
+#include <stdexcept>
+#include <typeinfo>
+#include <utility>
 
 #include "../../Main/MaterialInstance.hpp"
-#include "../../Main/Factory.hpp"
+#include "OgreGpuProgram.hpp"
+#include "OgreMaterial.hpp"
+#include "OgreMaterialSerializer.hpp"
+#include "OgrePlatform.hpp"
+#include "extern/shiny/Platforms/Ogre/../../Main/Platform.hpp"
+
+namespace Ogre {
+class Renderable;
+}  // namespace Ogre
 
 namespace
 {

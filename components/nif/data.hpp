@@ -24,7 +24,23 @@
 #ifndef OPENMW_COMPONENTS_NIF_DATA_HPP
 #define OPENMW_COMPONENTS_NIF_DATA_HPP
 
+#include <OgreMatrix3.h>
+#include <OgreQuaternion.h>
+#include <OgreVector2.h>
+#include <OgreVector3.h>
+#include <OgreVector4.h>
+#include <stddef.h>
+#include <vector>
+
 #include "base.hpp"
+#include "components/nif/nifkey.hpp"
+#include "components/nif/nifstream.hpp"
+#include "components/nif/record.hpp"
+#include "components/nif/recordptr.hpp"
+
+namespace Nif {
+class NIFFile;
+}  // namespace Nif
 
 namespace Nif
 {

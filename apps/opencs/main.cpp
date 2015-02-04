@@ -1,19 +1,20 @@
 
-#include "editor.hpp"
-
+#include <components/ogreinit/ogreinit.hpp>
+#include <extern/shiny/Main/Factory.hpp>
+#include <qapplication.h>
+#include <qglobal.h>
+#include <qicon.h>
+#include <qmetatype.h>
 #include <exception>
 #include <iostream>
+#include <memory>
 #include <string>
 
-#include <QApplication>
-#include <QIcon>
-#include <QMetaType>
-
-#include <extern/shiny/Main/Factory.hpp>
-
-#include <components/ogreinit/ogreinit.hpp>
-
+#include "editor.hpp"
 #include "model/world/universalid.hpp"
+
+class QEvent;
+class QObject;
 
 #ifdef Q_OS_MAC
 #include <QDir>

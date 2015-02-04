@@ -1,10 +1,11 @@
-#include "importinventory.hpp"
-
-#include <stdexcept>
-
 #include <components/esm/esmreader.hpp>
-
 #include <components/esm/loadcont.hpp>
+#include <stdlib.h>
+
+#include "apps/essimporter/importscri.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "importinventory.hpp"
 
 namespace ESSImport
 {

@@ -1,18 +1,14 @@
-#include "usersettings.hpp"
-
-#include <QSettings>
-#include <QFile>
-
-#include <components/files/configurationmanager.hpp>
-#include <components/settings/settings.hpp>
+#include <assert.h>
 #include <boost/version.hpp>
+#include <components/files/configurationmanager.hpp>
+#include <extern/shiny/Main/Factory.hpp>
+#include <stddef.h>
+#include <string>
+#include <utility>
 
 #include "setting.hpp"
 #include "support.hpp"
-#include <QTextCodec>
-#include <QDebug>
-
-#include <extern/shiny/Main/Factory.hpp>
+#include "usersettings.hpp"
 
 /**
  * Workaround for problems with whitespaces in paths in older versions of Boost library

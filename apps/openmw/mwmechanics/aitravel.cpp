@@ -1,18 +1,28 @@
-#include "aitravel.hpp"
-
+#include <OgreMath.h>
 #include <OgreVector3.h>
-
 #include <components/esm/aisequence.hpp>
+#include <limits>
+#include <memory>
+#include <vector>
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
-
-#include "../mwworld/class.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/cellstore.hpp"
-
-#include "steering.hpp"
-#include "movement.hpp"
+#include "../mwworld/class.hpp"
+#include "aitravel.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadpgrd.hpp"
 #include "creaturestats.hpp"
+#include "movement.hpp"
+#include "steering.hpp"
 
 namespace
 {

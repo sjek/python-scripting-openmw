@@ -1,7 +1,14 @@
 #ifndef OPENMW_ESM_CUSTOMMARKERSTATE_H
 #define OPENMW_ESM_CUSTOMMARKERSTATE_H
 
+#include <string>
+
 #include "cellid.hpp"
+
+namespace ESM {
+class ESMReader;
+class ESMWriter;
+}  // namespace ESM
 
 namespace ESM
 {

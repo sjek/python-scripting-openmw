@@ -1,20 +1,32 @@
-#include "imagerotate.hpp"
-
+#include <OgreAxisAlignedBox.h>
+#include <OgreColourValue.h>
+#include <OgreHardwarePixelBuffer.h>
+#include <OgreMaterial.h>
+#include <OgreMaterialManager.h>
+#include <OgreMath.h>
+#include <OgrePass.h>
+#include <OgrePixelFormat.h>
+#include <OgrePrerequisites.h>
+#include <OgreRectangle2D.h>
+#include <OgreRenderQueue.h>
+#include <OgreRenderTarget.h>
+#include <OgreRenderTexture.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreRoot.h>
 #include <OgreSceneManager.h>
-#include <OgreImage.h>
-#include <OgreTexture.h>
-#include <OgreRenderTarget.h>
-#include <OgreCamera.h>
-#include <OgreTextureUnitState.h>
-#include <OgreHardwarePixelBuffer.h>
-#include <OgreTechnique.h>
-#include <OgreMaterialManager.h>
-#include <OgreRectangle2D.h>
 #include <OgreSceneNode.h>
+#include <OgreSharedPtr.h>
+#include <OgreTechnique.h>
+#include <OgreTexture.h>
 #include <OgreTextureManager.h>
-#include <OgreRenderTexture.h>
+#include <OgreTextureUnitState.h>
 #include <OgreViewport.h>
+
+#include "imagerotate.hpp"
+
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
 
 using namespace Ogre;
 using namespace OEngine::Render;

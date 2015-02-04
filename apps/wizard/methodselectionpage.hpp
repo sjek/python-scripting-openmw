@@ -1,9 +1,13 @@
 #ifndef METHODSELECTIONPAGE_HPP
 #define METHODSELECTIONPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qwizard.h>
 #include <QWizardPage>
 
 #include "ui_methodselectionpage.h"
+
+class QWidget;
 
 namespace Wizard
 {

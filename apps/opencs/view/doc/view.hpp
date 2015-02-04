@@ -1,15 +1,24 @@
 #ifndef CSV_DOC_VIEW_H
 #define CSV_DOC_VIEW_H
 
-#include <vector>
-#include <map>
-
+#include <qlist.h>
+#include <qmainwindow.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QMainWindow>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "subviewfactory.hpp"
 
 class QAction;
+class QCloseEvent;
 class QDockWidget;
+namespace CSVDoc {
+class SubView;
+}  // namespace CSVDoc
 
 namespace CSMDoc
 {
@@ -23,9 +32,9 @@ namespace CSMWorld
 
 namespace CSVDoc
 {
-    class ViewManager;
-    class Operations;
     class GlobalDebugProfileMenu;
+    class Operations;
+    class ViewManager;
 
     class View : public QMainWindow
     {

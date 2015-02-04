@@ -1,5 +1,8 @@
-#include "plugin.hpp"
+#include <MyGUI_Platform.h>
+#include <MyGUI_Prerequest.h>
+
 #include "MyGUI_PluginManager.h"
+#include "plugin.hpp"
 
 MyGUIPlugin::ResourcePlugin* plugin_item = nullptr;
 

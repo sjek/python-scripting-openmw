@@ -1,11 +1,14 @@
 #ifndef CSV_DOC_OPERATION_H
 #define CSV_DOC_OPERATION_H
 
+#include <qobject.h>
+#include <qobjectdefs.h>
 #include <QObject>
 
 class QHBoxLayout;
-class QPushButton;
 class QProgressBar;
+class QPushButton;
+class QWidget;
 
 namespace CSVDoc
 {

@@ -1,9 +1,13 @@
 #ifndef IMPORTPAGE_HPP
 #define IMPORTPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qwizard.h>
 #include <QWizardPage>
 
 #include "ui_importpage.h"
+
+class QWidget;
 
 namespace Wizard
 {

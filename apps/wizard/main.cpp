@@ -1,7 +1,7 @@
-#include <QApplication>
-#include <QTextCodec>
-#include <QDir>
-#include <QDebug>
+#include <qapplication.h>
+#include <qcoreapplication.h>
+#include <qdir.h>
+#include <qtextcodec.h>
 
 #include "mainwizard.hpp"
 

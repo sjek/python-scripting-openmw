@@ -1,9 +1,14 @@
+#include "components/compiler/parser.hpp"
+#include "components/compiler/scriptparser.hpp"
 #include "fileparser.hpp"
-
-#include <iostream>
-
-#include "tokenloc.hpp"
 #include "scanner.hpp"
+#include "tokenloc.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Locals;
+}  // namespace Compiler
 
 namespace Compiler
 {

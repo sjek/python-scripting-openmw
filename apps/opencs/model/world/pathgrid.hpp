@@ -1,13 +1,19 @@
 #ifndef CSM_WOLRD_PATHGRID_H
 #define CSM_WOLRD_PATHGRID_H
 
-#include <vector>
-#include <string>
-
 #include <components/esm/loadpgrd.hpp>
+#include <string>
+#include <vector>
 
-#include "idcollection.hpp"
 #include "cell.hpp"
+#include "idcollection.hpp"
+
+namespace CSMWorld {
+struct Cell;
+}  // namespace CSMWorld
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace CSMWorld
 {

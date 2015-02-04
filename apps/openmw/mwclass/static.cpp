@@ -1,14 +1,22 @@
 
-#include "static.hpp"
-
+#include <assert.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/loadstat.hpp>
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/cellstore.hpp"
+#include <stddef.h>
+#include <typeinfo>
 
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/livecellref.hpp"
+#include "static.hpp"
+
+namespace MWWorld {
+class Class;
+}  // namespace MWWorld
 
 namespace MWClass
 {

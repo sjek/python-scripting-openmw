@@ -1,9 +1,13 @@
 #ifndef INSTALLATIONTARGETPAGE_HPP
 #define INSTALLATIONTARGETPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qwizard.h>
 #include <QWizardPage>
 
 #include "ui_installationtargetpage.h"
+
+class QWidget;
 
 namespace Files
 {

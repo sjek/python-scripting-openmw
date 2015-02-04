@@ -1,24 +1,46 @@
 #ifndef GAME_MWWORLD_CONTAINERSTORE_H
 #define GAME_MWWORLD_CONTAINERSTORE_H
 
-#include <iterator>
-#include <map>
-
 #include <components/esm/loadalch.hpp>
 #include <components/esm/loadappa.hpp>
 #include <components/esm/loadarmo.hpp>
 #include <components/esm/loadbook.hpp>
 #include <components/esm/loadclot.hpp>
 #include <components/esm/loadingr.hpp>
-#include <components/esm/loadlock.hpp>
 #include <components/esm/loadligh.hpp>
+#include <components/esm/loadlock.hpp>
 #include <components/esm/loadmisc.hpp>
 #include <components/esm/loadprob.hpp>
 #include <components/esm/loadrepa.hpp>
 #include <components/esm/loadweap.hpp>
+#include <cstddef>
+#include <iterator>
+#include <map>
+#include <string>
 
-#include "ptr.hpp"
 #include "cellreflist.hpp"
+#include "ptr.hpp"
+
+namespace ESM {
+struct Apparatus;
+struct Armor;
+struct Book;
+struct Clothing;
+struct Ingredient;
+struct Light;
+struct Lockpick;
+struct Miscellaneous;
+struct ObjectState;
+struct Potion;
+struct Probe;
+struct Repair;
+struct Weapon;
+}  // namespace ESM
+namespace MWWorld {
+class ESMStore;
+struct LiveCellRefBase;
+template <typename X> struct LiveCellRef;
+}  // namespace MWWorld
 
 namespace ESM
 {

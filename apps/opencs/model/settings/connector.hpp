@@ -1,9 +1,15 @@
 #ifndef CSMSETTINGS_CONNECTOR_HPP
 #define CSMSETTINGS_CONNECTOR_HPP
 
-#include <QObject>
+#include <qlist.h>
+#include <qmap.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
 #include <QList>
 #include <QMap>
+#include <QObject>
 #include <QStringList>
 
 #include "support.hpp"

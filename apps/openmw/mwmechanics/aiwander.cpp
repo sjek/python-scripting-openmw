@@ -1,23 +1,41 @@
-#include "aiwander.hpp"
-
-#include <OgreVector3.h>
+#include <OgreMath.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneNode.h>
-
+#include <OgreVector3.h>
+#include <assert.h>
 #include <components/esm/aisequence.hpp>
+#include <stdlib.h>
+#include <list>
+#include <memory>
 
-#include "../mwbase/world.hpp"
+#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-
+#include "../mwbase/world.hpp"
+#include "../mwworld/cellstore.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/cellstore.hpp"
-
+#include "aiwander.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/refdata.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/timestamp.hpp"
+#include "apps/openmw/mwmechanics/aipackage.hpp"
+#include "apps/openmw/mwmechanics/aisequence.hpp"
+#include "apps/openmw/mwmechanics/aistate.hpp"
+#include "apps/openmw/mwmechanics/drawstate.hpp"
+#include "apps/openmw/mwmechanics/obstacle.hpp"
+#include "apps/openmw/mwmechanics/pathfinding.hpp"
+#include "apps/openmw/mwmechanics/stat.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/esm/util.hpp"
 #include "creaturestats.hpp"
-#include "steering.hpp"
 #include "movement.hpp"
+#include "steering.hpp"
 
 
 

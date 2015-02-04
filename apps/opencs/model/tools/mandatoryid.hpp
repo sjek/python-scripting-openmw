@@ -4,9 +4,12 @@
 #include <string>
 #include <vector>
 
+#include "../doc/stage.hpp"
 #include "../world/universalid.hpp"
 
-#include "../doc/stage.hpp"
+namespace CSMDoc {
+class Messages;
+}  // namespace CSMDoc
 
 namespace CSMWorld
 {

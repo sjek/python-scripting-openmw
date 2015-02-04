@@ -1,22 +1,26 @@
 
-#include "genericcreator.hpp"
-
-#include <memory>
-
-#include <QHBoxLayout>
-#include <QPushButton>
-#include <QLineEdit>
-#include <QUndoStack>
-#include <QLabel>
-#include <QComboBox>
-
 #include <components/misc/stringops.hpp>
+#include <qabstractitemmodel.h>
+#include <qboxlayout.h>
+#include <qbytearray.h>
+#include <qcombobox.h>
+#include <qlabel.h>
+#include <qlineedit.h>
+#include <qnamespace.h>
+#include <qpushbutton.h>
+#include <qstring.h>
+#include <qundostack.h>
+#include <qvariant.h>
+#include <memory>
 
 #include "../../model/world/commands.hpp"
 #include "../../model/world/data.hpp"
 #include "../../model/world/idtable.hpp"
-
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
+#include "genericcreator.hpp"
 #include "idvalidator.hpp"
+
+class QWidget;
 
 void CSVWorld::GenericCreator::update()
 {

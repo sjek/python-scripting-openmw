@@ -1,5 +1,9 @@
-#include "fallback.hpp"
+#include <sstream>
+#include <utility>
+
 #include "boost/lexical_cast.hpp"
+#include "fallback.hpp"
+
 namespace MWWorld
 {
     Fallback::Fallback(const std::map<std::string,std::string>& fallback):mFallbackMap(fallback)

@@ -1,16 +1,22 @@
 #ifndef OPENCS_VIEW_TEXTOVERLAY_H
 #define OPENCS_VIEW_TEXTOVERLAY_H
 
+#include <OgreFont.h>
+#include <OgreOverlayPrerequisites.h>
+#include <OgrePrerequisites.h>
+#include <OgreString.h>
+#include <qrect.h>
 #include <QRect>
 
-#include <OgreString.h>
-#include <OgreFont.h>
+namespace Ogre {
+class Vector3;
+}  // namespace Ogre
 
 namespace Ogre
 {
-    class MovableObject;
     class Camera;
     class Font;
+    class MovableObject;
     class Overlay;
     class OverlayContainer;
     class TextAreaOverlayElement;

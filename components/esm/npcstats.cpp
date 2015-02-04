@@ -1,8 +1,10 @@
 
-#include "npcstats.hpp"
+#include <utility>
 
+#include "components/esm/statstate.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "npcstats.hpp"
 
 ESM::NpcStats::Faction::Faction() : mExpelled (false), mRank (-1), mReputation (0) {}
 

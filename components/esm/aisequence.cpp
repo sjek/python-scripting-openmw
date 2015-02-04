@@ -1,11 +1,10 @@
-#include "aisequence.hpp"
+#include <memory>
 
+#include "aisequence.hpp"
+#include "components/esm/util.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-
-#include "defs.hpp"
-
-#include <memory>
 
 namespace ESM
 {

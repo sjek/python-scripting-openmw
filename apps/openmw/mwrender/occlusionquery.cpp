@@ -1,18 +1,31 @@
-#include "occlusionquery.hpp"
-
-#include <OgreRenderSystem.h>
-#include <OgreRoot.h>
-#include <OgreBillboardSet.h>
-#include <OgreHardwareOcclusionQuery.h>
-#include <OgreEntity.h>
-#include <OgreSubEntity.h>
-#include <OgreMeshManager.h>
-#include <OgreMaterialManager.h>
+#include <OgreAxisAlignedBox.h>
 #include <OgreCamera.h>
-#include <OgreSceneNode.h>
+#include <OgreEntity.h>
+#include <OgreHardwareOcclusionQuery.h>
 #include <OgreMesh.h>
+#include <OgreMeshManager.h>
+#include <OgrePlane.h>
+#include <OgreRenderSystem.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreRoot.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreSharedPtr.h>
+#include <OgreSubEntity.h>
+#include <OgreVector3.h>
+#include <stddef.h>
+#include <iostream>
 
+#include "occlusionquery.hpp"
+#include "openengine/ogre/renderer.hpp"
 #include "renderconst.hpp"
+
+namespace Ogre {
+class AutoParamDataSource;
+class Exception;
+class Pass;
+class Renderable;
+}  // namespace Ogre
 
 using namespace MWRender;
 using namespace Ogre;

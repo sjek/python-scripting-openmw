@@ -2,6 +2,12 @@
 #define SH_OGREMATERIALSERIALIZER_H
 
 #include <OgreMaterialSerializer.h>
+#include <OgrePrerequisites.h>
+#include <string>
+
+namespace Ogre {
+class TextureUnitState;
+}  // namespace Ogre
 
 namespace Ogre
 {

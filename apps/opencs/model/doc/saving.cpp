@@ -1,12 +1,31 @@
 
-#include "saving.hpp"
-
 #include "../world/data.hpp"
 #include "../world/idcollection.hpp"
-
-#include "state.hpp"
-#include "savingstages.hpp"
+#include "apps/opencs/model/doc/../world/record.hpp"
+#include "apps/opencs/model/doc/../world/scope.hpp"
+#include "apps/opencs/model/doc/operation.hpp"
+#include "components/esm/debugprofile.hpp"
+#include "components/esm/filter.hpp"
+#include "components/esm/loadbody.hpp"
+#include "components/esm/loadbsgn.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadfact.hpp"
+#include "components/esm/loadglob.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/esm/loadrace.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadsndg.hpp"
+#include "components/esm/loadsoun.hpp"
+#include "components/esm/loadspel.hpp"
+#include "components/to_utf8/to_utf8.hpp"
 #include "document.hpp"
+#include "saving.hpp"
+#include "savingstages.hpp"
+#include "state.hpp"
 
 CSMDoc::Saving::Saving (Document& document, const boost::filesystem::path& projectPath,
     ToUTF8::FromType encoding)

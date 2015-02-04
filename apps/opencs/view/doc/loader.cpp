@@ -1,15 +1,20 @@
 
-#include "loader.hpp"
-
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QProgressBar>
-#include <QCursor>
-#include <QDialogButtonBox>
-#include <QCloseEvent>
-#include <QListWidget>
+#include <boost/filesystem/path.hpp>
+#include <qboxlayout.h>
+#include <qcursor.h>
+#include <qdialogbuttonbox.h>
+#include <qevent.h>
+#include <qlabel.h>
+#include <qlistwidget.h>
+#include <qnamespace.h>
+#include <qprogressbar.h>
+#include <qstring.h>
+#include <sstream>
+#include <utility>
+#include <vector>
 
 #include "../../model/doc/document.hpp"
+#include "loader.hpp"
 
 void CSVDoc::LoadingDocument::closeEvent (QCloseEvent *event)
 {

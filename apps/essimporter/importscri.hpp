@@ -2,7 +2,7 @@
 #define OPENMW_ESSIMPORT_IMPORTSCRI_H
 
 #include <components/esm/variant.hpp>
-
+#include <string>
 #include <vector>
 
 namespace ESM

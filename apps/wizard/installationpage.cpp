@@ -1,13 +1,22 @@
+#include <qdir.h>
+#include <qfiledialog.h>
+#include <qglobal.h>
+#include <qlabel.h>
+#include <qmap.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qplaintextedit.h>
+#include <qprogressbar.h>
+#include <qstringlist.h>
+#include <qtextcodec.h>
+#include <qthread.h>
+#include <qvariant.h>
+#include <qwidget.h>
+
+#include "apps/wizard/unshield/unshieldworker.hpp"
 #include "installationpage.hpp"
-
-#include <QDebug>
-#include <QTextCodec>
-#include <QFileInfo>
-#include <QFileDialog>
-#include <QMessageBox>
-
 #include "mainwizard.hpp"
-#include "inisettings.hpp"
 
 Wizard::InstallationPage::InstallationPage(QWidget *parent) :
     QWizardPage(parent)

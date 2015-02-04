@@ -1,18 +1,23 @@
 #ifndef GAME_MWWORLD_CELLS_H
 #define GAME_MWWORLD_CELLS_H
 
-#include <map>
+#include <stdint.h>
+#include <cstddef>
 #include <list>
+#include <map>
 #include <string>
+#include <utility>
+#include <vector>
 
+#include "apps/openmw/mwworld/cellstore.hpp"
 #include "ptr.hpp"
 
 namespace ESM
 {
     class ESMReader;
     class ESMWriter;
-    struct CellId;
     struct Cell;
+    struct CellId;
 }
 
 namespace Loading

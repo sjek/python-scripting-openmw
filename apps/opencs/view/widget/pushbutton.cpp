@@ -1,8 +1,11 @@
 
+#include <qevent.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+
 #include "pushbutton.hpp"
 
-#include <QMouseEvent>
-#include <QKeyEvent>
+class QWidget;
 
 void CSVWidget::PushButton::setExtendedToolTip()
 {

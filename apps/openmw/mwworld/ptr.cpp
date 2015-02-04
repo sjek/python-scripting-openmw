@@ -1,11 +1,14 @@
 
-#include "ptr.hpp"
-
 #include <cassert>
 
-#include "containerstore.hpp"
 #include "class.hpp"
 #include "livecellref.hpp"
+#include "ptr.hpp"
+
+namespace MWWorld {
+class CellRef;
+class RefData;
+}  // namespace MWWorld
 
 const std::string& MWWorld::Ptr::getTypeName() const
 {

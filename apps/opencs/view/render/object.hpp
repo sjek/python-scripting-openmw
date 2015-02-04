@@ -2,6 +2,8 @@
 #define OPENCS_VIEW_OBJECT_H
 
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <string>
 
 #ifndef Q_MOC_RUN
 #include <components/nifogre/ogrenifloader.hpp>
@@ -16,8 +18,8 @@ namespace Ogre
 
 namespace CSMWorld
 {
-    class Data;
     class CellRef;
+    class Data;
 }
 
 namespace CSVWorld

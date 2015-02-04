@@ -1,11 +1,18 @@
 
-#include "editwidget.hpp"
-
-#include <QAbstractItemModel>
-#include <QString>
-#include <QApplication>
+#include <qabstractitemmodel.h>
+#include <qapplication.h>
+#include <qbytearray.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+#include <qregexp.h>
+#include <sstream>
 
 #include "../../model/world/data.hpp"
+#include "apps/opencs/view/filter/../../model/filter/parser.hpp"
+#include "apps/opencs/view/filter/../../model/world/../doc/../world/universalid.hpp"
+#include "editwidget.hpp"
+
+class QWidget;
 
 CSVFilter::EditWidget::EditWidget (CSMWorld::Data& data, QWidget *parent)
 : QLineEdit (parent), mParser (data)

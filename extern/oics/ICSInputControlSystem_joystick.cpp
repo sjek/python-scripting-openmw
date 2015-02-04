@@ -24,7 +24,18 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------------------------------- */
 
+#include <SDL_events.h>
+#include <SDL_joystick.h>
+#include <stdlib.h>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
+
 #include "ICSInputControlSystem.h"
+#include "extern/oics/ICSControl.h"
+#include "extern/oics/ICSPrerequisites.h"
+#include "extern/oics/tinyxml.h"
 
 #define SDL_JOY_AXIS_MIN -32768
 #define SDL_JOY_AXIS_MAX 32767

@@ -1,8 +1,12 @@
-#include "loadnpc.hpp"
-
+#include "components/esm/aipackage.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/spelllist.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadnpc.hpp"
 
 namespace ESM
 {

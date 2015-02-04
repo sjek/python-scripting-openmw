@@ -21,8 +21,8 @@
 
  */
 
-#include <string>
 #include <algorithm>
+#include <string>
 
 #ifndef BSA_BSA_ARCHIVE_H
 #define BSA_BSA_ARCHIVE_H

@@ -1,16 +1,14 @@
 #ifndef GAME_MWMECHANICS_ACTIVESPELLS_H
 #define GAME_MWMECHANICS_ACTIVESPELLS_H
 
+#include <components/esm/activespells.hpp>
+#include <components/esm/defs.hpp>
 #include <map>
-#include <vector>
 #include <string>
+#include <vector>
 
 #include "../mwworld/timestamp.hpp"
-
 #include "magiceffects.hpp"
-
-#include <components/esm/defs.hpp>
-#include <components/esm/activespells.hpp>
 
 namespace MWMechanics
 {

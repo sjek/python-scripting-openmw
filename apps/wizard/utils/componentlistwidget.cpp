@@ -1,7 +1,11 @@
+#include <qabstractitemmodel.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+#include <qstring.h>
+
 #include "componentlistwidget.hpp"
 
-#include <QDebug>
-#include <QStringList>
+class QWidget;
 
 ComponentListWidget::ComponentListWidget(QWidget *parent) :
     QListWidget(parent)

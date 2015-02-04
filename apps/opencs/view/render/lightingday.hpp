@@ -3,6 +3,11 @@
 
 #include "lighting.hpp"
 
+namespace Ogre {
+class ColourValue;
+class SceneManager;
+}  // namespace Ogre
+
 namespace Ogre
 {
     class Light;

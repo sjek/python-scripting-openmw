@@ -1,6 +1,6 @@
 
+#include "components/compiler/errorhandler.hpp"
 #include "streamerrorhandler.hpp"
-
 #include "tokenloc.hpp"
 
 namespace Compiler

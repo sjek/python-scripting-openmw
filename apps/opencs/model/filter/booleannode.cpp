@@ -1,6 +1,10 @@
 
 #include "booleannode.hpp"
 
+namespace CSMWorld {
+class IdTableBase;
+}  // namespace CSMWorld
+
 CSMFilter::BooleanNode::BooleanNode (bool true_) : mTrue (true_) {}
 
 bool CSMFilter::BooleanNode::test (const CSMWorld::IdTableBase& table, int row,

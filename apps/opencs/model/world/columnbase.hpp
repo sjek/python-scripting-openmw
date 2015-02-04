@@ -1,12 +1,18 @@
 #ifndef CSM_WOLRD_COLUMNBASE_H
 #define CSM_WOLRD_COLUMNBASE_H
 
+#include <qnamespace.h>
+#include <qvariant.h>
+#include <QVariant>
+#include <Qt>
+#include <stdexcept>
 #include <string>
 
-#include <Qt>
-#include <QVariant>
-
 #include "record.hpp"
+
+namespace CSMWorld {
+template <typename ESXRecordT> struct Record;
+}  // namespace CSMWorld
 
 namespace CSMWorld
 {

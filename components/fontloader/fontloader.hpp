@@ -2,6 +2,7 @@
 #define MWGUI_FONTLOADER_H
 
 #include <components/to_utf8/to_utf8.hpp>
+#include <string>
 
 namespace Gui
 {

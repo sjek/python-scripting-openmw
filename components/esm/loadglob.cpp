@@ -1,6 +1,6 @@
-#include "loadglob.hpp"
-
+#include "components/esm/variant.hpp"
 #include "defs.hpp"
+#include "loadglob.hpp"
 
 namespace ESM
 {

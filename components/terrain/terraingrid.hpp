@@ -1,8 +1,23 @@
 #ifndef COMPONENTS_TERRAIN_TERRAINGRID_H
 #define COMPONENTS_TERRAIN_TERRAINGRID_H
 
-#include "world.hpp"
+#include <OgreAxisAlignedBox.h>
+#include <map>
+#include <utility>
+
+#include "components/terrain/defs.hpp"
 #include "material.hpp"
+#include "world.hpp"
+
+namespace Ogre {
+class SceneManager;
+class SceneNode;
+class Vector2;
+class Vector3;
+}  // namespace Ogre
+namespace Terrain {
+class Storage;
+}  // namespace Terrain
 
 namespace Terrain
 {

@@ -1,9 +1,14 @@
 #ifndef OPENCS_VIEW_NAVIGATIONORBIT_H
 #define OPENCS_VIEW_NAVIGATIONORBIT_H
 
+#include <OgreVector3.h>
+
 #include "navigation.hpp"
 
-#include <OgreVector3.h>
+class QPoint;
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
 
 namespace CSVRender
 {

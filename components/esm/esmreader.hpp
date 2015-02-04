@@ -1,20 +1,24 @@
 #ifndef OPENMW_ESM_READER_H
 #define OPENMW_ESM_READER_H
 
-#include <stdint.h>
-#include <libs/platform/string.h>
-#include <cassert>
-#include <vector>
-#include <sstream>
-
 #include <OgreDataStream.h>
-
+#include <OgreSharedPtr.h>
 #include <components/misc/stringops.hpp>
-
 #include <components/to_utf8/to_utf8.hpp>
+#include <libs/platform/string.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <cassert>
+#include <sstream>
+#include <string>
+#include <vector>
 
 #include "esmcommon.hpp"
 #include "loadtes3.hpp"
+
+namespace ToUTF8 {
+class Utf8Encoder;
+}  // namespace ToUTF8
 
 namespace ESM {
 

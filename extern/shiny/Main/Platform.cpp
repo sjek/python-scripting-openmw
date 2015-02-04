@@ -1,8 +1,9 @@
-#include "Platform.hpp"
-
+#include <stddef.h>
 #include <stdexcept>
 
 #include "Factory.hpp"
+#include "Platform.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
 
 namespace sh
 {

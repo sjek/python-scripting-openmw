@@ -1,9 +1,9 @@
-#include "loglistener.hpp"
-
-#include <iomanip>
-#include <time.h>
-
 #include <boost/filesystem/path.hpp>
+#include <time.h>
+#include <iomanip>
+#include <ostream>
+
+#include "loglistener.hpp"
 
 namespace MyGUI
 {

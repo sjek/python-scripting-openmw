@@ -1,9 +1,13 @@
 #ifndef LANGUAGESELECTIONPAGE_HPP
 #define LANGUAGESELECTIONPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qwizard.h>
 #include <QWizardPage>
 
 #include "ui_languageselectionpage.h"
+
+class QWidget;
 
 namespace Wizard
 {

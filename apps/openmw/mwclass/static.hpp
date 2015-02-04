@@ -1,7 +1,18 @@
 #ifndef GAME_MWCLASS_STATIC_H
 #define GAME_MWCLASS_STATIC_H
 
+#include <string>
+
 #include "../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/ptr.hpp"
+
+namespace MWRender {
+class RenderingInterface;
+}  // namespace MWRender
+namespace MWWorld {
+class CellStore;
+class PhysicsSystem;
+}  // namespace MWWorld
 
 namespace MWClass
 {

@@ -1,8 +1,12 @@
 
-#include "actiontalk.hpp"
-
-#include "../mwbase/environment.hpp"
 #include "../mwbase/dialoguemanager.hpp"
+#include "../mwbase/environment.hpp"
+#include "actiontalk.hpp"
+#include "apps/openmw/mwworld/action.hpp"
+
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWWorld
 {

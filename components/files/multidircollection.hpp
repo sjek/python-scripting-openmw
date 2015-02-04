@@ -1,13 +1,14 @@
 #ifndef COMPONENTS_FILES_MULTIDIRSOLLECTION_HPP
 #define COMPONENTS_FILES_MULTIDIRSOLLECTION_HPP
 
-#include <map>
-#include <vector>
-#include <string>
-#include <locale>
-#include <cctype>
-
 #include <boost/filesystem/path.hpp>
+#include <algorithm>
+#include <cctype>
+#include <cstddef>
+#include <locale>
+#include <map>
+#include <string>
+#include <vector>
 
 namespace Files
 {

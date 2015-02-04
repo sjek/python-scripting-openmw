@@ -24,9 +24,12 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------------------------------- */
 
-#include "ICSInputControlSystem.h"
+#include <stddef.h>
+#include <algorithm>
 
 #include "ICSControl.h"
+#include "extern/oics/ICSChannel.h"
+#include "extern/oics/ICSControlListener.h"
 
 namespace ICS
 {

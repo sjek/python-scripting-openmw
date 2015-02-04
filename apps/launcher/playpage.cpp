@@ -1,6 +1,8 @@
-#include "playpage.hpp"
+#include <qcombobox.h>
+#include <qlistview.h>
+#include <qpushbutton.h>
 
-#include <QListView>
+#include "playpage.hpp"
 
 #ifdef Q_OS_MAC
 #include <QPlastiqueStyle>

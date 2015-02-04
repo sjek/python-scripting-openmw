@@ -1,4 +1,5 @@
 
+#include "apps/opencs/model/filter/node.hpp"
 #include "unarynode.hpp"
 
 CSMFilter::UnaryNode::UnaryNode (boost::shared_ptr<Node> child, const std::string& name)

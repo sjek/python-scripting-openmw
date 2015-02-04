@@ -1,31 +1,45 @@
 
-#include "pagedworldspacewidget.hpp"
-
-#include <sstream>
-
-#include <QMouseEvent>
-
+#include <OgreAxisAlignedBox.h>
 #include <OgreCamera.h>
-#include <OgreSceneManager.h>
 #include <OgreManualObject.h>
-#include <OgreOverlayContainer.h>
-#include <OgreOverlayManager.h>
-#include <OgreRoot.h>
-#include <OgreSceneQuery.h>
-
+#include <OgreRenderOperation.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreVector3.h>
+#include <OgreViewport.h>
 #include <components/esm/loadland.hpp>
-#include "textoverlay.hpp"
-#include "overlaymask.hpp"
+#include <qabstractitemmodel.h>
+#include <qevent.h>
+#include <qicon.h>
+#include <qnamespace.h>
+#include <qrect.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <iostream>
 
-#include "../../model/world/tablemimedata.hpp"
 #include "../../model/world/idtable.hpp"
-
-#include "../widget/scenetooltoggle.hpp"
 #include "../widget/scenetoolmode.hpp"
+#include "../widget/scenetooltoggle.hpp"
 #include "../widget/scenetooltoggle2.hpp"
-
+#include "apps/opencs/model/doc/../world/data.hpp"
+#include "apps/opencs/model/doc/../world/universalid.hpp"
+#include "apps/opencs/model/doc/document.hpp"
+#include "apps/opencs/view/render/../../model/world/cell.hpp"
+#include "apps/opencs/view/render/../../model/world/cellselection.hpp"
+#include "apps/opencs/view/render/../../model/world/idcollection.hpp"
+#include "apps/opencs/view/render/../../model/world/record.hpp"
+#include "apps/opencs/view/render/cell.hpp"
+#include "apps/opencs/view/render/worldspacewidget.hpp"
 #include "editmode.hpp"
 #include "elements.hpp"
+#include "overlaymask.hpp"
+#include "pagedworldspacewidget.hpp"
+#include "textoverlay.hpp"
+
+class QWidget;
+namespace CSVWidget {
+class SceneToolbar;
+}  // namespace CSVWidget
 
 bool CSVRender::PagedWorldspaceWidget::adjustCells()
 {

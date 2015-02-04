@@ -1,12 +1,25 @@
+#include <qdir.h>
+#include <qfile.h>
+#include <qfiledialog.h>
+#include <qfileinfo.h>
+#include <qglobal.h>
+#include <qitemselectionmodel.h>
+#include <qlist.h>
+#include <qlistwidget.h>
+#include <qmap.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qpushbutton.h>
+#include <qstringlist.h>
+#include <qvariant.h>
+#include <qwidget.h>
+#include <stddef.h>
+
 #include "existinginstallationpage.hpp"
-
-#include <QDebug>
-#include <QMessageBox>
-#include <QFileDialog>
-#include <QFileInfo>
-#include <QFile>
-
 #include "mainwizard.hpp"
+
+class QAbstractButton;
 
 Wizard::ExistingInstallationPage::ExistingInstallationPage(QWidget *parent) :
     QWizardPage(parent)

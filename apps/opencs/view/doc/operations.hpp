@@ -1,9 +1,10 @@
 #ifndef CSV_DOC_OPERATIONS_H
 #define CSV_DOC_OPERATIONS_H
 
-#include <vector>
-
+#include <qdockwidget.h>
+#include <qobjectdefs.h>
 #include <QDockWidget>
+#include <vector>
 
 class QVBoxLayout;
 

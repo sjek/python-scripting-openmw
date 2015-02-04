@@ -1,19 +1,17 @@
 #ifndef GAME_MWWORLD_GLOBALS_H
 #define GAME_MWWORLD_GLOBALS_H
 
-#include <vector>
-#include <string>
-#include <map>
-
-#include <stdint.h>
-
-#include <components/interpreter/types.hpp>
 #include <components/esm/variant.hpp>
+#include <components/interpreter/types.hpp>
+#include <stdint.h>
+#include <map>
+#include <string>
+#include <vector>
 
 namespace ESM
 {
-    class ESMWriter;
     class ESMReader;
+    class ESMWriter;
 }
 
 namespace Loading

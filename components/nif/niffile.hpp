@@ -3,11 +3,17 @@
 #ifndef OPENMW_COMPONENTS_NIF_NIFFILE_HPP
 #define OPENMW_COMPONENTS_NIF_NIFFILE_HPP
 
-#include <stdexcept>
-#include <vector>
+#include <stddef.h>
 #include <iostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
 
 #include "record.hpp"
+
+namespace Nif {
+struct Record;
+}  // namespace Nif
 
 namespace Nif
 {

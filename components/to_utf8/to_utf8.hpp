@@ -1,8 +1,9 @@
 #ifndef COMPONENTS_TOUTF8_H
 #define COMPONENTS_TOUTF8_H
 
-#include <string>
+#include <stddef.h>
 #include <cstring>
+#include <string>
 #include <vector>
 
 namespace ToUTF8

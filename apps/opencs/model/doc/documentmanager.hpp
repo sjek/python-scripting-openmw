@@ -1,18 +1,17 @@
 #ifndef CSM_DOC_DOCUMENTMGR_H
 #define CSM_DOC_DOCUMENTMGR_H
 
-#include <vector>
-#include <string>
-
 #include <boost/filesystem/path.hpp>
-
+#include <components/to_utf8/to_utf8.hpp>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qthread.h>
 #include <QObject>
 #include <QThread>
-
-#include <components/to_utf8/to_utf8.hpp>
+#include <string>
+#include <vector>
 
 #include "../world/resourcesmanager.hpp"
-
 #include "loader.hpp"
 
 namespace Files

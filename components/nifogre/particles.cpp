@@ -1,16 +1,30 @@
+#include <OgreAny.h>
+#include <OgreBone.h>
+#include <OgreException.h>
+#include <OgreMath.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgreNode.h>
+#include <OgreParticle.h>
+#include <OgreParticleAffector.h>
+#include <OgreParticleEmitter.h>
+#include <OgreParticleIterator.h>
+#include <OgreParticleSystem.h>
+#include <OgreQuaternion.h>
+#include <OgreStringConverter.h>
+#include <OgreStringInterface.h>
+#include <OgreTagPoint.h>
+#include <OgreUserObjectBindings.h>
+#include <OgreVector3.h>
+#include <assert.h>
+#include <stdlib.h>
+#include <algorithm>
+#include <string>
+
 #include "particles.hpp"
 
-#include <OgreStringConverter.h>
-#include <OgreParticleSystem.h>
-#include <OgreParticleEmitter.h>
-#include <OgreParticleAffector.h>
-#include <OgreParticle.h>
-#include <OgreBone.h>
-#include <OgreTagPoint.h>
-#include <OgreEntity.h>
-#include <OgreSkeletonInstance.h>
-#include <OgreSceneNode.h>
-#include <OgreSceneManager.h>
+namespace Ogre {
+class ColourValue;
+}  // namespace Ogre
 
 /* FIXME: "Nif" isn't really an appropriate emitter name. */
 class NifEmitter : public Ogre::ParticleEmitter

@@ -1,7 +1,13 @@
 #ifndef CSV_WIDGET_MODEBUTTON_H
 #define CSV_WIDGET_MODEBUTTON_H
 
+#include <qicon.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+
 #include "pushbutton.hpp"
+
+class QWidget;
 
 namespace CSVWidget
 {

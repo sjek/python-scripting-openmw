@@ -1,9 +1,15 @@
 #ifndef CSM_WORLD_LAND_H
 #define CSM_WORLD_LAND_H
 
-#include <string>
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/loadland.hpp>
+#include <string>
+
+namespace ESM {
+class ESMReader;
+struct Land;
+}  // namespace ESM
 
 namespace CSMWorld
 {

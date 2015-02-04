@@ -1,7 +1,9 @@
-#include "resizeablestackedwidget.hpp"
-#include "page.hpp"
+#include <qlayout.h>
 
-#include <QListWidgetItem>
+#include "page.hpp"
+#include "resizeablestackedwidget.hpp"
+
+class QWidget;
 
 CSVSettings::ResizeableStackedWidget::ResizeableStackedWidget(QWidget *parent) :
     QStackedWidget(parent)

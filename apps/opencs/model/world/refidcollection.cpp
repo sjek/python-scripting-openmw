@@ -1,14 +1,29 @@
 
-#include "refidcollection.hpp"
-
-#include <stdexcept>
-#include <memory>
-
 #include <components/esm/esmreader.hpp>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <memory>
+#include <stdexcept>
+#include <utility>
 
+#include "apps/opencs/model/world/columnbase.hpp"
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/refiddata.hpp"
+#include "columns.hpp"
+#include "components/esm/loadacti.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
 #include "refidadapter.hpp"
 #include "refidadapterimp.hpp"
-#include "columns.hpp"
+#include "refidcollection.hpp"
 
 CSMWorld::RefIdColumn::RefIdColumn (int columnId, Display displayType, int flag,
     bool editable, bool userEditable)

@@ -1,7 +1,8 @@
 #ifndef MWGUI_LIST_HPP
 #define MWGUI_LIST_HPP
 
-#include <MyGUI_ScrollView.h>
+#include <MyGUI.h>
+#include <MyGUI_OgrePlatform.h>
 
 namespace Gui
 {

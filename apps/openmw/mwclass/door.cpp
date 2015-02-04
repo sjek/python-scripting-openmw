@@ -1,31 +1,42 @@
 
-#include "door.hpp"
-
-#include <components/esm/loaddoor.hpp>
+#include <assert.h>
 #include <components/esm/doorstate.hpp>
+#include <components/esm/loaddoor.hpp>
+#include <stdlib.h>
+#include <memory>
+#include <stdexcept>
+#include <typeinfo>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/nullaction.hpp"
-#include "../mwworld/failedaction.hpp"
-#include "../mwworld/actionteleport.hpp"
-#include "../mwworld/actiondoor.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/physicssystem.hpp"
-#include "../mwworld/inventorystore.hpp"
-#include "../mwworld/actiontrap.hpp"
-#include "../mwworld/customdata.hpp"
-
+#include "../mwbase/soundmanager.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwgui/tooltips.hpp"
-
 #include "../mwrender/actors.hpp"
 #include "../mwrender/renderinginterface.hpp"
+#include "../mwworld/actiondoor.hpp"
+#include "../mwworld/actionteleport.hpp"
+#include "../mwworld/actiontrap.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/customdata.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "../mwworld/failedaction.hpp"
+#include "../mwworld/physicssystem.hpp"
+#include "../mwworld/ptr.hpp"
+#include "apps/openmw/mwclass/../mwworld/action.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellref.hpp"
+#include "apps/openmw/mwclass/../mwworld/cellreflist.hpp"
+#include "apps/openmw/mwclass/../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwworld/containerstore.hpp"
+#include "apps/openmw/mwclass/../mwworld/refdata.hpp"
+#include "apps/openmw/mwclass/../mwworld/store.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadregn.hpp"
+#include "components/esm/objectstate.hpp"
+#include "components/misc/stringops.hpp"
+#include "door.hpp"
 
 namespace
 {

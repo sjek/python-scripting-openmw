@@ -1,10 +1,18 @@
 #ifndef IDTYPEDELEGATE_HPP
 #define IDTYPEDELEGATE_HPP
 
-#include "enumdelegate.hpp"
-#include "util.hpp"
 #include "../../model/world/universalid.hpp"
 #include "datadisplaydelegate.hpp"
+#include "enumdelegate.hpp"
+#include "util.hpp"
+
+class QObject;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
+namespace CSVWorld {
+class CommandDelegate;
+}  // namespace CSVWorld
 
 namespace CSVWorld
 {

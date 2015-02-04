@@ -1,11 +1,16 @@
 #ifndef COMBOBOX_HPP
 #define COMBOBOX_HPP
 
+#include <qcombobox.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QComboBox>
 #include <QStylePainter>
 
-class QString;
+class QPaintEvent;
 class QRegExpValidator;
+class QString;
+class QWidget;
 
 namespace ContentSelectorView
 {

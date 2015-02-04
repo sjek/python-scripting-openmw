@@ -1,8 +1,10 @@
-#include "loadench.hpp"
+#include <vector>
 
+#include "components/esm/effectlist.hpp"
+#include "defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
-#include "defs.hpp"
+#include "loadench.hpp"
 
 namespace ESM
 {

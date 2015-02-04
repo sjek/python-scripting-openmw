@@ -1,8 +1,11 @@
-#include "world.hpp"
-
 #include <OgreAxisAlignedBox.h>
+#include <OgrePrerequisites.h>
+#include <OgreVector3.h>
+#include <algorithm>
 
+#include "components/terrain/defs.hpp"
 #include "storage.hpp"
+#include "world.hpp"
 
 namespace Terrain
 {

@@ -1,11 +1,14 @@
 #ifndef OPENMW_ESM_SKIL_H
 #define OPENMW_ESM_SKIL_H
 
+#include <boost/array.hpp>
 #include <string>
 
-#include <boost/array.hpp>
-
 #include "defs.hpp"
+
+namespace boost {
+template <class T, std::size_t N> class array;
+}  // namespace boost
 
 namespace ESM {
 

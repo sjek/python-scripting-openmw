@@ -1,10 +1,16 @@
 #ifndef COMPONENTS_TERRAIN_WORLD_H
 #define COMPONENTS_TERRAIN_WORLD_H
 
+#include <OgreAxisAlignedBox.h>
 #include <OgreVector3.h>
 
-#include "defs.hpp"
 #include "buffercache.hpp"
+#include "defs.hpp"
+
+namespace Ogre {
+class Vector2;
+class Vector3;
+}  // namespace Ogre
 
 namespace Ogre
 {

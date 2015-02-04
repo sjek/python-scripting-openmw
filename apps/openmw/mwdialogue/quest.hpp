@@ -1,6 +1,9 @@
 #ifndef GAME_MWDIALOG_QUEST_H
 #define GAME_MWDIALOG_QUEST_H
 
+#include <string>
+
+#include "apps/openmw/mwdialogue/journalentry.hpp"
 #include "topic.hpp"
 
 namespace ESM

@@ -1,10 +1,14 @@
 #ifndef BSA_BSA_RESOURCES_H
 #define BSA_BSA_RESOURCES_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 #include "../files/collections.hpp"
+
+namespace Files {
+class Collections;
+}  // namespace Files
 
 namespace Bsa
 {

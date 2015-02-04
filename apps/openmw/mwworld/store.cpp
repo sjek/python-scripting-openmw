@@ -1,7 +1,8 @@
-#include "store.hpp"
-#include "esmstore.hpp"
-
 #include <components/esm/esmreader.hpp>
+#include <list>
+
+#include "components/esm/cellref.hpp"
+#include "store.hpp"
 
 namespace MWWorld {
 

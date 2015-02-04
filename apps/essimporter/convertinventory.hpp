@@ -1,9 +1,16 @@
 #ifndef OPENMW_ESSIMPORT_CONVERTINVENTORY_H
 #define OPENMW_ESSIMPORT_CONVERTINVENTORY_H
 
+#include <components/esm/inventorystate.hpp>
+
 #include "importinventory.hpp"
 
-#include <components/esm/inventorystate.hpp>
+namespace ESM {
+struct InventoryState;
+}  // namespace ESM
+namespace ESSImport {
+struct Inventory;
+}  // namespace ESSImport
 
 namespace ESSImport
 {

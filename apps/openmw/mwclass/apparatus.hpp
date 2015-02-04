@@ -1,7 +1,21 @@
 #ifndef GAME_MWCLASS_APPARATUS_H
 #define GAME_MWCLASS_APPARATUS_H
 
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <string>
+
 #include "../mwworld/class.hpp"
+#include "apps/openmw/mwclass/../mwgui/tooltips.hpp"
+#include "apps/openmw/mwclass/../mwworld/ptr.hpp"
+
+namespace MWRender {
+class RenderingInterface;
+}  // namespace MWRender
+namespace MWWorld {
+class Action;
+class CellStore;
+class PhysicsSystem;
+}  // namespace MWWorld
 
 namespace MWClass
 {

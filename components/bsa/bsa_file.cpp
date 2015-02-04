@@ -21,14 +21,17 @@
 
  */
 
-#include "bsa_file.hpp"
-
-#include <stdexcept>
-
-#include <boost/filesystem/path.hpp>
+#include <assert.h>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <stddef.h>
+#include <istream>
+#include <stdexcept>
+#include <utility>
 
 #include "../files/constrainedfiledatastream.hpp"
+#include "bsa_file.hpp"
 
 using namespace std;
 using namespace Bsa;

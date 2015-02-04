@@ -1,6 +1,11 @@
-#include "convertscri.hpp"
+#include <string>
+#include <utility>
+#include <vector>
 
-#include <iostream>
+#include "apps/essimporter/importscri.hpp"
+#include "components/esm/locals.hpp"
+#include "components/esm/variant.hpp"
+#include "convertscri.hpp"
 
 namespace
 {

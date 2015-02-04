@@ -1,17 +1,22 @@
 
-#include "globalscripts.hpp"
-
-#include <cassert>
-#include <iostream>
-
-#include <components/misc/stringops.hpp>
 #include <components/esm/globalscript.hpp>
-
-#include "../mwworld/esmstore.hpp"
+#include <components/misc/stringops.hpp>
+#include <exception>
+#include <iostream>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/scriptmanager.hpp"
-
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwscript/../mwworld/ptr.hpp"
+#include "apps/openmw/mwscript/../mwworld/store.hpp"
+#include "apps/openmw/mwscript/locals.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/loadsscr.hpp"
+#include "globalscripts.hpp"
 #include "interpretercontext.hpp"
 
 namespace MWScript

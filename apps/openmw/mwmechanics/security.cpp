@@ -1,16 +1,25 @@
-#include "security.hpp"
+#include <stdlib.h>
 
+#include "../mwbase/environment.hpp"
+#include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/esmstore.hpp"
-
-#include "../mwbase/world.hpp"
-#include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/mechanicsmanager.hpp"
-
-#include "npcstats.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwmechanics/stat.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/cellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "components/esm/attr.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadskil.hpp"
+#include "components/esm/loadspel.hpp"
 #include "creaturestats.hpp"
+#include "npcstats.hpp"
+#include "security.hpp"
 
 namespace MWMechanics
 {

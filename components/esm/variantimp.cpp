@@ -1,10 +1,11 @@
 
-#include "variantimp.hpp"
-
+#include <ostream>
 #include <stdexcept>
 
+#include "components/esm/variant.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
+#include "variantimp.hpp"
 
 ESM::VariantDataBase::~VariantDataBase() {}
 

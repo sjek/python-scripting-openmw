@@ -1,21 +1,36 @@
 
-#include "journalimp.hpp"
-
-#include <iterator>
-
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/esmreader.hpp>
-#include <components/esm/queststate.hpp>
 #include <components/esm/journalentry.hpp>
-
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/class.hpp"
+#include <components/esm/queststate.hpp>
+#include <deque>
+#include <iterator>
+#include <list>
+#include <map>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwdialogue/journalentry.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwdialogue/quest.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwdialogue/topic.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/journal.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/ptr.hpp"
+#include "apps/openmw/mwdialogue/../mwworld/store.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadinfo.hpp"
+#include "journalimp.hpp"
 
-#include "../mwgui/messagebox.hpp"
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
+namespace Loading {
+class Listener;
+}  // namespace Loading
 
 namespace MWDialogue
 {

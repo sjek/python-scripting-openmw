@@ -1,18 +1,20 @@
 
-#include "journalentry.hpp"
-
-#include <stdexcept>
-
 #include <components/esm/journalentry.hpp>
-
 #include <components/interpreter/defines.hpp>
+#include <stddef.h>
+#include <list>
+#include <stdexcept>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwworld/esmstore.hpp"
-
 #include "../mwscript/interpretercontext.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwdialogue/../mwbase/../mwworld/store.hpp"
+#include "components/esm/loaddial.hpp"
+#include "components/esm/loadinfo.hpp"
+#include "journalentry.hpp"
 
 
 namespace MWDialogue

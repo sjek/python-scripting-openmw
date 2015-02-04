@@ -1,3 +1,12 @@
+#include <MyGUI_StringUtility.h>
+#include <MyGUI_TPoint.h>
+#include <MyGUI_TSize.h>
+#include <stddef.h>
+#include <algorithm>
+#include <stdexcept>
+#include <utility>
+#include <vector>
+
 #include "box.hpp"
 
 namespace Gui

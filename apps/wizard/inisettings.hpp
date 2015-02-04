@@ -1,6 +1,11 @@
 #ifndef INISETTINGS_HPP
 #define INISETTINGS_HPP
 
+#include <qhash.h>
+#include <qlist.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qvariant.h>
 #include <QHash>
 #include <QVariant>
 

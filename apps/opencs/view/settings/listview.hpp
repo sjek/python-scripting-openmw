@@ -1,12 +1,23 @@
 #ifndef CSVSETTINGS_LISTVIEW_HPP
 #define CSVSETTINGS_LISTVIEW_HPP
 
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qwidget.h>
+
 #include "view.hpp"
 
-
-class QStringListModel;
-class QComboBox;
 class QAbstractItemView;
+class QComboBox;
+class QShowEvent;
+class QStringListModel;
+namespace CSMSettings {
+class Setting;
+}  // namespace CSMSettings
+namespace CSVSettings {
+class Page;
+}  // namespace CSVSettings
 
 namespace CSVSettings
 {

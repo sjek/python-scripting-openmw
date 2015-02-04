@@ -1,16 +1,33 @@
 #ifndef CSV_WORLD_UTIL_H
 #define CSV_WORLD_UTIL_H
 
-#include <map>
-
+#include <qabstractitemmodel.h>
+#include <qlineedit.h>
+#include <qnamespace.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qstyleditemdelegate.h>
+#include <qstyleoption.h>
+#include <qvariant.h>
 #include <QAbstractTableModel>
-#include <QStyledItemDelegate>
 #include <QLineEdit>
+#include <QStyledItemDelegate>
+#include <map>
+#include <vector>
 
-#include "../../model/world/columnbase.hpp"
 #include "../../model/doc/document.hpp"
+#include "../../model/world/columnbase.hpp"
 
+class QDragEnterEvent;
+class QDragMoveEvent;
+class QDropEvent;
+class QObject;
 class QUndoStack;
+class QWidget;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 namespace CSMWorld
 {

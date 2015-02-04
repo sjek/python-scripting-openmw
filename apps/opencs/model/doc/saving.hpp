@@ -2,8 +2,8 @@
 #define CSM_DOC_SAVING_H
 
 #include <boost/filesystem/path.hpp>
-
 #include <components/to_utf8/to_utf8.hpp>
+#include <qobjectdefs.h>
 
 #include "operation.hpp"
 #include "savingstate.hpp"

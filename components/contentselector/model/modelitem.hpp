@@ -1,8 +1,12 @@
 #ifndef MODELITEM_HPP
 #define MODELITEM_HPP
 
-#include <QMimeData>
+#include <qlist.h>
+#include <qmimedata.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QList>
+#include <QMimeData>
 
 namespace ContentSelectorModel
 {

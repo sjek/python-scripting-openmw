@@ -1,16 +1,26 @@
 #ifndef UNSHIELDWORKER_HPP
 #define UNSHIELDWORKER_HPP
 
-#include <QObject>
-#include <QThread>
+#include <libunshield.h>
+#include <qmutex.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qreadwritelock.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qwaitcondition.h>
+#include <stdbool.h>
 #include <QMutex>
-#include <QWaitCondition>
+#include <QObject>
 #include <QReadWriteLock>
 #include <QStringList>
-
-#include <libunshield.h>
+#include <QThread>
+#include <QWaitCondition>
 
 #include "../inisettings.hpp"
+
+class QTextCodec;
 
 
 namespace Wizard

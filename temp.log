@@ -1,0 +1,45 @@
+
+/home/showard/openmw/openmw/apps/opencs/model/settings/usersettings.hpp should add these lines:
+#include <QtCore>                       // for QObject, Q_OBJECT, signals, etc
+#include <vector>                       // for vector
+
+/home/showard/openmw/openmw/apps/opencs/model/settings/usersettings.hpp should remove these lines:
+- #include <components/files/configurationmanager.hpp>  // lines 16-16
+- class QFile;  // lines 22-22
+- class QSettings;  // lines 23-23
+
+The full include-list for /home/showard/openmw/openmw/apps/opencs/model/settings/usersettings.hpp:
+#include <QList>                        // for QList
+#include <QMap>                         // for QMap
+#include <QPair>                        // for QPair
+#include <QString>                      // for QString
+#include <QStringList>                  // for QStringList
+#include <QtCore>                       // for QObject, Q_OBJECT, signals, etc
+#include <boost/filesystem/path.hpp>    // for path
+#include <map>                          // for map
+#include <vector>                       // for vector
+#include "support.hpp"                  // for SettingType
+namespace CSMSettings { class Setting; }  // lines 27-27
+namespace Files { struct ConfigurationManager; }  // lines 20-20
+---
+
+/home/showard/openmw/openmw/apps/opencs/model/settings/usersettings.cpp should add these lines:
+
+/home/showard/openmw/openmw/apps/opencs/model/settings/usersettings.cpp should remove these lines:
+- #include <qfile.h>  // lines 5-5
+- #include <qglobal.h>  // lines 6-6
+- #include <qsettings.h>  // lines 7-7
+- #include <qvariant.h>  // lines 8-8
+
+The full include-list for /home/showard/openmw/openmw/apps/opencs/model/settings/usersettings.cpp:
+#include "usersettings.hpp"
+#include <assert.h>                     // for assert
+#include <stddef.h>                     // for NULL
+#include <boost/version.hpp>            // for BOOST_VERSION
+#include <components/files/configurationmanager.hpp>
+#include <extern/shiny/Main/Factory.hpp>  // for Factory
+#include <string>                       // for string, operator==, etc
+#include <utility>                      // for pair
+#include "setting.hpp"                  // for Setting
+#include "support.hpp"                  // for SettingType::Type_CheckBox, etc
+---

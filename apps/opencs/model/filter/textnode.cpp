@@ -1,13 +1,16 @@
 
-#include "textnode.hpp"
-
+#include <qabstractitemmodel.h>
+#include <qnamespace.h>
+#include <qregexp.h>
+#include <qstring.h>
+#include <qvariant.h>
 #include <sstream>
 #include <stdexcept>
-
-#include <QRegExp>
+#include <utility>
 
 #include "../world/columns.hpp"
 #include "../world/idtablebase.hpp"
+#include "textnode.hpp"
 
 CSMFilter::TextNode::TextNode (int columnId, const std::string& text)
 : mColumnId (columnId), mText (text)

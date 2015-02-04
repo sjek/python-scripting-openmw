@@ -1,17 +1,24 @@
 #ifndef COMPILER_LINEPARSER_H_INCLUDED
 #define COMPILER_LINEPARSER_H_INCLUDED
 
+#include <components/interpreter/types.hpp>
+#include <string>
 #include <vector>
 
-#include <components/interpreter/types.hpp>
-
-#include "parser.hpp"
 #include "exprparser.hpp"
+#include "parser.hpp"
+
+namespace Compiler {
+class Context;
+class ErrorHandler;
+class Scanner;
+struct TokenLoc;
+}  // namespace Compiler
 
 namespace Compiler
 {
-    class Locals;
     class Literals;
+    class Locals;
 
     /// \brief Line parser, to be used in console scripts and as part of ScriptParser
 

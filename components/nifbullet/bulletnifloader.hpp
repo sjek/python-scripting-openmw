@@ -24,22 +24,38 @@
 #ifndef OPENMW_COMPONENTS_NIFBULLET_BULLETNIFLOADER_HPP
 #define OPENMW_COMPONENTS_NIFBULLET_BULLETNIFLOADER_HPP
 
-#include <cassert>
-#include <string>
 #include <BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h>
-#include <BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h>
 #include <BulletCollision/CollisionShapes/btCompoundShape.h>
+#include <BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h>
+#include <OgreMatrix4.h>
 #include <btBulletDynamicsCommon.h>
 #include <openengine/bullet/BulletShapeLoader.h>
-
+#include <stdlib.h>
+#include <cassert>
 // For warning messages
 #include <iostream>
+#include <set>
+#include <string>
+
+#include "BulletCollision/CollisionShapes/btStridingMeshInterface.h"
+#include "BulletCollision/CollisionShapes/btTriangleInfoMap.h"
+#include "LinearMath/btScalar.h"
+#include "LinearMath/btVector3.h"
+
+class btBoxShape;
+class btCompoundShape;
+class btTriangleMesh;
+namespace Ogre {
+class Quaternion;
+class Resource;
+class Vector3;
+}  // namespace Ogre
 
 namespace Nif
 {
+    class NiTriShape;
     class Node;
     class Transformation;
-    class NiTriShape;
 }
 
 namespace NifBullet

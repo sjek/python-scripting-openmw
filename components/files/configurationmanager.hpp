@@ -9,10 +9,20 @@
 #include <tr1/unordered_map>
 #endif
 
+#include <boost/filesystem/path.hpp>
 #include <boost/program_options.hpp>
-
-#include <components/files/fixedpath.hpp>
 #include <components/files/collections.hpp>
+#include <components/files/fixedpath.hpp>
+#include <string>
+
+#include "components/files/multidircollection.hpp"
+
+namespace boost {
+namespace program_options {
+class options_description;
+class variables_map;
+}  // namespace program_options
+}  // namespace boost
 
 /**
  * \namespace Files

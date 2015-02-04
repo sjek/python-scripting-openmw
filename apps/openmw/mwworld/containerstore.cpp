@@ -1,23 +1,49 @@
 
-#include "containerstore.hpp"
-
-#include <cassert>
-#include <typeinfo>
-#include <stdexcept>
-
 #include <components/esm/inventorystate.hpp>
+#include <stdlib.h>
+#include <cassert>
+#include <iostream>
+#include <list>
+#include <stdexcept>
+#include <typeinfo>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/levelledlist.hpp"
-
+#include "apps/openmw/mwworld/../mwscript/locals.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/cellreflist.hpp"
+#include "apps/openmw/mwworld/esmstore.hpp"
+#include "apps/openmw/mwworld/livecellref.hpp"
+#include "apps/openmw/mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "class.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadench.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/esm/objectstate.hpp"
+#include "components/misc/stringops.hpp"
+#include "containerstore.hpp"
+#include "localscripts.hpp"
 #include "manualref.hpp"
 #include "refdata.hpp"
-#include "class.hpp"
-#include "localscripts.hpp"
-#include "player.hpp"
 
 namespace
 {

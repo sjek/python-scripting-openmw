@@ -1,13 +1,18 @@
 
-#include "globaldebugprofilemenu.hpp"
-
-#include <vector>
+#include <qaction.h>
+#include <qactiongroup.h>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qvariant.h>
 #include <algorithm>
-
-#include <QActionGroup>
+#include <vector>
 
 #include "../../model/world/idtable.hpp"
 #include "../../model/world/record.hpp"
+#include "apps/opencs/view/doc/../../model/world/columns.hpp"
+#include "globaldebugprofilemenu.hpp"
+
+class QWidget;
 
 void CSVDoc::GlobalDebugProfileMenu::rebuild()
 {

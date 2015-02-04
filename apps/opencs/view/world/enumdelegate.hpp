@@ -1,14 +1,26 @@
 #ifndef CSV_WORLD_ENUMDELEGATE_H
 #define CSV_WORLD_ENUMDELEGATE_H
 
-#include <vector>
-
+#include <components/esm/defs.hpp>
+#include <qstring.h>
+#include <qstyleoption.h>
 #include <QString>
 #include <QStyledItemDelegate>
+#include <string>
+#include <utility>
+#include <vector>
 
-#include <components/esm/defs.hpp>
-
+#include "apps/opencs/view/world/../../model/world/columnbase.hpp"
 #include "util.hpp"
+
+class QAbstractItemModel;
+class QModelIndex;
+class QObject;
+class QPainter;
+class QWidget;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
 
 namespace CSVWorld
 {

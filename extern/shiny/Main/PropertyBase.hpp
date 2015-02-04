@@ -1,16 +1,19 @@
 #ifndef SH_PROPERTYBASE_H
 #define SH_PROPERTYBASE_H
 
-#include <string>
-#include <map>
-
 #include <boost/shared_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+#include <stddef.h>
+#include <iosfwd>
+#include <map>
+#include <string>
+#include <typeinfo>
 
 namespace sh
 {
-	class StringValue;
-	class PropertySetGet;
 	class LinkedValue;
+	class PropertySetGet;
+	class StringValue;
 
 	enum ValueType
 	{

@@ -4,16 +4,20 @@
 #ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
 #endif
+#include <libavutil/frame.h>
+#include <libavutil/samplefmt.h>
+#include <libavutil/version.h>
+#include <stddef.h>
 #include <stdint.h>
-
-#include <new>
+#include <sys/types.h>
 #include <memory>
+#include <new>
 
 extern "C"
 {
-    #include <libavutil/avutil.h>
     #include <libavcodec/avcodec.h>
     #include <libavformat/avformat.h>
+    #include <libavutil/avutil.h>
 
     #if AV_VERSION_INT(52, 2, 0) <= AV_VERSION_INT(LIBAVUTIL_VERSION_MAJOR, \
         LIBAVUTIL_VERSION_MINOR, LIBAVUTIL_VERSION_MICRO)
@@ -31,7 +35,6 @@ namespace Video
 {
 
 struct AudioResampler;
-
 struct VideoState;
 
 class MovieAudioDecoder

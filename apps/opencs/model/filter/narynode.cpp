@@ -1,7 +1,8 @@
 
-#include "narynode.hpp"
-
 #include <sstream>
+
+#include "apps/opencs/model/filter/node.hpp"
+#include "narynode.hpp"
 
 CSMFilter::NAryNode::NAryNode (const std::vector<boost::shared_ptr<Node> >& nodes,
     const std::string& name)

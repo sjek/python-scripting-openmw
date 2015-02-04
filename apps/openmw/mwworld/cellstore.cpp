@@ -1,28 +1,62 @@
-#include "cellstore.hpp"
-
-#include <iostream>
-#include <algorithm>
-
-#include <components/esm/cellstate.hpp>
+#include <assert.h>
 #include <components/esm/cellid.hpp>
-#include <components/esm/esmwriter.hpp>
-#include <components/esm/objectstate.hpp>
+#include <components/esm/cellstate.hpp>
 #include <components/esm/containerstate.hpp>
-#include <components/esm/npcstate.hpp>
-#include <components/esm/creaturestate.hpp>
-#include <components/esm/fogstate.hpp>
 #include <components/esm/creaturelevliststate.hpp>
+#include <components/esm/creaturestate.hpp>
 #include <components/esm/doorstate.hpp>
+#include <components/esm/fogstate.hpp>
+#include <components/esm/npcstate.hpp>
+#include <components/esm/objectstate.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <iostream>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwmechanics/creaturestats.hpp"
-
-#include "ptr.hpp"
-#include "esmstore.hpp"
+#include "apps/openmw/mwworld/../mwmechanics/pathgrid.hpp"
+#include "apps/openmw/mwworld/cellreflist.hpp"
+#include "apps/openmw/mwworld/livecellref.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
+#include "apps/openmw/mwworld/timestamp.hpp"
+#include "cellstore.hpp"
 #include "class.hpp"
+#include "components/esm/cellref.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/esmreader.hpp"
+#include "components/esm/loadacti.hpp"
+#include "components/esm/loadalch.hpp"
+#include "components/esm/loadappa.hpp"
+#include "components/esm/loadarmo.hpp"
+#include "components/esm/loadbook.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadclot.hpp"
+#include "components/esm/loadcont.hpp"
+#include "components/esm/loadcrea.hpp"
+#include "components/esm/loaddoor.hpp"
+#include "components/esm/loadgmst.hpp"
+#include "components/esm/loadingr.hpp"
+#include "components/esm/loadlevlist.hpp"
+#include "components/esm/loadligh.hpp"
+#include "components/esm/loadlock.hpp"
+#include "components/esm/loadmisc.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadprob.hpp"
+#include "components/esm/loadrepa.hpp"
+#include "components/esm/loadstat.hpp"
+#include "components/esm/loadweap.hpp"
+#include "components/misc/stringops.hpp"
 #include "containerstore.hpp"
+#include "esmstore.hpp"
+#include "ptr.hpp"
+
+namespace ESM {
+class ESMWriter;
+}  // namespace ESM
 
 namespace
 {

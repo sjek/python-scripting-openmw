@@ -1,16 +1,20 @@
 #ifndef CSV_DOC_LOADER_H
 #define CSV_DOC_LOADER_H
 
-#include <map>
-
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qwidget.h>
 #include <QObject>
-#include <QWidget>
 #include <QSignalMapper>
+#include <QWidget>
+#include <map>
+#include <string>
 
-class QLabel;
-class QProgressBar;
+class QCloseEvent;
 class QDialogButtonBox;
+class QLabel;
 class QListWidget;
+class QProgressBar;
 class QVBoxLayout;
 
 namespace CSMDoc

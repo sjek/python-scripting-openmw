@@ -1,13 +1,7 @@
-#include "processinvoker.hpp"
+#include <qfileinfo.h>
+#include <qmessagebox.h>
 
-#include <QMessageBox>
-#include <QStringList>
-#include <QString>
-#include <QFileInfo>
-#include <QFile>
-#include <QDir>
-#include <QDebug>
-#include <QCoreApplication>
+#include "processinvoker.hpp"
 
 Process::ProcessInvoker::ProcessInvoker()
 {

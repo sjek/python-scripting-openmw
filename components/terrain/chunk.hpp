@@ -1,8 +1,25 @@
 #ifndef COMPONENTS_TERRAIN_TERRAINBATCH_H
 #define COMPONENTS_TERRAIN_TERRAINBATCH_H
 
-#include <OgreRenderable.h>
+#include <OgreAxisAlignedBox.h>
+#include <OgreCommon.h>
 #include <OgreMovableObject.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreRenderable.h>
+#include <OgreSharedPtr.h>
+#include <vector>
+
+namespace Ogre {
+class Camera;
+class HardwareIndexBufferSharedPtr;
+class HardwareVertexBufferSharedPtr;
+class IndexData;
+class Matrix4;
+class RenderOperation;
+class RenderQueue;
+class VertexData;
+}  // namespace Ogre
 
 namespace Terrain
 {

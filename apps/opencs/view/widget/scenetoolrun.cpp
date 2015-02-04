@@ -1,13 +1,25 @@
 
-#include "scenetoolrun.hpp"
-
+#include <qabstractitemmodel.h>
+#include <qabstractitemview.h>
+#include <qapplication.h>
+#include <qboxlayout.h>
+#include <qframe.h>
+#include <qheaderview.h>
+#include <qicon.h>
+#include <qmargins.h>
+#include <qnamespace.h>
+#include <qstyle.h>
+#include <qtablewidget.h>
 #include <iterator>
 
-#include <QFrame>
-#include <QTableWidget>
-#include <QHBoxLayout>
-#include <QHeaderView>
-#include <QApplication>
+#include "apps/opencs/view/widget/pushbutton.hpp"
+#include "apps/opencs/view/widget/scenetool.hpp"
+#include "scenetoolrun.hpp"
+
+class QPoint;
+namespace CSVWidget {
+class SceneToolbar;
+}  // namespace CSVWidget
 
 void CSVWidget::SceneToolRun::adjustToolTips()
 {

@@ -1,9 +1,13 @@
 #ifndef CONCLUSIONPAGE_HPP
 #define CONCLUSIONPAGE_HPP
 
+#include <qobjectdefs.h>
+#include <qwizard.h>
 #include <QWizardPage>
 
 #include "ui_conclusionpage.h"
+
+class QWidget;
 
 namespace Wizard
 {

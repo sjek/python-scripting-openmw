@@ -1,6 +1,11 @@
-#include "nifstream.hpp"
+#include <OgrePrerequisites.h>
+#include <OgreStringConverter.h>
+#include <stdexcept>
+
+#include "components/nif/niftypes.hpp"
 //For error reporting
 #include "niffile.hpp"
+#include "nifstream.hpp"
 
 namespace Nif
 {

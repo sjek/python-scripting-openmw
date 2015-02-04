@@ -1,10 +1,19 @@
 
 #include "trace.h"
 
-#include <map>
-
-#include <btBulletDynamicsCommon.h>
-#include <btBulletCollisionCommon.h>
+#include <BulletCollision/BroadphaseCollision/btBroadphaseProxy.h>
+#include <BulletCollision/CollisionDispatch/btCollisionObject.h>
+#include <BulletCollision/CollisionDispatch/btCollisionWorld.h>
+#include <BulletCollision/CollisionShapes/btCollisionShape.h>
+#include <BulletCollision/CollisionShapes/btConvexShape.h>
+#include <BulletCollision/CollisionShapes/btCylinderShape.h>
+#include <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
+#include <LinearMath/btMatrix3x3.h>
+#include <LinearMath/btScalar.h>
+#include <LinearMath/btTransform.h>
+#include <LinearMath/btVector3.h>
+#include <assert.h>
+#include <stddef.h>
 
 #include "physic.hpp"
 

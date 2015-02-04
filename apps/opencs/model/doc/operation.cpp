@@ -1,14 +1,11 @@
 
-#include "operation.hpp"
-
-#include <string>
+#include <qtimer.h>
+#include <exception>
 #include <vector>
 
-#include <QTimer>
-
 #include "../world/universalid.hpp"
-
-#include "state.hpp"
+#include "apps/opencs/model/doc/messages.hpp"
+#include "operation.hpp"
 #include "stage.hpp"
 
 void CSMDoc::Operation::prepareStages()

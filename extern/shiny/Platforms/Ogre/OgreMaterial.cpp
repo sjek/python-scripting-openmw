@@ -1,12 +1,16 @@
-#include "OgreMaterial.hpp"
-
+#include <OgreMaterial.h>
 #include <OgreMaterialManager.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreTechnique.h>
+#include <assert.h>
+#include <ostream>
 #include <stdexcept>
 
-#include "OgrePass.hpp"
+#include "OgreMaterial.hpp"
 #include "OgreMaterialSerializer.hpp"
+#include "OgrePass.hpp"
 #include "OgrePlatform.hpp"
+#include "extern/shiny/Platforms/Ogre/../../Main/Platform.hpp"
 
 namespace sh
 {

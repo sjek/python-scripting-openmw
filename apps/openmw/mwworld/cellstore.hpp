@@ -1,19 +1,50 @@
 #ifndef GAME_MWWORLD_CELLSTORE_H
 #define GAME_MWWORLD_CELLSTORE_H
 
-#include <algorithm>
-#include <stdexcept>
 #include <boost/shared_ptr.hpp>
-
-#include "livecellref.hpp"
-#include "cellreflist.hpp"
-
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/esm/fogstate.hpp>
 #include <components/esm/records.hpp>
+#include <algorithm>
+#include <list>
+#include <map>
+#include <stdexcept>
+#include <string>
+#include <vector>
 
 #include "../mwmechanics/pathgrid.hpp"  // TODO: maybe belongs in mwworld
-
+#include "apps/openmw/mwworld/../mwbase/../mwworld/ptr.hpp"
+#include "cellreflist.hpp"
+#include "components/esm/loadpgrd.hpp"
+#include "livecellref.hpp"
 #include "timestamp.hpp"
+
+namespace ESM {
+class CellRef;
+class ESMReader;
+class ESMWriter;
+struct Activator;
+struct Apparatus;
+struct Armor;
+struct Book;
+struct Cell;
+struct Clothing;
+struct Container;
+struct Creature;
+struct CreatureLevList;
+struct Door;
+struct Ingredient;
+struct ItemLevList;
+struct Light;
+struct Lockpick;
+struct Miscellaneous;
+struct NPC;
+struct Potion;
+struct Probe;
+struct Repair;
+struct Static;
+struct Weapon;
+}  // namespace ESM
 
 namespace ESM
 {
@@ -23,8 +54,8 @@ namespace ESM
 
 namespace MWWorld
 {
-    class Ptr;
     class ESMStore;
+    class Ptr;
 
 
     /// \brief Mutable state of a cell

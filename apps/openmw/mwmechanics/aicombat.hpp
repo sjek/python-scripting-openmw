@@ -1,20 +1,23 @@
 #ifndef GAME_MWMECHANICS_AICOMBAT_H
 #define GAME_MWMECHANICS_AICOMBAT_H
 
-#include "aipackage.hpp"
-
-#include "pathfinding.hpp"
-
-#include "movement.hpp"
-#include "obstacle.hpp"
-
 #include <OgreVector3.h>
-
-#include "../mwworld/cellstore.hpp" // for Doors
+#include <boost/shared_ptr.hpp>
 
 #include "../mwbase/world.hpp"
+#include "../mwworld/cellstore.hpp" // for Doors
+#include "aipackage.hpp"
+#include "apps/openmw/mwmechanics/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwmechanics/aistate.hpp"
+#include "movement.hpp"
+#include "obstacle.hpp"
+#include "pathfinding.hpp"
 
-#include <boost/shared_ptr.hpp>
+namespace ESM {
+namespace AiSequence {
+struct AiSequence;
+}  // namespace AiSequence
+}  // namespace ESM
 
 namespace ESM
 {

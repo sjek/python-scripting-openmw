@@ -1,25 +1,26 @@
 
-#include "util.hpp"
-
-#include <stdexcept>
-#include <climits>
+#include <qbytearray.h>
+#include <qcheckbox.h>
+#include <qevent.h>
+#include <qmetaobject.h>
+#include <qmimedata.h>
+#include <qobject.h>
+#include <qplaintextedit.h>
+#include <qspinbox.h>
+#include <qundostack.h>
+#include <qwidget.h>
 #include <cfloat>
-
-#include <QUndoStack>
-#include <QMetaProperty>
-#include <QStyledItemDelegate>
-#include <QLineEdit>
-#include <QSpinBox>
-#include <QDoubleSpinBox>
-#include <QComboBox>
-#include <QCheckBox>
-#include <QPlainTextEdit>
-#include <QEvent>
+#include <climits>
+#include <stdexcept>
+#include <utility>
 
 #include "../../model/world/commands.hpp"
 #include "../../model/world/tablemimedata.hpp"
-
+#include "apps/opencs/view/world/../../model/doc/document.hpp"
+#include "apps/opencs/view/world/../../model/world/columnbase.hpp"
+#include "apps/opencs/view/world/scripthighlighter.hpp"
 #include "scriptedit.hpp"
+#include "util.hpp"
 
 CSVWorld::NastyTableModelHack::NastyTableModelHack (QAbstractItemModel& model)
 : mModel (model)

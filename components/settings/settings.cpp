@@ -1,14 +1,19 @@
+#include <OgreConfigFile.h>
+#include <OgreDataStream.h>
+#include <OgrePrerequisites.h>
+#include <OgreStringConverter.h>
+#include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <components/files/constrainedfiledatastream.hpp>
+#include <ostream>
+#include <stdexcept>
+
 #include "settings.hpp"
 
-#include <stdexcept>
-#include <boost/filesystem/path.hpp>
-#include <boost/filesystem/fstream.hpp>
-
-#include <OgreResourceGroupManager.h>
-#include <OgreStringConverter.h>
-#include <OgreDataStream.h>
-
-#include <components/files/constrainedfiledatastream.hpp>
+namespace Ogre {
+class Exception;
+}  // namespace Ogre
 
 using namespace Settings;
 

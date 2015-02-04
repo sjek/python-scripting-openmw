@@ -1,19 +1,29 @@
-#include "actors.hpp"
-
-#include <OgreSceneNode.h>
+#include <OgreMath.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneManager.h>
-
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/class.hpp"
+#include <OgreSceneNode.h>
+#include <OgreVector3.h>
+#include <typeinfo>
+#include <utility>
 
 #include "../mwrender/renderingmanager.hpp"
-
-#include "animation.hpp"
+#include "../mwworld/ptr.hpp"
 #include "activatoranimation.hpp"
+#include "actors.hpp"
+#include "animation.hpp"
+#include "apps/openmw/mwrender/../mwworld/cellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwrender/../mwworld/refdata.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadligh.hpp"
 #include "creatureanimation.hpp"
 #include "npcanimation.hpp"
-
+#include "openengine/ogre/renderer.hpp"
 #include "renderconst.hpp"
+
+namespace Ogre {
+class Camera;
+}  // namespace Ogre
 
 
 namespace MWRender

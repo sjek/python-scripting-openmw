@@ -1,13 +1,23 @@
 #ifndef CSM_WOLRD_REFIDCOLLECTION_H
 #define CSM_WOLRD_REFIDCOLLECTION_H
 
-#include <vector>
-#include <map>
+#include <qvariant.h>
 #include <deque>
+#include <map>
+#include <string>
+#include <vector>
 
-#include "columnbase.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
 #include "collectionbase.hpp"
+#include "columnbase.hpp"
 #include "refiddata.hpp"
+
+namespace CSMWorld {
+struct RecordBase;
+}  // namespace CSMWorld
+namespace ESM {
+class ESMReader;
+}  // namespace ESM
 
 namespace ESM
 {

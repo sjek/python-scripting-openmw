@@ -1,15 +1,28 @@
-#include "defaultworld.hpp"
-
+#include <OgreAny.h>
 #include <OgreAxisAlignedBox.h>
-#include <OgreCamera.h>
 #include <OgreHardwarePixelBuffer.h>
-#include <OgreTextureManager.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgrePixelFormat.h>
+#include <OgreRenderTarget.h>
 #include <OgreRenderTexture.h>
-#include <OgreSceneNode.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreRoot.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreTexture.h>
+#include <OgreTextureManager.h>
+#include <OgreVector2.h>
+#include <OgreVector3.h>
+#include <Threading/OgreThreadDefinesBoost.h>
+#include <assert.h>
+#include <boost/date_time/time_duration.hpp>
+#include <stddef.h>
+#include <algorithm>
 
-#include "storage.hpp"
+#include "components/terrain/world.hpp"
+#include "defaultworld.hpp"
 #include "quadtreenode.hpp"
+#include "storage.hpp"
 
 namespace
 {

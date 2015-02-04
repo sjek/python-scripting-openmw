@@ -1,10 +1,31 @@
-#include "Preprocessor.hpp"
-
-#include <boost/wave.hpp>
-#include <boost/wave/cpplexer/cpp_lex_token.hpp>
-#include <boost/wave/cpplexer/cpp_lex_iterator.hpp>
-
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/path_traits.hpp>
+#include <boost/spirit/home/classic/core/composite/actions.hpp>
+#include <boost/spirit/home/classic/core/composite/alternative.hpp>
+#include <boost/spirit/home/classic/core/composite/difference.hpp>
+#include <boost/spirit/home/classic/core/composite/kleene_star.hpp>
+#include <boost/spirit/home/classic/core/composite/optional.hpp>
+#include <boost/spirit/home/classic/core/composite/sequence.hpp>
+#include <boost/spirit/home/classic/core/parser.hpp>
+#include <boost/spirit/home/classic/core/scanner/skipper.hpp>
+#include <boost/spirit/home/classic/iterator/multi_pass.hpp>
+#include <boost/spirit/home/classic/tree/parse_tree_utils.hpp>
+#include <boost/wave/cpp_context.hpp>
+#include <boost/wave/cpp_exceptions.hpp>
+#include <boost/wave/cpp_throw.hpp>
+#include <boost/wave/cpplexer/cpp_lex_iterator.hpp>
+#include <boost/wave/cpplexer/cpp_lex_token.hpp>
+#include <boost/wave/language_support.hpp>
+#include <boost/wave/util/cpp_iterator.hpp>
+#include <boost/wave/util/file_position.hpp>
+#include <boost/wave/util/flex_string.hpp>
+#include <exception>
+#include <fstream>
+#include <ostream>
+#include <stdexcept>
+
+#include "Preprocessor.hpp"
 
 /*
 	Almost exact copy of load_file_to_string policy found in

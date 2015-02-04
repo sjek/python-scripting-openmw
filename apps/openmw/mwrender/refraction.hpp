@@ -2,8 +2,10 @@
 #define MWRENDER_REFRACTION_H
 
 #include <OgrePlane.h>
-#include <OgreRenderTargetListener.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
 #include <OgreRenderQueueListener.h>
+#include <OgreRenderTargetListener.h>
 
 namespace Ogre
 {

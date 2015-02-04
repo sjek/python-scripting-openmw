@@ -1,20 +1,42 @@
-#include "physic.hpp"
-
-#include <btBulletDynamicsCommon.h>
-#include <btBulletCollisionCommon.h>
+#include <BulletCollision/BroadphaseCollision/btBroadphaseInterface.h>
+#include <BulletCollision/BroadphaseCollision/btBroadphaseProxy.h>
+#include <BulletCollision/BroadphaseCollision/btDbvtBroadphase.h>
+#include <BulletCollision/CollisionDispatch/btCollisionDispatcher.h>
+#include <BulletCollision/CollisionDispatch/btCollisionObject.h>
+#include <BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h>
+#include <BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h>
+#include <BulletCollision/CollisionShapes/btBoxShape.h>
+#include <BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h>
+#include <BulletCollision/CollisionShapes/btCollisionShape.h>
+#include <BulletCollision/CollisionShapes/btCompoundShape.h>
+#include <BulletCollision/CollisionShapes/btConcaveShape.h>
+#include <BulletCollision/CollisionShapes/btCylinderShape.h>
 #include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
-
-#include <boost/lexical_cast.hpp>
-#include <boost/format.hpp>
-
+#include <BulletCollision/CollisionShapes/btSphereShape.h>
+#include <BulletCollision/CollisionShapes/btTriangleMesh.h>
+#include <BulletCollision/NarrowPhaseCollision/btManifoldPoint.h>
+#include <BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h>
+#include <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>
+#include <LinearMath/btMotionState.h>
+#include <LinearMath/btQuaternion.h>
+#include <LinearMath/btTransform.h>
+#include <LinearMath/btVector3.h>
 #include <OgreSceneManager.h>
-
+#include <OgreSceneNode.h>
+#include <OgreSharedPtr.h>
+#include <assert.h>
+#include <boost/format.hpp>
+#include <boost/lexical_cast.hpp>
 #include <components/nifbullet/bulletnifloader.hpp>
-#include <components/misc/stringops.hpp>
+#include <algorithm>
+#include <cmath>
+#include <limits>
+#include <sstream>
+#include <stdexcept>
 
-#include "BtOgrePG.h"
-#include "BtOgreGP.h"
 #include "BtOgreExtras.h"
+#include "openengine/bullet/BulletShapeLoader.h"
+#include "physic.hpp"
 
 namespace
 {

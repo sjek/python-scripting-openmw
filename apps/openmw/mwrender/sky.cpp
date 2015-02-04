@@ -1,36 +1,51 @@
-#include "sky.hpp"
-
+#include <OgreAxisAlignedBox.h>
 #include <OgreCamera.h>
-#include <OgreRenderWindow.h>
-#include <OgreSceneNode.h>
-#include <OgreMesh.h>
-#include <OgreSubMesh.h>
-#include <OgreSceneManager.h>
-#include <OgreHardwareVertexBuffer.h>
-#include <OgreHighLevelGpuProgramManager.h>
-#include <OgreParticle.h>
-#include <OgreParticleSystem.h>
+#include <OgreController.h>
+#include <OgreControllerManager.h>
 #include <OgreEntity.h>
+#include <OgreLight.h>
+#include <OgreMaterial.h>
+#include <OgreMath.h>
+#include <OgreMesh.h>
+#include <OgreMeshManager.h>
+#include <OgreNode.h>
+#include <OgreParticle.h>
+#include <OgreParticleIterator.h>
+#include <OgreParticleSystem.h>
+#include <OgrePass.h>
+#include <OgrePlane.h>
+#include <OgreQuaternion.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreSharedPtr.h>
+#include <OgreStringConverter.h>
 #include <OgreSubEntity.h>
 #include <OgreTechnique.h>
-#include <OgreControllerManager.h>
-
-#include <OgreMeshManager.h>
-
+#include <assert.h>
 #include <boost/lexical_cast.hpp>
-
-#include <components/nifogre/ogrenifloader.hpp>
 #include <components/misc/resourcehelpers.hpp>
-
+#include <components/nifogre/ogrenifloader.hpp>
 #include <extern/shiny/Platforms/Ogre/OgreMaterial.hpp>
+#include <stddef.h>
+#include <stdlib.h>
+#include <cmath>
+#include <sstream>
+#include <utility>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwworld/fallback.hpp"
-
+#include "apps/openmw/mwrender/../mwworld/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwrender/../mwworld/weather.hpp"
+#include "extern/shiny/Main/Factory.hpp"
+#include "extern/shiny/Main/PropertyBase.hpp"
 #include "renderconst.hpp"
-#include "renderingmanager.hpp"
+#include "sky.hpp"
+
+namespace Ogre {
+class MovableObject;
+}  // namespace Ogre
 
 using namespace MWRender;
 using namespace Ogre;

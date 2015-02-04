@@ -1,36 +1,49 @@
 #ifndef CS_EDITOR_H
 #define CS_EDITOR_H
 
-#include <memory>
-
-#include <boost/interprocess/sync/file_lock.hpp>
 #include <boost/filesystem/fstream.hpp>
-
-#include <QObject>
-#include <QString>
+#include <boost/filesystem/path.hpp>
+#include <boost/interprocess/sync/file_lock.hpp>
+#include <extern/shiny/Main/Factory.hpp>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QLocalServer>
 #include <QLocalSocket>
-
-#include <extern/shiny/Main/Factory.hpp>
+#include <QObject>
+#include <QString>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 
 #ifndef Q_MOC_RUN
 #include <components/files/configurationmanager.hpp>
 #endif
 
 #include <components/files/multidircollection.hpp>
-
 #include <components/nifcache/nifcache.hpp>
 
-#include "model/settings/usersettings.hpp"
 #include "model/doc/documentmanager.hpp"
-
-#include "view/doc/viewmanager.hpp"
-#include "view/doc/startup.hpp"
+#include "model/settings/usersettings.hpp"
 #include "view/doc/filedialog.hpp"
 #include "view/doc/newgame.hpp"
-
-#include "view/settings/dialog.hpp"
+#include "view/doc/startup.hpp"
+#include "view/doc/viewmanager.hpp"
 #include "view/render/overlaysystem.hpp"
+#include "view/settings/dialog.hpp"
+
+class QLocalServer;
+class QLocalSocket;
+namespace CSMDoc {
+class Document;
+}  // namespace CSMDoc
+namespace CSVRender {
+class OverlaySystem;
+}  // namespace CSVRender
+namespace sh {
+class Factory;
+}  // namespace sh
 
 namespace OgreInit
 {

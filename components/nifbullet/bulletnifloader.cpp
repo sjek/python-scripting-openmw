@@ -21,30 +21,37 @@ http://www.gnu.org/licenses/ .
 
 */
 
-#include "bulletnifloader.hpp"
-
-#include <cstdio>
-
-
+#include <OgreQuaternion.h>
+#include <OgreResource.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreVector3.h>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <components/misc/stringops.hpp>
-
 #include <components/nifcache/nifcache.hpp>
+#include <stddef.h>
+#include <cassert>
+#include <cstdio>
+#include <map>
+#include <utility>
+#include <vector>
 
+#include "../nif/controller.hpp"
+#include "../nif/data.hpp"
+#include "../nif/extra.hpp"
 #include "../nif/niffile.hpp"
 #include "../nif/node.hpp"
-#include "../nif/data.hpp"
-#include "../nif/property.hpp"
-#include "../nif/controller.hpp"
-#include "../nif/extra.hpp"
-#include <libs/platform/strings.h>
-
-#include <vector>
-#include <list>
-// For warning messages
-#include <iostream>
-
-// float infinity
-#include <limits>
+#include "BulletCollision/CollisionShapes/btBoxShape.h"
+#include "BulletCollision/CollisionShapes/btCollisionShape.h"
+#include "BulletCollision/CollisionShapes/btCompoundShape.h"
+#include "BulletCollision/CollisionShapes/btTriangleMesh.h"
+#include "LinearMath/btQuaternion.h"
+#include "LinearMath/btTransform.h"
+#include "bulletnifloader.hpp"
+#include "components/nif/base.hpp"
+#include "components/nif/niftypes.hpp"
+#include "components/nif/record.hpp"
+#include "components/nif/recordptr.hpp"
+#include "openengine/bullet/BulletShapeLoader.h"
 
 typedef unsigned char ubyte;
 

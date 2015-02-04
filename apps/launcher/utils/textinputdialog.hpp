@@ -1,11 +1,16 @@
 #ifndef TEXTINPUTDIALOG_HPP
 #define TEXTINPUTDIALOG_HPP
 
+#include <qdialog.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
 #include <QDialog>
 
 #include "lineedit.hpp"
 
+class LineEdit;
 class QDialogButtonBox;
+class QWidget;
 
 namespace Launcher
 {

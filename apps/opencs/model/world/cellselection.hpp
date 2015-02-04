@@ -1,9 +1,9 @@
 #ifndef CSM_WOLRD_CELLSELECTION_H
 #define CSM_WOLRD_CELLSELECTION_H
 
-#include <set>
-
+#include <qmetatype.h>
 #include <QMetaType>
+#include <set>
 
 #include "cellcoordinates.hpp"
 

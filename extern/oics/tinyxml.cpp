@@ -22,13 +22,15 @@ must not be misrepresented as being the original software.
 distribution.
 */
 
-#include <ctype.h>
-
 #ifdef TIXML_USE_STL
-#include <sstream>
 #include <iostream>
+#include <sstream>
 #endif
 
+#include <stdlib.h>
+#include <string.h>
+
+#include "extern/oics/tinystr.h"
 #include "tinyxml.h"
 
 #ifdef _WIN32

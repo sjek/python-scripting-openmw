@@ -1,14 +1,14 @@
-#include "actionopen.hpp"
-
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
-
 #include "../mwgui/container.hpp"
-
 #include "../mwmechanics/disease.hpp"
+#include "actionopen.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwworld/action.hpp"
 
-#include "class.hpp"
-#include "containerstore.hpp"
+namespace MWWorld {
+class Ptr;
+}  // namespace MWWorld
 
 namespace MWWorld
 {

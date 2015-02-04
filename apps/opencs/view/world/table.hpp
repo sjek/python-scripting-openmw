@@ -1,18 +1,31 @@
 #ifndef CSV_WORLD_TABLE_H
 #define CSV_WORLD_TABLE_H
 
-#include <vector>
-#include <string>
-
 #include <QtGui/qevent.h>
+#include <qnamespace.h>
+#include <qobjectdefs.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "../../model/filter/node.hpp"
 #include "../../model/world/columnbase.hpp"
 #include "../../model/world/universalid.hpp"
 #include "dragrecordtable.hpp"
 
-class QUndoStack;
 class QAction;
+class QContextMenuEvent;
+class QDropEvent;
+class QMouseEvent;
+class QUndoStack;
+namespace CSMFilter {
+class Node;
+}  // namespace CSMFilter
+namespace boost {
+template <class Y> class shared_ptr;
+}  // namespace boost
 
 namespace CSMDoc
 {
@@ -21,10 +34,10 @@ namespace CSMDoc
 
 namespace CSMWorld
 {
-    class Data;
-    class IdTableProxyModel;
-    class IdTableBase;
     class CommandDispatcher;
+    class Data;
+    class IdTableBase;
+    class IdTableProxyModel;
 }
 
 namespace CSVWorld

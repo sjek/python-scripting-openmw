@@ -1,6 +1,14 @@
+#include <MyGUI.h>
+#include <MyGUI_OgrePlatform.h>
+#include <boost/lexical_cast.hpp>
+#include <algorithm>
+#include <sstream>
+
 #include "numericeditbox.hpp"
 
-#include <boost/lexical_cast.hpp>
+namespace MyGUI {
+class Widget;
+}  // namespace MyGUI
 
 namespace Gui
 {

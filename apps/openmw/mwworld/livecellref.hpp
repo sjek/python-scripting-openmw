@@ -1,10 +1,12 @@
 #ifndef GAME_MWWORLD_LIVECELLREF_H
 #define GAME_MWWORLD_LIVECELLREF_H
 
+#include <stddef.h>
+#include <string>
 #include <typeinfo>
 
 #include "cellref.hpp"
-
+#include "components/esm/cellref.hpp"
 #include "refdata.hpp"
 
 namespace ESM
@@ -14,9 +16,9 @@ namespace ESM
 
 namespace MWWorld
 {
-    class Ptr;
-    class ESMStore;
     class Class;
+    class ESMStore;
+    class Ptr;
 
     /// Used to create pointers to hold any type of LiveCellRef<> object.
     struct LiveCellRefBase

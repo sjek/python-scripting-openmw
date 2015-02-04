@@ -1,11 +1,18 @@
+#include <qapplication.h>
+#include <qboxlayout.h>
+#include <qdialogbuttonbox.h>
+#include <qglobal.h>
+#include <qlabel.h>
+#include <qnamespace.h>
+#include <qpalette.h>
+#include <qpushbutton.h>
+#include <qregexp.h>
+#include <qvalidator.h>
+
+#include "apps/launcher/utils/lineedit.hpp"
 #include "textinputdialog.hpp"
 
-#include <QDialogButtonBox>
-#include <QApplication>
-#include <QPushButton>
-#include <QVBoxLayout>
-#include <QValidator>
-#include <QLabel>
+class QWidget;
 
 Launcher::TextInputDialog::TextInputDialog(const QString& title, const QString &text, QWidget *parent) :
     QDialog(parent)

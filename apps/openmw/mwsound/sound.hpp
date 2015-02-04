@@ -2,7 +2,9 @@
 #define GAME_SOUND_SOUND_H
 
 #include <OgreVector3.h>
+#include <vector>
 
+#include "apps/openmw/mwsound/../mwbase/soundmanager.hpp"
 #include "soundmanagerimp.hpp"
 
 namespace MWSound

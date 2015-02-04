@@ -1,17 +1,31 @@
 #ifndef GAME_OCCLUSION_QUERY_H
 #define GAME_OCCLUSION_QUERY_H
 
+#include <OgreCommon.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
 #include <OgreRenderObjectListener.h>
 #include <OgreRenderQueueListener.h>
 
 namespace Ogre
 {
-    class HardwareOcclusionQuery;
     class Entity;
+    class HardwareOcclusionQuery;
     class SceneNode;
 }
 
 #include <openengine/ogre/renderer.hpp>
+
+namespace OEngine {
+namespace Render {
+class OgreRenderer;
+}  // namespace Render
+}  // namespace OEngine
+namespace Ogre {
+class AutoParamDataSource;
+class Pass;
+class Renderable;
+}  // namespace Ogre
 
 namespace MWRender
 {

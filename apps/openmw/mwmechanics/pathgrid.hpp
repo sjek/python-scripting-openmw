@@ -3,6 +3,8 @@
 
 #include <components/esm/loadpgrd.hpp>
 #include <list>
+#include <utility>
+#include <vector>
 
 namespace ESM
 {

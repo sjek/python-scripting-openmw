@@ -1,11 +1,15 @@
 #ifndef GAME_RENDER_MWSCENE_H
 #define GAME_RENDER_MWSCENE_H
 
-#include <utility>
 #include <openengine/ogre/renderer.hpp>
-
-#include <vector>
+#include <map>
 #include <string>
+#include <utility>
+#include <vector>
+
+namespace Ogre {
+class ManualObject;
+}  // namespace Ogre
 
 namespace ESM
 {
@@ -23,18 +27,18 @@ namespace OEngine
 namespace Ogre
 {
     class Camera;
-    class Viewport;
+    class Quaternion;
+    class RaySceneQuery;
     class SceneManager;
     class SceneNode;
-    class RaySceneQuery;
-    class Quaternion;
     class Vector3;
+    class Viewport;
 }
 
 namespace MWWorld
 {
-    class Ptr;
     class CellStore;
+    class Ptr;
 }
 
 namespace MWRender

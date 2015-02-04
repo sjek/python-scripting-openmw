@@ -1,7 +1,9 @@
 
-#include "creator.hpp"
-
 #include <stdexcept>
+
+#include "apps/opencs/view/world/../../model/world/scope.hpp"
+#include "apps/opencs/view/world/../../model/world/universalid.hpp"
+#include "creator.hpp"
 
 CSVWorld::Creator::~Creator() {}
 

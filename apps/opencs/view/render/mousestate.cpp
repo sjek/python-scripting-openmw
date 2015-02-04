@@ -1,21 +1,36 @@
-#include "mousestate.hpp"
-
-#include <OgreSceneNode.h>
-#include <OgreSceneManager.h>
-#include <OgreEntity.h>
+#include <OgreCamera.h>
 #include <OgreMeshManager.h>
+#include <OgrePlane.h>
+#include <OgrePrerequisites.h>
+#include <OgreRay.h>
+#include <OgreResourceGroupManager.h>
+#include <OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreSharedPtr.h>
+#include <OgreViewport.h>
+#include <qelapsedtimer.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+#include <qobject.h>
+#include <qobjectdefs.h>
+#include <qregexp.h>
+#include <qstring.h>
+#include <qundostack.h>
+#include <stdint.h>
+#include <map>
 
-#include <QMouseEvent>
-#include <QElapsedTimer>
-#include <QObject>
-
-#include "../../model/settings/usersettings.hpp"
 #include "../../model/world/commands.hpp"
 #include "../../model/world/idtable.hpp"
 #include "../../model/world/universalid.hpp"
 #include "../world/physicssystem.hpp"
-
+#include "apps/opencs/model/doc/../world/data.hpp"
+#include "apps/opencs/model/doc/document.hpp"
+#include "apps/opencs/view/render/../../model/world/columns.hpp"
+#include "apps/opencs/view/render/../../model/world/refcollection.hpp"
+#include "apps/opencs/view/render/scenewidget.hpp"
 #include "elements.hpp"
+#include "mousestate.hpp"
 #include "worldspacewidget.hpp"
 
 namespace CSVRender

@@ -1,24 +1,36 @@
+#include <OgreCamera.h>
+#include <OgreCommon.h>
+#include <OgreMath.h>
+#include <OgreOverlaySystem.h>
+#include <OgrePlatform.h>
+#include <OgrePrerequisites.h>
+#include <OgreRenderWindow.h>
+#include <OgreRoot.h>
+#include <OgreSceneManager.h>
+#include <OgreViewport.h>
+#include <qcoreevent.h>
+#include <qevent.h>
+#include <qglobal.h>
+#include <qnamespace.h>
+#include <qregexp.h>
+#include <qshortcut.h>
+#include <qsize.h>
+#include <qtimer.h>
+#include <stddef.h>
+#include <ostream>
+#include <utility>
+
+#include "../../model/settings/usersettings.hpp"
+#include "../widget/scenetoolmode.hpp"
+#include "apps/opencs/view/render/lightingbright.hpp"
+#include "apps/opencs/view/render/lightingday.hpp"
+#include "apps/opencs/view/render/lightingnight.hpp"
+#include "lighting.hpp"
+#include "navigation.hpp"
+#include "overlaysystem.hpp"
 #include "scenewidget.hpp"
 
-#include <QEvent>
-#include <QResizeEvent>
-#include <QTimer>
-#include <QShortcut>
-
-#include <OgreRoot.h>
-#include <OgreRenderWindow.h>
-#include <OgreEntity.h>
-#include <OgreCamera.h>
-#include <OgreSceneNode.h>
-#include <OgreViewport.h>
-#include <OgreOverlaySystem.h>
-
-#include "../widget/scenetoolmode.hpp"
-#include "../../model/settings/usersettings.hpp"
-
-#include "navigation.hpp"
-#include "lighting.hpp"
-#include "overlaysystem.hpp"
+class QPaintEngine;
 
 namespace CSVRender
 {

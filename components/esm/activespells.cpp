@@ -1,5 +1,7 @@
-#include "activespells.hpp"
+#include <utility>
 
+#include "activespells.hpp"
+#include "components/esm/defs.hpp"
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
 

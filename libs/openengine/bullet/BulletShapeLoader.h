@@ -1,10 +1,21 @@
 #ifndef OPENMW_BULLET_SHAPE_LOADER_H_
 #define OPENMW_BULLET_SHAPE_LOADER_H_
 
+#include <OgreCommon.h>
+#include <OgrePrerequisites.h>
+#include <OgreQuaternion.h>
 #include <OgreResource.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreResourceManager.h>
-#include <btBulletCollisionCommon.h>
+#include <OgreSharedPtr.h>
 #include <OgreVector3.h>
+#include <btBulletCollisionCommon.h>
+#include <stddef.h>
+#include <algorithm>
+#include <map>
+#include <string>
+
+class btCollisionShape;
 
 namespace OEngine {
 namespace Physic

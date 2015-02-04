@@ -1,13 +1,15 @@
-#include "esmstore.hpp"
-
-#include <set>
-#include <iostream>
-
-#include <boost/filesystem/operations.hpp>
-
-#include <components/loadinglistener/loadinglistener.hpp>
-
+#include <boost/filesystem/path.hpp>
 #include <components/esm/esmreader.hpp>
+#include <components/loadinglistener/loadinglistener.hpp>
+#include <stddef.h>
+#include <iostream>
+#include <vector>
+
+#include "apps/openmw/mwworld/store.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/esmwriter.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "esmstore.hpp"
 
 namespace MWWorld
 {

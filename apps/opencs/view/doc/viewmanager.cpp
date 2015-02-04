@@ -1,29 +1,33 @@
 
-#include "viewmanager.hpp"
-
+#include <boost/filesystem/path.hpp>
+#include <qapplication.h>
+#include <qcoreapplication.h>
+#include <qglobal.h>
+#include <qmessagebox.h>
+#include <qnamespace.h>
+#include <qpushbutton.h>
+#include <qstring.h>
+#include <algorithm>
+#include <cstddef>
 #include <map>
+#include <utility>
 
-#include <QApplication>
-#include <QDesktopWidget>
-
-#include "../../model/doc/documentmanager.hpp"
 #include "../../model/doc/document.hpp"
+#include "../../model/doc/documentmanager.hpp"
+#include "../../model/settings/usersettings.hpp"
 #include "../../model/world/columns.hpp"
 #include "../../model/world/universalid.hpp"
-
-#include "../world/util.hpp"
 #include "../world/enumdelegate.hpp"
-#include "../world/vartypedelegate.hpp"
-#include "../world/recordstatusdelegate.hpp"
 #include "../world/idtypedelegate.hpp"
-
-#include "../../model/settings/usersettings.hpp"
-
+#include "../world/recordstatusdelegate.hpp"
+#include "../world/util.hpp"
+#include "../world/vartypedelegate.hpp"
+#include "apps/opencs/view/doc/../../model/doc/../world/columnbase.hpp"
+#include "apps/opencs/view/doc/../../model/doc/state.hpp"
+#include "apps/opencs/view/doc/loader.hpp"
+#include "components/esm/variant.hpp"
 #include "view.hpp"
-
-#include <QMessageBox>
-#include <QPushButton>
-#include <QtGui/QApplication>
+#include "viewmanager.hpp"
 
 void CSVDoc::ViewManager::updateIndices()
 {

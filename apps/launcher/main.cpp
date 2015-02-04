@@ -1,9 +1,5 @@
+#include <exception>
 #include <iostream>
-
-#include <QApplication>
-#include <QTextCodec>
-#include <QDir>
-#include <QDebug>
 
 #ifdef MAC_OS_X_VERSION_MIN_REQUIRED
 #undef MAC_OS_X_VERSION_MIN_REQUIRED
@@ -12,6 +8,15 @@
 #endif // MAC_OS_X_VERSION_MIN_REQUIRED
 
 #include <SDL.h>
+#include <SDL_error.h>
+#include <SDL_hints.h>
+#include <SDL_main.h>
+#include <qapplication.h>
+#include <qcoreapplication.h>
+#include <qdebug.h>
+#include <qdir.h>
+#include <qstring.h>
+#include <qtextcodec.h>
 
 #include "maindialog.hpp"
 

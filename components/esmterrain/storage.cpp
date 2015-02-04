@@ -1,17 +1,29 @@
-#include "storage.hpp"
-
-#include <OgreVector2.h>
-#include <OgreTextureManager.h>
-#include <OgreStringConverter.h>
+#include <OgreColourValue.h>
+#include <OgreMemoryAllocatorConfig.h>
+#include <OgrePixelFormat.h>
+#include <OgrePlane.h>
+#include <OgrePrerequisites.h>
 #include <OgreRenderSystem.h>
-#include <OgreResourceGroupManager.h>
 #include <OgreResourceBackgroundQueue.h>
+#include <OgreResourceGroupManager.h>
 #include <OgreRoot.h>
-
-#include <boost/algorithm/string.hpp>
-
-#include <components/terrain/quadtreenode.hpp>
+#include <OgreVector2.h>
+#include <OgreVector3.h>
+#include <assert.h>
+#include <boost/algorithm/string/replace.hpp>
 #include <components/misc/resourcehelpers.hpp>
+#include <components/terrain/quadtreenode.hpp>
+#include <stddef.h>
+#include <stdint.h>
+#include <string.h>
+#include <algorithm>
+#include <cmath>
+#include <limits>
+#include <set>
+
+#include "components/esm/loadland.hpp"
+#include "components/esm/loadltex.hpp"
+#include "storage.hpp"
 
 namespace ESMTerrain
 {

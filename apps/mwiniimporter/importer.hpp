@@ -1,13 +1,12 @@
 #ifndef MWINIIMPORTER_IMPORTER
 #define MWINIIMPORTER_IMPORTER 1
 
-#include <string>
-#include <map>
-#include <vector>
+#include <components/to_utf8/to_utf8.hpp>
 #include <exception>
 #include <iosfwd>
-
-#include <components/to_utf8/to_utf8.hpp>
+#include <map>
+#include <string>
+#include <vector>
 
 class MwIniImporter {
   public:

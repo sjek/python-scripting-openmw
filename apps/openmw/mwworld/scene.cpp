@@ -1,23 +1,41 @@
-#include "scene.hpp"
-
+#include <OgreMath.h>
+#include <OgreQuaternion.h>
 #include <OgreSceneNode.h>
-
-#include <components/nif/niffile.hpp>
+#include <OgreVector3.h>
+#include <assert.h>
 #include <components/misc/resourcehelpers.hpp>
+#include <stdlib.h>
+#include <algorithm>
+#include <cmath>
+#include <exception>
+#include <iostream>
+#include <limits>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
+#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-
-#include "physicssystem.hpp"
-#include "player.hpp"
-#include "localscripts.hpp"
-#include "esmstore.hpp"
-#include "class.hpp"
+#include "../mwbase/world.hpp"
+#include "apps/openmw/mwworld/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwworld/../mwrender/renderingmanager.hpp"
+#include "apps/openmw/mwworld/cellref.hpp"
+#include "apps/openmw/mwworld/refdata.hpp"
+#include "apps/openmw/mwworld/store.hpp"
 #include "cellfunctors.hpp"
 #include "cellstore.hpp"
+#include "class.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/loadcell.hpp"
+#include "components/esm/loadland.hpp"
+#include "components/loadinglistener/loadinglistener.hpp"
+#include "components/settings/settings.hpp"
+#include "esmstore.hpp"
+#include "localscripts.hpp"
+#include "physicssystem.hpp"
+#include "player.hpp"
+#include "scene.hpp"
 
 namespace
 {

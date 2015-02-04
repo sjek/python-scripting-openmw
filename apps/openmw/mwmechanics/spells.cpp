@@ -1,17 +1,22 @@
 
-#include "spells.hpp"
-
-#include <cstdlib>
-
 #include <components/esm/loadspel.hpp>
 #include <components/esm/spellstate.hpp>
+#include <algorithm>
+#include <cstdlib>
+#include <utility>
+#include <vector>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-
 #include "../mwworld/esmstore.hpp"
-
+#include "apps/openmw/mwmechanics/../mwworld/store.hpp"
+#include "apps/openmw/mwmechanics/../mwworld/timestamp.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/effectlist.hpp"
+#include "components/esm/loadmgef.hpp"
+#include "components/misc/stringops.hpp"
 #include "magiceffects.hpp"
+#include "spells.hpp"
 
 namespace MWMechanics
 {

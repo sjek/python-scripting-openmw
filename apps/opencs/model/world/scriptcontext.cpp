@@ -1,15 +1,24 @@
 
-#include "scriptcontext.hpp"
-
-#include <algorithm>
-
-#include <components/misc/stringops.hpp>
-
-#include <components/compiler/quickfileparser.hpp>
 #include <components/compiler/nullerrorhandler.hpp>
+#include <components/compiler/quickfileparser.hpp>
 #include <components/compiler/scanner.hpp>
+#include <components/misc/stringops.hpp>
+#include <qbytearray.h>
+#include <qstring.h>
+#include <qvariant.h>
+#include <algorithm>
+#include <iosfwd>
 
+#include "apps/opencs/model/world/columns.hpp"
+#include "apps/opencs/model/world/idcollection.hpp"
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/refidcollection.hpp"
+#include "components/compiler/locals.hpp"
+#include "components/esm/loadglob.hpp"
+#include "components/esm/loadscpt.hpp"
+#include "components/esm/variant.hpp"
 #include "data.hpp"
+#include "scriptcontext.hpp"
 
 CSMWorld::ScriptContext::ScriptContext (const Data& data) : mData (data), mIdsUpdated (false) {}
 

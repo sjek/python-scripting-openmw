@@ -1,39 +1,55 @@
 
-#include "statemanagerimp.hpp"
-
-#include <components/esm/esmwriter.hpp>
-#include <components/esm/esmreader.hpp>
-#include <components/esm/cellid.hpp>
-#include <components/esm/loadcell.hpp>
-
-#include <components/misc/stringops.hpp>
-
-#include <components/settings/settings.hpp>
-
+#include <OgreDataStream.h>
 #include <OgreImage.h>
-
+#include <OgreSharedPtr.h>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <components/esm/cellid.hpp>
+#include <components/esm/esmreader.hpp>
+#include <components/esm/esmwriter.hpp>
+#include <components/esm/loadcell.hpp>
+#include <components/misc/stringops.hpp>
+#include <components/settings/settings.hpp>
+#include <stddef.h>
+#include <algorithm>
+#include <exception>
+#include <iostream>
+#include <list>
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/journal.hpp"
 #include "../mwbase/dialoguemanager.hpp"
-#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/environment.hpp"
+#include "../mwbase/inputmanager.hpp"
+#include "../mwbase/journal.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/scriptmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
-#include "../mwbase/inputmanager.hpp"
-
-#include "../mwworld/player.hpp"
-#include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/esmstore.hpp"
-#include "../mwworld/inventorystore.hpp"
-
-#include "../mwmechanics/npcstats.hpp"
+#include "../mwbase/windowmanager.hpp"
+#include "../mwbase/world.hpp"
 #include "../mwmechanics/creaturestats.hpp"
-
+#include "../mwmechanics/npcstats.hpp"
 #include "../mwscript/globalscripts.hpp"
+#include "../mwworld/cellstore.hpp"
+#include "../mwworld/class.hpp"
+#include "../mwworld/esmstore.hpp"
+#include "apps/openmw/mwstate/../mwbase/../mwgui/mode.hpp"
+#include "apps/openmw/mwstate/../mwbase/../mwworld/livecellref.hpp"
+#include "apps/openmw/mwstate/../mwbase/../mwworld/ptr.hpp"
+#include "apps/openmw/mwstate/../mwbase/../mwworld/refdata.hpp"
+#include "apps/openmw/mwstate/../mwbase/../mwworld/store.hpp"
+#include "apps/openmw/mwstate/../mwbase/../mwworld/timestamp.hpp"
+#include "apps/openmw/mwstate/../mwbase/statemanager.hpp"
+#include "apps/openmw/mwstate/charactermanager.hpp"
+#include "components/esm/defs.hpp"
+#include "components/esm/esmcommon.hpp"
+#include "components/esm/loadclas.hpp"
+#include "components/esm/loadnpc.hpp"
+#include "components/esm/loadtes3.hpp"
+#include "components/esm/savedgame.hpp"
+#include "components/loadinglistener/loadinglistener.hpp"
+#include "statemanagerimp.hpp"
 
 void MWState::StateManager::cleanup (bool force)
 {

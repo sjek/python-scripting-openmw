@@ -1,9 +1,7 @@
 
-#include "scope.hpp"
-
-#include <stdexcept>
-
 #include <components/misc/stringops.hpp>
+
+#include "scope.hpp"
 
 CSMWorld::Scope CSMWorld::getScopeFromId (const std::string& id)
 {

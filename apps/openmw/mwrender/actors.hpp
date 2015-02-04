@@ -2,12 +2,27 @@
 #define GAME_RENDER_ACTORS_H
 
 #include <openengine/ogre/renderer.hpp>
+#include <stddef.h>
+#include <map>
+#include <string>
+
+#include "apps/openmw/mwrender/../mwworld/ptr.hpp"
+
+namespace OEngine {
+namespace Render {
+class OgreRenderer;
+}  // namespace Render
+}  // namespace OEngine
+namespace Ogre {
+class Camera;
+class SceneNode;
+}  // namespace Ogre
 
 namespace MWWorld
 {
-    class Ptr;
     class CellStore;
     class InventoryStore;
+    class Ptr;
 }
 
 namespace MWRender

@@ -1,9 +1,8 @@
-#include "operations.hpp"
-
-#include <QVBoxLayout>
-#include <QHBoxLayout>
+#include <qboxlayout.h>
+#include <qwidget.h>
 
 #include "operation.hpp"
+#include "operations.hpp"
 
 CSVDoc::Operations::Operations()
 {

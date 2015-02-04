@@ -1,10 +1,13 @@
 
+#include <qnamespace.h>
+#include <qstring.h>
+#include <utility>
+
+#include "apps/opencs/model/world/columns.hpp"
+#include "apps/opencs/model/world/record.hpp"
+#include "apps/opencs/model/world/universalid.hpp"
 #include "commands.hpp"
-
-#include <QAbstractItemModel>
-
 #include "idtable.hpp"
-#include <components/misc/stringops.hpp>
 
 CSMWorld::ModifyCommand::ModifyCommand (QAbstractItemModel& model, const QModelIndex& index,
                                         const QVariant& new_, QUndoCommand* parent)

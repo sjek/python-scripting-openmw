@@ -1,11 +1,30 @@
 #ifndef CONTENTMODEL_HPP
 #define CONTENTMODEL_HPP
 
+#include <qabstractitemmodel.h>
+#include <qhash.h>
+#include <qicon.h>
+#include <qlist.h>
+#include <qnamespace.h>
+#include <qobjectdefs.h>
+#include <qset.h>
+#include <qstring.h>
+#include <qstringlist.h>
+#include <qvariant.h>
+#include <qvector.h>
 #include <QAbstractTableModel>
-#include <QStringList>
-#include <QSet>
 #include <QIcon>
+#include <QSet>
+#include <QStringList>
+
 #include "loadordererror.hpp"
+
+class QMimeData;
+class QObject;
+class QTextCodec;
+namespace ContentSelectorModel {
+class LoadOrderError;
+}  // namespace ContentSelectorModel
 
 namespace ContentSelectorModel
 {

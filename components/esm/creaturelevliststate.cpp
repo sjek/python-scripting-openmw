@@ -1,5 +1,5 @@
+#include "components/esm/objectstate.hpp"
 #include "creaturelevliststate.hpp"
-
 #include "esmreader.hpp"
 #include "esmwriter.hpp"
 
