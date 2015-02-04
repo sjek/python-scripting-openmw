@@ -8,8 +8,11 @@
 import json
 import subprocess
 import sys
+import os
+import multiprocessing as mp
 
-srcdir = "/home/showard/openmw/openmw/"
+srcdir = os.getcwd()+"/"
+print(srcdir)
 
 def run(cmd):
 	stringCmd = u" ".join(cmd)
@@ -27,26 +30,20 @@ def runIWYU(wd, args):
 	cmd.extend(args)
 	run(cmd)
 
-#f = open("compile_commands.json" "r")
-
 f = open(sys.argv[1], "r")
 tunits = json.load(f)
 
 extraArg = u" ".join([u"-Xiwyu " + x for x in sys.argv[2:]])
 
-#basedir = u"/home/rpavlik/llvm-trunk/"
-#remove scrdir from .json file using sed
 #basecmd = [u"include-what-you-use", u"-Xiwyu", u"--verbose=2", extraArg] #  "-working-directory", wd]
-basecmd = [u"include-what-you-use",extraArg] #  "-working-directory", wd]
+basecmd = [u"include-what-you-use",extraArg]
 
-#mappingFiles = ["gcc.libc.imp", "gcc.stl.headers.imp", "gcc.symbols.imp", "google.imp", "third_party.imp"] # "iwyu.gcc.imp"
-
-#for mapping in mappingFiles:
-#	basecmd.extend(["-Xiwyu", "--mapping_file="+srcdir+mapping])
-
-
-for tu in tunits:
+#for tu in tunits:
+def runcommands(tu):
 	 oldDriver = tu["command"].split(None)[0]
 	 cmd = tu["command"].replace(oldDriver, u"")
 	 cmd = cmd.replace(srcdir, u"")
 	 runIWYU(tu["directory"], [cmd])
+
+pool = mp.Pool(processes=4)
+pool.map(runcommands, tunits)
