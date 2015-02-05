@@ -1,7 +1,4 @@
-#include <boost/format/alt_sstream.hpp>
-#include <boost/format/format_class.hpp>
-#include <boost/format/format_fwd.hpp>
-#include <boost/format/format_implementation.hpp>
+#include <boost/format.hpp>
 #include <stdlib.h>
 #include <algorithm>
 #include <string>

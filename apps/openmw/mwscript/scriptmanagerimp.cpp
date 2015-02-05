@@ -1,28 +1,24 @@
 
-#include <components/compiler/context.hpp>
-#include <components/compiler/quickfileparser.hpp>
-#include <components/compiler/scanner.hpp>
-#include <components/esm/loadscpt.hpp>
-#include <components/misc/stringops.hpp>
-#include <algorithm>
-#include <cassert>
-#include <exception>
-#include <iostream>
-#include <stdexcept>
-
-#include "../mwworld/esmstore.hpp"
-#include "apps/openmw/mwscript/../mwworld/store.hpp"
-#include "apps/openmw/mwscript/globalscripts.hpp"
-#include "components/compiler/fileparser.hpp"
-#include "components/compiler/streamerrorhandler.hpp"
-#include "components/interpreter/interpreter.hpp"
-#include "components/interpreter/types.hpp"
-#include "extensions.hpp"
 #include "scriptmanagerimp.hpp"
 
-namespace Compiler {
-class SourceException;
-}  // namespace Compiler
+#include <cassert>
+#include <iostream>
+#include <sstream>
+#include <exception>
+#include <algorithm>
+
+#include <components/esm/loadscpt.hpp>
+
+#include <components/misc/stringops.hpp>
+
+#include <components/compiler/scanner.hpp>
+#include <components/compiler/context.hpp>
+#include <components/compiler/exception.hpp>
+#include <components/compiler/quickfileparser.hpp>
+
+#include "../mwworld/esmstore.hpp"
+
+#include "extensions.hpp"
 
 namespace MWScript
 {

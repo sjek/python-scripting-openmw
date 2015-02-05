@@ -1,5 +1,6 @@
 
 #include <ostream>
+#include <sstream>
 
 #include "cellcoordinates.hpp"
 
