@@ -15,3 +15,4 @@ def run():
     print("SomethingScript.hello: " + str(omwget("SomethingScript.hello")))
     omwset("SomethingScript.hello",42.0)
     print("SomethingScript.hello: " + str(omwget("SomethingScript.hello")))
+    omwcall("MessageBox, \"This is a simple message\"")

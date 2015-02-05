@@ -17,8 +17,14 @@
 
 #include <assert.h>                     // for assert
 #include <components/compiler/locals.hpp>  // for Locals
+#include <components/compiler/scanner.hpp>
+#include <components/compiler/output.hpp>
+#include <components/compiler/nullerrorhandler.hpp>
+#include <components/compiler/lineparser.hpp>
+#include <components/compiler/exception.hpp>
 #include <iostream>                     // for operator<<, cout, ostream, etc
 #include <string>                       // for string, operator<<, etc
+#include "compilercontext.hpp"
 #include "../mwbase/environment.hpp"    // for Environment
 #include "../mwbase/scriptmanager.hpp"  // for ScriptManager
 #include "../mwworld/../mwscript/locals.hpp"  // for Locals
@@ -27,6 +33,7 @@
 #include "globalscripts.hpp"            // for GlobalScripts
 #include "interpretercontext.hpp"       // for InterpreterContext
 #include "openmwbindings.hpp"           // for context
+#include "extensions.hpp"
 
 #include "openmwbindings0.hpp"
 
@@ -208,4 +215,56 @@ namespace MWScriptExtensions
     {
         return setget("get", name, 0);
     }
+    bool compile (const std::string& cmd, Compiler::Output& output)
+    {
+        try
+        {
+            std::istringstream input (cmd + '\n');
+            MWScript::CompilerContext compilerContext(MWScript::CompilerContext::Type_Full);
+            Compiler::NullErrorHandler errorHandler;
+
+            Compiler::Scanner scanner (errorHandler, input, compilerContext.getExtensions());
+
+            Compiler::LineParser parser (errorHandler, compilerContext, output.getLocals(),
+                output.getLiterals(), output.getCode(), true);
+
+            scanner.scan (parser);
+
+            return 1;
+        }
+        catch (const Compiler::SourceException&)
+        {
+            // error has already been reported via error handler
+        }
+        catch (const std::exception& error)
+        {
+            std::cerr << (std::string ("Error: ") + error.what());
+        }
+
+        return false;
+    }
+    void omwcall(std::string command)
+    {
+        Compiler::Locals locals;
+        Compiler::Output output (locals);
+
+        if (compile (command + "\n", output))
+        {
+            try
+            {
+                //Interpreter::Interpreter interpreter;
+                //MWScript::installOpcodes (interpreter);
+                std::vector<Interpreter::Type_Code> code;
+                output.getCode (code);
+                MWScriptExtensions::interpreter.run(&code[0], code.size(), *MWScriptExtensions::context);
+            }
+            catch (const std::exception& error)
+            {
+                std::cerr << (std::string ("Error: ") + error.what());
+            }
+        }
+
+    }
+
+
 }
