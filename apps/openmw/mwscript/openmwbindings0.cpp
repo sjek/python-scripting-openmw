@@ -16,27 +16,28 @@
 //used include-what-you-use from CLANG projcect
 
 #include <assert.h>                     // for assert
-#include <components/compiler/locals.hpp>  // for Locals
-#include <components/compiler/scanner.hpp>
-#include <components/compiler/output.hpp>
-#include <components/compiler/nullerrorhandler.hpp>
 #include <components/compiler/lineparser.hpp>
+#include <components/compiler/locals.hpp>  // for Locals
+#include <components/compiler/nullerrorhandler.hpp>
 #include <components/compiler/exception.hpp>
+#include <components/compiler/output.hpp>
+#include <components/compiler/scanner.hpp>
 #include <iostream>                     // for operator<<, cout, ostream, etc
 #include <string>                       // for string, operator<<, etc
-#include "compilercontext.hpp"
+#include <vector>
+
 #include "../mwbase/environment.hpp"    // for Environment
 #include "../mwbase/scriptmanager.hpp"  // for ScriptManager
-#include "../mwworld/../mwscript/locals.hpp"  // for Locals
+#include "locals.hpp"  // for Locals
 #include "../mwworld/class.hpp"         // for Class
 #include "../mwworld/ptr.hpp"           // for Ptr
+#include "compilercontext.hpp"
+#include "components/interpreter/interpreter.hpp"
+#include "components/interpreter/types.hpp"
 #include "globalscripts.hpp"            // for GlobalScripts
 #include "interpretercontext.hpp"       // for InterpreterContext
 #include "openmwbindings.hpp"           // for context
-#include "extensions.hpp"
-
 #include "openmwbindings0.hpp"
-
 
 namespace MWScriptExtensions
 {
