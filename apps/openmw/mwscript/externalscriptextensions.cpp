@@ -46,7 +46,7 @@ namespace MWScript
                             desc.add_options()
                             ("data", boost::program_options::value<Files::PathContainer>()->default_value(Files::PathContainer(), "data")->multitoken()->composing())
                             ("data-local", boost::program_options::value<std::string>()->default_value(""))
-                            ("extensions", boost::program_options::value<std::string>()->default_value(""));
+                            ("extensions", boost::program_options::value<Files::PathContainer>()->default_value(Files::PathContainer(),""));
 
                             boost::program_options::notify(variables);
 
@@ -70,19 +70,44 @@ namespace MWScript
                                 dataDirs.insert (dataDirs.end(), dataLocal.begin(), dataLocal.end());
 
                             Files::PathContainer extensionDirs = variables["extensions"].as<Files::PathContainer>();
-                            extensionDirs.push_back(dataDirs);
+                            extensionDirs.insert(extensionDirs.end(),dataDirs.begin(), dataDirs.end());
+                            PyRun_SimpleString("import sys\n");
+                            for (unsigned i=0; i<extensionDirs.size(); i++)
+                            {
+                                std::cout << extensionDirs.at(i).string() << "\n";
+                                std::cout.flush();
+                                std::string pathAppend("sys.path.append(\"" + extensionDirs.at(i).string() +  "\")\n");
+                                std::cout << pathAppend;
+                                std::cout.flush();
+                                PyRun_SimpleString(pathAppend.c_str());
+                            }
+
                             //need to find directories and append to sys.path, make new .cfg variable for extensions
                             // "lib/games/openmw" and look in data dirs for other scripts
                             // see "opemw/plugins/mygui_.../plugin.cpp for cfgManager.readConfiguration
 
-                            PyRun_SimpleString("import sys; sys.path.append(\".\"); from openmw import *\n");
+                            PyRun_SimpleString("from openmw import *\n");
+                            //PyRun_SimpleString("setattr(__main__, openmw, sys.modules[openmw])");
                             //PyRun_SimpleString("from openmw import *\n");
                             MWScriptExtensions::opcodesInstalled=true;
 
                         }
+                        //std::string executeString("for paths in reversed(sys.path):\n    try:\n        exec(open(paths+'/"+scriptname+"').read())\n        break\n    except:\n        continue\n");
+
+                        //PyRun_SimpleString(executeString.c_str());
+                        std::string pythonModuleName = scriptname.substr(0, scriptname.size()-3);
+                        std::string executeString("import "+pythonModuleName);
+                        PyRun_SimpleString(executeString.c_str());
+                        executeString = pythonModuleName + ".run()";
+                        PyRun_SimpleString(executeString.c_str());
+
+
+
+                        //std::string execfile("exec(open("+scriptname +").read())\n");
+                        //PyRun_SimpleString(execfile.c_str());
                         //PyThreadState* newPythonInterpreter = Py_NewInterpreter();
-                        FILE *file_1 = fopen(scriptname.c_str(),"r");
-                        PyRun_SimpleFileEx(file_1,scriptname.c_str(),1);
+                        //FILE *file_1 = fopen(scriptname.c_str(),"r");
+                        //PyRun_SimpleFileEx(file_1,scriptname.c_str(),1);
                         //Py_EndInterpreter(newPythonInterpreter);
                         MWScriptExtensions::context = NULL;
                     }
