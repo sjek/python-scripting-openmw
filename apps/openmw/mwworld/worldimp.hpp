@@ -139,6 +139,7 @@ namespace MWWorld
             void loadContentFiles(const Files::Collections& fileCollections,
                 const std::vector<std::string>& content, ContentLoader& contentLoader);
 
+            float mSwimHeightScale;
             bool isUnderwater(const MWWorld::Ptr &object, const float heightRatio) const;
             ///< helper function for implementing isSwimming(), isSubmerged(), isWading()
 
@@ -537,6 +538,7 @@ namespace MWWorld
 
             /// \todo Probably shouldn't be here
             virtual MWRender::Animation* getAnimation(const MWWorld::Ptr &ptr);
+            virtual void reattachPlayerCamera();
 
             /// \todo this does not belong here
             virtual void frameStarted (float dt, bool paused);

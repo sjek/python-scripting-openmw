@@ -231,6 +231,11 @@ namespace MWWorld
                         cell->getCell()->getGridY()
                     );
                 if (land) {
+                    // Actually only VHGT is needed here, but we'll need the rest for rendering anyway.
+                    // Load everything now to reduce IO overhead.
+                    const int flags = ESM::Land::DATA_VCLR|ESM::Land::DATA_VHGT|ESM::Land::DATA_VNML|ESM::Land::DATA_VTEX;
+                    if (!land->isDataLoaded(flags))
+                        land->loadData(flags);
                     mPhysics->addHeightField (
                         land->mLandData->mHeights,
                         cell->getCell()->getGridX(),
@@ -539,9 +544,16 @@ namespace MWWorld
 
     void Scene::addObjectToScene (const Ptr& ptr)
     {
-        addObject(ptr, *mPhysics, mRendering);
-        MWBase::Environment::get().getWorld()->rotateObject(ptr, 0, 0, 0, true);
-        MWBase::Environment::get().getWorld()->scaleObject(ptr, ptr.getCellRef().getScale());
+        try
+        {
+            addObject(ptr, *mPhysics, mRendering);
+            MWBase::Environment::get().getWorld()->rotateObject(ptr, 0, 0, 0, true);
+            MWBase::Environment::get().getWorld()->scaleObject(ptr, ptr.getCellRef().getScale());
+        }
+        catch (std::exception& e)
+        {
+            std::cerr << "error during rendering: " << e.what() << std::endl;
+        }
     }
 
     void Scene::removeObjectFromScene (const Ptr& ptr)

@@ -19,12 +19,17 @@
 #include <MyGUI_ClipboardManager.h>
 #include <MyGUI_RenderManager.h>
 
+#include <SDL_keyboard.h>
+#include <SDL_clipboard.h>
+
 #include <openengine/ogre/renderer.hpp>
 #include <openengine/gui/manager.hpp>
 
 #include <extern/sdl4ogre/sdlcursormanager.hpp>
 
 #include <components/fontloader/fontloader.hpp>
+
+#include <components/translation/translation.hpp>
 
 #include <components/widgets/widgets.hpp>
 #include <components/widgets/tags.hpp>
@@ -91,7 +96,7 @@ namespace MWGui
 {
 
     WindowManager::WindowManager(
-        const Compiler::Extensions& extensions, int fpsLevel, OEngine::Render::OgreRenderer *ogre,
+        const Compiler::Extensions& extensions, OEngine::Render::OgreRenderer *ogre,
             const std::string& logpath, const std::string& cacheDir, bool consoleOnlyScripts,
             Translation::Storage& translationDataStorage, ToUTF8::FromType encoding, bool exportFonts, const std::map<std::string, std::string>& fallbackMap)
       : mConsoleOnlyScripts(consoleOnlyScripts)
@@ -162,7 +167,6 @@ namespace MWGui
       , mForceHidden(GW_None)
       , mAllowed(GW_ALL)
       , mRestAllowed(true)
-      , mShowFPSLevel(fpsLevel)
       , mFPS(0.0f)
       , mTriangleCount(0)
       , mBatchCount(0)
@@ -264,7 +268,7 @@ namespace MWGui
         trackWindow(mDialogueWindow, "dialogue");
         mContainerWindow = new ContainerWindow(mDragAndDrop);
         trackWindow(mContainerWindow, "container");
-        mHud = new HUD(mCustomMarkers, mShowFPSLevel, mDragAndDrop);
+        mHud = new HUD(mCustomMarkers, Settings::Manager::getInt("fps", "HUD"), mDragAndDrop);
         mToolTips = new ToolTips();
         mScrollWindow = new ScrollWindow();
         mBookWindow = new BookWindow();
@@ -352,6 +356,12 @@ namespace MWGui
 
     WindowManager::~WindowManager()
     {
+        MyGUI::LanguageManager::getInstance().eventRequestTag.clear();
+        MyGUI::PointerManager::getInstance().eventChangeMousePointer.clear();
+        MyGUI::InputManager::getInstance().eventChangeKeyFocus.clear();
+        MyGUI::ClipboardManager::getInstance().eventClipboardChanged.clear();
+        MyGUI::ClipboardManager::getInstance().eventClipboardRequested.clear();
+
         delete mConsole;
         delete mMessageBoxManager;
         delete mHud;
@@ -385,7 +395,6 @@ namespace MWGui
         delete mMerchantRepair;
         delete mRepair;
         delete mSoulgemDialog;
-        delete mCursorManager;
         delete mRecharge;
         delete mCompanionWindow;
         delete mHitFader;
@@ -393,6 +402,8 @@ namespace MWGui
         delete mScreenFader;
         delete mBlindnessFader;
         delete mDebugWindow;
+
+        delete mCursorManager;
 
         cleanupGarbage();
 
@@ -1712,18 +1723,9 @@ namespace MWGui
     void WindowManager::sizeVideo(int screenWidth, int screenHeight)
     {
         // Use black bars to correct aspect ratio
+        bool stretch = Settings::Manager::getBool("stretch menu background", "GUI");
         mVideoBackground->setSize(screenWidth, screenHeight);
-
-        if (mVideoWidget->getVideoHeight() > 0)
-        {
-            double imageaspect = static_cast<double>(mVideoWidget->getVideoWidth())/mVideoWidget->getVideoHeight();
-
-            int leftPadding = std::max(0.0, (screenWidth - screenHeight * imageaspect) / 2);
-            int topPadding = std::max(0.0, (screenHeight - screenWidth / imageaspect) / 2);
-
-            mVideoWidget->setCoord(leftPadding, topPadding,
-                                   screenWidth - leftPadding*2, screenHeight - topPadding*2);
-        }
+        mVideoWidget->autoResize(stretch);
     }
 
     WindowModal* WindowManager::getCurrentModal() const

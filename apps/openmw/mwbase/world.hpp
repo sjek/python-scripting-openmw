@@ -3,24 +3,23 @@
 
 #include <vector>
 #include <map>
+#include <set>
 
-#include <components/settings/settings.hpp>
+#include <components/esm/cellid.hpp>
 
-#include "../mwworld/globals.hpp"
 #include "../mwworld/ptr.hpp"
 
 namespace Ogre
 {
     class Vector2;
     class Vector3;
+    class Quaternion;
+    class Image;
 }
 
-namespace OEngine
+namespace Loading
 {
-    namespace Physic
-    {
-        class PhysicEngine;
-    }
+    class Listener;
 }
 
 namespace ESM
@@ -33,7 +32,6 @@ namespace ESM
     struct Potion;
     struct Spell;
     struct NPC;
-    struct CellId;
     struct Armor;
     struct Weapon;
     struct Clothing;
@@ -92,6 +90,7 @@ namespace MWBase
             {
                 std::string name;
                 float x, y; // world position
+                ESM::CellId dest;
             };
 
             World() {}
@@ -388,7 +387,7 @@ namespace MWBase
             virtual bool canPlaceObject (float cursorX, float cursorY) = 0;
             ///< @return true if it is possible to place on object at specified cursor location
 
-            virtual void processChangedSettings (const Settings::CategorySettingVector& settings) = 0;
+            virtual void processChangedSettings (const std::set< std::pair<std::string, std::string> >& settings) = 0;
 
             virtual bool isFlying(const MWWorld::Ptr &ptr) const = 0;
             virtual bool isSlowFalling(const MWWorld::Ptr &ptr) const = 0;
@@ -453,6 +452,7 @@ namespace MWBase
 
             /// \todo Probably shouldn't be here
             virtual MWRender::Animation* getAnimation(const MWWorld::Ptr &ptr) = 0;
+            virtual void reattachPlayerCamera() = 0;
 
             /// \todo this does not belong here
             virtual void frameStarted (float dt, bool paused) = 0;
