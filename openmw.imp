@@ -1,0 +1,8 @@
+[
+{ ref: boost-all-private.imp },
+{ ref: boost-all.imp },
+{ ref: qt4.imp },
+{ symbol: [ "std::char_traits", private, "<sstream>", public ] },
+{ symbol: [ "std::char_traits", private, "<fstream>", public ] },
+{ include: [ "\"MyGUI_DelegateImplement.h\"", private, "\"MyGUI_Delegate\"",public]}
+]
