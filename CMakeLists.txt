@@ -356,12 +356,6 @@ configure_file(${OpenMW_SOURCE_DIR}/files/settings-default.cfg
 configure_file(${OpenMW_SOURCE_DIR}/files/transparency-overrides.cfg
     "${OpenMW_BINARY_DIR}/transparency-overrides.cfg")
 
-configure_file(${OpenMW_SOURCE_DIR}/files/openmw.cfg.local
-    "${OpenMW_BINARY_DIR}/openmw.cfg")
-
-configure_file(${OpenMW_SOURCE_DIR}/files/openmw.cfg
-    "${OpenMW_BINARY_DIR}/openmw.cfg.install")
-
 configure_file(${OpenMW_SOURCE_DIR}/files/opencs.ini
     "${OpenMW_BINARY_DIR}/opencs.ini")
 
@@ -458,6 +452,13 @@ IF(NOT WIN32 AND NOT APPLE)
     INSTALL(DIRECTORY "${OpenMW_BINARY_DIR}/resources" DESTINATION "${DATADIR}" FILE_PERMISSIONS OWNER_READ GROUP_READ WORLD_READ COMPONENT "Resources")
     INSTALL(DIRECTORY DESTINATION "${DATADIR}/data" COMPONENT "Resources")
 ENDIF(NOT WIN32 AND NOT APPLE)
+
+#These configure files need variables set above
+configure_file(${OpenMW_SOURCE_DIR}/files/openmw.cfg.local
+    "${OpenMW_BINARY_DIR}/openmw.cfg")
+
+configure_file(${OpenMW_SOURCE_DIR}/files/openmw.cfg
+    "${OpenMW_BINARY_DIR}/openmw.cfg.install")
 
 if(WIN32)
     FILE(GLOB dll_files "${OpenMW_BINARY_DIR}/Release/*.dll")
