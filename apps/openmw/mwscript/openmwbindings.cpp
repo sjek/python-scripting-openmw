@@ -18,7 +18,9 @@
 namespace MWScriptExtensions
 {
     Interpreter::Interpreter interpreter;
+    lua_State *luaState=NULL;
     bool opcodesInstalled=false;
+    bool pythonInitialized=false;
     MWScript::InterpreterContext *context=NULL;
     Interpreter::Data stackReturn;
 

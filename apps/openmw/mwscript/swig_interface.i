@@ -6,6 +6,8 @@
  %}
 
 %ignore interpreter;
+%ignore luaState;
+%ignore pythonInitialized;
 %ignore context;
 %ignore Data;
 %ignore getData;

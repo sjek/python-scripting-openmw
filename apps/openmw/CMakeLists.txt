@@ -113,7 +113,7 @@ file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript)
 ADD_CUSTOM_COMMAND(OUTPUT
     ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.hpp ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp
     COMMAND extensiontool ${CMAKE_CURRENT_SOURCE_DIR}/mwscript
-    DEPENDS extensiontool ${CMAKE_SOURCE_DIR}/apps/extensiontool/extensiontool.cpp)
+    DEPENDS extensiontool)
 
 set(BINDINGS_FILES
 ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp
@@ -122,14 +122,12 @@ ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings0.cpp)
 set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
 
 set(SWIG_MODULE_openmw_EXTRA_DEPS
-${BINDINGS_FILES}
-${CMAKE_SOURCE_DIR}/apps/extensiontool.cpp
-extensiontool)
+extensiontool
+${BINDINGS_FILES})
 
 set(SWIG_MODULE_lua-openmw_EXTRA_DEPS
-${BINDINGS_FILES}
-${CMAKE_SOURCE_DIR}/apps/extensiontool.cpp
-extensiontool)
+extensiontool
+${BINDINGS_FILES})
 
 SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_SOURCE_DIR}/mwscript/swig_interface.i PROPERTIES CPLUSPLUS ON)
 
@@ -140,7 +138,12 @@ SWIG_ADD_MODULE(lua-openmw lua mwscript/swig_interface.i)#luaopen_openmw, everyt
 SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript")
 
 INSTALL(TARGETS ${SWIG_MODULE_openmw_REAL_NAME} ${SWIG_MODULE_lua-openmw_REAL_NAME} DESTINATION ${OPENMW_EXTENSIONSDIR} )
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/files/testing.py ${CMAKE_BINARY_DIR}/openmw.py DESTINATION ${OPENMW_EXTENSIONSDIR} )
+INSTALL(
+FILES
+${CMAKE_SOURCE_DIR}/files/testing.py
+${CMAKE_SOURCE_DIR}/files/testing.lua
+${CMAKE_BINARY_DIR}/openmw.py
+DESTINATION ${OPENMW_EXTENSIONSDIR} )
 
 #END SWIG STUFF
 

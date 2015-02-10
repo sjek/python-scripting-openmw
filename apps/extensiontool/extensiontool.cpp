@@ -42,7 +42,7 @@ class CodeGenerator
 void CodeGenerator::topGenerator()
 {
     mHeaderFile << "#ifndef OPENMWBINDINGS_HPP\n#define OPENMWBINDINGS_HPP\n\n";
-    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n";
+    mHeaderFile << "#include <string>\n\n#include \"lua.hpp\"\n\n#include <components/interpreter/types.hpp>\n";
     mHeaderFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n\n";
     mHeaderFile << "namespace MWScript { class InterpreterContext; }\n\n";
     mHeaderFile << "namespace MWScriptExtensions\n{\n";
@@ -62,12 +62,16 @@ void CodeGenerator::topGenerator()
     mImpFile << "namespace MWScriptExtensions\n{\n";
     //mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
     mImpFile << "    Interpreter::Interpreter interpreter;\n";
+    mImpFile << "    lua_State *luaState=NULL;\n";
     mImpFile << "    bool opcodesInstalled=false;\n";
+    mImpFile << "    bool pythonInitialized=false;\n";
     mImpFile << "    MWScript::InterpreterContext *context=NULL;\n";
     mImpFile << "    Interpreter::Data stackReturn;\n\n";
     //mHeaderFile << "    extern Interpreter::Interpreter *interpreter;\n";
     mHeaderFile << "    extern Interpreter::Interpreter interpreter;\n";
+    mHeaderFile << "    extern lua_State *luaState;\n";
     mHeaderFile << "    extern bool opcodesInstalled;\n";
+    mHeaderFile << "    extern bool pythonInitialized;\n";
     mHeaderFile << "    extern MWScript::InterpreterContext *context;\n";
     mHeaderFile << "    extern Interpreter::Data stackReturn;\n\n";
 }
