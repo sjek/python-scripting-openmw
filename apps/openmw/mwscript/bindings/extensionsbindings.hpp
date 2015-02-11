@@ -1,5 +1,7 @@
-#ifndef OPENMWBINDINGS_HPP
-#define OPENMWBINDINGS_HPP
+//THIS FILE IS CREATED BY EXTENSIONSTOOL, DO NOT EDIT
+
+#ifndef EXTENSIONSBINDINGS_HPP
+#define EXTENSIONSBINDINGS_HPP
 
 #include <string>
 
@@ -8,17 +10,9 @@
 #include <components/interpreter/types.hpp>
 #include <components/interpreter/interpreter.hpp>  // for Interpreter
 
-namespace MWScript { class InterpreterContext; }
 
 namespace MWScriptExtensions
 {
-    extern Interpreter::Interpreter interpreter;
-    extern lua_State *luaState;
-    extern bool opcodesInstalled;
-    extern bool pythonInitialized;
-    extern MWScript::InterpreterContext *context;
-    extern Interpreter::Data stackReturn;
-
     void activate(std::string arg0);
     void additem(std::string arg0, std::string arg1, Interpreter::Type_Integer arg2);
     void addsoulgem(std::string arg0, std::string arg1, std::string arg2);

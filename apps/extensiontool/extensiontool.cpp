@@ -26,8 +26,8 @@ class CodeGenerator
     public:
         CodeGenerator(std::string directory = "")
         {
-            mHeaderFile.open (std::string(directory+"openmwbindings.hpp").c_str());
-            mImpFile.open (std::string(directory+"openmwbindings.cpp").c_str());
+            mHeaderFile.open (std::string(directory+"extensionsbindings.hpp").c_str());
+            mImpFile.open (std::string(directory+"extensionsbindings.cpp").c_str());
             Compiler::registerExtensions(mExtensions);
             mExtensions.listKeywords(mKeywords);
         }
@@ -41,13 +41,14 @@ class CodeGenerator
 
 void CodeGenerator::topGenerator()
 {
-    mHeaderFile << "#ifndef OPENMWBINDINGS_HPP\n#define OPENMWBINDINGS_HPP\n\n";
+    mHeaderFile << "//THIS FILE IS CREATED BY EXTENSIONSTOOL, DO NOT EDIT\n\n";
+    mHeaderFile << "#ifndef EXTENSIONSBINDINGS_HPP\n#define EXTENSIONSBINDINGS_HPP\n\n";
     mHeaderFile << "#include <string>\n\n#include \"lua.hpp\"\n\n#include <components/interpreter/types.hpp>\n";
-    mHeaderFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n\n";
-    mHeaderFile << "namespace MWScript { class InterpreterContext; }\n\n";
+    mHeaderFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n\n\n";
     mHeaderFile << "namespace MWScriptExtensions\n{\n";
-    mImpFile << "#include \"openmwbindings.hpp\"\n\n";
-    mImpFile << "#include <stddef.h>                     // for NULL\n";
+    mImpFile << "//THIS FILE IS CREATED BY EXTENSIONSTOOL, DO NOT EDIT\n\n";
+    mImpFile << "#include \"extensionsbindings.hpp\"\n";
+    mImpFile << "#include \"bindingsvars.hpp\"\n\n";
     mImpFile << "#include <sys/types.h>                  // for uint\n";
     mImpFile << "#include <algorithm>                    // for copy\n";
     mImpFile << "#include <iterator>                     // for back_inserter, etc\n";
@@ -58,22 +59,8 @@ void CodeGenerator::topGenerator()
     mImpFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n";
     mImpFile << "#include <components/misc/stringops.hpp>  // for StringUtils\n";
     mImpFile << "#include <components/interpreter/types.hpp>  // for Type_Code, etc\n\n";
-    mImpFile << "#include \"interpretercontext.hpp\"\n\n";
+    mImpFile << "#include \"../interpretercontext.hpp\"\n\n";
     mImpFile << "namespace MWScriptExtensions\n{\n";
-    //mImpFile << "    Interpreter::Interpreter *interpreter=NULL;\n";
-    mImpFile << "    Interpreter::Interpreter interpreter;\n";
-    mImpFile << "    lua_State *luaState=NULL;\n";
-    mImpFile << "    bool opcodesInstalled=false;\n";
-    mImpFile << "    bool pythonInitialized=false;\n";
-    mImpFile << "    MWScript::InterpreterContext *context=NULL;\n";
-    mImpFile << "    Interpreter::Data stackReturn;\n\n";
-    //mHeaderFile << "    extern Interpreter::Interpreter *interpreter;\n";
-    mHeaderFile << "    extern Interpreter::Interpreter interpreter;\n";
-    mHeaderFile << "    extern lua_State *luaState;\n";
-    mHeaderFile << "    extern bool opcodesInstalled;\n";
-    mHeaderFile << "    extern bool pythonInitialized;\n";
-    mHeaderFile << "    extern MWScript::InterpreterContext *context;\n";
-    mHeaderFile << "    extern Interpreter::Data stackReturn;\n\n";
 }
 void CodeGenerator::bottomGenerator()
 {

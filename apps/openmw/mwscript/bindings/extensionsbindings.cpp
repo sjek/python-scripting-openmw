@@ -1,6 +1,8 @@
-#include "openmwbindings.hpp"
+//THIS FILE IS CREATED BY EXTENSIONSTOOL, DO NOT EDIT
 
-#include <stddef.h>                     // for NULL
+#include "extensionsbindings.hpp"
+#include "bindingsvars.hpp"
+
 #include <sys/types.h>                  // for uint
 #include <algorithm>                    // for copy
 #include <iterator>                     // for back_inserter, etc
@@ -13,17 +15,10 @@
 #include <components/misc/stringops.hpp>  // for StringUtils
 #include <components/interpreter/types.hpp>  // for Type_Code, etc
 
-#include "interpretercontext.hpp"
+#include "../interpretercontext.hpp"
 
 namespace MWScriptExtensions
 {
-    Interpreter::Interpreter interpreter;
-    lua_State *luaState=NULL;
-    bool opcodesInstalled=false;
-    bool pythonInitialized=false;
-    MWScript::InterpreterContext *context=NULL;
-    Interpreter::Data stackReturn;
-
     void activate(std::string arg0)
     {
         Interpreter::Type_Code codeword = 0xca000075;//codeword without arguments

@@ -107,16 +107,17 @@ find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
 FIND_PACKAGE(SWIG REQUIRED)
 INCLUDE(${SWIG_USE_FILE})
 
-file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript/bindings)
 
 ADD_CUSTOM_COMMAND(OUTPUT
-    ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.hpp ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp
-    COMMAND extensiontool ${CMAKE_CURRENT_SOURCE_DIR}/mwscript
+    ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.hpp ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.cpp
+    COMMAND extensiontool ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/
     DEPENDS extensiontool)
 
 set(BINDINGS_FILES
-${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/mwscript/openmwbindings0.cpp)
+${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings0.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/bindingsvars.cpp)
 
 set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
 
@@ -128,13 +129,13 @@ set(SWIG_MODULE_lua-openmw_EXTRA_DEPS
 extensiontool
 ${BINDINGS_FILES})
 
-SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_SOURCE_DIR}/mwscript/swig_interface.i PROPERTIES CPLUSPLUS ON)
+SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/swig_interface.i PROPERTIES CPLUSPLUS ON)
 
-SWIG_ADD_MODULE(openmw python mwscript/swig_interface.i)
-SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript")
+SWIG_ADD_MODULE(openmw python mwscript/bindings/swig_interface.i)
+SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings")
 
-SWIG_ADD_MODULE(lua-openmw lua mwscript/swig_interface.i)#luaopen_openmw, everything up to and including the dash is removed
-SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript")
+SWIG_ADD_MODULE(lua-openmw lua mwscript/bindings/swig_interface.i)#luaopen_openmw, everything up to and including the dash is removed
+SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings")
 
 INSTALL(TARGETS ${SWIG_MODULE_openmw_REAL_NAME} ${SWIG_MODULE_lua-openmw_REAL_NAME} DESTINATION ${OPENMW_EXTENSIONSDIR} )
 INSTALL(FILES

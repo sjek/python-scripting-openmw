@@ -1,5 +1,5 @@
-//#include "openmwbindings.hpp"
-//#include "openmwbindings0.hpp"
+//#include "extensionbindings.hpp"
+//#include "extensionbindings0.hpp"
 
 //#include "interpretercontext.hpp"
 //#include "globalscripts.hpp"
@@ -25,19 +25,20 @@
 #include <iostream>                     // for operator<<, cout, ostream, etc
 #include <string>                       // for string, operator<<, etc
 #include <vector>
+#include <exception>                    // for exception
 
-#include "../mwbase/environment.hpp"    // for Environment
-#include "../mwbase/scriptmanager.hpp"  // for ScriptManager
-#include "locals.hpp"  // for Locals
-#include "../mwworld/class.hpp"         // for Class
-#include "../mwworld/ptr.hpp"           // for Ptr
-#include "compilercontext.hpp"
-#include "components/interpreter/interpreter.hpp"
-#include "components/interpreter/types.hpp"
-#include "globalscripts.hpp"            // for GlobalScripts
-#include "interpretercontext.hpp"       // for InterpreterContext
-#include "openmwbindings.hpp"           // for context
-#include "openmwbindings0.hpp"
+#include "../../mwbase/environment.hpp"    // for Environment
+#include "../../mwbase/scriptmanager.hpp"  // for ScriptManager
+#include "../locals.hpp"  // for Locals
+#include "../../mwworld/class.hpp"         // for Class
+#include "../../mwworld/ptr.hpp"           // for Ptr
+#include "../compilercontext.hpp"
+#include <components/interpreter/interpreter.hpp>
+#include <components/interpreter/types.hpp>
+#include "../globalscripts.hpp"            // for GlobalScripts
+#include "../interpretercontext.hpp"       // for InterpreterContext
+#include "extensionsbindings0.hpp"           // for context
+#include "bindingsvars.hpp"
 
 namespace MWScriptExtensions
 {

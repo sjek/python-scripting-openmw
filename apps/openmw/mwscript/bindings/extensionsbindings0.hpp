@@ -1,5 +1,5 @@
-#ifndef OPENMWBINDINGS0_HPP
-#define OPENMWBINDINGS0_HPP
+#ifndef EXTENSIONSBINDINGS0_HPP
+#define EXTENSIONSBINDINGS0_HPP
 
 #include <string>
 
@@ -9,4 +9,4 @@ namespace MWScriptExtensions
     float omwget(std::string name);
     void omwcall(std::string command);
 }
-#endif // OPENMWBINDINGS0_HPP
+#endif

@@ -1,5 +1,5 @@
 
-#include "externalscriptextensions.hpp"
+#include "bindings/bindingsvars.hpp"
 
 #include <Python.h>
 
@@ -14,7 +14,7 @@
 
 #include "interpretercontext.hpp"
 #include "extensions.hpp"
-#include "openmwbindings.hpp"
+#include "bindings/extensionsbindings.hpp"
 #include "ref.hpp"
 
 #include <iostream>
