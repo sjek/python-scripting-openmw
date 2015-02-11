@@ -12,9 +12,9 @@ function testing.run()
     print("random100: "..omw.omwget("random100"))
     omw.omwset("random100",42)
     print("random100: "..omw.omwget("random100"))
-    print("SomethingScript.hello: "..omw.omwget("SomethingScript.hello"))
-    omw.omwset("SomethingScript.hello",42.0)
-    print("SomethingScript.hello: "..omw.omwget("SomethingScript.hello"))
+--    print("SomethingScript.hello: "..omw.omwget("SomethingScript.hello"))
+--    omw.omwset("SomethingScript.hello",42.0)
+--    print("SomethingScript.hello: "..omw.omwget("SomethingScript.hello"))
     omw.omwcall("MessageBox, \"This is a simple message\"")
 end
 

@@ -131,14 +131,14 @@ namespace MWScript
                             luaL_openlibs(MWScriptExtensions::luaState);
                             Files::PathContainer extensionDirs = getextensionsdir();
 
-                            for (unsigned i=0; i<extensionDirs.size(); i++)
+                            for (unsigned i=extensionDirs.size(); i-- > 0;)//reverse order
                             {
                                 std::string pathAppend("package.cpath=package.cpath..\";" + extensionDirs.at(i).string() +  "/?.so;"+ extensionDirs.at(i).string()+"/?.dll\"");
                                 luaL_dostring(MWScriptExtensions::luaState, pathAppend.c_str());
+                                pathAppend = "package.path=package.path..\";" + extensionDirs.at(i).string() +  "/?.lua\"";
+                                luaL_dostring(MWScriptExtensions::luaState, pathAppend.c_str());
+                                std::cout << pathAppend << "\n";
                             }
-                            luaL_dostring(MWScriptExtensions::luaState, "print(package.cpath)");
-
-                            //alternatively, call luaL_loadlib(extensiondirectory+"liblua-openmw.so or dll", luaopen_openmw); then register it
                             assert(!luaL_dostring(MWScriptExtensions::luaState, "omw=require(\"liblua-openmw\")"));
                             //lua scripts are modules with run() function
                         }
@@ -161,7 +161,7 @@ namespace MWScript
                     }
                     else
                     {
-                        std::cout << "StartExternalScript: " << scriptname << "is not valid external script name";
+                        std::cerr << "StartExternalScript: " << scriptname << "is not valid external script name";
                     }
                 }
         };
