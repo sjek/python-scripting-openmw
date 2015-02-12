@@ -53,7 +53,6 @@ add_openmw_dir (mwscript
     guiextensions soundextensions skyextensions statsextensions containerextensions
     aiextensions controlextensions extensions globalscripts ref dialogueextensions
     animationextensions transformationextensions consoleextensions userextensions
-    externalscriptextensions
     )
 
 add_openmw_dir (mwsound
@@ -122,6 +121,9 @@ if(LUA_SCRIPTING)
         ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings0.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/bindingsvars.cpp)
 
+    set(BINDINGS_EXTENSION
+        ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/externalscriptextensions.cpp)
+
     set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
 
     set(SWIG_MODULE_lua-openmw_EXTRA_DEPS extensiontool ${BINDINGS_FILES})
@@ -144,7 +146,7 @@ if (NOT ANDROID)
         ${OPENMW_FILES}
         ${GAME} ${GAME_HEADER}
         ${APPLE_BUNDLE_RESOURCES}
-        ${BINDINGS_FILES}
+        ${BINDINGS_FILES} ${BINDINGS_EXTENSION}
     )
 else ()
     add_library(openmw
