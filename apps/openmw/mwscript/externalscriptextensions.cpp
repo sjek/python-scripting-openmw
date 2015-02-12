@@ -1,23 +1,29 @@
 
-#include "bindings/bindingsvars.hpp"
-
-#include <Python.h>
-
-#include <components/compiler/extensions.hpp>
+#include <assert.h>
+#include <boost/filesystem/path.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/value_semantic.hpp>
+#include <boost/program_options/variables_map.hpp>
 #include <components/compiler/opcodes.hpp>
-
-#include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
-#include <components/interpreter/opcodes.hpp>
-#include <components/interpreter/context.hpp>
 #include <components/files/configurationmanager.hpp>
-
-#include "interpretercontext.hpp"
-#include "extensions.hpp"
-#include "bindings/extensionsbindings.hpp"
-#include "ref.hpp"
-
+#include <components/interpreter/interpreter.hpp>
+#include <components/interpreter/opcodes.hpp>
+#include <components/interpreter/runtime.hpp>
 #include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+
+#include "bindings/bindingsvars.hpp"
+#include "components/files/multidircollection.hpp"
+#include "components/interpreter/types.hpp"
+#include "extensions.hpp"
+#include "interpretercontext.hpp"
+extern "C" {
+#include "lauxlib.h"                    // for luaL_dostring, etc
+#include "lualib.h"                     // for luaL_openlibs
+}
 
 namespace MWScript
 {
@@ -73,53 +79,7 @@ namespace MWScript
 
                     if (scriptname.find(".py") != std::string::npos)
                     {
-                        MWScript::InterpreterContext pythonContext = static_cast<InterpreterContext&> (runtime.getContext());
-                        MWScriptExtensions::context = &pythonContext;
-                        if(!MWScriptExtensions::pythonInitialized)
-                        {
-                            Py_Initialize();
-
-                            Files::PathContainer extensionDirs = getextensionsdir();
-
-                            PyRun_SimpleString("import sys\n");
-                            for (unsigned i=0; i<extensionDirs.size(); i++)
-                            {
-                                std::cout << extensionDirs.at(i).string() << "\n";
-                                std::cout.flush();
-                                std::string pathAppend("sys.path.append(\"" + extensionDirs.at(i).string() +  "\")\n");
-                                std::cout << pathAppend;
-                                std::cout.flush();
-                                PyRun_SimpleString(pathAppend.c_str());
-                            }
-
-                            //need to find directories and append to sys.path, make new .cfg variable for extensions
-                            // "lib/games/openmw" and look in data dirs for other scripts
-                            // see "opemw/plugins/mygui_.../plugin.cpp for cfgManager.readConfiguration
-
-                            PyRun_SimpleString("from openmw import *\n");
-                            //PyRun_SimpleString("setattr(__main__, openmw, sys.modules[openmw])");
-                            //PyRun_SimpleString("from openmw import *\n");
-                            MWScriptExtensions::pythonInitialized=true;
-
-                        }
-                        //std::string executeString("for paths in reversed(sys.path):\n    try:\n        exec(open(paths+'/"+scriptname+"').read())\n        break\n    except:\n        continue\n");
-
-                        //PyRun_SimpleString(executeString.c_str());
-                        std::string pythonModuleName = scriptname.substr(0, scriptname.size()-3);
-                        std::string executeString("import "+pythonModuleName);
-                        PyRun_SimpleString(executeString.c_str());
-                        executeString = pythonModuleName + ".run()";
-                        PyRun_SimpleString(executeString.c_str());
-
-
-
-                        //std::string execfile("exec(open("+scriptname +").read())\n");
-                        //PyRun_SimpleString(execfile.c_str());
-                        //PyThreadState* newPythonInterpreter = Py_NewInterpreter();
-                        //FILE *file_1 = fopen(scriptname.c_str(),"r");
-                        //PyRun_SimpleFileEx(file_1,scriptname.c_str(),1);
-                        //Py_EndInterpreter(newPythonInterpreter);
-                        MWScriptExtensions::context = NULL;
+                        std::cerr << "Python scripting not enabled: " << scriptname << "\n";
                     }
                     else if (scriptname.find(".lua") != std::string::npos)
                     {

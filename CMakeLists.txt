@@ -71,6 +71,9 @@ option(BUILD_MYGUI_PLUGIN "build MyGUI plugin for OpenMW resources, to use with 
 # OS X deployment
 option(OPENMW_OSX_DEPLOYMENT OFF)
 
+#Lua scripting support
+option(LUA_SCRIPTING "Enable Lua scripting extensions" ON)
+
 # Location of morrowind data files
 if (APPLE)
     set(MORROWIND_DATA_FILES "./data" CACHE PATH "location of Morrowind data files")

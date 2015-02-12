@@ -5,11 +5,7 @@
 
 #include <string>
 
-#include "lua.hpp"
-
 #include <components/interpreter/types.hpp>
-#include <components/interpreter/interpreter.hpp>  // for Interpreter
-
 
 namespace MWScriptExtensions
 {

@@ -103,51 +103,40 @@ endif(WIN32)
 
 find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
 
-#SWIG stuff
-FIND_PACKAGE(SWIG REQUIRED)
-INCLUDE(${SWIG_USE_FILE})
+if(LUA_SCRIPTING)
+    add_definitions(-DLUA_SCRIPTING)
+    FIND_PACKAGE(SWIG REQUIRED)
+    INCLUDE(${SWIG_USE_FILE})
 
-file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript/bindings)
+    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mwscript/bindings)
 
-ADD_CUSTOM_COMMAND(OUTPUT
-    ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.hpp ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.cpp
-    COMMAND extensiontool ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/
-    DEPENDS extensiontool)
+    ADD_CUSTOM_COMMAND(
+        OUTPUT
+            ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.hpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.cpp
+        COMMAND extensiontool ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/
+        DEPENDS extensiontool)
 
-set(BINDINGS_FILES
-${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings0.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/bindingsvars.cpp)
+    set(BINDINGS_FILES
+        ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/extensionsbindings0.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/bindingsvars.cpp)
 
-set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
+    set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
 
-set(SWIG_MODULE_openmw_EXTRA_DEPS
-extensiontool
-${BINDINGS_FILES})
+    set(SWIG_MODULE_lua-openmw_EXTRA_DEPS extensiontool ${BINDINGS_FILES})
 
-set(SWIG_MODULE_lua-openmw_EXTRA_DEPS
-extensiontool
-${BINDINGS_FILES})
+    SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/swig_interface.i PROPERTIES CPLUSPLUS ON)
 
-SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings/swig_interface.i PROPERTIES CPLUSPLUS ON)
+    SWIG_ADD_MODULE(lua-openmw lua mwscript/bindings/swig_interface.i)#luaopen_openmw, everything up to and including the dash is removed
+    SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings")
 
-SWIG_ADD_MODULE(openmw python mwscript/bindings/swig_interface.i)
-SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings")
+    INSTALL(TARGETS ${SWIG_MODULE_lua-openmw_REAL_NAME} DESTINATION ${OPENMW_EXTENSIONSDIR} )
 
-SWIG_ADD_MODULE(lua-openmw lua mwscript/bindings/swig_interface.i)#luaopen_openmw, everything up to and including the dash is removed
-SET_SOURCE_FILES_PROPERTIES(${swig_generated_file_fullname} PROPERTIES COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/mwscript/bindings")
+    INSTALL(FILES ${CMAKE_SOURCE_DIR}/files/testing.lua DESTINATION ${OPENMW_EXTENSIONSDIR} )
 
-INSTALL(TARGETS ${SWIG_MODULE_openmw_REAL_NAME} ${SWIG_MODULE_lua-openmw_REAL_NAME} DESTINATION ${OPENMW_EXTENSIONSDIR} )
-INSTALL(FILES
-${CMAKE_SOURCE_DIR}/files/testing.py
-${CMAKE_SOURCE_DIR}/files/testing.lua
-${CMAKE_BINARY_DIR}/openmw.py
-DESTINATION ${OPENMW_EXTENSIONSDIR} )
-FILE(COPY
-${CMAKE_SOURCE_DIR}/files/testing.py
-${CMAKE_SOURCE_DIR}/files/testing.lua
-DESTINATION ${CMAKE_BINARY_DIR} )
-#END SWIG STUFF
+    FILE(COPY ${CMAKE_SOURCE_DIR}/files/testing.lua DESTINATION ${CMAKE_BINARY_DIR} )
+endif(LUA_SCRIPTING)
 
 if (NOT ANDROID)
     add_executable(openmw
@@ -234,12 +223,11 @@ if (BUILD_WITH_CODE_COVERAGE)
   target_link_libraries(openmw gcov)
 endif()
 
-#PYTHON STUFF
-FIND_PACKAGE(PythonLibs)
-FIND_PACKAGE(Lua51 REQUIRED)
-INCLUDE_DIRECTORIES(${PYTHON_INCLUDE_DIRS} ${LUA_INCLUDE_DIR})
-target_link_libraries(openmw ${PYTHON_LIBRARIES} ${LUA_LIBRARIES})
-#END PYTHON STUFF
+if(LUA_SCRIPTING)
+    FIND_PACKAGE(Lua51 REQUIRED)
+    INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIR})
+    target_link_libraries(openmw ${LUA_LIBRARIES})
+endif(LUA_SCRIPTING)
 
 if (MSVC)
     # Debug version needs increased number of sections beyond 2^16

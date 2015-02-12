@@ -43,8 +43,7 @@ void CodeGenerator::topGenerator()
 {
     mHeaderFile << "//THIS FILE IS CREATED BY EXTENSIONSTOOL, DO NOT EDIT\n\n";
     mHeaderFile << "#ifndef EXTENSIONSBINDINGS_HPP\n#define EXTENSIONSBINDINGS_HPP\n\n";
-    mHeaderFile << "#include <string>\n\n#include \"lua.hpp\"\n\n#include <components/interpreter/types.hpp>\n";
-    mHeaderFile << "#include <components/interpreter/interpreter.hpp>  // for Interpreter\n\n\n";
+    mHeaderFile << "#include <string>\n\n#include <components/interpreter/types.hpp>\n\n";
     mHeaderFile << "namespace MWScriptExtensions\n{\n";
     mImpFile << "//THIS FILE IS CREATED BY EXTENSIONSTOOL, DO NOT EDIT\n\n";
     mImpFile << "#include \"extensionsbindings.hpp\"\n";
