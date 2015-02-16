@@ -33,7 +33,7 @@ Programmers
     Douglas Diniz (Dgdiniz)
     Douglas Mencken (dougmencken)
     dreamer-dead
-    dteviot
+    David Teviotdale (dteviot)
     Edmondo Tommasina (edmondo)
     Eduard Cot (trombonecot)
     Eli2
@@ -78,6 +78,7 @@ Programmers
     naclander
     Narmo
     Nathan Jeffords (blunted2night)
+    NeveHanter
     Nikolay Kasyanov (corristo)
     nobrakal
     Nolan Poe (nopoe)

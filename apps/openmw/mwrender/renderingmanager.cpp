@@ -175,7 +175,7 @@ RenderingManager::RenderingManager(OEngine::Render::OgreRenderer& _rend, const b
     mDebugging = new Debugging(mRootNode, engine);
     mLocalMap = new MWRender::LocalMap(&mRendering, this);
 
-    mWater = new MWRender::Water(mRendering.getCamera(), this);
+    mWater = new MWRender::Water(mRendering.getCamera(), this, mFallback);
 
     setMenuTransparency(Settings::Manager::getFloat("menu transparency", "GUI"));
 }
@@ -632,12 +632,12 @@ void RenderingManager::sunDisable(bool real)
     }
 }
 
-void RenderingManager::setSunDirection(const Ogre::Vector3& direction, bool is_moon)
+void RenderingManager::setSunDirection(const Ogre::Vector3& direction, bool is_night)
 {
     // direction * -1 (because 'direction' is camera to sun vector and not sun to camera),
     if (mSun) mSun->setDirection(Vector3(-direction.x, -direction.y, -direction.z));
 
-    mSkyManager->setSunDirection(direction, is_moon);
+    mSkyManager->setSunDirection(direction, is_night);
 }
 
 void RenderingManager::setGlare(bool glare)
@@ -693,6 +693,7 @@ void RenderingManager::enableLights(bool sun)
 void RenderingManager::notifyWorldSpaceChanged()
 {
     mEffectManager->clear();
+    mWater->clearRipples();
 }
 
 Ogre::Vector4 RenderingManager::boundingBoxToScreen(Ogre::AxisAlignedBox bounds)

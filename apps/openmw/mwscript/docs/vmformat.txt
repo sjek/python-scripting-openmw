@@ -444,8 +444,9 @@ op 0x20002fd: AddToLevItem
 op 0x20002fe: RemoveFromLevItem
 op 0x20002ff: SetFactionReaction
 op 0x2000300: EnableLevelupMenu
-op 0x2000301: StartExternalScript
-op 0x2000302: ExternalScriptReturn
+op 0x2000301: ToggleScripts
+op 0x2000302: StartExternalScript
+op 0x2000303: ExternalScriptReturn
 
 
-opcodes 0x2000303-0x3ffffff unused
+opcodes 0x2000304-0x3ffffff unused

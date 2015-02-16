@@ -1,11 +1,11 @@
 #ifndef GAME_MWBASE_WINDOWMANAGER_H
 #define GAME_MWBASE_WINDOWMANAGER_H
 
+#include <stdint.h>
 #include <string>
 #include <vector>
 #include <map>
-
-#include "../mwmechanics/stat.hpp"
+#include <set>
 
 #include "../mwgui/mode.hpp"
 
@@ -42,6 +42,14 @@ namespace ESM
     struct CellId;
 }
 
+namespace MWMechanics
+{
+    class AttributeValue;
+    template<typename T>
+    class DynamicStat;
+    class SkillValue;
+}
+
 namespace MWWorld
 {
     class CellStore;
@@ -63,6 +71,7 @@ namespace MWGui
     class ContainerWindow;
     class DialogueWindow;
     class WindowModal;
+    class JailScreen;
 
     enum ShowInDialogueMode {
         ShowInDialogueMode_IfPossible,
@@ -113,6 +122,8 @@ namespace MWBase
 
             virtual void removeGuiMode (MWGui::GuiMode mode) = 0;
             ///< can be anywhere in the stack
+
+            virtual void goToJail(int days) = 0;
 
             virtual void updatePlayer() = 0;
 

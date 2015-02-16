@@ -12,6 +12,7 @@
 #include "../mwbase/windowmanager.hpp"
 
 #include <components/settings/settings.hpp>
+#include <components/to_utf8/to_utf8.hpp>
 
 #include "mapwindow.hpp"
 
@@ -90,6 +91,7 @@ namespace MWGui
   class WindowModal;
   class ScreenFader;
   class DebugWindow;
+  class JailScreen;
 
   class WindowManager : public MWBase::WindowManager
   {
@@ -127,6 +129,8 @@ namespace MWGui
     virtual void pushGuiMode(GuiMode mode);
     virtual void popGuiMode();
     virtual void removeGuiMode(GuiMode mode); ///< can be anywhere in the stack
+
+    virtual void goToJail(int days);
 
     virtual GuiMode getMode() const;
     virtual bool containsMode(GuiMode mode) const;
@@ -404,6 +408,7 @@ namespace MWGui
     ScreenFader* mHitFader;
     ScreenFader* mScreenFader;
     DebugWindow* mDebugWindow;
+    JailScreen* mJailScreen;
 
     Translation::Storage& mTranslationDataStorage;
 

@@ -44,6 +44,7 @@
 
 #include "player.hpp"
 #include "manualref.hpp"
+#include "cellstore.hpp"
 #include "cellfunctors.hpp"
 #include "containerstore.hpp"
 #include "inventorystore.hpp"
@@ -150,7 +151,8 @@ namespace MWWorld
       mFallback(fallbackMap), mTeleportEnabled(true), mLevitationEnabled(true),
       mGodMode(false), mContentFiles (contentFiles),
       mGoToJail(false), mDaysInPrison(0),
-      mStartCell (startCell), mStartupScript(startupScript)
+      mStartCell (startCell), mStartupScript(startupScript),
+      mScriptsEnabled(true)
     {
         mPhysics = new PhysicsSystem(renderer);
         mPhysEngine = mPhysics->getEngine();
@@ -292,6 +294,7 @@ namespace MWWorld
         mDoorStates.clear();
 
         mGodMode = false;
+        mScriptsEnabled = true;
         mSky = true;
         mTeleportEnabled = true;
         mLevitationEnabled = true;
@@ -2586,6 +2589,17 @@ namespace MWWorld
         return mGodMode;
     }
 
+    bool World::toggleScripts()
+    {
+        mScriptsEnabled = !mScriptsEnabled;
+        return mScriptsEnabled;
+    }
+
+    bool World::getScriptsEnabled() const
+    {
+        return mScriptsEnabled;
+    }
+
     void World::loadContentFiles(const Files::Collections& fileCollections,
         const std::vector<std::string>& content, ContentLoader& contentLoader)
     {
@@ -2885,6 +2899,9 @@ namespace MWWorld
                 }
                 else if (ptr.getClass().getTypeName() != typeid(ESM::Creature).name())
                     return false;
+
+                if (ptr.getClass().getCreatureStats(ptr).isDead())
+                    return false;
             }
             if (mType == World::Detect_Key && !ptr.getClass().isKey(ptr))
                 return false;
@@ -3019,59 +3036,7 @@ namespace MWWorld
 
             MWBase::Environment::get().getWindowManager()->removeGuiMode(MWGui::GM_Dialogue);
 
-            MWWorld::Ptr player = getPlayerPtr();
-            teleportToClosestMarker(player, "prisonmarker");
-
-            int days = mDaysInPrison;
-            advanceTime(days * 24);
-            for (int i=0; i<days*24; ++i)
-                MWBase::Environment::get().getMechanicsManager ()->rest (true);
-
-            std::set<int> skills;
-            for (int day=0; day<days; ++day)
-            {
-                int skill = std::rand()/ (static_cast<double> (RAND_MAX) + 1) * ESM::Skill::Length;
-                skills.insert(skill);
-
-                MWMechanics::SkillValue& value = player.getClass().getNpcStats(player).getSkill(skill);
-                if (skill == ESM::Skill::Security || skill == ESM::Skill::Sneak)
-                    value.setBase(std::min(100, value.getBase()+1));
-                else
-                    value.setBase(value.getBase()-1);
-            }
-
-            const Store<ESM::GameSetting>& gmst = getStore().get<ESM::GameSetting>();
-
-            std::string message;
-            if (days == 1)
-                message = gmst.find("sNotifyMessage42")->getString();
-            else
-                message = gmst.find("sNotifyMessage43")->getString();
-
-            std::stringstream dayStr;
-            dayStr << days;
-            if (message.find("%d") != std::string::npos)
-                message.replace(message.find("%d"), 2, dayStr.str());
-
-            for (std::set<int>::iterator it = skills.begin(); it != skills.end(); ++it)
-            {
-                std::string skillName = gmst.find(ESM::Skill::sSkillNameIds[*it])->getString();
-                std::stringstream skillValue;
-                skillValue << player.getClass().getNpcStats(player).getSkill(*it).getBase();
-                std::string skillMsg = gmst.find("sNotifyMessage44")->getString();
-                if (*it == ESM::Skill::Sneak || *it == ESM::Skill::Security)
-                    skillMsg = gmst.find("sNotifyMessage39")->getString();
-
-                if (skillMsg.find("%s") != std::string::npos)
-                    skillMsg.replace(skillMsg.find("%s"), 2, skillName);
-                if (skillMsg.find("%d") != std::string::npos)
-                    skillMsg.replace(skillMsg.find("%d"), 2, skillValue.str());
-                message += "\n" + skillMsg;
-            }
-
-            std::vector<std::string> buttons;
-            buttons.push_back("#{sOk}");
-            MWBase::Environment::get().getWindowManager()->interactiveMessageBox(message, buttons);
+            MWBase::Environment::get().getWindowManager()->goToJail(mDaysInPrison);
         }
     }
 
@@ -3215,12 +3180,17 @@ namespace MWWorld
 
         breakInvisibility(actor);
 
-        if (!script.empty())
+        if (mScriptsEnabled)
         {
-            getLocalScripts().setIgnore (object);
-            MWBase::Environment::get().getScriptManager()->run (script, interpreterContext);
+            if (!script.empty())
+            {
+                getLocalScripts().setIgnore (object);
+                MWBase::Environment::get().getScriptManager()->run (script, interpreterContext);
+            }
+            if (!interpreterContext.hasActivationBeenHandled())
+                interpreterContext.executeActivation(object, actor);
         }
-        if (!interpreterContext.hasActivationBeenHandled())
+        else
             interpreterContext.executeActivation(object, actor);
     }
 

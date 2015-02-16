@@ -42,6 +42,7 @@
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
 
+#include "../mwmechanics/stat.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
 #include "../mwsound/soundmanagerimp.hpp"
@@ -91,6 +92,7 @@
 #include "draganddrop.hpp"
 #include "container.hpp"
 #include "controllers.hpp"
+#include "jailscreen.hpp"
 
 namespace MWGui
 {
@@ -143,6 +145,7 @@ namespace MWGui
       , mHitFader(NULL)
       , mScreenFader(NULL)
       , mDebugWindow(NULL)
+      , mJailScreen(NULL)
       , mTranslationDataStorage (translationDataStorage)
       , mCharGen(NULL)
       , mInputBlocker(NULL)
@@ -290,6 +293,7 @@ namespace MWGui
         mSoulgemDialog = new SoulgemDialog(mMessageBoxManager);
         mCompanionWindow = new CompanionWindow(mDragAndDrop, mMessageBoxManager);
         trackWindow(mCompanionWindow, "companion");
+        mJailScreen = new JailScreen();
 
         mWerewolfFader = new ScreenFader("textures\\werewolfoverlay.dds");
         mBlindnessFader = new ScreenFader("black.png");
@@ -402,6 +406,7 @@ namespace MWGui
         delete mScreenFader;
         delete mBlindnessFader;
         delete mDebugWindow;
+        delete mJailScreen;
 
         delete mCursorManager;
 
@@ -467,6 +472,7 @@ namespace MWGui
         mInventoryWindow->setTrading(false);
         mRecharge->setVisible(false);
         mVideoBackground->setVisible(false);
+        mJailScreen->setVisible(false);
 
         mHud->setVisible(mHudEnabled && mGuiEnabled);
         mToolTips->setVisible(mGuiEnabled);
@@ -611,6 +617,9 @@ namespace MWGui
                     break;
                 case GM_Journal:
                     mJournal->setVisible(true);
+                    break;
+                case GM_Jail:
+                    mJailScreen->setVisible(true);
                     break;
                 case GM_LoadingWallpaper:
                 case GM_Loading:
@@ -912,6 +921,7 @@ namespace MWGui
         mCompanionWindow->checkReferenceAvailable();
         mConsole->checkReferenceAvailable();
         mCompanionWindow->onFrame();
+        mJailScreen->onFrame(frameDuration);
 
         mWerewolfFader->update(frameDuration);
         mBlindnessFader->update(frameDuration);
@@ -1185,6 +1195,12 @@ namespace MWGui
         MWBase::Environment::get().getInputManager()->changeInputMode(!gameMode);
 
         updateVisible();
+    }
+
+    void WindowManager::goToJail(int days)
+    {
+        pushGuiMode(MWGui::GM_Jail);
+        mJailScreen->goToJail(days);
     }
 
     void WindowManager::setSelectedSpell(const std::string& spellId, int successChancePercent)
