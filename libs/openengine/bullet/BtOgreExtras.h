@@ -236,6 +236,7 @@ public:
         }
     }
 
+    using btIDebugDraw::drawLine;
     void drawLine(const btVector3& from,const btVector3& to,const btVector3& color)
     {
         mLineDrawer->addPoint(Convert::toOgre(from));

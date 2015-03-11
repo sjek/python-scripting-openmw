@@ -76,6 +76,7 @@ namespace CSMWorld
 
             virtual std::string getId (int index) const;
 
+            using CollectionBase::getIndex;
             virtual int getIndex (const std::string& id) const;
 
             virtual int getColumns() const;

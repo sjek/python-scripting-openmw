@@ -53,6 +53,7 @@ namespace Gui
 
         void redraw(bool scrollbarShown = false);
 
+        using MyGUI::Widget::onMouseWheel;
         void onMouseWheel(MyGUI::Widget* _sender, int _rel);
         void onItemSelected(MyGUI::Widget* _sender);
 

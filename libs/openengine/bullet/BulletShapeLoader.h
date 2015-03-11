@@ -92,6 +92,9 @@ private:
     /** \brief Private operator= . This is a forbidden operation. */
     BulletShapeManager& operator=(const BulletShapeManager &);
 
+    // hide ogre's load that's ambigious with ours
+    Ogre::ResourcePtr load(const Ogre::String&, const Ogre::String&, bool, Ogre::ManualResourceLoader*, const Ogre::NameValuePairList*, bool);
+
 
 public:
 
@@ -109,6 +112,7 @@ public:
                         bool isManual = false, Ogre::ManualResourceLoader* loader = 0,
                         const Ogre::NameValuePairList* createParams = 0);
 
+    using Ogre::ResourceManager::load;
     virtual BulletShapePtr load(const Ogre::String &name, const Ogre::String &group);
 
     static BulletShapeManager &getSingleton();
