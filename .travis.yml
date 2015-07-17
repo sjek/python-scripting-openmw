@@ -1,3 +1,4 @@
+sudo: false
 os:
  - linux
 # - osx
@@ -21,6 +22,32 @@ addons:
     build_command_prepend: "cmake . -DBUILD_UNITTESTS=FALSE -DBUILD_OPENCS=FALSE"
     build_command:   "make"
     branch_pattern: coverity_scan
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.6
+    - boost-latest
+    packages:
+    - libgtest-dev
+    - google-mock
+    - libboost-filesystem1.55-dev
+    - libboost-program-options1.55-dev
+    - libboost-system1.55-dev
+    - libboost-thread1.55-dev
+    - libavcodec-dev
+    - libavformat-dev
+    - libavutil-dev
+    - libswscale-dev
+    - libavresample-dev
+    - libbullet-dev
+    - libopenscenegraph-dev
+    - libmygui-dev
+    - libsdl2-dev
+    - libunshield-dev
+    - libtinyxml-dev
+    - libopenal-dev
+    - libqt4-dev
+    - cmake-data
 matrix:
   include:
     - os: linux
@@ -31,7 +58,7 @@ matrix:
     - env: ANALYZE="scan-build-3.6 --use-cc clang-3.6 --use-c++ clang++-3.6 "
 
 before_install:
- - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then ./CI/before_install.linux.sh; fi
+ #- if [ "${TRAVIS_OS_NAME}" = "linux" ]; then ./CI/before_install.linux.sh; fi
  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ./CI/before_install.osx.sh; fi
 before_script:
  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then ./CI/before_script.linux.sh; fi
