@@ -48,6 +48,7 @@ addons:
     - libopenal-dev
     - libqt4-dev
     - cmake-data
+    - clang-3.6
 matrix:
   include:
     - os: linux
