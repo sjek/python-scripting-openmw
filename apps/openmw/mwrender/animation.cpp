@@ -1,3 +1,4 @@
+#include "animation.hpp"
 
 #include <iomanip>
 #include <limits>
@@ -11,14 +12,18 @@
 
 #include <osgParticle/ParticleSystem>
 
+#include <components/nifosg/nifloader.hpp>
 
 #include <components/resource/resourcesystem.hpp>
 #include <components/resource/scenemanager.hpp>
 #include <components/resource/texturemanager.hpp>
 
+#include <components/nifosg/nifloader.hpp> // KeyframeHolder
+#include <components/nifosg/controller.hpp>
 
 #include <components/vfs/manager.hpp>
 
+#include <components/sceneutil/statesetupdater.hpp>
 #include <components/sceneutil/visitor.hpp>
 #include <components/sceneutil/lightmanager.hpp>
 #include <components/sceneutil/util.hpp>
