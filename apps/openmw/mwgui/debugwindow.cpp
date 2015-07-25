@@ -1,6 +1,5 @@
 #include "debugwindow.hpp"
 
-#include <MyGUI_TabControl.h>
 #include <MyGUI_TabItem.h>
 #include <MyGUI_RenderManager.h>
 #include <MyGUI_EditBox.h>

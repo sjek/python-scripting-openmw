@@ -13,7 +13,6 @@
 #include "../mwworld/inventorystore.hpp"
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
 
@@ -25,7 +24,6 @@
 
 #include "spellcasting.hpp"
 #include "autocalcspell.hpp"
-#include "npcstats.hpp"
 
 namespace
 {

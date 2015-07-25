@@ -1,17 +1,13 @@
 #include "cellstore.hpp"
 
 #include <iostream>
-#include <algorithm>
 
 #include <components/esm/cellstate.hpp>
-#include <components/esm/cellid.hpp>
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/objectstate.hpp>
 #include <components/esm/containerstate.hpp>
 #include <components/esm/npcstate.hpp>
 #include <components/esm/creaturestate.hpp>
-#include <components/esm/fogstate.hpp>
 #include <components/esm/creaturelevliststate.hpp>
 #include <components/esm/doorstate.hpp>
 
@@ -20,7 +16,6 @@
 
 #include "../mwmechanics/creaturestats.hpp"
 
-#include "ptr.hpp"
 #include "esmstore.hpp"
 #include "class.hpp"
 #include "containerstore.hpp"

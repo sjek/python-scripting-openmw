@@ -1,12 +1,10 @@
 #include "inventorywindow.hpp"
 
-#include <stdexcept>
 
 #include <MyGUI_Window.h>
 #include <MyGUI_ImageBox.h>
 #include <MyGUI_RenderManager.h>
 #include <MyGUI_InputManager.h>
-#include <MyGUI_Button.h>
 
 #include <osg/Texture2D>
 
@@ -25,7 +23,6 @@
 
 #include "../mwworld/inventorystore.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/action.hpp"
 #include "../mwscript/interpretercontext.hpp"
 #include "../mwrender/characterpreview.hpp"
 

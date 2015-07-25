@@ -1,22 +1,13 @@
 
 #include "dialoguemanagerimp.hpp"
 
-#include <cctype>
-#include <cstdlib>
-#include <algorithm>
-#include <iterator>
-#include <list>
 
-#include <components/esm/loaddial.hpp>
-#include <components/esm/loadinfo.hpp>
 #include <components/esm/dialoguestate.hpp>
 #include <components/esm/esmwriter.hpp>
 
 #include <components/compiler/exception.hpp>
-#include <components/compiler/errorhandler.hpp>
 #include <components/compiler/scanner.hpp>
 #include <components/compiler/locals.hpp>
-#include <components/compiler/output.hpp>
 #include <components/compiler/scriptparser.hpp>
 
 #include <components/interpreter/interpreter.hpp>
@@ -36,11 +27,9 @@
 
 #include "../mwgui/dialogue.hpp"
 
-#include "../mwscript/compilercontext.hpp"
 #include "../mwscript/interpretercontext.hpp"
 #include "../mwscript/extensions.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
 #include "filter.hpp"

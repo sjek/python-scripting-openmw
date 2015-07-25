@@ -6,8 +6,6 @@
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/refdata.hpp"
 
 #include "npcanimation.hpp"
 

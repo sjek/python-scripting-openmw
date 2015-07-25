@@ -5,7 +5,6 @@
 #include <components/resource/resourcesystem.hpp>
 #include <components/resource/scenemanager.hpp>
 
-#include <components/sceneutil/controller.hpp>
 
 #include "animation.hpp"
 #include "vismask.hpp"

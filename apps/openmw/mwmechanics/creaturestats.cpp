@@ -1,6 +1,5 @@
 #include "creaturestats.hpp"
 
-#include <algorithm>
 
 #include <components/esm/creaturestats.hpp>
 #include <components/esm/esmreader.hpp>

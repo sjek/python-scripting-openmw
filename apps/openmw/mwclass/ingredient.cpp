@@ -1,19 +1,14 @@
 
 #include "ingredient.hpp"
 
-#include <components/esm/loadingr.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwphysics/physicssystem.hpp"
 #include "../mwworld/actioneat.hpp"
-#include "../mwworld/nullaction.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
 

@@ -1,10 +1,7 @@
 #include "movieaudiofactory.hpp"
 
-#include <extern/osg-ffmpeg-videoplayer/audiodecoder.hpp>
-#include <extern/osg-ffmpeg-videoplayer/videostate.hpp>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/soundmanager.hpp"
 
 #include "sound_decoder.hpp"
 #include "sound.hpp"

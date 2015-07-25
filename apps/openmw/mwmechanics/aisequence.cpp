@@ -1,8 +1,5 @@
 
-#include "aisequence.hpp"
 
-#include "aipackage.hpp"
-#include "aistate.hpp"
 
 #include "aiwander.hpp"
 #include "aiescort.hpp"
@@ -14,11 +11,7 @@
 
 #include <components/esm/aisequence.hpp>
 
-#include "../mwworld/class.hpp"
-#include "creaturestats.hpp"
-#include "npcstats.hpp"
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 
 namespace MWMechanics
 {

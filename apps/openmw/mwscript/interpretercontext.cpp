@@ -1,15 +1,10 @@
 
 #include "interpretercontext.hpp"
 
-#include <cmath>
-#include <stdexcept>
-#include <sstream>
 
-#include <components/interpreter/types.hpp>
 
 #include <components/compiler/locals.hpp>
 
-#include <components/esm/cellid.hpp>
 
 #include "../mwworld/esmstore.hpp"
 
@@ -21,11 +16,9 @@
 
 #include "../mwworld/class.hpp"
 #include "../mwworld/cellstore.hpp"
-#include "../mwworld/containerstore.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
 
-#include "locals.hpp"
 #include "globalscripts.hpp"
 
 namespace MWScript

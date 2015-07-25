@@ -1,9 +1,7 @@
 
 #include "globals.hpp"
 
-#include <stdexcept>
 
-#include <components/misc/stringops.hpp>
 
 #include <components/esm/esmwriter.hpp>
 #include <components/esm/esmreader.hpp>

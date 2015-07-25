@@ -2,12 +2,9 @@
 
 #include <iomanip>
 
-#include <osg/Geode>
-#include <osg/Texture2D>
 #include <osg/Material>
 #include <osg/Depth>
 #include <osg/PositionAttitudeTransform>
-#include <osgParticle/ParticleSystem>
 #include <osgParticle/ParticleSystemUpdater>
 
 #include <components/misc/rng.hpp>

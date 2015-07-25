@@ -6,14 +6,12 @@
 #include <components/esm/projectilestate.hpp>
 #include <components/resource/resourcesystem.hpp>
 #include <components/resource/scenemanager.hpp>
-#include <components/sceneutil/controller.hpp>
 
 #include "../mwworld/manualref.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/inventorystore.hpp"
 
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 
@@ -21,7 +19,6 @@
 #include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 
-#include "../mwrender/effectmanager.hpp"
 #include "../mwrender/animation.hpp"
 #include "../mwrender/vismask.hpp"
 

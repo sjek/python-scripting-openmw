@@ -1,23 +1,13 @@
 
 #include "containerstore.hpp"
 
-#include <cassert>
-#include <typeinfo>
-#include <stdexcept>
 
 #include <components/esm/inventorystate.hpp>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/levelledlist.hpp"
 
-#include "manualref.hpp"
-#include "refdata.hpp"
-#include "class.hpp"
 #include "localscripts.hpp"
-#include "player.hpp"
 
 namespace
 {

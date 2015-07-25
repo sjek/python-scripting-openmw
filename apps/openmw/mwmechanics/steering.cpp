@@ -1,7 +1,6 @@
 #include "steering.hpp"
 
 #include "../mwworld/class.hpp"
-#include "../mwworld/ptr.hpp"
 
 #include "../mwbase/environment.hpp"
 

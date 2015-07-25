@@ -1,9 +1,7 @@
-#include <components/esm/loaddial.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 
-#include "../mwworld/store.hpp"
 #include "../mwworld/esmstore.hpp"
 
 #include "keywordsearch.hpp"

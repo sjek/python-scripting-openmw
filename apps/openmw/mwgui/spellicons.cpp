@@ -1,11 +1,9 @@
 #include "spellicons.hpp"
 
-#include <sstream>
 #include <iomanip>
 
 #include <MyGUI_ImageBox.h>
 
-#include <components/esm/loadmgef.hpp>
 
 #include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"

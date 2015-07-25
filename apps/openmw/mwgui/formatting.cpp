@@ -1,6 +1,5 @@
 #include "formatting.hpp"
 
-#include <MyGUI_EditText.h>
 #include <MyGUI_Gui.h>
 #include <MyGUI_EditBox.h>
 #include <MyGUI_ImageBox.h>
@@ -11,7 +10,6 @@
 #include "../mwbase/windowmanager.hpp"
 
 #include <boost/algorithm/string/replace.hpp>
-#include <boost/algorithm/string/predicate.hpp>
 
 #include <components/interpreter/defines.hpp>
 #include <components/misc/stringops.hpp>

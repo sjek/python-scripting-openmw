@@ -1,12 +1,9 @@
 #include "journalviewmodel.hpp"
 
-#include <map>
-#include <sstream>
 #include <boost/make_shared.hpp>
 
 #include <MyGUI_LanguageManager.h>
 
-#include <components/misc/utf8stream.hpp>
 
 #include <components/translation/translation.hpp>
 
@@ -15,7 +12,6 @@
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwdialogue/journalentry.hpp"
 #include "../mwdialogue/keywordsearch.hpp"
 
 namespace MWGui {

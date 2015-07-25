@@ -23,7 +23,6 @@
 #include "../mwmechanics/creaturestats.hpp"
 
 #include "widgets.hpp"
-#include "bookpage.hpp"
 
 #include "journalbooks.hpp" // to_utf8_span
 

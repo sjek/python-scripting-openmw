@@ -1,27 +1,20 @@
 
 #include "class.hpp"
 
-#include <stdexcept>
 
-#include <components/esm/defs.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwworld/esmstore.hpp"
 
-#include "ptr.hpp"
-#include "refdata.hpp"
 #include "nullaction.hpp"
 #include "failedaction.hpp"
 #include "actiontake.hpp"
-#include "containerstore.hpp"
 
 #include "../mwgui/tooltips.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/magiceffects.hpp"
 
 namespace MWWorld
 {

@@ -1,12 +1,8 @@
 
 #include "selectwrapper.hpp"
 
-#include <cctype>
 
-#include <stdexcept>
-#include <algorithm>
 #include <sstream>
-#include <iterator>
 
 #include <components/misc/stringops.hpp>
 

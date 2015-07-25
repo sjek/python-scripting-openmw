@@ -1,21 +1,14 @@
 #include "windowmanagerimp.hpp"
 
-#include <cassert>
-#include <iterator>
 
 #include <osgViewer/Viewer>
 
-#include <MyGUI_UString.h>
-#include <MyGUI_IPointer.h>
-#include <MyGUI_ResourceImageSetPointer.h>
-#include <MyGUI_TextureUtility.h>
 #include <MyGUI_FactoryManager.h>
 #include <MyGUI_LanguageManager.h>
 #include <MyGUI_PointerManager.h>
 #include <MyGUI_InputManager.h>
 #include <MyGUI_Gui.h>
 #include <MyGUI_ClipboardManager.h>
-#include <MyGUI_RenderManager.h>
 
 #include <SDL_keyboard.h>
 #include <SDL_clipboard.h>
@@ -54,7 +47,6 @@
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
 
-#include "../mwmechanics/stat.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
 #include "../mwrender/localmap.hpp"
@@ -82,7 +74,6 @@
 #include "quickkeysmenu.hpp"
 #include "loadingscreen.hpp"
 #include "levelupdialog.hpp"
-#include "waitdialog.hpp"
 #include "enchantingdialog.hpp"
 #include "trainingwindow.hpp"
 #include "recharge.hpp"
@@ -93,7 +84,6 @@
 #include "soulgemdialog.hpp"
 #include "companionwindow.hpp"
 #include "inventorywindow.hpp"
-#include "bookpage.hpp"
 #include "itemview.hpp"
 #include "videowidget.hpp"
 #include "backgroundimage.hpp"

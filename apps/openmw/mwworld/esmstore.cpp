@@ -1,6 +1,5 @@
 #include "esmstore.hpp"
 
-#include <set>
 #include <iostream>
 
 #include <boost/filesystem/operations.hpp>

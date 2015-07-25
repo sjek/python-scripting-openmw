@@ -1,7 +1,6 @@
 
 #include "journalentry.hpp"
 
-#include <stdexcept>
 
 #include <components/esm/journalentry.hpp>
 

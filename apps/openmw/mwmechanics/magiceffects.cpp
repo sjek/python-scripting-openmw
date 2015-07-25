@@ -1,7 +1,6 @@
 
 #include "magiceffects.hpp"
 
-#include <cstdlib>
 
 #include <stdexcept>
 

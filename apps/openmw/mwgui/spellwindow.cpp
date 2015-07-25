@@ -13,7 +13,6 @@
 #include "../mwworld/esmstore.hpp"
 
 #include "../mwmechanics/spellcasting.hpp"
-#include "../mwmechanics/spells.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 
 #include "spellicons.hpp"

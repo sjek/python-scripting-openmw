@@ -1,23 +1,15 @@
 #include "objects.hpp"
 
-#include <cmath>
 
-#include <osg/Group>
 #include <osg/Geode>
 #include <osg/PositionAttitudeTransform>
 #include <osg/UserDataContainer>
 
-#include <osgParticle/ParticleSystem>
 #include <osgParticle/ParticleProcessor>
 
-#include <components/resource/scenemanager.hpp>
 
-#include <components/sceneutil/visitor.hpp>
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/class.hpp"
 
-#include "animation.hpp"
 #include "npcanimation.hpp"
 #include "creatureanimation.hpp"
 #include "vismask.hpp"

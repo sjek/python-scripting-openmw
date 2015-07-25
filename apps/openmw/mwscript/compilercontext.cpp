@@ -3,7 +3,6 @@
 
 #include "../mwworld/esmstore.hpp"
 
-#include <components/esm/loaddial.hpp>
 
 #include <components/compiler/locals.hpp>
 
@@ -11,7 +10,6 @@
 #include "../mwbase/world.hpp"
 #include "../mwbase/scriptmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/class.hpp"
 
 namespace MWScript

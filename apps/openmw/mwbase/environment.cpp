@@ -1,7 +1,6 @@
 
 #include "environment.hpp"
 
-#include <cassert>
 
 #include "world.hpp"
 #include "scriptmanager.hpp"

@@ -1,7 +1,5 @@
 #include "localmap.hpp"
 
-#include <iostream>
-#include <stdint.h>
 
 #include <osg/LightModel>
 #include <osg/Texture2D>
@@ -11,7 +9,6 @@
 
 #include <osgViewer/Viewer>
 
-#include <components/esm/fogstate.hpp>
 #include <components/settings/settings.hpp>
 #include <components/sceneutil/visitor.hpp>
 #include <components/files/memorystream.hpp>

@@ -3,7 +3,6 @@
 #include <osg/PositionAttitudeTransform>
 
 #include <BulletCollision/CollisionShapes/btCylinderShape.h>
-#include <BulletCollision/CollisionShapes/btBoxShape.h>
 #include <BulletCollision/CollisionDispatch/btCollisionWorld.h>
 
 #include <components/nifbullet/bulletnifloader.hpp>

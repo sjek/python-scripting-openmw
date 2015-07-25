@@ -1,9 +1,7 @@
 
 #include "spells.hpp"
 
-#include <cstdlib>
 
-#include <components/esm/loadspel.hpp>
 #include <components/esm/spellstate.hpp>
 #include <components/misc/rng.hpp>
 
@@ -12,7 +10,6 @@
 
 #include "../mwworld/esmstore.hpp"
 
-#include "magiceffects.hpp"
 
 namespace MWMechanics
 {

@@ -8,34 +8,25 @@
 #include <tr1/unordered_map>
 #endif
 
-#include <osg/Group>
 #include <osg/ComputeBoundsVisitor>
 #include <osg/PositionAttitudeTransform>
 
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
 
-#include <components/misc/rng.hpp>
 
 #include <components/files/collections.hpp>
-#include <components/compiler/locals.hpp>
-#include <components/esm/cellid.hpp>
 #include <components/esm/esmreader.hpp>
 #include <components/misc/resourcehelpers.hpp>
 #include <components/resource/resourcesystem.hpp>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/scriptmanager.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/movement.hpp"
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 #include "../mwmechanics/levelledlist.hpp"
-#include "../mwmechanics/combat.hpp"
 #include "../mwmechanics/aiavoiddoor.hpp" //Used to tell actors to avoid doors
 
 #include "../mwrender/animation.hpp"
@@ -50,19 +41,14 @@
 
 #include "../mwphysics/physicssystem.hpp"
 #include "../mwphysics/actor.hpp"
-#include "../mwphysics/collisiontype.hpp"
 
 #include "player.hpp"
-#include "manualref.hpp"
 #include "cellstore.hpp"
-#include "cellfunctors.hpp"
-#include "containerstore.hpp"
 #include "inventorystore.hpp"
 #include "actionteleport.hpp"
 #include "projectilemanager.hpp"
 #include "weather.hpp"
 
-#include "contentloader.hpp"
 #include "esmloader.hpp"
 
 namespace

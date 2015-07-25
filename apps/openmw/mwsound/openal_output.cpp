@@ -1,18 +1,11 @@
-#include <algorithm>
-#include <stdexcept>
-#include <iostream>
-#include <vector>
 
-#include <stdint.h>
 
 #include <components/vfs/manager.hpp>
 
 #include <boost/thread.hpp>
 
 #include "openal_output.hpp"
-#include "sound_decoder.hpp"
 #include "sound.hpp"
-#include "soundmanagerimp.hpp"
 #include "loudness.hpp"
 
 #ifndef ALC_ALL_DEVICES_SPECIFIER

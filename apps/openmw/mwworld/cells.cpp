@@ -2,16 +2,13 @@
 
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/defs.hpp>
 #include <components/esm/cellstate.hpp>
 #include <components/loadinglistener/loadinglistener.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 
-#include "class.hpp"
 #include "esmstore.hpp"
-#include "containerstore.hpp"
 #include "cellstore.hpp"
 
 MWWorld::CellStore *MWWorld::Cells::getCellStore (const ESM::Cell *cell)

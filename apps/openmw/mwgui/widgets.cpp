@@ -1,6 +1,5 @@
 #include "widgets.hpp"
 
-#include <sstream>
 #include <iomanip>
 
 #include <MyGUI_ProgressBar.h>

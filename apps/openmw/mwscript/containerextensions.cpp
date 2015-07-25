@@ -1,17 +1,13 @@
 
-#include "containerextensions.hpp"
 
-#include <stdexcept>
 
 #include <boost/format.hpp>
 
 #include <MyGUI_LanguageManager.h>
 
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
 
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
 
 #include <components/misc/stringops.hpp>
@@ -23,11 +19,9 @@
 #include "../mwbase/world.hpp"
 
 #include "../mwworld/class.hpp"
-#include "../mwworld/containerstore.hpp"
 #include "../mwworld/actionequip.hpp"
 #include "../mwworld/inventorystore.hpp"
 
-#include "interpretercontext.hpp"
 #include "ref.hpp"
 
 namespace MWScript

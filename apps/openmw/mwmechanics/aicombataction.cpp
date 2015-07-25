@@ -11,8 +11,6 @@
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 
-#include <components/esm/loadench.hpp>
-#include <components/esm/loadmgef.hpp>
 
 namespace
 {

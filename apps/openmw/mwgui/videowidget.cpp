@@ -4,7 +4,6 @@
 
 #include <MyGUI_RenderManager.h>
 
-#include <osg/Texture2D>
 
 #include <components/vfs/manager.hpp>
 #include <components/myguiplatform/myguitexture.hpp>

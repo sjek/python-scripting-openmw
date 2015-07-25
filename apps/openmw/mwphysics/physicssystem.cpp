@@ -1,8 +1,6 @@
 #include "physicssystem.hpp"
 
-#include <stdexcept>
 
-#include <osg/Group>
 #include <osg/PositionAttitudeTransform>
 
 #include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
@@ -10,7 +8,6 @@
 #include <BulletCollision/CollisionShapes/btSphereShape.h>
 #include <BulletCollision/CollisionShapes/btStaticPlaneShape.h>
 #include <BulletCollision/CollisionShapes/btCompoundShape.h>
-#include <BulletCollision/CollisionDispatch/btCollisionObject.h>
 #include <BulletCollision/CollisionDispatch/btCollisionWorld.h>
 #include <BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h>
 #include <BulletCollision/CollisionDispatch/btCollisionWorld.h>
@@ -21,7 +18,6 @@
 #include <components/nifbullet/bulletnifloader.hpp>
 #include <components/resource/resourcesystem.hpp>
 
-#include <components/esm/loadgmst.hpp>
 
 #include <components/nifosg/particle.hpp> // FindRecIndexVisitor
 
@@ -41,7 +37,6 @@
 
 #include "../mwworld/class.hpp"
 
-#include "collisiontype.hpp"
 #include "actor.hpp"
 #include "convert.hpp"
 #include "trace.h"

@@ -3,7 +3,6 @@
 #include <components/misc/stringops.hpp>
 
 #include "../mwworld/class.hpp"
-#include "../mwworld/containerstore.hpp"
 #include "../mwworld/inventorystore.hpp"
 
 namespace MWGui

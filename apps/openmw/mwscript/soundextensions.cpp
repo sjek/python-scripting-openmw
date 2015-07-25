@@ -1,15 +1,11 @@
 
-#include "extensions.hpp"
 
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
 
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
 

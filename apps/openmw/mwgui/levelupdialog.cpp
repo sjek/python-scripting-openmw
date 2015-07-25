@@ -12,9 +12,7 @@
 #include "../mwworld/class.hpp"
 #include "../mwworld/fallback.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/cellstore.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
 namespace MWGui

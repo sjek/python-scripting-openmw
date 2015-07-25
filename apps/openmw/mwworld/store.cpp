@@ -1,14 +1,9 @@
-#include "store.hpp"
-#include "esmstore.hpp"
 
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
 
-#include <components/loadinglistener/loadinglistener.hpp>
 #include <components/misc/rng.hpp>
 
-#include <stdexcept>
-#include <sstream>
 
 namespace
 {

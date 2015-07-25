@@ -1,7 +1,6 @@
 
 #include "door.hpp"
 
-#include <components/esm/loaddoor.hpp>
 #include <components/esm/doorstate.hpp>
 
 #include "../mwbase/environment.hpp"
@@ -10,8 +9,6 @@
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/nullaction.hpp"
 #include "../mwworld/failedaction.hpp"
 #include "../mwworld/actionteleport.hpp"
 #include "../mwworld/actiondoor.hpp"

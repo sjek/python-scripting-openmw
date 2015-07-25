@@ -1,7 +1,6 @@
 
 #include "container.hpp"
 
-#include <components/esm/loadcont.hpp>
 #include <components/esm/containerstate.hpp>
 
 #include "../mwbase/environment.hpp"
@@ -9,10 +8,8 @@
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/failedaction.hpp"
 #include "../mwworld/nullaction.hpp"
-#include "../mwworld/containerstore.hpp"
 #include "../mwworld/customdata.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"

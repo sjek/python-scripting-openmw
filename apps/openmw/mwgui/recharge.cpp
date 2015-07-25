@@ -15,7 +15,6 @@
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
 #include "widgets.hpp"

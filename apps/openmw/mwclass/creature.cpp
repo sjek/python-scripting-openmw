@@ -1,30 +1,21 @@
 
 #include "creature.hpp"
 
-#include <components/misc/rng.hpp>
 
-#include <components/esm/loadcrea.hpp>
 #include <components/esm/creaturestate.hpp>
 
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/magiceffects.hpp"
 #include "../mwmechanics/movement.hpp"
 #include "../mwmechanics/disease.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 #include "../mwmechanics/difficultyscaling.hpp"
 
-#include "../mwbase/environment.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/actiontalk.hpp"
 #include "../mwworld/actionopen.hpp"
 #include "../mwworld/failedaction.hpp"
 #include "../mwworld/customdata.hpp"
-#include "../mwworld/containerstore.hpp"
 #include "../mwphysics/physicssystem.hpp"
 #include "../mwworld/cellstore.hpp"
 

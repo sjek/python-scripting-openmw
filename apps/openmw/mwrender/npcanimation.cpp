@@ -17,7 +17,6 @@
 #include <components/nifosg/nifloader.hpp> // TextKeyMapHolder
 
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/inventorystore.hpp"
 #include "../mwworld/class.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
@@ -27,7 +26,6 @@
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
 
-#include "camera.hpp"
 #include "rotatecontroller.hpp"
 
 namespace

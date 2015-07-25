@@ -1,19 +1,14 @@
 
 #include "inventorystore.hpp"
 
-#include <iterator>
-#include <algorithm>
 
-#include <components/esm/loadench.hpp>
 #include <components/esm/inventorystate.hpp>
 #include <components/misc/rng.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
 
-#include "../mwgui/inventorywindow.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwmechanics/spellcasting.hpp"

@@ -1,7 +1,5 @@
 #include "sky.hpp"
 
-#include <osg/Transform>
-#include <osg/Geode>
 #include <osg/Depth>
 #include <osg/Geometry>
 #include <osg/Material>
@@ -10,12 +8,10 @@
 #include <osg/TexMat>
 #include <osg/Version>
 
-#include <osgParticle/ParticleSystem>
 #include <osgParticle/ParticleSystemUpdater>
 #include <osgParticle/ModularEmitter>
 #include <osgParticle/BoxPlacer>
 #include <osgParticle/ConstantRateCounter>
-#include <osgParticle/RadialShooter>
 
 #include <components/misc/rng.hpp>
 
@@ -26,7 +22,6 @@
 
 #include <components/vfs/manager.hpp>
 
-#include <components/sceneutil/util.hpp>
 #include <components/sceneutil/statesetupdater.hpp>
 #include <components/sceneutil/controller.hpp>
 

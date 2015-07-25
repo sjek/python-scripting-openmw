@@ -1,21 +1,15 @@
-#include "statsextensions.hpp"
 
 #include <iostream>
-#include <cmath>
 
-#include <components/esm/loadnpc.hpp>
 
 #include "../mwworld/esmstore.hpp"
 
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
 
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/world.hpp"
@@ -23,10 +17,8 @@
 #include "../mwworld/class.hpp"
 #include "../mwworld/player.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
-#include "interpretercontext.hpp"
 #include "ref.hpp"
 
 namespace

@@ -10,7 +10,6 @@
 #include "../mwmechanics/npcstats.hpp"
 
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/store.hpp"
 #include "../mwworld/class.hpp"
 
 #include "jailscreen.hpp"

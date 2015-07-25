@@ -1,6 +1,5 @@
 #include "loudness.hpp"
 
-#include <stdint.h>
 #include <limits>
 
 #include "soundmanagerimp.hpp"

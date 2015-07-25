@@ -4,7 +4,6 @@
 
 #include <components/esm/loadalch.hpp>
 #include <components/esm/loadappa.hpp>
-#include <components/esm/loadarmo.hpp>
 #include <components/esm/loadbook.hpp>
 #include <components/esm/loadclot.hpp>
 #include <components/esm/loadingr.hpp>

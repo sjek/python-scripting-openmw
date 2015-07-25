@@ -3,7 +3,6 @@
 #include <MyGUI_ScrollBar.h>
 #include <MyGUI_Window.h>
 #include <MyGUI_ComboBox.h>
-#include <MyGUI_ListBox.h>
 #include <MyGUI_ScrollView.h>
 #include <MyGUI_Gui.h>
 #include <MyGUI_TabControl.h>

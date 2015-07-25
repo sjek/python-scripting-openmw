@@ -2,18 +2,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/stat.h>
 #include <sys/wait.h>
-#include <sys/param.h>
-#include <sys/ucontext.h>
 #include <sys/utsname.h>
 #include <string.h>
 #include <errno.h>
-#include <limits.h>
 
-#include <pthread.h>
 #include <stdbool.h>
-#include <sys/ptrace.h>
 
 #include <string>
 

@@ -1,16 +1,10 @@
 #include "journalwindow.hpp"
 
-#include <sstream>
-#include <set>
 #include <stack>
-#include <string>
-#include <utility>
 
-#include <MyGUI_TextBox.h>
 #include <MyGUI_Button.h>
 
 #include <boost/bind.hpp>
-#include <boost/function.hpp>
 
 #include <components/misc/stringops.hpp>
 #include <components/widgets/imagebutton.hpp>
@@ -21,9 +15,7 @@
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/journal.hpp"
 
-#include "bookpage.hpp"
 #include "windowbase.hpp"
-#include "journalviewmodel.hpp"
 #include "journalbooks.hpp"
 
 namespace

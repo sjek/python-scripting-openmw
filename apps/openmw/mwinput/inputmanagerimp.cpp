@@ -1,14 +1,10 @@
 #include "inputmanagerimp.hpp"
 
-#include <cmath>
 
-#include <boost/lexical_cast.hpp>
 
 #include <MyGUI_InputManager.h>
 #include <MyGUI_RenderManager.h>
-#include <MyGUI_Widget.h>
 #include <MyGUI_Button.h>
-#include <MyGUI_EditBox.h>
 
 #include <SDL_version.h>
 

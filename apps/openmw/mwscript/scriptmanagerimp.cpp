@@ -1,15 +1,9 @@
 
 #include "scriptmanagerimp.hpp"
 
-#include <cassert>
 #include <iostream>
-#include <sstream>
-#include <exception>
-#include <algorithm>
 
-#include <components/esm/loadscpt.hpp>
 
-#include <components/misc/stringops.hpp>
 
 #include <components/compiler/scanner.hpp>
 #include <components/compiler/context.hpp>

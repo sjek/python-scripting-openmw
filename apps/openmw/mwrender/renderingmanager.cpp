@@ -1,18 +1,13 @@
 #include "renderingmanager.hpp"
 
-#include <stdexcept>
 
-#include <osg/Light>
 #include <osg/LightModel>
 #include <osg/Fog>
 #include <osg/PolygonMode>
-#include <osg/Group>
 #include <osg/PositionAttitudeTransform>
 #include <osg/UserDataContainer>
 #include <osg/ComputeBoundsVisitor>
 
-#include <osgUtil/LineSegmentIntersector>
-#include <osgUtil/IncrementalCompileOperation>
 
 #include <osgViewer/Viewer>
 
@@ -20,7 +15,6 @@
 #include <components/resource/texturemanager.hpp>
 #include <components/resource/scenemanager.hpp>
 
-#include <components/settings/settings.hpp>
 
 #include <components/sceneutil/util.hpp>
 #include <components/sceneutil/lightmanager.hpp>
@@ -28,7 +22,6 @@
 
 #include <components/terrain/terraingrid.hpp>
 
-#include <components/esm/loadcell.hpp>
 
 #include "sky.hpp"
 #include "effectmanager.hpp"

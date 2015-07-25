@@ -1,12 +1,10 @@
 #include "actors.hpp"
 
-#include <typeinfo>
 
 #include <osg/PositionAttitudeTransform>
 
 #include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/loadnpc.hpp>
 
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/class.hpp"
@@ -14,7 +12,6 @@
 #include "../mwworld/actionequip.hpp"
 #include "../mwworld/player.hpp"
 
-#include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
 #include "../mwbase/soundmanager.hpp"
@@ -23,8 +20,6 @@
 #include "../mwmechanics/spellcasting.hpp"
 
 #include "npcstats.hpp"
-#include "creaturestats.hpp"
-#include "movement.hpp"
 #include "character.hpp"
 #include "aicombat.hpp"
 #include "aifollow.hpp"

@@ -3,19 +3,15 @@
 #include <iostream>
 
 #include <osg/Texture2D>
-#include <osg/Camera>
 #include <osg/PositionAttitudeTransform>
 #include <osgViewer/Viewer>
 #include <osg/LightModel>
-#include <osgUtil/IntersectionVisitor>
-#include <osgUtil/LineSegmentIntersector>
 
 #include <components/sceneutil/lightmanager.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/inventorystore.hpp"
 
 #include "npcanimation.hpp"
 #include "vismask.hpp"

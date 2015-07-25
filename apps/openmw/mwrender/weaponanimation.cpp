@@ -13,10 +13,8 @@
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/combat.hpp"
 
-#include "animation.hpp"
 #include "rotatecontroller.hpp"
 
 namespace MWRender

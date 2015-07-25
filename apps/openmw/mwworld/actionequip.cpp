@@ -4,10 +4,8 @@
 #include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include <components/compiler/locals.hpp>
 
 #include "inventorystore.hpp"
-#include "player.hpp"
 #include "class.hpp"
 
 namespace MWWorld

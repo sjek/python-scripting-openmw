@@ -1,6 +1,5 @@
 #include "aiwander.hpp"
 
-#include <cfloat>
 
 #include <components/misc/rng.hpp>
 

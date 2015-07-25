@@ -1,11 +1,7 @@
 
-#include "ptr.hpp"
 
-#include <cassert>
 
-#include "containerstore.hpp"
 #include "class.hpp"
-#include "livecellref.hpp"
 
 const std::string& MWWorld::Ptr::getTypeName() const
 {

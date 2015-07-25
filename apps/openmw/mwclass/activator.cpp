@@ -1,7 +1,6 @@
 
 #include "activator.hpp"
 
-#include <components/esm/loadacti.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
@@ -10,8 +9,6 @@
 
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/action.hpp"
 #include "../mwworld/failedaction.hpp"
 #include "../mwworld/nullaction.hpp"
 

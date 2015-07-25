@@ -9,7 +9,6 @@
 #include <components/sceneutil/attach.hpp>
 #include <components/sceneutil/visitor.hpp>
 
-#include "../mwbase/world.hpp"
 
 #include "../mwworld/class.hpp"
 

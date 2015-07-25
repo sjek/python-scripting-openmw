@@ -1,12 +1,7 @@
 #include "globalmap.hpp"
 
-#include <climits>
 
-#include <osg/Image>
 #include <osg/Texture2D>
-#include <osg/Group>
-#include <osg/Geometry>
-#include <osg/Geode>
 #include <osg/Depth>
 
 #include <osgDB/WriteFile>

@@ -1,18 +1,12 @@
 
 #include "apparatus.hpp"
 
-#include <components/esm/loadappa.hpp>
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
 #include "../mwworld/actionalchemy.hpp"
 #include "../mwworld/cellstore.hpp"
-#include "../mwphysics/physicssystem.hpp"
-#include "../mwworld/nullaction.hpp"
 
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"

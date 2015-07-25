@@ -1,10 +1,8 @@
 
-#include "refdata.hpp"
 
 #include <components/esm/objectstate.hpp>
 
 #include "customdata.hpp"
-#include "cellstore.hpp"
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"

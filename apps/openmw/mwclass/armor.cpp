@@ -1,23 +1,15 @@
 
 #include "armor.hpp"
 
-#include <components/esm/loadarmo.hpp>
-#include <components/esm/loadskil.hpp>
-#include <components/esm/loadgmst.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
 #include "../mwworld/actionequip.hpp"
 #include "../mwworld/inventorystore.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwphysics/physicssystem.hpp"
-#include "../mwworld/nullaction.hpp"
-#include "../mwworld/containerstore.hpp"
 
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"

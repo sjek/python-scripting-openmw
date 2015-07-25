@@ -1,9 +1,7 @@
 #include "ffmpeg_decoder.hpp"
 
 // auto_ptr
-#include <memory>
 
-#include <stdexcept>
 #include <sstream>
 
 extern "C" {

@@ -2,7 +2,6 @@
 
 #include <MyGUI_EditBox.h>
 
-#include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 
 #include <components/compiler/exception.hpp>

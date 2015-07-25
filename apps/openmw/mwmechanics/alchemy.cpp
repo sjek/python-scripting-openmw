@@ -1,20 +1,10 @@
 
 #include "alchemy.hpp"
 
-#include <cassert>
-#include <cstdlib>
-#include <cmath>
 
-#include <algorithm>
-#include <stdexcept>
-#include <map>
 
 #include <components/misc/rng.hpp>
 
-#include <components/esm/loadskil.hpp>
-#include <components/esm/loadappa.hpp>
-#include <components/esm/loadgmst.hpp>
-#include <components/esm/loadmgef.hpp>
 
 
 #include "../mwbase/environment.hpp"
@@ -23,11 +13,7 @@
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/containerstore.hpp"
 #include "../mwworld/class.hpp"
-#include "../mwworld/cellstore.hpp"
-#include "../mwworld/manualref.hpp"
 
-#include "magiceffects.hpp"
-#include "creaturestats.hpp"
 #include "npcstats.hpp"
 
 MWMechanics::Alchemy::Alchemy()

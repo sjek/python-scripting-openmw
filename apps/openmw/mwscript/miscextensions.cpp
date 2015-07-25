@@ -1,18 +1,12 @@
 
-#include "miscextensions.hpp"
 
-#include <cstdlib>
 
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
 #include <components/compiler/locals.hpp>
 
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
 
-#include <components/esm/loadmgef.hpp>
-#include <components/esm/loadcrea.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/windowmanager.hpp"
@@ -26,7 +20,6 @@
 #include "../mwworld/cellstore.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/spellcasting.hpp"
 
 #include "interpretercontext.hpp"

@@ -3,17 +3,13 @@
 
 #include <boost/lexical_cast.hpp>
 
-#include <components/esm/loadmisc.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwphysics/physicssystem.hpp"
 #include "../mwworld/manualref.hpp"
 #include "../mwworld/nullaction.hpp"
 #include "../mwworld/actionsoulgem.hpp"

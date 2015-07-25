@@ -1,8 +1,5 @@
-#include "soundmanagerimp.hpp"
 
 #include <iostream>
-#include <algorithm>
-#include <map>
 
 #include <components/misc/rng.hpp>
 
@@ -15,8 +12,6 @@
 #include "../mwworld/esmstore.hpp"
 #include "../mwworld/cellstore.hpp"
 
-#include "sound_output.hpp"
-#include "sound_decoder.hpp"
 #include "sound.hpp"
 
 #include "openal_output.hpp"

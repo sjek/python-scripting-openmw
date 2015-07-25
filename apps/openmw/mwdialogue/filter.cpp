@@ -12,12 +12,9 @@
 
 #include "../mwworld/class.hpp"
 #include "../mwworld/inventorystore.hpp"
-#include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/creaturestats.hpp"
-#include "../mwmechanics/magiceffects.hpp"
 
 #include "selectwrapper.hpp"
 

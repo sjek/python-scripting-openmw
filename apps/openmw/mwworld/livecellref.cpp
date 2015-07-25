@@ -1,4 +1,3 @@
-#include "livecellref.hpp"
 
 #include <iostream>
 
@@ -7,7 +6,6 @@
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 
-#include "ptr.hpp"
 #include "class.hpp"
 #include "esmstore.hpp"
 

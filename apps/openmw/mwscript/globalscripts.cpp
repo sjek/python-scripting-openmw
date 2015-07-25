@@ -1,10 +1,8 @@
 
 #include "globalscripts.hpp"
 
-#include <cassert>
 #include <iostream>
 
-#include <components/misc/stringops.hpp>
 #include <components/esm/esmwriter.hpp>
 #include <components/esm/globalscript.hpp>
 

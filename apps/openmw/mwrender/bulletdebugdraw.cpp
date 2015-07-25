@@ -6,7 +6,6 @@
 
 #include <osg/Geode>
 #include <osg/Geometry>
-#include <osg/Group>
 
 #include "vismask.hpp"
 

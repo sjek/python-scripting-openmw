@@ -1,19 +1,14 @@
 #include "pathgrid.hpp"
 
-#include <cassert>
 
 #include <osg/Geometry>
 #include <osg/PositionAttitudeTransform>
 #include <osg/Geode>
-#include <osg/Group>
 
-#include <components/esm/loadstat.hpp>
-#include <components/esm/loadpgrd.hpp>
 
 #include "../mwbase/world.hpp" // these includes can be removed once the static-hack is gone
 #include "../mwbase/environment.hpp"
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
 #include "../mwmechanics/pathfinding.hpp"

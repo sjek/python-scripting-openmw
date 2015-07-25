@@ -7,7 +7,6 @@
 #include "../mwbase/world.hpp"
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
-#include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 
 #include "../mwworld/class.hpp"
@@ -19,7 +18,6 @@
 #include "inventorywindow.hpp"
 
 #include "itemview.hpp"
-#include "itemwidget.hpp"
 #include "inventoryitemmodel.hpp"
 #include "sortfilteritemmodel.hpp"
 #include "pickpocketitemmodel.hpp"

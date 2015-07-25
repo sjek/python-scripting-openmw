@@ -1,14 +1,11 @@
 
 #include "aipackage.hpp"
 
-#include <cmath>
 #include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/cellstore.hpp"
-#include "creaturestats.hpp"
 #include "movement.hpp"
-#include "../mwworld/action.hpp"
 
 #include "steering.hpp"
 

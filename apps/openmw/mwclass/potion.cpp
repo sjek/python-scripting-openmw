@@ -1,20 +1,14 @@
 
 #include "potion.hpp"
 
-#include <components/esm/loadalch.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
-#include "../mwworld/actiontake.hpp"
 #include "../mwworld/actionapply.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/containerstore.hpp"
-#include "../mwphysics/physicssystem.hpp"
-#include "../mwworld/nullaction.hpp"
 
 #include "../mwgui/tooltips.hpp"
 

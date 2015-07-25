@@ -1,18 +1,14 @@
 #include "book.hpp"
 
-#include <components/esm/loadbook.hpp>
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/actionread.hpp"
 #include "../mwworld/failedaction.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwphysics/physicssystem.hpp"
 
 #include "../mwrender/objects.hpp"
 #include "../mwrender/renderinginterface.hpp"

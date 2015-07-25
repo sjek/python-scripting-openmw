@@ -1,7 +1,5 @@
 #define _USE_MATH_DEFINES
-#include <cmath>
 
-#include "weather.hpp"
 
 #include <components/misc/rng.hpp>
 
@@ -10,14 +8,12 @@
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"
-#include "../mwbase/soundmanager.hpp"
 
 #include "../mwsound/sound.hpp"
 
 #include "../mwrender/renderingmanager.hpp"
 #include "../mwrender/sky.hpp"
 
-#include "player.hpp"
 #include "esmstore.hpp"
 #include "fallback.hpp"
 #include "cellstore.hpp"

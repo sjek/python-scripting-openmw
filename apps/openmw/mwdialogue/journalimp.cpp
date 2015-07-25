@@ -1,10 +1,8 @@
 
 #include "journalimp.hpp"
 
-#include <iterator>
 
 #include <components/esm/esmwriter.hpp>
-#include <components/esm/esmreader.hpp>
 #include <components/esm/queststate.hpp>
 #include <components/esm/journalentry.hpp>
 
@@ -15,7 +13,6 @@
 #include "../mwbase/world.hpp"
 #include "../mwbase/windowmanager.hpp"
 
-#include "../mwgui/messagebox.hpp"
 
 namespace MWDialogue
 {

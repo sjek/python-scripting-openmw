@@ -16,15 +16,12 @@
 #include "../mwworld/class.hpp"
 #include "../mwworld/esmstore.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
 
 #include "inventorywindow.hpp"
 #include "spellicons.hpp"
-#include "itemmodel.hpp"
 #include "draganddrop.hpp"
 
-#include "itemmodel.hpp"
 #include "itemwidget.hpp"
 
 namespace MWGui

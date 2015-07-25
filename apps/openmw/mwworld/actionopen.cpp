@@ -1,12 +1,8 @@
 #include "actionopen.hpp"
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/windowmanager.hpp"
 
 #include "../mwmechanics/disease.hpp"
 
-#include "class.hpp"
-#include "containerstore.hpp"
 
 namespace MWWorld
 {

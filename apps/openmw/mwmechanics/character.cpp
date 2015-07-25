@@ -25,14 +25,12 @@
 
 #include "movement.hpp"
 #include "npcstats.hpp"
-#include "creaturestats.hpp"
 #include "security.hpp"
 
 #include <components/misc/rng.hpp>
 
 #include <components/settings/settings.hpp>
 
-#include "../mwrender/animation.hpp"
 
 #include "../mwbase/environment.hpp"
 #include "../mwbase/world.hpp"

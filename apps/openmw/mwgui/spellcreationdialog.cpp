@@ -3,7 +3,6 @@
 #include <MyGUI_ImageBox.h>
 #include <MyGUI_Gui.h>
 
-#include <components/esm/records.hpp>
 #include <components/widgets/list.hpp>
 
 #include "../mwbase/windowmanager.hpp"
@@ -17,12 +16,10 @@
 #include "../mwworld/esmstore.hpp"
 
 #include "../mwmechanics/spellcasting.hpp"
-#include "../mwmechanics/spells.hpp"
 #include "../mwmechanics/creaturestats.hpp"
 
 #include "tooltips.hpp"
 #include "class.hpp"
-#include "widgets.hpp"
 
 namespace
 {

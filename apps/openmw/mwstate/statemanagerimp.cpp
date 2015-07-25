@@ -3,16 +3,12 @@
 
 #include <components/esm/esmwriter.hpp>
 #include <components/esm/esmreader.hpp>
-#include <components/esm/cellid.hpp>
-#include <components/esm/loadcell.hpp>
 
 #include <components/loadinglistener/loadinglistener.hpp>
 
-#include <components/misc/stringops.hpp>
 
 #include <components/settings/settings.hpp>
 
-#include <osg/Image>
 
 #include <osgDB/Registry>
 
@@ -29,14 +25,11 @@
 #include "../mwbase/soundmanager.hpp"
 #include "../mwbase/inputmanager.hpp"
 
-#include "../mwworld/player.hpp"
 #include "../mwworld/class.hpp"
 #include "../mwworld/cellstore.hpp"
 #include "../mwworld/esmstore.hpp"
-#include "../mwworld/inventorystore.hpp"
 
 #include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/creaturestats.hpp"
 
 #include "../mwscript/globalscripts.hpp"
 

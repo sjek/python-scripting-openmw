@@ -1,22 +1,14 @@
 
 #include "npc.hpp"
 
-#include <memory>
 
-#include <components/misc/rng.hpp>
 
-#include <components/esm/loadmgef.hpp>
-#include <components/esm/loadnpc.hpp>
 #include <components/esm/npcstate.hpp>
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
-#include "../mwbase/windowmanager.hpp"
 #include "../mwbase/dialoguemanager.hpp"
 #include "../mwbase/soundmanager.hpp"
 
-#include "../mwmechanics/creaturestats.hpp"
 #include "../mwmechanics/npcstats.hpp"
 #include "../mwmechanics/movement.hpp"
 #include "../mwmechanics/spellcasting.hpp"
@@ -26,7 +18,6 @@
 #include "../mwmechanics/difficultyscaling.hpp"
 #include "../mwmechanics/character.hpp"
 
-#include "../mwworld/ptr.hpp"
 #include "../mwworld/actiontalk.hpp"
 #include "../mwworld/actionopen.hpp"
 #include "../mwworld/failedaction.hpp"

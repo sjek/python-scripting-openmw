@@ -1,9 +1,7 @@
 
 #include "static.hpp"
 
-#include <components/esm/loadstat.hpp>
 
-#include "../mwworld/ptr.hpp"
 #include "../mwphysics/physicssystem.hpp"
 #include "../mwworld/cellstore.hpp"
 

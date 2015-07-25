@@ -1,4 +1,3 @@
-#include "pathgrid.hpp"
 
 #include "../mwbase/world.hpp"
 #include "../mwbase/environment.hpp"

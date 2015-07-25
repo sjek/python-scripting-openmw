@@ -2,9 +2,6 @@
 
 #include <iomanip>
 
-#include <osg/Group>
-#include <osg/Geode>
-#include <osg/Geometry>
 #include <osg/Material>
 #include <osg/PositionAttitudeTransform>
 #include <osg/Depth>
@@ -15,7 +12,6 @@
 #include <components/resource/texturemanager.hpp>
 
 #include <components/nifosg/controller.hpp>
-#include <components/sceneutil/controller.hpp>
 
 #include "vismask.hpp"
 #include "ripplesimulation.hpp"

@@ -2,13 +2,10 @@
 
 #include <osg/PositionAttitudeTransform>
 
-#include <components/esm/loadcell.hpp>
 
-#include <components/compiler/extensions.hpp>
 #include <components/compiler/opcodes.hpp>
 
 #include <components/interpreter/interpreter.hpp>
-#include <components/interpreter/runtime.hpp>
 #include <components/interpreter/opcodes.hpp>
 
 #include "../mwbase/environment.hpp"
@@ -18,7 +15,6 @@
 #include "../mwworld/class.hpp"
 #include "../mwworld/manualref.hpp"
 #include "../mwworld/player.hpp"
-#include "../mwworld/esmstore.hpp"
 
 #include "interpretercontext.hpp"
 #include "ref.hpp"

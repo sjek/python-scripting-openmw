@@ -1,7 +1,6 @@
 #include "locals.hpp"
 
 #include <components/esm/loadscpt.hpp>
-#include <components/esm/variant.hpp>
 #include <components/esm/locals.hpp>
 
 #include <components/compiler/locals.hpp>

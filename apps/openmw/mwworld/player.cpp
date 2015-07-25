@@ -1,29 +1,18 @@
 
 #include "player.hpp"
 
-#include <stdexcept>
 
-#include <components/esm/esmreader.hpp>
 #include <components/esm/esmwriter.hpp>
 #include <components/esm/player.hpp>
-#include <components/esm/defs.hpp>
-#include <components/esm/loadbsgn.hpp>
 
 #include "../mwworld/esmstore.hpp"
 
 #include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
-#include "../mwbase/windowmanager.hpp"
-#include "../mwbase/soundmanager.hpp"
 #include "../mwbase/mechanicsmanager.hpp"
 
-#include "../mwmechanics/movement.hpp"
 #include "../mwmechanics/npcstats.hpp"
-#include "../mwmechanics/actors.hpp"
 
 #include "class.hpp"
-#include "ptr.hpp"
-#include "inventorystore.hpp"
 #include "cellstore.hpp"
 
 namespace MWWorld

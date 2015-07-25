@@ -1,9 +1,6 @@
 #include "cursor.hpp"
 
 #include <MyGUI_PointerManager.h>
-#include <MyGUI_InputManager.h>
-#include <MyGUI_RotatingSkin.h>
-#include <MyGUI_Gui.h>
 
 namespace MWGui
 {

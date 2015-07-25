@@ -1,7 +1,5 @@
 #include "timeadvancer.hpp"
 
-#include "../mwbase/environment.hpp"
-#include "../mwbase/world.hpp"
 
 namespace MWGui
 {
