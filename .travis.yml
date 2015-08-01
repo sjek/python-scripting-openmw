@@ -8,6 +8,7 @@ branches:
     - master
     - coverity_scan
     - /openmw-.*$/
+    - travis-container
 env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
@@ -27,6 +28,7 @@ addons:
     - ubuntu-toolchain-r-test
     - llvm-toolchain-precise-3.6
     - boost-latest
+    - debian-sid
     packages:
     - libgtest-dev
     - google-mock
